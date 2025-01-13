@@ -3,7 +3,6 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 
-
 import { RootLayout } from "@/components/RootLayout";
 
 import "@/styles/tailwind.css";
@@ -17,14 +16,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function Layout({
-  children,
-  params,
-}: {
+type LayoutProps = {
   children: React.ReactNode;
-  params: { locale: string };
-}) {
-  const { locale } = params;
+  params: Promise<{ locale: string }>; // params is now a Promise
+};
+
+export default async function Layout({ children, params }: LayoutProps) {
+  const { locale } = await params;
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
