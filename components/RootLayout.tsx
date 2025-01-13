@@ -58,7 +58,7 @@ function Header({
   toggleRef: React.RefObject<HTMLButtonElement | null>
   invert?: boolean
 }) {
-  let { logoHovered, setLogoHovered } = useContext(RootLayoutContext)!
+  const { logoHovered, setLogoHovered } = useContext(RootLayoutContext)!
 
   return (
     <Container>
@@ -155,12 +155,12 @@ function Navigation() {
 }
 
 function RootLayoutInner({ children }: { children: React.ReactNode }) {
-  let panelId = useId()
-  let [expanded, setExpanded] = useState(false)
-  let openRef = useRef<React.ElementRef<'button'>>(null)
-  let closeRef = useRef<React.ElementRef<'button'>>(null)
-  let navRef = useRef<React.ElementRef<'div'>>(null)
-  let shouldReduceMotion = useReducedMotion()
+  const panelId = useId()
+  const [expanded, setExpanded] = useState(false)
+  const openRef = useRef<React.ElementRef<'button'>>(null)
+  const closeRef = useRef<React.ElementRef<'button'>>(null)
+  const navRef = useRef<React.ElementRef<'div'>>(null)
+  const shouldReduceMotion = useReducedMotion()
 
   useEffect(() => {
     function onClick(event: MouseEvent) {
@@ -280,8 +280,8 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
 }
 
 export function RootLayout({ children }: { children: React.ReactNode }) {
-  let pathname = usePathname()
-  let [logoHovered, setLogoHovered] = useState(false)
+  const pathname = usePathname()
+  const [logoHovered, setLogoHovered] = useState(false)
 
   return (
     <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
