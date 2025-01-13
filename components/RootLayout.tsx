@@ -8,8 +8,8 @@ import {
   useRef,
   useState,
 } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+
+
 import clsx from 'clsx'
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
 
@@ -20,6 +20,8 @@ import { GridPattern } from '@/components/GridPattern'
 import { Logo, Logomark } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
+import { Link, usePathname } from '@/i18n/routing'
+import { LanguageSwitcher } from './LanguageSwitcher'
 
 const RootLayoutContext = createContext<{
   logoHovered: boolean
@@ -59,7 +61,8 @@ function Header({
   invert?: boolean
 }) {
   const { logoHovered, setLogoHovered } = useContext(RootLayoutContext)!
-
+  const pathname = usePathname();
+  const currentLocale = pathname.split('/')[1] || 'en';
   return (
     <Container>
       <div className="flex items-center justify-between">
@@ -84,6 +87,7 @@ function Header({
           <Button href="/contact" invert={invert}>
             Contact us
           </Button>
+          <LanguageSwitcher currentLocale={currentLocale} />
           <button
             ref={toggleRef}
             type="button"
@@ -282,6 +286,8 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
 export function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
   const [logoHovered, setLogoHovered] = useState(false)
+
+
 
   return (
     <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
