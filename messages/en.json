@@ -2,5 +2,16 @@
     "HomePage": {
       "title": "Hello world!",
       "about": "Go to the about page"
-    }
+    },
+    "Header": {
+    "link-our-work": "Our Work",
+    "link-process": "Our Process",
+    "link-blog": "Blog",
+    "link-contact-us":"Contact us",
+    "contact-button": "Contact us",
+    "language-button": "Language",
+    "language-option-bs": "Bosnian",
+    "language-option-en": "English",
+    "language-option-de": "German"
+  }
   }

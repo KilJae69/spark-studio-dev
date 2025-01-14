@@ -1,3 +1,4 @@
+
 import { type Metadata } from 'next'
 import Image from 'next/image'
 // import Link from 'next/link'
@@ -8,21 +9,25 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
-import { Testimonial } from '@/components/Testimonial'
+ import { Testimonial } from '@/components/Testimonial'
 import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
 import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
 import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
 import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
 import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
 import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
+// import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
+import logoPetVet from "@/images/clients/pet-vet/petvet-logo.png"
 import imageLaptop from '@/images/laptop.jpg'
 import { useTranslations } from 'next-intl'
+// import MarqueeBanner from '@/components/shared/marquee-banner'
+
 // import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
 const clients = [
+ // ["Pet Vet", logoPetVet],
   ['Phobia', logoPhobiaLight],
   ['Family Fund', logoFamilyFund],
   ['Unseal', logoUnseal],
@@ -179,6 +184,8 @@ export const metadata: Metadata = {
     'We are a development studio working at the intersection of design and technology.',
 }
 
+
+
 export default function Home() {
 //  let caseStudies = (await loadCaseStudies()).slice(0, 3)
 const t = useTranslations('HomePage');
@@ -195,21 +202,24 @@ const t = useTranslations('HomePage');
             our staff have been involved in hit and runs.
           </p>
         </FadeIn>
+       
       </Container>
 
       <Clients />
 
       {/* <CaseStudies caseStudies={caseStudies} /> */}
 
-      <Testimonial
+       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
+        client={{ name: 'Pet Vet', logo: logoPetVet }}
       >
         The team at Studio went above and beyond with our onboarding, even
         finding a way to access the user’s microphone without triggering one of
         those annoying permission dialogs.
-      </Testimonial>
-
+      </Testimonial> 
+{/* <MarqueeBanner text='The team at Studio went above and beyond with our onboarding, even
+        finding a way to access the user’s microphone without triggering one of
+        those annoying permission dialogs.'/> */}
       <Services />
 
       <ContactSection />

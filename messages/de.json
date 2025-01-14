@@ -2,5 +2,16 @@
     "HomePage": {
       "title": "Hallo Weiss!",
       "about": "Go to the about page"
-    }
+    },
+    "Header": {
+    "link-our-work": "Unsere Arbeit",
+    "link-process": "Unser Prozess",
+    "link-blog": "Blog",
+    "link-contact-us": "Kontaktieren Sie uns",
+    "contact-button": "Kontaktieren Sie uns",
+    "language-button": "Sprache",
+    "language-option-bs": "Bosnisch",
+    "language-option-en": "Englisch",
+    "language-option-de": "Deutsch"
+  }
   }
