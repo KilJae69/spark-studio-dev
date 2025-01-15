@@ -1,31 +1,28 @@
-"use client";
+import { useEffect, useRef, useState } from "react";
+import type { LottiePlayer } from "lottie-web";
 
-import React  from "react";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+export const LottieComponent = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [lottie, setLottie] = useState<LottiePlayer | null>(null);
 
-type LottieComponentProps = {
-  animationPath: string;
-  autoplay?: boolean;
-  loop?: boolean;
-  className?: string;
+  useEffect(() => {
+    import("lottie-web").then((Lottie) => setLottie(Lottie.default));
+  }, []);
+
+  useEffect(() => {
+    if (lottie && ref.current) {
+      const animation = lottie.loadAnimation({
+        container: ref.current,
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        // path to your animation file, place it inside public folder
+        path: "/animations/globe.json",
+      });
+
+      return () => animation.destroy();
+    }
+  }, [lottie]);
+
+  return <div className="size-[300px]" ref={ref} />;
 };
-
-function LottieComponent({
-  animationPath,
-  autoplay = true,
-  loop = true,
-  className = "",
-}: LottieComponentProps) {
-  const animationSrc = animationPath;
-
-  return (
-    <DotLottieReact
-      src={animationSrc}
-      autoplay={autoplay}
-      loop={loop}
-      className={className}
-    />
-  );
-}
-
-export default LottieComponent;

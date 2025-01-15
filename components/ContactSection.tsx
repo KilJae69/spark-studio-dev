@@ -1,15 +1,9 @@
-"use client"
+"use client";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
 import { useTranslations } from "next-intl";
-// import dynamic from "next/dynamic";
-// import { Offices } from '@/components/Offices'
-
-// const LottieComponent = dynamic(
-//   () => import("@/components/shared/LottieComponent"),
-//   { loading: () => <p>Loading animation...</p>, ssr: false }
-// );
+import { LottieComponent } from "./shared/LottieComponent";
 
 export function ContactSection() {
   const t = useTranslations("ContactSection");
@@ -38,12 +32,7 @@ export function ContactSection() {
               </div>
             </div>
           </div>
-              {/* <LottieComponent
-                animationPath="/animations/globe.json"
-                autoplay={true}
-                loop={true}
-                className="mx-auto size-[300px]"
-              /> */}
+           <LottieComponent /> 
         </div>
       </FadeIn>
     </Container>
