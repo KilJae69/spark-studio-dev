@@ -1,25 +1,43 @@
 import { type Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
 import { RootLayout } from "@/components/RootLayout";
 
 import "@/styles/tailwind.css";
-import { Locale } from "@/lib/locales";
+import { Locale, locales } from "@/lib/locales";
 import { routing } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: {
-    template: "%s - Spark Studio",
-    default: "Spark Studio - Award winning developer studio based in Denmark",
-  },
-};
+
 
 type LayoutProps = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>; // params is now a Promise
 };
+
+export async function generateMetadata({
+  params,
+}: {params: Promise<{ locale: string }>}): Promise<Metadata> {
+  const { locale } = await params; 
+
+   // Validate the locale
+   if (!routing.locales.includes(locale as Locale)) {
+    notFound();
+  }
+  
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  return {
+    title: t("titleHome"),
+    description: t("descriptionHome"),
+  };
+}
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export default async function Layout({ children, params }: LayoutProps) {
   const { locale } = await params;
@@ -27,6 +45,8 @@ export default async function Layout({ children, params }: LayoutProps) {
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
   }
+   // Enable static rendering
+   setRequestLocale(locale);
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();

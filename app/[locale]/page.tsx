@@ -1,50 +1,56 @@
-
-import { type Metadata } from 'next'
-import Image from 'next/image'
+import Image, { StaticImageData } from "next/image";
 // import Link from 'next/link'
 
-import { ContactSection } from '@/components/ContactSection'
-import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { List, ListItem } from '@/components/List'
-import { SectionIntro } from '@/components/SectionIntro'
-import { StylizedImage } from '@/components/StylizedImage'
- import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
-// import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
-import logoUnseal from '@/images/clients/unseal/logo-light.svg'
-import logoPetVet from "@/images/clients/pet-vet/petvet-logo.png"
-import imageLaptop from '@/images/laptop.jpg'
-import { useTranslations } from 'next-intl'
+import { ContactSection } from "@/components/ContactSection";
+import { Container } from "@/components/Container";
+import { FadeIn, FadeInStagger } from "@/components/FadeIn";
+import { List, ListItem } from "@/components/List";
+import { SectionIntro } from "@/components/SectionIntro";
+import { StylizedImage } from "@/components/StylizedImage";
+import { Testimonial } from "@/components/Testimonial";
+
+import logoPetVet from "@/images/clients/pet-vet/petvet-logo.png";
+import imageLaptop from "@/images/laptop.jpg";
+import nextLogo from "@/images/tech/next-logo.png";
+import reactLogo from "@/images/tech/react-logo.png";
+import tailwindLogo from "@/images/tech/tailwind-logo.png";
+import laravelLogo from "@/images/tech/laravel-logo.png";
+import mySqlLogo from "@/images/tech/mysql-logo.png";
+import strapiLogo from "@/images/tech/strapi-logo.png";
+import { useTranslations } from "next-intl";
 // import MarqueeBanner from '@/components/shared/marquee-banner'
 
 // import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
-const clients = [
- // ["Pet Vet", logoPetVet],
-  ['Phobia', logoPhobiaLight],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
-]
+// const clients = [
+//   // ["Pet Vet", logoPetVet],
+//   ["Phobia", logoPhobiaLight],
+//   ["Family Fund", logoFamilyFund],
+//   ["Unseal", logoUnseal],
+//   ["Mail Smirk", logoMailSmirk],
+//   ["Home Work", logoHomeWork],
+//   ["Green Life", logoGreenLife],
+//   ["Bright Path", logoBrightPath],
+//   ["North Adventures", logoNorthAdventures],
+// ];
 
-function Clients() {
+const techs: [string, StaticImageData][] = [
+  ["NextJs", nextLogo],
+  ["React", reactLogo],
+  ["Tailwind", tailwindLogo],
+  ["Laravel", laravelLogo],
+  ["My SQL", mySqlLogo],
+  ["Strapi", strapiLogo],
+];
+
+function Techs() {
+  const t = useTranslations("HomePage");
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+            {t("techSectionTitle")}
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
@@ -53,10 +59,17 @@ function Clients() {
             role="list"
             className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
           >
-            {clients.map(([client, logo]) => (
-              <li key={client}>
+            {techs.map(([tech, logo]) => (
+              <li key={tech}>
                 <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
+                  <div className="relative w-[300px] ">
+                    <Image
+                      src={logo}
+                      alt={tech}
+                      unoptimized
+                      className="object-cover size-full"
+                    />
+                  </div>
                 </FadeIn>
               </li>
             ))}
@@ -64,7 +77,7 @@ function Clients() {
         </FadeInStagger>
       </Container>
     </div>
-  )
+  );
 }
 
 /*
@@ -129,17 +142,15 @@ function CaseStudies({
 }
 */
 function Services() {
+  const t = useTranslations("ServicesSection");
   return (
     <>
       <SectionIntro
-        eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
+        eyebrow={t("eyebrow")}
+        title={t("heading")}
         className="mt-24 sm:mt-32 lg:mt-40"
       >
-        <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
-        </p>
+        <p>{t("subheading")}</p>
       </SectionIntro>
       <Container className="mt-16">
         <div className="lg:flex lg:items-center lg:justify-end">
@@ -153,42 +164,26 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+            <ListItem title={t("webDevelopmentTitle")}>
+              {t("webDevelopment")}
             </ListItem>
-            <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title={t("applicationDevelopmentTitle")}>
+              {t("applicationDevelopment")}
             </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
-            </ListItem>
-            <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title={t("eCommerceTitle")}>{t("eCommerce")}</ListItem>
+            <ListItem title={t("customContentManagementTitle")}>
+              {t("customContentManagement")}
             </ListItem>
           </List>
         </div>
       </Container>
     </>
-  )
+  );
 }
-
-export const metadata: Metadata = {
-  description:
-    'We are a development studio working at the intersection of design and technology.',
-}
-
-
 
 export default function Home() {
-//  let caseStudies = (await loadCaseStudies()).slice(0, 3)
-const t = useTranslations('HomePage');
+  //  let caseStudies = (await loadCaseStudies()).slice(0, 3)
+  const t = useTranslations("HomePage");
   return (
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
@@ -196,33 +191,28 @@ const t = useTranslations('HomePage');
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
             {t("title")}
           </h1>
-          <p className="mt-6 text-xl text-neutral-600">
-            We are a development studio working at the intersection of design
-            and technology. It’s a really busy intersection though — a lot of
-            our staff have been involved in hit and runs.
-          </p>
+          <p className="mt-6 text-xl text-neutral-600">{t("about")}</p>
         </FadeIn>
-       
       </Container>
 
-      <Clients />
+      <Techs />
 
       {/* <CaseStudies caseStudies={caseStudies} /> */}
 
-       <Testimonial
+      <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Pet Vet', logo: logoPetVet }}
+        client={{ name: "Pet Vet", logo: logoPetVet }}
       >
         The team at Studio went above and beyond with our onboarding, even
         finding a way to access the user’s microphone without triggering one of
         those annoying permission dialogs.
-      </Testimonial> 
-{/* <MarqueeBanner text='The team at Studio went above and beyond with our onboarding, even
+      </Testimonial>
+      {/* <MarqueeBanner text='The team at Studio went above and beyond with our onboarding, even
         finding a way to access the user’s microphone without triggering one of
         those annoying permission dialogs.'/> */}
       <Services />
 
       <ContactSection />
     </>
-  )
+  );
 }

@@ -1,17 +1,128 @@
 {
-    "HomePage": {
-      "title": "Pozdrav svite!",
-      "about": "Go to the about page"
-    },
-    "Header": {
+  "Metadata": {
+    "titleHome": "Spark Studio | Nagrađivana Agencija za Web Razvoj",
+    "descriptionHome": "Dobrodošli u Spark Studio, vodeću agenciju za web razvoj koja spaja savremeni dizajn i tehnologiju za izradu prilagođenih rješenja. Otkrijte kako možemo oživjeti vašu digitalnu viziju.",
+
+    "titleOurWork": "Spark Studio | Naši Inovativni Projekti",
+    "descriptionOurWork": "Istražite portfolio Spark Studija, pun inovativnih i značajnih projekata. Pogledajte kako smo pomogli biznisima da uspiju kroz prilagođena web rješenja, dizajn i e-trgovinu.",
+
+    "titleProcess": "Spark Studio | Naš Kreativni Proces",
+    "descriptionProcess": "Saznajte više o jedinstvenom procesu Spark Studija koji garantuje uspjeh svakog projekta. Od ideje do isporuke, izrađujemo rješenja s preciznošću i kreativnošću.",
+
+    "titleContact": "Spark Studio | Kontaktirajte Nas za Vaše Sljedeće Ideje",
+    "descriptionContact": "Kontaktirajte Spark Studio kako biste razgovarali o vašim projektima. Bilo da planirate web stranicu, aplikaciju ili strategiju brendiranja, naš tim je spreman da radi s vama.",
+
+    "titleBlog": "Spark Studio | Uvidi i Trendovi Web Razvoja",
+    "descriptionBlog": "Budite u toku sa Spark Studio blogom. Pročitajte stručne uvide, savjete i trendove iz oblasti web razvoja, UI/UX dizajna i najnovijih tehnologija."
+  },
+  "HomePage": {
+    "title": "Spark Studio | Moderna Rješenja za Inovativne Biznise",
+    "about": "Osnažujemo biznise savremenim tehnologijama i elegantnim dizajnom kako bismo vaše ideje pretvorili u stvarnost.",
+    "techSectionTitle": "Samo najbolje tehnologije za Vaš biznis"
+  },
+  "ServicesSection": {
+    "eyebrow": "Usluge",
+    "heading": "Gradimo rješenja koja pokreću vaš biznis naprijed",
+    "subheading": "Naše usluge su osmišljene kako bi vam pomogle da otključate prilike, potaknete inovacije i postignete održiv rast.",
+    "webDevelopmentTitle": "Web Razvoj",
+    "webDevelopment": "Vaš biznis zaslužuje web stranicu koja se ističe. Dizajniramo vizualno privlačne i funkcionalne stranice prilagođene vašim ciljevima i publici.",
+    "applicationDevelopmentTitle": "Razvoj Aplikacija",
+    "applicationDevelopment": "Pretvorite svoje ideje u utjecajne aplikacije. Naš tim koristi moderne okvire za izgradnju korisnički prilagođenih i skalabilnih rješenja za vaše poslovne potrebe.",
+    "eCommerceTitle": "E-Trgovina",
+    "eCommerce": "Podignite svoju online trgovinu na viši nivo. Od prilagođenih dizajna do besprijekornih integracija, stvaramo iskustva e-trgovine koja povećavaju prodaju i zadovoljstvo kupaca.",
+    "customContentManagementTitle": "Prilagođeno Upravljanje Sadržajem",
+    "customContentManagement": "Jednostavno upravljajte svojim sadržajem uz rješenja prilagođena vašem poslovanju. Specijalizirani smo za izradu intuitivnih i skalabilnih sustava za upravljanje sadržajem."
+  },
+  "Header": {
     "link-our-work": "Naš Rad",
     "link-process": "Naš Proces",
     "link-blog": "Blog",
-    "link-contact-us":"Kontaktirajte nas",
+    "link-contact-us": "Kontaktirajte nas",
     "contact-button": "Kontaktirajte nas",
     "language-button": "Jezik",
     "language-option-bs": "Bosanski",
     "language-option-en": "Engleski",
     "language-option-de": "Njemački"
+  },
+  "ContactSection": {
+  "title": "Recite nam o svom projektu",
+  "buttonText": "Pozdravite",
+  "noOfficesTitle": "Mi ne radimo u kancelarijama",
+  "description": "Spark Studio je globalni tim dostupan gdje god se nalazili. Bilo da je to uz kafu u vašem omiljenom kafiću ili brzi video poziv s drugog kraja svijeta, spremni smo na saradnju.",
+  "wifiNote": "Imate Wi-Fi? Mi smo tu."
+},
+"ProcessPage": {
+    "pageIntro": {
+      "eyebrow": "Naš proces",
+      "title": "Kako vaše ideje pretvaramo u stvarnost",
+      "subtitle": "Jasni procesi. Stvarni rezultati.",
+      "description": "U Spark Studiu vjerujemo da veliki rezultati dolaze iz jasno definisanog i transparentnog procesa. Kombinovanjem saradnje, stručnosti i inovacija, vašu viziju pretvaramo u stvarnost. Naš pristup osigurava da svaki korak prilagodimo vašim poslovnim potrebama, stvarajući rješenja koja donose stvarni uticaj."
+    },
+    "discover": {
+      "title": "Otkrivanje",
+      "description": [
+        "Razumijevanje vašeg poslovanja je srž svega što radimo. U ovoj fazi fokusiramo se na potpuno razumijevanje vaših ciljeva, izazova i ciljne publike. Kroz otvorenu saradnju i detaljne razgovore osiguravamo da svaka odluka bude utemeljena na vašim jedinstvenim potrebama.",
+        "Bilo da istražujemo vašu tržišnu poziciju, analiziramo konkurenciju ili identifikujemo prilike za inovacije, ova faza postavlja temelje za stvaranje rješenja koja prave razliku. S vama radimo na definisanju prioriteta i jasnom planu za budućnost, osiguravajući usklađenost na svakom koraku.",
+        "Rezultat? Jasno razumijevanje gdje vaše poslovanje stoji danas i fokusiran plan kako ga unaprijediti."
+      ],
+      "included": {
+        "title": "Šta je uključeno u ovu fazu",
+        "items": [
+          "Intervjui s klijentima",
+          "Analiza konkurencije",
+          "Istraživanje publike",
+          "Revizije sadržaja i dizajna",
+          "Prioriteti ciljeva",
+          "Visok nivo planiranja projekata"
+        ]
+      }
+    },
+    "build": {
+      "title": "Izgradnja",
+      "description": [
+        "S jasnim planom, faza izgradnje je mjesto gdje ideje postaju stvarnost. Uzimamo uvide i strategije iz faze otkrivanja i počinjemo kreirati rješenja koja su ne samo funkcionalna već i usklađena s vašim poslovnim ciljevima. Bilo da je riječ o web stranici, aplikaciji ili prilagođenom alatu, ovdje inovacije susreću realizaciju.",
+        "Komunikacija je ključna u ovoj fazi. Posvećeni smo tome da vas redovno informišemo o napretku i prekretnicama, osiguravajući transparentnost i održavanje saradnje. Otvoreni smo za povratne informacije i kontinuirano unapređujemo, osiguravajući najbolje moguće rezultate.",
+        "Kombinovanjem modernih tehnologija, efikasnih radnih tokova i predanosti kvalitetu, osiguravamo da isporučena rješenja budu dugotrajna i prilagodljiva vašim budućim potrebama."
+      ]
+    },
+    "deliver": {
+      "title": "Isporuka",
+      "description": [
+        "Faza isporuke je trenutak kada se sve spaja. Nakon mjeseci saradnje i razvoja, fokusiramo se na osiguravanje da je vaše rješenje spremno za lansiranje. To uključuje temeljno testiranje, završne prilagodbe i pripremu za besprijekoran prijenos.",
+        "Razumijemo koliko je pouzdanost važna pri lansiranju. Zato provodimo rigorozna testiranja kako bismo osigurali da vaš proizvod funkcionira kako treba u stvarnim uslovima. Od brzine učitavanja do funkcionalnosti svake funkcije, ništa ne prepuštamo slučaju.",
+        "Nakon što je sve spremno, pružamo vam alate, obuku i dokumentaciju potrebnu za samopouzdano upravljanje vašim novim rješenjem. Čak i nakon isporuke, ostajemo dostupni za podršku, ažuriranja ili buduća poboljšanja."
+      ],
+      "included": {
+        "title": "Šta je uključeno u ovu fazu",
+        "items": [
+          {
+            "title": "Detaljno testiranje",
+            "description": "Svaka funkcija je temeljno testirana kako bi se osigurala besprijekorna isporuka, od performansi i upotrebljivosti do sigurnosti i kompatibilnosti."
+          },
+          {
+            "title": "Podrška pri lansiranju",
+            "description": "Uz vas smo na svakom koraku, pružajući pomoć kako bi vaše lansiranje prošlo bez problema i ostavilo sjajan prvi dojam."
+          },
+          {
+            "title": "Kontinuirana podrška",
+            "description": "Ne nestajemo nakon lansiranja. Bez obzira da li su u pitanju ažuriranja, održavanje ili nove funkcije, tu smo da pomognemo vašem poslovanju da raste."
+          }
+        ]
+      }
+    },
+    "values": {
+      "eyebrow": "Naše vrijednosti",
+      "title": "Naše vrijednosti nas vode u isporuci inovativnih, pouzdanih i klijentima usmjerenih rješenja.",
+      "description": "U Spark Studiu, naš rad je vođen ključnim vrijednostima koje oblikuju svaki projekt koji preuzmemo. Ovi principi osiguravaju da isporučujemo rješenja koja su ne samo učinkovita već i usklađena s vašim ciljevima i vizijom. Vjerujemo u izgradnju povjerenja kroz transparentnost, prilagodljivost izazovima i ostanak na čelu u brzo mijenjajućoj industriji.",
+      "items": [
+        { "title": "Preciznost", "description": "Pažnja prema detaljima je srž onoga što radimo. Svaki dizajn, linija koda i interakcija su izrađeni s preciznošću kako bi se pružilo besprijekorno korisničko iskustvo." },
+        { "title": "Efikasnost", "description": "Poštujemo vaše vrijeme i resurse, trudeći se da pružimo kvalitetne rezultate na vrijeme." },
+        { "title": "Prilagodljivost", "description": "Svako poslovanje ima jedinstvene potrebe, a mi se ponosimo prilagođavanjem rješenja koja rastu s vašim ciljevima." },
+        { "title": "Transparentnost", "description": "Komunikacija i povjerenje su centralni za naše partnerstvo. Održavamo vas informisanim i uključenim u svaki korak." },
+        { "title": "Odanost", "description": "Ne isporučujemo samo projekte; gradimo odnose. Naša posvećenost ne prestaje nakon isporuke." },
+        { "title": "Inovativnost", "description": "Stalno smo ispred, koristeći najnovije alate i tehnologije za isporuku kreativnih i dugotrajnih rješenja." }
+      ]
+    }
   }
-  }
+
+}

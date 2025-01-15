@@ -1,9 +1,39 @@
 {
-    "HomePage": {
-      "title": "Hallo Weiss!",
-      "about": "Go to the about page"
-    },
-    "Header": {
+  "Metadata": {
+    "titleHome": "Spark Studio | Preisgekrönte Webentwicklungsagentur",
+    "descriptionHome": "Willkommen bei Spark Studio, einer führenden Webentwicklungsagentur, die modernes Design und Technologie kombiniert, um maßgeschneiderte Lösungen zu liefern. Erfahren Sie, wie wir Ihre digitale Vision zum Leben erwecken können.",
+
+    "titleOurWork": "Spark Studio | Unser Portfolio Innovativer Projekte",
+    "descriptionOurWork": "Entdecken Sie das Portfolio von Spark Studio voller innovativer und wirkungsvoller Projekte. Erfahren Sie, wie wir Unternehmen mit maßgeschneiderten Web-, Design- und E-Commerce-Lösungen unterstützen.",
+
+    "titleProcess": "Spark Studio | Unser Kreativer Entwicklungsprozess",
+    "descriptionProcess": "Erfahren Sie mehr über den einzigartigen Prozess von Spark Studio, der den Erfolg jedes Projekts garantiert. Von der Ideenfindung bis zur Lieferung schaffen wir Lösungen mit Präzision und Kreativität.",
+
+    "titleContact": "Spark Studio | Kontaktieren Sie Uns für Ihr Nächstes Großes Projekt",
+    "descriptionContact": "Kontaktieren Sie Spark Studio, um über Ihre Projektanforderungen zu sprechen. Egal, ob Sie eine Website, eine App oder eine Branding-Strategie planen – unser Team ist bereit, mit Ihnen zusammenzuarbeiten.",
+
+    "titleBlog": "Spark Studio | Einblicke und Trends der Webentwicklung",
+    "descriptionBlog": "Bleiben Sie mit dem Blog von Spark Studio auf dem Laufenden. Lesen Sie Experteneinblicke, Tipps und Trends zu Webentwicklung, UI/UX-Design und den neuesten Technologien."
+  },
+  "HomePage": {
+    "title": "Spark Studio | Moderne Lösungen für innovative Unternehmen",
+    "about": "Wir stärken Unternehmen mit modernster Technologie und elegantem Design, um Ideen in die Realität umzusetzen.",
+    "techSectionTitle": "Nur die besten Technologien für Ihr Unternehmen"
+  },
+  "ServicesSection": {
+    "eyebrow": "Dienstleistungen",
+    "heading": "Wir entwickeln Lösungen, die Ihr Unternehmen voranbringen",
+    "subheading": "Unsere Dienstleistungen helfen Ihnen, Chancen zu nutzen, Innovationen voranzutreiben und nachhaltiges Wachstum zu erzielen.",
+    "webDevelopmentTitle": "Webentwicklung",
+    "webDevelopment": "Ihr Unternehmen verdient eine Website, die auffällt. Wir entwerfen visuell ansprechende und hochfunktionale Websites, die auf Ihre Ziele und Zielgruppe zugeschnitten sind.",
+    "applicationDevelopmentTitle": "Anwendungsentwicklung",
+    "applicationDevelopment": "Verwandeln Sie Ihre Ideen in wirkungsvolle Anwendungen. Unser Team nutzt moderne Frameworks, um benutzerfreundliche und skalierbare Lösungen für Ihre Geschäftsanforderungen zu entwickeln.",
+    "eCommerceTitle": "E-Commerce",
+    "eCommerce": "Bringen Sie Ihren Online-Shop auf das nächste Level. Von individuellen Designs bis hin zu nahtlosen Integrationen schaffen wir E-Commerce-Erlebnisse, die Verkäufe steigern und Kunden begeistern.",
+    "customContentManagementTitle": "Individuelles Content-Management",
+    "customContentManagement": "Verwalten Sie Ihre Inhalte mühelos mit Lösungen, die auf Ihre Arbeitsabläufe zugeschnitten sind. Wir sind auf den Aufbau intuitiver und skalierbarer Content-Management-Systeme spezialisiert."
+  },
+  "Header": {
     "link-our-work": "Unsere Arbeit",
     "link-process": "Unser Prozess",
     "link-blog": "Blog",
@@ -13,5 +43,103 @@
     "language-option-bs": "Bosnisch",
     "language-option-en": "Englisch",
     "language-option-de": "Deutsch"
+  },
+  "ContactSection": {
+    "title": "Erzählen Sie uns von Ihrem Projekt",
+    "buttonText": "Sagen Sie Hallo",
+    "noOfficesTitle": "Wir arbeiten nicht in Büros",
+    "description": "Spark Studio ist ein globales Team, das überall verfügbar ist. Ob bei einem Kaffee an Ihrem Lieblingsort oder einem schnellen Videoanruf vom anderen Ende der Welt – wir sind bereit, zusammenzuarbeiten.",
+    "wifiNote": "Haben Sie WLAN? Wir sind da."
+  },
+  "ProcessPage": {
+    "pageIntro": {
+      "eyebrow": "Unser Prozess",
+      "title": "Wie wir Ihre Ideen zum Leben erwecken",
+      "subtitle": "Klare Prozesse. Echte Ergebnisse.",
+      "description": "Bei Spark Studio sind wir überzeugt, dass großartige Ergebnisse aus einem klar definierten und transparenten Prozess entstehen. Durch die Kombination von Zusammenarbeit, Fachwissen und Innovation verwandeln wir Ihre Vision in die Realität. Unser Ansatz stellt sicher, dass jeder Schritt auf die Bedürfnisse Ihres Unternehmens abgestimmt ist, um Lösungen mit echtem Mehrwert zu schaffen."
+    },
+    "discover": {
+      "title": "Entdecken",
+      "description": [
+        "Das Verständnis Ihres Unternehmens steht im Mittelpunkt unseres Handelns. In dieser Phase konzentrieren wir uns darauf, Ihre Ziele, Herausforderungen und Zielgruppe wirklich zu verstehen. Durch offene Zusammenarbeit und detaillierte Gespräche stellen wir sicher, dass jede Entscheidung auf Ihre individuellen Bedürfnisse abgestimmt ist.",
+        "Ob es darum geht, Ihre Marktposition zu analysieren, Wettbewerber zu bewerten oder Chancen für Innovationen zu identifizieren – diese Phase legt den Grundstein für Lösungen, die einen Unterschied machen. Gemeinsam mit Ihnen definieren wir Prioritäten und einen klaren Fahrplan, der eine Ausrichtung in jeder Phase gewährleistet.",
+        "Das Ergebnis? Ein klares Verständnis davon, wo Ihr Unternehmen heute steht, und ein fokussierter Plan, um es dahin zu bringen, wo es sein muss."
+      ],
+      "included": {
+        "title": "In dieser Phase enthalten",
+        "items": [
+          "Kundeninterviews",
+          "Wettbewerbsanalyse",
+          "Zielgruppenforschung",
+          "Inhalts- und Designprüfungen",
+          "Zielpriorisierung",
+          "Hochrangige Projektplanung"
+        ]
+      }
+    },
+    "build": {
+      "title": "Bauen",
+      "description": [
+        "Mit einem klaren Plan ist die Build-Phase der Moment, in dem Ideen Wirklichkeit werden. Wir nutzen die Erkenntnisse und Strategien aus der Entdeckungsphase, um Lösungen zu schaffen, die nicht nur funktional, sondern auch auf Ihre Geschäftsziele abgestimmt sind. Ob es sich um eine Website, eine Anwendung oder ein benutzerdefiniertes Tool handelt – hier treffen Innovation und Umsetzung aufeinander.",
+        "Kommunikation ist in dieser Phase entscheidend. Wir halten Sie mit regelmäßigen Updates und Meilensteinen auf dem Laufenden, sorgen für Transparenz und fördern die Zusammenarbeit. Wir begrüßen Feedback und optimieren kontinuierlich, um sicherzustellen, dass wir stets das bestmögliche Ergebnis erzielen.",
+        "Durch die Kombination moderner Technologien, effizienter Workflows und unserem Engagement für Qualität stellen wir sicher, dass die von uns gelieferten Lösungen langlebig und anpassungsfähig an Ihre zukünftigen Bedürfnisse sind."
+      ]
+    },
+    "deliver": {
+      "title": "Liefern",
+      "description": [
+        "Die Lieferphase ist der Moment, in dem alles zusammenkommt. Nach Monaten der Zusammenarbeit und Entwicklung konzentrieren wir uns darauf, sicherzustellen, dass Ihre Lösung bereit für den Launch ist. Dazu gehören gründliche Tests, letzte Anpassungen und die Vorbereitung für eine nahtlose Übergabe.",
+        "Wir wissen, wie wichtig Zuverlässigkeit beim Launch ist. Deshalb führen wir umfangreiche Tests durch, um sicherzustellen, dass Ihr Produkt unter realen Bedingungen wie erwartet funktioniert. Von schnellen Ladezeiten bis zur Funktionalität jeder Taste und Funktion wird nichts dem Zufall überlassen.",
+        "Sobald alles bereit ist, stellen wir Ihnen die Werkzeuge, Schulungen und Dokumentationen zur Verfügung, die Sie benötigen, um Ihre neue Lösung sicher zu verwalten. Und auch nach der Lieferung stehen wir Ihnen für Support, Updates oder zukünftige Verbesserungen zur Verfügung."
+      ],
+      "included": {
+        "title": "In dieser Phase enthalten",
+        "items": [
+          {
+            "title": "Umfassende Tests",
+            "description": "Jede Funktion wird gründlich getestet, um einen reibungslosen Launch zu gewährleisten – von Leistung und Benutzerfreundlichkeit bis hin zu Sicherheit und Kompatibilität."
+          },
+          {
+            "title": "Launch-Support",
+            "description": "Wir begleiten Sie bei jedem Schritt und bieten Unterstützung, damit Ihr Launch reibungslos verläuft und einen großartigen ersten Eindruck hinterlässt."
+          },
+          {
+            "title": "Laufender Support",
+            "description": "Wir verschwinden nicht nach dem Launch. Egal ob Updates, Wartung oder neue Funktionen – wir sind hier, um Ihr Unternehmen beim Wachsen zu unterstützen."
+          }
+        ]
+      }
+    },
+    "values": {
+      "eyebrow": "Unsere Werte",
+      "title": "Unsere Werte leiten uns, innovative, zuverlässige und kundenorientierte Lösungen zu liefern.",
+      "description": "Bei Spark Studio wird unsere Arbeit von den Kernwerten geleitet, die jedes Projekt prägen, das wir übernehmen. Diese Prinzipien stellen sicher, dass wir Lösungen liefern, die nicht nur effektiv sind, sondern auch mit Ihren Zielen und Ihrer Vision übereinstimmen. Wir glauben an den Aufbau von Vertrauen durch Transparenz, die Anpassung an Herausforderungen und die ständige Weiterentwicklung in einer sich schnell verändernden Branche.",
+      "items": [
+        {
+          "title": "Sorgfältig",
+          "description": "Aufmerksamkeit für Details steht im Mittelpunkt dessen, was wir tun. Jedes Design, jede Codezeile und jede Interaktion wird mit Präzision erstellt, um ein nahtloses Benutzererlebnis zu gewährleisten."
+        },
+        {
+          "title": "Effizient",
+          "description": "Wir respektieren Ihre Zeit und Ressourcen und sind bestrebt, qualitativ hochwertige Ergebnisse pünktlich zu liefern."
+        },
+        {
+          "title": "Anpassungsfähig",
+          "description": "Jedes Unternehmen hat einzigartige Bedürfnisse, und wir sind stolz darauf, Lösungen anzubieten, die sich an Ihre Anforderungen anpassen und mit Ihren Zielen wachsen."
+        },
+        {
+          "title": "Transparent",
+          "description": "Kommunikation und Vertrauen stehen im Mittelpunkt unserer Partnerschaften. Wir halten Sie bei jedem Schritt informiert und eingebunden."
+        },
+        {
+          "title": "Loyal",
+          "description": "Wir liefern nicht nur Projekte, sondern bauen Beziehungen auf. Unser Engagement endet nicht mit der Lieferung."
+        },
+        {
+          "title": "Innovativ",
+          "description": "Wir bleiben immer einen Schritt voraus und nutzen die neuesten Tools und Technologien, um kreative und zukunftssichere Lösungen zu liefern."
+        }
+      ]
+    }
   }
-  }
+}
