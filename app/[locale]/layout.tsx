@@ -57,6 +57,7 @@ export default async function Layout({ children, params }: LayoutProps) {
         <NextIntlClientProvider messages={messages}>
           <RootLayout>{children}</RootLayout>
         </NextIntlClientProvider>
+        
       </body>
     </html>
   );

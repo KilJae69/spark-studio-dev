@@ -3,15 +3,29 @@ import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
 import { useTranslations } from "next-intl";
-//import { LottieComponent } from "./shared/LottieComponent";
-// import dynamic from "next/dynamic";
-
-// const LottieComponent = dynamic(() => import("@/components/shared/LottieComponent"), {
-//   ssr: false,
-// });
+import dynamic from "next/dynamic";
+import { useState, useEffect } from "react";
 
 export function ContactSection() {
   const t = useTranslations("ContactSection");
+  const [loadLottie, setLoadLottie] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 100) { // Adjust scroll threshold as needed
+        setLoadLottie(true);
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const LottieComponent = loadLottie
+    ? dynamic(() => import("@/components/shared/LottieComponent"), {
+        ssr: false,
+      })
+    : null;
+
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <FadeIn className="-mx-6 rounded-4xl bg-neutral-950 px-6 py-20 sm:mx-0 sm:py-32 md:px-12">
@@ -30,14 +44,16 @@ export function ContactSection() {
                 <h3 className="font-display text-base font-semibold text-white">
                   {t("noOfficesTitle")}
                 </h3>
-                <p className="mt-2 text-sm text-white/75">{t("description")}</p>
+                <p className="mt-2 text-sm text-white/75">
+                  {t("description")}
+                </p>
                 <div className="mt-4">
                   <p className="text-sm text-white/75">🛜{t("wifiNote")}</p>
                 </div>
               </div>
             </div>
           </div>
-          {/* <LottieComponent /> */}
+          {LottieComponent && <LottieComponent />}
         </div>
       </FadeIn>
     </Container>
