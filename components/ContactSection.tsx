@@ -3,7 +3,12 @@ import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
 import { useTranslations } from "next-intl";
-import { LottieComponent } from "./shared/LottieComponent";
+//import { LottieComponent } from "./shared/LottieComponent";
+import dynamic from "next/dynamic";
+
+const LottieComponent = dynamic(() => import("@/components/shared/LottieComponent"), {
+  ssr: false,
+});
 
 export function ContactSection() {
   const t = useTranslations("ContactSection");
@@ -32,7 +37,7 @@ export function ContactSection() {
               </div>
             </div>
           </div>
-           <LottieComponent /> 
+          <LottieComponent />
         </div>
       </FadeIn>
     </Container>
