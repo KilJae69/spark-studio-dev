@@ -39,7 +39,7 @@ export function ContactSection() {
             </div>
           </div>
               <LottieComponent
-                animationPath="globe.json"
+                animationPath="/animations/globe.json"
                 autoplay={true}
                 loop={true}
                 className="mx-auto size-[300px]"

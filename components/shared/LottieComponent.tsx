@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import LottieAnimation from "lottie-react";
+import React  from "react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 type LottieComponentProps = {
   animationPath: string;
@@ -14,22 +14,13 @@ function LottieComponent({
   animationPath,
   autoplay = true,
   loop = true,
-
   className = "",
-}:LottieComponentProps) {
-  const [animationData, setAnimationData] = useState(null);
-
-  useEffect(() => {
-    import(`../../public/animations/${animationPath}`)
-      .then((animation) => setAnimationData(animation.default))
-      .catch((error) => console.log("Failed to load animation: ", error));
-  }, [animationPath]);
-
-  if (!animationData) return null;
+}: LottieComponentProps) {
+  const animationSrc = animationPath;
 
   return (
-    <LottieAnimation
-      animationData={animationData}
+    <DotLottieReact
+      src={animationSrc}
       autoplay={autoplay}
       loop={loop}
       className={className}
