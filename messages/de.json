@@ -20,6 +20,12 @@
     "about": "Wir stärken Unternehmen mit modernster Technologie und elegantem Design, um Ideen in die Realität umzusetzen.",
     "techSectionTitle": "Nur die besten Technologien für Ihr Unternehmen"
   },
+  "NotFound": {
+    "title": "404",
+    "header": "Seite nicht gefunden",
+    "description": "Entschuldigung, wir konnten die von Ihnen gesuchte Seite nicht finden.",
+    "homeLink": "Zur Startseite"
+  },
   "ServicesSection": {
     "eyebrow": "Dienstleistungen",
     "heading": "Wir entwickeln Lösungen, die Ihr Unternehmen voranbringen",
@@ -140,6 +146,60 @@
           "description": "Wir bleiben immer einen Schritt voraus und nutzen die neuesten Tools und Technologien, um kreative und zukunftssichere Lösungen zu liefern."
         }
       ]
+    }
+  },
+  "ContactPage": {
+    "pageIntro": {
+      "eyebrow": "Kontaktieren Sie uns",
+      "title": "Lassen Sie uns zusammenarbeiten",
+      "description": "Wir freuen uns darauf, von Ihnen zu hören."
+    },
+    "form": {
+      "workInquiriesTitle": "Arbeitsanfragen",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Ihr vollständiger Name"
+        },
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "Ihre E-Mail-Adresse"
+        },
+        "company": {
+          "label": "Firma",
+          "placeholder": "Name Ihrer Firma"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "Ihre Telefonnummer"
+        },
+        "message": {
+          "label": "Nachricht",
+          "placeholder": "Ihre Nachricht"
+        }
+      },
+      "submitButton": "Lassen Sie uns zusammenarbeiten"
+    },
+    "contactDetails": {
+      "noOfficesTitle": "Wir arbeiten nicht in Büros",
+      "description": "Spark Studio ist ein globales Team, das überall verfügbar ist. Ob bei einem Kaffee an Ihrem Lieblingsort oder einem schnellen Videoanruf vom anderen Ende der Welt – wir sind bereit, zusammenzuarbeiten.",
+      "wifiNote": "Haben Sie WLAN? Wir sind da.",
+      "emailSection": {
+        "title": "Schreiben Sie uns",
+        "emails": [
+          {
+            "label": "Karriere",
+            "email": "careers@studioagency.com"
+          },
+          {
+            "label": "Presse",
+            "email": "press@studioagency.com"
+          }
+        ]
+      },
+      "socialMediaSection": {
+        "title": "Folgen Sie uns"
+      }
     }
   }
 }

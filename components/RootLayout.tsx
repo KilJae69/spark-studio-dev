@@ -2,6 +2,7 @@
 
 import {
   createContext,
+  ReactNode,
   useContext,
   useEffect,
   useId,
@@ -17,7 +18,7 @@ import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
 import { GridPattern } from "@/components/GridPattern";
 import { Logo, Logomark } from "@/components/Logo";
-import { Offices } from "@/components/Offices";
+
 import { SocialMedia } from "@/components/SocialMedia";
 import { Link, usePathname } from "@/i18n/routing";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -159,14 +160,20 @@ function Navigation() {
   );
 }
 
-function RootLayoutInner({ children }: { children: React.ReactNode }) {
+function RootLayoutInner({
+  children,
+  locale,
+}: {
+  children: React.ReactNode;
+  locale: string;
+}) {
   const panelId = useId();
   const [expanded, setExpanded] = useState(false);
   const openRef = useRef<React.ElementRef<"button">>(null);
   const closeRef = useRef<React.ElementRef<"button">>(null);
   const navRef = useRef<React.ElementRef<"div">>(null);
   const shouldReduceMotion = useReducedMotion();
-
+  const t = useTranslations("ContactSection");
   useEffect(() => {
     function onClick(event: MouseEvent) {
       if (
@@ -189,7 +196,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
       <header>
         <div
           className="absolute left-0 right-0 top-2 z-40 pt-14"
-        //  aria-hidden={expanded ? "true" : undefined}
+          //  aria-hidden={expanded ? "true" : undefined}
 
           //  inert={expanded ? "" : undefined}
         >
@@ -238,12 +245,14 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
                 <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
                   <div>
                     <h2 className="font-display text-base font-semibold text-white">
-                      Our offices
+                      {t("noOfficesTitle")}
                     </h2>
-                    <Offices
-                      invert
-                      className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
-                    />
+                    <p className="mt-2 text-sm text-white/75">
+                      {t("description")}
+                    </p>
+                    <div className="mt-4">
+                      <p className="text-sm text-white/75">🛜{t("wifiNote")}</p>
+                    </div>
                   </div>
                   <div className="sm:border-l sm:border-transparent sm:pl-16">
                     <h2 className="font-display text-base font-semibold text-white">
@@ -282,13 +291,20 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function RootLayout({ children }: { children: React.ReactNode }) {
+type Props = {
+  children: ReactNode;
+  locale: string;
+};
+
+export function RootLayout({ children, locale }: Props) {
   const pathname = usePathname();
   const [logoHovered, setLogoHovered] = useState(false);
 
   return (
     <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
-      <RootLayoutInner key={pathname}>{children}</RootLayoutInner>
+      <RootLayoutInner locale={locale} key={pathname}>
+        {children}
+      </RootLayoutInner>
     </RootLayoutContext.Provider>
   );
 }

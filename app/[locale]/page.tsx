@@ -15,8 +15,11 @@ import nextLogo from "@/images/tech/next-logo.svg";
 import reactLogo from "@/images/tech/react-logo.svg";
 import tailwindLogo from "@/images/tech/tailwind-logo.svg";
 import laravelLogo from "@/images/tech/laravel-logo.svg";
-import mySqlLogo from "@/images/tech/mysql-logo.svg";
+
 import strapiLogo from "@/images/tech/strapi-logo.svg";
+import vercelLogo from "@/images/tech/vercel-logo.svg";
+import hetznerLogo from "@/images/tech/hetzner-logo.svg";
+
 import { useTranslations } from "next-intl";
 // import MarqueeBanner from '@/components/shared/marquee-banner'
 
@@ -39,8 +42,10 @@ const techs: [string, StaticImageData][] = [
   ["React", reactLogo],
   ["Tailwind", tailwindLogo],
   ["Laravel", laravelLogo],
-  ["My SQL", mySqlLogo],
+
   ["Strapi", strapiLogo],
+  ["Vercel", vercelLogo],
+  ["Hetzner", hetznerLogo],
 ];
 
 function Techs() {
@@ -55,10 +60,10 @@ function Techs() {
             <div className="h-px flex-auto bg-neutral-800" />
           </FadeIn>
           </Container>
-      <Marquee pauseOnHover gradient gradientColor="bg-neutral-800" className="overflow-y-hidden">
+      <Marquee pauseOnClick className="overflow-y-hidden">
           <ul
             role="list"
-            className="mt-10 mx-10  flex gap-20 items-center justify-center "
+            className="mt-10 mx-10 flex gap-20 items-center justify-center "
           >
             {techs.map(([tech, logo]) => (
               <li key={tech}>
@@ -67,7 +72,7 @@ function Techs() {
                     src={logo}
                     alt={tech}
                     unoptimized
-                    className="object-contain "
+                    className="object-contain size-fill"
                     width={230} // Set the same width for all logos
                     height={90} // Adjust the height to a uniform value
                   />

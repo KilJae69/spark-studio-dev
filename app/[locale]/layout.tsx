@@ -46,7 +46,7 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default async function Layout({ children, params }: LayoutProps) {
+export default async function LocaleLayout({ children, params }: LayoutProps) {
   const { locale } = await params;
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as Locale)) {
@@ -62,7 +62,7 @@ export default async function Layout({ children, params }: LayoutProps) {
     <html lang={locale} className={`${poppins.variable} h-full bg-neutral-950 text-base antialiased`}>
       <body className="flex min-h-full flex-col">
         <NextIntlClientProvider messages={messages}>
-          <RootLayout>{children}</RootLayout>
+          <RootLayout locale={locale}>{children}</RootLayout>
         </NextIntlClientProvider>
         
       </body>

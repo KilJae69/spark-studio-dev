@@ -15,6 +15,12 @@
     "titleBlog": "Spark Studio | Uvidi i Trendovi Web Razvoja",
     "descriptionBlog": "Budite u toku sa Spark Studio blogom. Pročitajte stručne uvide, savjete i trendove iz oblasti web razvoja, UI/UX dizajna i najnovijih tehnologija."
   },
+  "NotFound": {
+    "title": "404",
+    "header": "Stranica nije pronađena",
+    "description": "Nažalost, nismo mogli pronaći stranicu koju tražite.",
+    "homeLink": "Povratak na početnu stranicu"
+  },
   "HomePage": {
     "title": "Spark Studio | Moderna Rješenja za Inovativne Biznise",
     "about": "Osnažujemo biznise savremenim tehnologijama i elegantnim dizajnom kako bismo vaše ideje pretvorili u stvarnost.",
@@ -45,13 +51,13 @@
     "language-option-de": "Njemački"
   },
   "ContactSection": {
-  "title": "Recite nam o svom projektu",
-  "buttonText": "Pozdravite",
-  "noOfficesTitle": "Mi ne radimo u kancelarijama",
-  "description": "Spark Studio je globalni tim dostupan gdje god se nalazili. Bilo da je to uz kafu u vašem omiljenom kafiću ili brzi video poziv s drugog kraja svijeta, spremni smo na saradnju.",
-  "wifiNote": "Imate Wi-Fi? Mi smo tu."
-},
-"ProcessPage": {
+    "title": "Recite nam o svom projektu",
+    "buttonText": "Pozdravite",
+    "noOfficesTitle": "Mi ne radimo u kancelarijama",
+    "description": "Spark Studio je globalni tim dostupan gdje god se nalazili. Bilo da je to uz kafu u vašem omiljenom kafiću ili brzi video poziv s drugog kraja svijeta, spremni smo na saradnju.",
+    "wifiNote": "Imate Wi-Fi? Mi smo tu."
+  },
+  "ProcessPage": {
     "pageIntro": {
       "eyebrow": "Naš proces",
       "title": "Kako vaše ideje pretvaramo u stvarnost",
@@ -115,14 +121,85 @@
       "title": "Naše vrijednosti nas vode u isporuci inovativnih, pouzdanih i klijentima usmjerenih rješenja.",
       "description": "U Spark Studiu, naš rad je vođen ključnim vrijednostima koje oblikuju svaki projekt koji preuzmemo. Ovi principi osiguravaju da isporučujemo rješenja koja su ne samo učinkovita već i usklađena s vašim ciljevima i vizijom. Vjerujemo u izgradnju povjerenja kroz transparentnost, prilagodljivost izazovima i ostanak na čelu u brzo mijenjajućoj industriji.",
       "items": [
-        { "title": "Preciznost", "description": "Pažnja prema detaljima je srž onoga što radimo. Svaki dizajn, linija koda i interakcija su izrađeni s preciznošću kako bi se pružilo besprijekorno korisničko iskustvo." },
-        { "title": "Efikasnost", "description": "Poštujemo vaše vrijeme i resurse, trudeći se da pružimo kvalitetne rezultate na vrijeme." },
-        { "title": "Prilagodljivost", "description": "Svako poslovanje ima jedinstvene potrebe, a mi se ponosimo prilagođavanjem rješenja koja rastu s vašim ciljevima." },
-        { "title": "Transparentnost", "description": "Komunikacija i povjerenje su centralni za naše partnerstvo. Održavamo vas informisanim i uključenim u svaki korak." },
-        { "title": "Odanost", "description": "Ne isporučujemo samo projekte; gradimo odnose. Naša posvećenost ne prestaje nakon isporuke." },
-        { "title": "Inovativnost", "description": "Stalno smo ispred, koristeći najnovije alate i tehnologije za isporuku kreativnih i dugotrajnih rješenja." }
+        {
+          "title": "Preciznost",
+          "description": "Pažnja prema detaljima je srž onoga što radimo. Svaki dizajn, linija koda i interakcija su izrađeni s preciznošću kako bi se pružilo besprijekorno korisničko iskustvo."
+        },
+        {
+          "title": "Efikasnost",
+          "description": "Poštujemo vaše vrijeme i resurse, trudeći se da pružimo kvalitetne rezultate na vrijeme."
+        },
+        {
+          "title": "Prilagodljivost",
+          "description": "Svako poslovanje ima jedinstvene potrebe, a mi se ponosimo prilagođavanjem rješenja koja rastu s vašim ciljevima."
+        },
+        {
+          "title": "Transparentnost",
+          "description": "Komunikacija i povjerenje su centralni za naše partnerstvo. Održavamo vas informisanim i uključenim u svaki korak."
+        },
+        {
+          "title": "Odanost",
+          "description": "Ne isporučujemo samo projekte; gradimo odnose. Naša posvećenost ne prestaje nakon isporuke."
+        },
+        {
+          "title": "Inovativnost",
+          "description": "Stalno smo ispred, koristeći najnovije alate i tehnologije za isporuku kreativnih i dugotrajnih rješenja."
+        }
       ]
     }
+  },
+  "ContactPage": {
+    "pageIntro": {
+      "eyebrow": "Kontaktirajte nas",
+      "title": "Radimo zajedno",
+      "description": "Radujemo se vašem javljanju."
+    },
+    "form": {
+      "workInquiriesTitle": "Upiti za posao",
+      "fields": {
+        "name": {
+          "label": "Ime",
+          "placeholder": "Vaše puno ime"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Vaša email adresa"
+        },
+        "company": {
+          "label": "Kompanija",
+          "placeholder": "Naziv vaše kompanije"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "Vaš broj telefona"
+        },
+        "message": {
+          "label": "Poruka",
+          "placeholder": "Vaša poruka"
+        }
+      },
+      "submitButton": "Radimo zajedno"
+    },
+    "contactDetails": {
+      "noOfficesTitle": "Mi ne radimo u kancelarijama",
+      "description": "Spark Studio je globalni tim dostupan gdje god se nalazili. Bilo da je to uz kafu u vašem omiljenom kafiću ili brzi video poziv s drugog kraja svijeta, spremni smo na saradnju.",
+      "wifiNote": "Imate Wi-Fi? Mi smo tu.",
+      "emailSection": {
+        "title": "Pišite nam",
+        "emails": [
+          {
+            "label": "Karijere",
+            "email": "careers@studioagency.com"
+          },
+          {
+            "label": "Press",
+            "email": "press@studioagency.com"
+          }
+        ]
+      },
+      "socialMediaSection": {
+        "title": "Pratite nas"
+      }
+    }
   }
-
 }
