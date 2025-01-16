@@ -293,11 +293,11 @@ function RootLayoutInner({
 
 type Props = {
   children: ReactNode;
-  locale?: string;
+ // locale?: string;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function RootLayout({ children, locale }: Props) {
+
+export function RootLayout({ children }: Props) {
   const pathname = usePathname();
   const [logoHovered, setLogoHovered] = useState(false);
 
