@@ -162,10 +162,10 @@ function Navigation() {
 
 function RootLayoutInner({
   children,
-  locale,
+  
 }: {
   children: React.ReactNode;
-  locale: string;
+ 
 }) {
   const panelId = useId();
   const [expanded, setExpanded] = useState(false);
@@ -293,16 +293,17 @@ function RootLayoutInner({
 
 type Props = {
   children: ReactNode;
-  locale: string;
+  locale?: string;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function RootLayout({ children, locale }: Props) {
   const pathname = usePathname();
   const [logoHovered, setLogoHovered] = useState(false);
 
   return (
     <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
-      <RootLayoutInner locale={locale} key={pathname}>
+      <RootLayoutInner  key={pathname}>
         {children}
       </RootLayoutInner>
     </RootLayoutContext.Provider>
