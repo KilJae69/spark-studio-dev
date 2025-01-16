@@ -1,9 +1,9 @@
 import Image, { StaticImageData } from "next/image";
 // import Link from 'next/link'
-
+import Marquee from "react-fast-marquee";
 import { ContactSection } from "@/components/ContactSection";
 import { Container } from "@/components/Container";
-import { FadeIn, FadeInStagger } from "@/components/FadeIn";
+import { FadeIn } from "@/components/FadeIn";
 import { List, ListItem } from "@/components/List";
 import { SectionIntro } from "@/components/SectionIntro";
 import { StylizedImage } from "@/components/StylizedImage";
@@ -11,12 +11,12 @@ import { Testimonial } from "@/components/Testimonial";
 
 import logoPetVet from "@/images/clients/pet-vet/petvet-logo.png";
 import imageLaptop from "@/images/laptop.jpg";
-import nextLogo from "@/images/tech/next-logo.png";
-import reactLogo from "@/images/tech/react-logo.png";
-import tailwindLogo from "@/images/tech/tailwind-logo.png";
-import laravelLogo from "@/images/tech/laravel-logo.png";
-import mySqlLogo from "@/images/tech/mysql-logo.png";
-import strapiLogo from "@/images/tech/strapi-logo.png";
+import nextLogo from "@/images/tech/next-logo.svg";
+import reactLogo from "@/images/tech/react-logo.svg";
+import tailwindLogo from "@/images/tech/tailwind-logo.svg";
+import laravelLogo from "@/images/tech/laravel-logo.svg";
+import mySqlLogo from "@/images/tech/mysql-logo.svg";
+import strapiLogo from "@/images/tech/strapi-logo.svg";
 import { useTranslations } from "next-intl";
 // import MarqueeBanner from '@/components/shared/marquee-banner'
 
@@ -47,35 +47,36 @@ function Techs() {
   const t = useTranslations("HomePage");
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
-      <Container>
-        <FadeIn className="flex items-center gap-x-8">
-          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            {t("techSectionTitle")}
-          </h2>
-          <div className="h-px flex-auto bg-neutral-800" />
-        </FadeIn>
-        <FadeInStagger faster>
+        <Container>
+          <FadeIn className="flex items-center gap-x-8">
+            <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
+              {t("techSectionTitle")}
+            </h2>
+            <div className="h-px flex-auto bg-neutral-800" />
+          </FadeIn>
+          </Container>
+      <Marquee pauseOnHover gradient gradientColor="bg-neutral-800" className="overflow-y-hidden">
           <ul
             role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+            className="mt-10 mx-10  flex gap-20 items-center justify-center "
           >
             {techs.map(([tech, logo]) => (
               <li key={tech}>
-                <FadeIn>
-                  <div className="relative w-[300px] ">
-                    <Image
-                      src={logo}
-                      alt={tech}
-                      unoptimized
-                      className="object-cover size-full"
-                    />
-                  </div>
-                </FadeIn>
+                <div className="relative flex items-center justify-center h-[120px] w-auto">
+                  <Image
+                    src={logo}
+                    alt={tech}
+                    unoptimized
+                    className="object-contain "
+                    width={230} // Set the same width for all logos
+                    height={90} // Adjust the height to a uniform value
+                  />
+                </div>
               </li>
             ))}
           </ul>
-        </FadeInStagger>
-      </Container>
+      </Marquee>
+        
     </div>
   );
 }
