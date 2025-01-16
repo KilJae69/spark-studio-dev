@@ -1,16 +1,16 @@
 import { type Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
+// import Image from 'next/image'
+// import Link from 'next/link'
 
-import { Border } from '@/components/Border'
-import { Button } from '@/components/Button'
+// import { Border } from '@/components/Border'
+// import { Button } from '@/components/Button'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
+// import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 
-import { loadArticles } from '@/lib/mdx'
-import { formatDate } from '@/lib/utils'
+// import { loadArticles } from '@/lib/mdx'
+// import { formatDate } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -32,7 +32,7 @@ export default async function Blog() {
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
         <div className="space-y-24 lg:space-y-32">
-          {articles.map((article) => (
+          {/* {articles.map((article) => (
             <FadeIn key={article.href}>
               <article>
                 <Border className="pt-16">
@@ -80,7 +80,7 @@ export default async function Blog() {
                 </Border>
               </article>
             </FadeIn>
-          ))}
+          ))} */}
         </div>
       </Container>
 
