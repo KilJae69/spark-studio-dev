@@ -2,13 +2,20 @@ import { type Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-
+import { Poppins } from "next/font/google";
 import { RootLayout } from "@/components/RootLayout";
 
 import "@/styles/tailwind.css";
 import { Locale, locales } from "@/lib/locales";
 import { routing } from "@/i18n/routing";
 
+
+const poppins = Poppins({
+  subsets: ["latin"], // Choose language subsets as needed
+  weight: ["200", "300", "400", "500", "700"], // Include only the weights you use
+  variable: "--font-poppins", // Optional CSS variable
+  preload: true, // Ensures the font is preloaded automatically
+});
 
 
 type LayoutProps = {
@@ -52,7 +59,7 @@ export default async function Layout({ children, params }: LayoutProps) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="h-full bg-neutral-950 text-base antialiased">
+    <html lang={locale} className={`${poppins.variable} h-full bg-neutral-950 text-base antialiased`}>
       <body className="flex min-h-full flex-col">
         <NextIntlClientProvider messages={messages}>
           <RootLayout>{children}</RootLayout>
