@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
-import defaultTheme from 'tailwindcss/defaultTheme'
-import animate from "tailwindcss-animate"
+import defaultTheme from "tailwindcss/defaultTheme";
+import animate from "tailwindcss-animate";
 
 export default {
   content: [
@@ -10,30 +10,38 @@ export default {
   ],
   theme: {
     fontSize: {
-      xs: ['0.75rem', { lineHeight: '1rem' }],
-      sm: ['0.875rem', { lineHeight: '1.5rem' }],
-      base: ['1rem', { lineHeight: '1.75rem' }],
-      lg: ['1.125rem', { lineHeight: '1.75rem' }],
-      xl: ['1.25rem', { lineHeight: '2rem' }],
-      '2xl': ['1.5rem', { lineHeight: '2.25rem' }],
-      '3xl': ['1.75rem', { lineHeight: '2.25rem' }],
-      '4xl': ['2rem', { lineHeight: '2.5rem' }],
-      '5xl': ['2.5rem', { lineHeight: '3rem' }],
-      '6xl': ['3rem', { lineHeight: '3.5rem' }],
-      '7xl': ['4rem', { lineHeight: '4.5rem' }],
+      xs: ["0.75rem", { lineHeight: "1rem" }],
+      sm: ["0.875rem", { lineHeight: "1.5rem" }],
+      base: ["1rem", { lineHeight: "1.75rem" }],
+      lg: ["1.125rem", { lineHeight: "1.75rem" }],
+      xl: ["1.25rem", { lineHeight: "2rem" }],
+      "2xl": ["1.5rem", { lineHeight: "2.25rem" }],
+      "3xl": ["1.75rem", { lineHeight: "2.25rem" }],
+      "4xl": ["2rem", { lineHeight: "2.5rem" }],
+      "5xl": ["2.5rem", { lineHeight: "3rem" }],
+      "6xl": ["3rem", { lineHeight: "3.5rem" }],
+      "7xl": ["4rem", { lineHeight: "4.5rem" }],
     },
     extend: {
       borderRadius: {
-        '4xl': '2.5rem',
+        "4xl": "2.5rem",
       },
       fontFamily: {
-        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+        sans: ["Poppins", ...defaultTheme.fontFamily.sans],
         display: [
-          ['Poppins', ...defaultTheme.fontFamily.sans],
+          ["Poppins", ...defaultTheme.fontFamily.sans],
           { fontVariationSettings: '"wdth" 125' },
         ],
       },
       keyframes: {
+        'star-movement-bottom': {
+           '0%': { transform: 'translate(0%, 0%)', opacity: '1' },
+           '100%': { transform: 'translate(-100%, 0%)', opacity: '0' },
+         },
+         'star-movement-top': {
+           '0%': { transform: 'translate(0%, 0%)', opacity: '1' },
+           '100%': { transform: 'translate(100%, 0%)', opacity: '0' },
+         },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -60,6 +68,9 @@ export default {
         },
       },
       animation: {
+        "star-movement-bottom":
+          "star-movement-bottom linear infinite alternate",
+        "star-movement-top": "star-movement-top linear infinite alternate",
         marquee: "marquee 50s linear infinite",
         "accordion-down": "accordion-down 0.5s ease-out",
         "accordion-up": "accordion-up 0.5s ease-out",

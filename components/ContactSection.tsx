@@ -12,7 +12,8 @@ export function ContactSection() {
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 100) { // Adjust scroll threshold as needed
+      if (window.scrollY > 100) {
+        // Adjust scroll threshold as needed
         setLoadLottie(true);
       }
     };
@@ -28,8 +29,8 @@ export function ContactSection() {
 
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-40">
-      <FadeIn className="-mx-6 rounded-4xl bg-neutral-950 px-6 py-20 sm:mx-0 sm:py-32 md:px-12">
-        <div className="mx-auto max-w-4xl flex flex-col sm:flex-row justify-between">
+      <FadeIn className="relative  overflow-hidden -mx-6 rounded-4xl bg-gradient-to-tr bg-slate-800 px-6 py-20 sm:mx-0 sm:py-32 md:px-12">
+        <div className="mx-auto max-w-4xl pb-20 flex flex-col sm:flex-row justify-between ">
           <div className="max-w-xl flex-1">
             <h2 className="font-display text-3xl font-medium text-white [text-wrap:balance] sm:text-4xl">
               {t("title")}
@@ -44,17 +45,15 @@ export function ContactSection() {
                 <h3 className="font-display text-base font-semibold text-white">
                   {t("noOfficesTitle")}
                 </h3>
-                <p className="mt-2 text-sm text-white/75">
-                  {t("description")}
-                </p>
+                <p className="mt-2 text-sm text-white/75">{t("description")}</p>
                 <div className="mt-4">
                   <p className="text-sm text-white/75">🛜{t("wifiNote")}</p>
                 </div>
               </div>
             </div>
           </div>
-          {LottieComponent && <LottieComponent />}
         </div>
+        <div className=" absolute bottom-0 translate-y-[50%] lg:translate-x-1/2 lg:right-20 lg:bottom-20 right-0 left-0">{LottieComponent && <LottieComponent />}</div>
       </FadeIn>
     </Container>
   );

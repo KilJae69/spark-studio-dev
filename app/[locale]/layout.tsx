@@ -10,6 +10,7 @@ import { Locale, locales } from "@/lib/locales";
 import { routing } from "@/i18n/routing";
 
 
+
 const poppins = Poppins({
   subsets: ["latin"], // Choose language subsets as needed
   weight: ["200", "300", "400", "500", "700"], // Include only the weights you use
@@ -59,10 +60,12 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${poppins.variable} h-full bg-neutral-950 text-base antialiased`}>
+    <html lang={locale} className={`${poppins.variable} h-full bg-slate-800 text-base antialiased`}>
       <body className="flex min-h-full flex-col">
         <NextIntlClientProvider messages={messages}>
-          <RootLayout >{children}</RootLayout>
+          <RootLayout >{children}
+          
+          </RootLayout>
         </NextIntlClientProvider>
         
       </body>

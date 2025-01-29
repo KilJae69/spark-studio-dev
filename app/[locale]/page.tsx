@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 // import Link from 'next/link'
+
 import Marquee from "react-fast-marquee";
 import { ContactSection } from "@/components/ContactSection";
 import { Container } from "@/components/Container";
@@ -8,6 +9,7 @@ import { List, ListItem } from "@/components/List";
 import { SectionIntro } from "@/components/SectionIntro";
 import { StylizedImage } from "@/components/StylizedImage";
 import { Testimonial } from "@/components/Testimonial";
+
 
 import logoPetVet from "@/images/clients/pet-vet/petvet-logo.png";
 import imageLaptop from "@/images/laptop.jpg";
@@ -51,37 +53,37 @@ const techs: [string, StaticImageData][] = [
 function Techs() {
   const t = useTranslations("HomePage");
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
-        <Container>
-          <FadeIn className="flex items-center gap-x-8">
-            <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-              {t("techSectionTitle")}
-            </h2>
-            <div className="h-px flex-auto bg-neutral-800" />
-          </FadeIn>
-          </Container>
+    <div className="mt-24 rounded-4xl bg-slate-800 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+      <Container>
+         
+        <FadeIn className="flex items-center gap-x-8">
+          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
+            {t("techSectionTitle")}
+          </h2>
+          <div className="h-px flex-auto bg-slate-600" />
+        </FadeIn>
+      </Container>
       <Marquee pauseOnClick className="overflow-y-hidden">
-          <ul
-            role="list"
-            className="mt-10 mx-10 flex gap-20 items-center justify-center "
-          >
-            {techs.map(([tech, logo]) => (
-              <li key={tech}>
-                <div className="relative flex items-center justify-center h-[120px] w-auto">
-                  <Image
-                    src={logo}
-                    alt={tech}
-                    unoptimized
-                    className="object-contain size-fill"
-                    width={230} // Set the same width for all logos
-                    height={90} // Adjust the height to a uniform value
-                  />
-                </div>
-              </li>
-            ))}
-          </ul>
+        <ul
+          role="list"
+          className="mt-10 mx-10 flex gap-20 items-center justify-center "
+        >
+          {techs.map(([tech, logo]) => (
+            <li key={tech}>
+              <div className="relative flex items-center justify-center h-[120px] w-auto">
+                <Image
+                  src={logo}
+                  alt={tech}
+                  unoptimized
+                  className="object-contain size-fill"
+                  width={230} // Set the same width for all logos
+                  height={90} // Adjust the height to a uniform value
+                />
+              </div>
+            </li>
+          ))}
+        </ul>
       </Marquee>
-        
     </div>
   );
 }
@@ -151,6 +153,7 @@ function Services() {
   const t = useTranslations("ServicesSection");
   return (
     <>
+   
       <SectionIntro
         eyebrow={t("eyebrow")}
         title={t("heading")}
@@ -194,7 +197,8 @@ export default function Home() {
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
+       
+          <h1 className="font-display text-5xl font-medium tracking-tight bg-gradient-to-tr from-yellow-500 via-yellow-200 to-yellow-500 bg-clip-text text-transparent [text-wrap:balance] sm:text-7xl">
             {t("title")}
           </h1>
           <p className="mt-6 text-xl text-neutral-600">{t("about")}</p>

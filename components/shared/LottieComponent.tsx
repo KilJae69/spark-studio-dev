@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { LottiePlayer } from "lottie-web";
 
-  const LottieComponent = () => {
+const LottieComponent = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [lottie, setLottie] = useState<LottiePlayer | null>(null);
 
@@ -24,7 +24,7 @@ import type { LottiePlayer } from "lottie-web";
     }
   }, [lottie]);
 
-  return <div className="size-[300px]" ref={ref} />;
+  return <div className="size-full" ref={ref} />;
 };
 
-export default LottieComponent
+export default LottieComponent;

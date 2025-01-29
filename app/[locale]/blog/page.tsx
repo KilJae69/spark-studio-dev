@@ -1,16 +1,16 @@
 import { type Metadata } from 'next'
-// import Image from 'next/image'
-// import Link from 'next/link'
+ import Image from 'next/image'
 
-// import { Border } from '@/components/Border'
-// import { Button } from '@/components/Button'
+ import { Border } from '@/components/Border'
+ import { Button } from '@/components/Button'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
-// import { FadeIn } from '@/components/FadeIn'
+ import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
+import { Link } from '@/i18n/routing'
+import { formatDate } from '@/lib/utils'
 
-// import { loadArticles } from '@/lib/mdx'
-// import { formatDate } from '@/lib/utils'
+
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -32,45 +32,47 @@ export default async function Blog() {
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
         <div className="space-y-24 lg:space-y-32">
-          {/* {articles.map((article) => (
-            <FadeIn key={article.href}>
+         
+            <FadeIn >
               <article>
                 <Border className="pt-16">
                   <div className="relative lg:-mx-4 lg:flex lg:justify-end">
                     <div className="pt-10 lg:w-2/3 lg:flex-none lg:px-4 lg:pt-0">
                       <h2 className="font-display text-2xl font-semibold text-neutral-950">
-                        <Link href={article.href}>{article.title}</Link>
+                        <Link href={"/"}>The Future of Web Development: Our Predictions for 2023</Link>
                       </h2>
                       <dl className="lg:absolute lg:left-0 lg:top-0 lg:w-1/3 lg:px-4">
                         <dt className="sr-only">Published</dt>
                         <dd className="absolute left-0 top-0 text-sm text-neutral-950 lg:static">
-                          <time dateTime={article.date}>
-                            {formatDate(article.date)}
+                          <time dateTime={"article.date"}>
+                            {formatDate("article.date")}
                           </time>
                         </dd>
                         <dt className="sr-only">Author</dt>
                         <dd className="mt-6 flex gap-x-4">
                           <div className="flex-none overflow-hidden rounded-xl bg-neutral-100">
                             <Image
+                            width={50}
+                            height={50}
                               alt=""
-                              {...article.author.image}
-                              className="h-12 w-12 object-cover grayscale"
+                              src={"/angela-fisher.jpg"}
+                              className="h-12 w-12 object-cover grayscale "
                             />
                           </div>
                           <div className="text-sm text-neutral-950">
                             <div className="font-semibold">
-                              {article.author.name}
+                              Adi Toromanovic
                             </div>
-                            <div>{article.author.role}</div>
+                            <div>Frontend Developer</div>
                           </div>
                         </dd>
                       </dl>
                       <p className="mt-6 max-w-2xl text-base text-neutral-600">
-                        {article.description}
+                      Let’s explore the latest trends in web development, and regurgitate some predictions we read on X for how they will shape the industry in the coming year.
                       </p>
                       <Button
-                        href={article.href}
-                        aria-label={`Read more: ${article.title}`}
+                        href={"/"}
+                        aria-label={`Read more: ${"The Future of Web Development: Our Predictions for 2023"}`}
                         className="mt-8"
                       >
                         Read more
@@ -80,7 +82,7 @@ export default async function Blog() {
                 </Border>
               </article>
             </FadeIn>
-          ))} */}
+        
         </div>
       </Container>
 
