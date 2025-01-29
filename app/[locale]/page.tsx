@@ -198,7 +198,7 @@ export default function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
        
-          <h1 className="font-display text-5xl font-medium tracking-tight bg-gradient-to-tr from-yellow-500 via-yellow-200 to-yellow-500 bg-clip-text text-transparent [text-wrap:balance] sm:text-7xl">
+          <h1 className="font-display text-5xl font-medium tracking-tight text-gradient-accent [text-wrap:balance] sm:text-7xl">
             {t("title")}
           </h1>
           <p className="mt-6 text-xl text-neutral-600">{t("about")}</p>

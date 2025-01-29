@@ -49,14 +49,14 @@ export default {
         ],
       },
       keyframes: {
-        'star-movement-bottom': {
-           '0%': { transform: 'translate(0%, 0%)', opacity: '1' },
-           '100%': { transform: 'translate(-100%, 0%)', opacity: '0' },
-         },
-         'star-movement-top': {
-           '0%': { transform: 'translate(0%, 0%)', opacity: '1' },
-           '100%': { transform: 'translate(100%, 0%)', opacity: '0' },
-         },
+        "star-movement-bottom": {
+          "0%": { transform: "translate(0%, 0%)", opacity: "1" },
+          "100%": { transform: "translate(-100%, 0%)", opacity: "0" },
+        },
+        "star-movement-top": {
+          "0%": { transform: "translate(0%, 0%)", opacity: "1" },
+          "100%": { transform: "translate(100%, 0%)", opacity: "0" },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -81,6 +81,11 @@ export default {
           "0%": { opacity: "1" },
           "100%": { opacity: "0" },
         },
+        gradient: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
       },
       animation: {
         "star-movement-bottom":
@@ -93,6 +98,7 @@ export default {
         grow: "grow 20s ease-in-out infinite",
         fadeIn: "fadeIn 2s ease-in-out forwards",
         fadeOut: "fadeOut 2s ease-in-out forwards",
+        gradient: 'gradient 8s linear infinite',
       },
     },
   },

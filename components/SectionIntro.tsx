@@ -1,7 +1,7 @@
-import clsx from 'clsx'
+import clsx from "clsx";
 
-import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
+import { Container } from "@/components/Container";
+import { FadeIn } from "@/components/FadeIn";
 
 export function SectionIntro({
   title,
@@ -12,13 +12,13 @@ export function SectionIntro({
   ...props
 }: Omit<
   React.ComponentPropsWithoutRef<typeof Container>,
-  'title' | 'children'
+  "title" | "children"
 > & {
-  title: string
-  eyebrow?: string
-  children?: React.ReactNode
-  smaller?: boolean
-  invert?: boolean
+  title: string;
+  eyebrow?: string;
+  children?: React.ReactNode;
+  smaller?: boolean;
+  invert?: boolean;
 }) {
   return (
     <Container {...props}>
@@ -28,8 +28,8 @@ export function SectionIntro({
             <>
               <span
                 className={clsx(
-                  'mb-6 block font-display text-base font-semibold',
-                  invert ? 'text-white' : 'text-neutral-950',
+                  "mb-6 block font-display text-base font-semibold",
+                  invert ? "text-white" : "text-gradient-accent"
                 )}
               >
                 {eyebrow}
@@ -39,21 +39,23 @@ export function SectionIntro({
           )}
           <span
             className={clsx(
-              'block font-display tracking-tight [text-wrap:balance]',
+              "block font-display tracking-tight [text-wrap:balance]",
               smaller
-                ? 'text-2xl font-semibold'
-                : 'text-4xl font-medium sm:text-5xl',
-              invert ? 'text-white' : 'text-neutral-950',
+                ? "text-2xl font-semibold"
+                : "text-4xl font-medium sm:text-5xl",
+              invert ? "text-white" : "text-neutral-950"
             )}
           >
-            {title}
+           
+              {title}
+           
           </span>
         </h2>
         {children && (
           <div
             className={clsx(
-              'mt-6 text-xl',
-              invert ? 'text-neutral-300' : 'text-neutral-600',
+              "mt-6 text-xl",
+              invert ? "text-neutral-300" : "text-neutral-600"
             )}
           >
             {children}
@@ -61,5 +63,5 @@ export function SectionIntro({
         )}
       </FadeIn>
     </Container>
-  )
+  );
 }
