@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 import animate from "tailwindcss-animate";
+import colors from "tailwindcss/colors";
 
 export default {
   content: [
@@ -23,6 +24,20 @@ export default {
       "7xl": ["4rem", { lineHeight: "4.5rem" }],
     },
     extend: {
+      colors: {
+        primary: {
+          50: colors.slate[50],
+          100: colors.slate[100],
+          200: colors.slate[200],
+          300: colors.slate[300],
+          400: colors.slate[400],
+          500: colors.slate[500],
+          600: colors.slate[600],
+          700: colors.slate[700],
+          800: colors.slate[800], // Default primary shade
+          900: colors.slate[900],
+        },
+      },
       borderRadius: {
         "4xl": "2.5rem",
       },

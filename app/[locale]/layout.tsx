@@ -60,7 +60,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${poppins.variable} h-full bg-slate-800 text-base antialiased`}>
+    <html lang={locale} className={`${poppins.variable} h-full bg-primary-800 text-base antialiased`}>
       <body className="flex min-h-full flex-col">
         <NextIntlClientProvider messages={messages}>
           <RootLayout >{children}

@@ -29,7 +29,7 @@ export function ContactSection() {
 
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-40">
-      <FadeIn className="relative  overflow-hidden -mx-6 rounded-4xl bg-gradient-to-tr bg-slate-800 px-6 py-20 sm:mx-0 sm:py-32 md:px-12">
+      <FadeIn className="relative  overflow-hidden -mx-6 rounded-4xl bg-gradient-to-tr bg-primary-800 px-6 py-20 sm:mx-0 sm:py-32 md:px-12">
         <div className="mx-auto max-w-4xl pb-20 flex flex-col sm:flex-row justify-between ">
           <div className="max-w-xl flex-1">
             <h2 className="font-display text-3xl font-medium text-white [text-wrap:balance] sm:text-4xl">
