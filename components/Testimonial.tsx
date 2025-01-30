@@ -17,12 +17,12 @@ export function Testimonial({
   return (
     <div
       className={clsx(
-        'relative isolate bg-neutral-50 py-16 sm:py-28 md:py-32',
+        'relative isolate bg-slate-50 py-16 sm:py-28 md:py-32',
         className,
       )}
     >
       <GridPattern
-        className="absolute inset-0 -z-10 h-full w-full fill-neutral-100 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_50%,transparent_60%)]"
+        className="absolute inset-0 -z-10 h-full w-full fill-yellow-50 stroke-yellow-500/10 [mask-image:linear-gradient(to_bottom_left,white_50%,transparent_60%)]"
         yOffset={-256}
       />
       <Container>

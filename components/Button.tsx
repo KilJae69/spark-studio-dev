@@ -21,7 +21,7 @@ export function Button({
     'inline-flex px-6 py-3 text-sm font-semibold transition glow-effect border-0 rounded-[0.75rem]',
     invert
       ? 'bg-white text-primary-800 hover:bg-primary-200'
-      : ' bg-gradient-to-tr from-yellow-500 via-yellow-200 to-yellow-500 text-white ',
+      : ' bg-gradient-accent text-white ',
   )
 
   useEffect(() => {

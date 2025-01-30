@@ -23,6 +23,7 @@ import hetznerLogo from "@/images/tech/hetzner-logo.svg";
 
 import { useTranslations } from "next-intl";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 // import MarqueeBanner from '@/components/shared/marquee-banner'
 
 // import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
@@ -69,14 +70,13 @@ function Techs() {
         >
           {techs.map(([tech, logo]) => (
             <li key={tech}>
-              <div className="relative flex items-center justify-center h-[120px] w-auto">
+              <div className="relative flex items-center justify-center h-[120px] w-[230px]">
                 <Image
                   src={logo}
                   alt={tech}
                   unoptimized
-                  className="object-contain size-fill"
-                  width={230} // Set the same width for all logos
-                  height={90} // Adjust the height to a uniform value
+                  className="object-contain"
+                  fill
                 />
               </div>
             </li>
@@ -194,12 +194,15 @@ export default function Home() {
   return (
     <>
       <BackgroundBeamsWithCollision>
-        <Container className="mt-24 pb-24 sm:pb-32 sm:py-32 lg:pb-56">
-          <FadeIn className="max-w-3xl">
-            <h1 className="font-display text-5xl font-medium tracking-tight text-gradient-accent [text-wrap:balance] sm:text-7xl">
-              {t("title")}
-            </h1>
-            <p className="mt-6 text-xl text-neutral-600">{t("about")}</p>
+        <Container className="mt-24 pb-24 sm:py-32 lg:pb-56 ">
+          <FadeIn className="flex flex-col items-start justify-start max-w-7xl">
+            <div className="">
+              <h1 className="font-display text-5xl font-medium tracking-tight text-gradient-accent [text-wrap:balance] sm:text-7xl">
+                {t("title")}
+              </h1>
+              <TextGenerateEffect className="max-w-3xl" words={t("about")} />
+              
+            </div>
           </FadeIn>
         </Container>
       </BackgroundBeamsWithCollision>

@@ -85,14 +85,13 @@ function Discover({ t }: { t: (key: string) => string }) {
   return (
     <Section title={t("discover.title")} image={{ src: imageWhiteboard }}>
       <div className="space-y-6 text-base text-neutral-600">
-      <p>{t("discover.description.0")}</p>
-      <p>{t("discover.description.1")}</p>
-      <p>{t("discover.description.2")}</p>
-     
+        <p>{t("discover.description.0")}</p>
+        <p>{t("discover.description.1")}</p>
+        <p>{t("discover.description.2")}</p>
       </div>
 
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-      {t("discover.included.title")}
+        {t("discover.included.title")}
       </h3>
       <TagList className="mt-4">
         <TagListItem>{t("discover.included.items.0")}</TagListItem>
@@ -110,7 +109,7 @@ function Build({ t }: { t: (key: string) => string }) {
   return (
     <Section title={t("build.title")} image={{ src: imageLaptop, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
-      <p>{t("build.description.0")}</p>
+        <p>{t("build.description.0")}</p>
         <p>{t("build.description.1")}</p>
         <p>{t("build.description.2")}</p>
       </div>
@@ -130,23 +129,23 @@ function Deliver({ t }: { t: (key: string) => string }) {
   return (
     <Section title={t("deliver.title")} image={{ src: imageMeeting, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
-      <p>{t("deliver.description.0")}</p>
+        <p>{t("deliver.description.0")}</p>
         <p>{t("deliver.description.1")}</p>
         <p>{t("deliver.description.2")}</p>
       </div>
 
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-      {t("deliver.included.title")}
+        {t("deliver.included.title")}
       </h3>
       <List className="mt-8">
         <ListItem title={t("deliver.included.items.0.title")}>
-        {t("deliver.included.items.0.description")}
+          {t("deliver.included.items.0.description")}
         </ListItem>
         <ListItem title={t("deliver.included.items.1.title")}>
-        {t("deliver.included.items.1.description")}
+          {t("deliver.included.items.1.description")}
         </ListItem>
         <ListItem title={t("deliver.included.items.2.title")}>
-        {t("deliver.included.items.2.description")}
+          {t("deliver.included.items.2.description")}
         </ListItem>
       </List>
     </Section>
@@ -163,34 +162,29 @@ function Values({ t }: { t: (key: string) => string }) {
         />
       </div>
 
-      <SectionIntro
-        eyebrow={t("values.eyebrow")}
-        title={t("values.title")}
-      >
-        <p>
-        {t("values.description")}
-        </p>
+      <SectionIntro eyebrow={t("values.eyebrow")} title={t("values.title")}>
+        <p>{t("values.description")}</p>
       </SectionIntro>
 
       <Container className="mt-24">
         <GridList>
           <GridListItem title={t("values.items.0.title")}>
-          {t("values.items.0.description")}
+            {t("values.items.0.description")}
           </GridListItem>
           <GridListItem title={t("values.items.1.title")}>
-          {t("values.items.1.description")}
+            {t("values.items.1.description")}
           </GridListItem>
           <GridListItem title={t("values.items.2.title")}>
-          {t("values.items.2.description")}
+            {t("values.items.2.description")}
           </GridListItem>
           <GridListItem title={t("values.items.3.title")}>
-          {t("values.items.3.description")}
+            {t("values.items.3.description")}
           </GridListItem>
           <GridListItem title={t("values.items.4.title")}>
-          {t("values.items.4.description")}
+            {t("values.items.4.description")}
           </GridListItem>
           <GridListItem title={t("values.items.5.title")}>
-          {t("values.items.5.description")}
+            {t("values.items.5.description")}
           </GridListItem>
         </GridList>
       </Container>
@@ -198,9 +192,12 @@ function Values({ t }: { t: (key: string) => string }) {
   );
 }
 
-
-export default async function Process({ params }: {  params: Promise<{ locale: string }> }) {
-  const { locale } =await params;
+export default async function Process({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
 
   if (!locales.includes(locale as Locale)) {
     notFound();
@@ -210,18 +207,18 @@ export default async function Process({ params }: {  params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: "ProcessPage" });
   return (
     <>
-      <PageIntro eyebrow={t("pageIntro.eyebrow")} title={t("pageIntro.title")}>
-       
-        <p>{t("pageIntro.description")}</p>
+      <PageIntro  eyebrow={t("pageIntro.eyebrow")} title={t("pageIntro.title")}>
+      
+          <p>{t("pageIntro.description")}</p>
       </PageIntro>
 
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
-        <Discover t={t}/>
-        <Build t={t}/>
-        <Deliver t={t}/>
+        <Discover t={t} />
+        <Build t={t} />
+        <Deliver t={t} />
       </div>
 
-      <Values t={t}/>
+      <Values t={t} />
 
       <ContactSection />
     </>
