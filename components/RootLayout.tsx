@@ -24,6 +24,8 @@ import { Link, usePathname } from "@/i18n/routing";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useTranslations } from "next-intl";
 
+
+
 const RootLayoutContext = createContext<{
   logoHovered: boolean;
   setLogoHovered: React.Dispatch<React.SetStateAction<boolean>>;
@@ -85,7 +87,8 @@ function Header({
           />
         </Link>
         <div className="flex items-center whitespace-nowrap gap-x-8">
-          <Button href="/contact" invert={invert}>
+         
+          <Button className="hidden sm:block" href="/contact" invert={invert}>
             {t("contact-button")}
           </Button>
           <LanguageSwitcher />
