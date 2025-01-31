@@ -108,7 +108,7 @@ export const ModalBody = ({
             opacity: 0,
             backdropFilter: "blur(0px)",
           }}
-          className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full flex items-center justify-center z-50"
+          className="fixed [perspective:800px] [transform-style:preserve-3d] z-[2000] inset-0 h-full w-full flex items-center justify-center"
         >
           <Overlay />
 
@@ -119,29 +119,28 @@ export const ModalBody = ({
               className
             )}
             initial={{
-              opacity: 0,
-              scale: 0.5,
-              rotateX: 40,
-              y: 40,
+              opacity: 1,
+              y: "-100%", // Start from the top
             }}
             animate={{
               opacity: 1,
-              scale: 1,
-              rotateX: 0,
-              y: 0,
+              y: 0, // Slide down to the center
+              transition: {
+                type: "spring",
+                stiffness: 300, // Adjust stiffness for bounce
+                damping: 20, // Adjust damping for bounce
+              },
             }}
             exit={{
-              opacity: 0,
-              scale: 0.8,
-              rotateX: 10,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 260,
-              damping: 15,
+              opacity: 1,
+              y: "-100%", // Slide back up
+              transition: {
+                type: "spring",
+                stiffness: 100,
+                damping: 20,
+              },
             }}
           >
-            <CloseIcon />
             {children}
           </motion.div>
         </motion.div>
@@ -159,7 +158,7 @@ export const ModalContent = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("flex flex-col flex-1 p-8 md:p-10", className)}>
+    <div className={cn("flex flex-col flex-1", className)}>
       {children}
     </div>
   );
@@ -203,32 +202,7 @@ const Overlay = ({ className }: { className?: string }) => {
   );
 };
 
-const CloseIcon = () => {
-  const { setOpen } = useModal();
-  return (
-    <button
-      onClick={() => setOpen(false)}
-      className="absolute top-4 right-4 group"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="text-black dark:text-white h-4 w-4 group-hover:scale-125 group-hover:rotate-3 transition duration-200"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M18 6l-12 12" />
-        <path d="M6 6l12 12" />
-      </svg>
-    </button>
-  );
-};
+
 
 // Hook to detect clicks outside of a component.
 export const useOutsideClick = (
