@@ -69,6 +69,11 @@ export const ModalBody = ({
   className?: string;
 }) => {
   const { open } = useModal();
+  const [isClient, setIsClient] = useState(false); // Track if the code is running on the client
+
+  useEffect(() => {
+    setIsClient(true); // Set isClient to true when the component mounts (client-side)
+  }, []);
 
   useEffect(() => {
     if (open) {
@@ -82,6 +87,8 @@ export const ModalBody = ({
 
   const { setOpen } = useModal();
   useOutsideClick(modalRef, () => setOpen(false));
+
+  if (!isClient) return null; // Don't render anything on the server
 
   const modalRoot = document.getElementById("modal-root");
   if (!modalRoot) return null;
@@ -101,14 +108,14 @@ export const ModalBody = ({
             opacity: 0,
             backdropFilter: "blur(0px)",
           }}
-          className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full flex items-center justify-center z-[1000]"
+          className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full flex items-center justify-center z-50"
         >
           <Overlay />
 
           <motion.div
             ref={modalRef}
             className={cn(
-              "bg-primary-800 dark:bg-neutral-950 border border-transparent dark:border-neutral-800 relative z-50 flex flex-col flex-1 overflow-hidden",
+              "bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 relative z-50 flex flex-col flex-1 overflow-hidden",
               className
             )}
             initial={{
