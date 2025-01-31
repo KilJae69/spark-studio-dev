@@ -4,7 +4,7 @@ import Image, { StaticImageData } from "next/image";
 import Marquee from "react-fast-marquee";
 import { ContactSection } from "@/components/ContactSection";
 import { Container } from "@/components/Container";
-import { FadeIn } from "@/components/FadeIn";
+import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import { List, ListItem } from "@/components/List";
 import { SectionIntro } from "@/components/SectionIntro";
 import { StylizedImage } from "@/components/StylizedImage";
@@ -24,6 +24,9 @@ import hetznerLogo from "@/images/tech/hetzner-logo.svg";
 import { useTranslations } from "next-intl";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { ColourfulText } from "@/components/ui/colourful-text";
+import { caseStudies, CaseStudyType } from "@/constants/data";
+import { Link } from "@/i18n/routing";
 // import MarqueeBanner from '@/components/shared/marquee-banner'
 
 // import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
@@ -87,11 +90,11 @@ function Techs() {
   );
 }
 
-/*
+
 function CaseStudies({
   caseStudies,
 }: {
-  caseStudies: Array<MDXEntry<CaseStudy>>
+  caseStudies: CaseStudyType[]
 }) {
   return (
     <>
@@ -147,7 +150,7 @@ function CaseStudies({
     </>
   )
 }
-*/
+
 function Services() {
   const t = useTranslations("ServicesSection");
   return (
@@ -197,8 +200,10 @@ export default function Home() {
         <Container className="mt-24 pb-24 sm:py-32 lg:pb-56 ">
           <FadeIn className="flex flex-col items-start justify-start max-w-7xl">
             <div className="">
-              <h1 className="font-display text-5xl font-medium tracking-tight text-gradient-accent [text-wrap:balance] sm:text-7xl">
-                {t("title")}
+              <h1 className="font-display text-5xl font-bold tracking-tight text-gradient-accent [text-wrap:balance] sm:text-7xl">
+               
+                <ColourfulText text={t("title")} /> <br />
+                <span className="">{t("subtitle")}</span>
               </h1>
               <TextGenerateEffect className="max-w-3xl" words={t("about")} />
               
@@ -209,7 +214,7 @@ export default function Home() {
 
       <Techs />
 
-      {/* <CaseStudies caseStudies={caseStudies} /> */}
+       <CaseStudies caseStudies={caseStudies} />
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"

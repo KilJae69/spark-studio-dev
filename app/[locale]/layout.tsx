@@ -1,15 +1,18 @@
 import { type Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Poppins } from "next/font/google";
-import { RootLayout } from "@/components/RootLayout";
 
 import "@/styles/tailwind.css";
 import { Locale, locales } from "@/lib/locales";
 import { routing } from "@/i18n/routing";
 
-
+import InnerLayout from "@/components/InnerLayout";
 
 const poppins = Poppins({
   subsets: ["latin"], // Choose language subsets as needed
@@ -18,7 +21,6 @@ const poppins = Poppins({
   preload: true, // Ensures the font is preloaded automatically
 });
 
-
 type LayoutProps = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>; // params is now a Promise
@@ -26,14 +28,16 @@ type LayoutProps = {
 
 export async function generateMetadata({
   params,
-}: {params: Promise<{ locale: string }>}): Promise<Metadata> {
-  const { locale } = await params; 
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
 
-   // Validate the locale
-   if (!routing.locales.includes(locale as Locale)) {
+  // Validate the locale
+  if (!routing.locales.includes(locale as Locale)) {
     notFound();
   }
-  
+
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Metadata" });
 
@@ -53,21 +57,22 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
   }
-   // Enable static rendering
-   setRequestLocale(locale);
+  // Enable static rendering
+  setRequestLocale(locale);
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${poppins.variable} h-full bg-primary-800 text-base antialiased`}>
+    <html
+      lang={locale}
+      className={`${poppins.variable} h-full bg-primary-800 text-base antialiased`}
+    >
       <body className="flex min-h-full flex-col">
         <NextIntlClientProvider messages={messages}>
-          <RootLayout >{children}
-          
-          </RootLayout>
+          <InnerLayout>{children}</InnerLayout>
+          <div id="modal-root"></div>
         </NextIntlClientProvider>
-        
       </body>
     </html>
   );

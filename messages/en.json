@@ -1,6 +1,7 @@
 {
   "Metadata": {
     "titleHome": "Spark Studio | Award-Winning Web Development Agency",
+    
     "descriptionHome": "Welcome to Spark Studio, a leading web development agency combining cutting-edge design and technology to deliver bespoke solutions. Discover how we can bring your digital vision to life.",
 
     "titleOurWork": "Spark Studio | Portfolio of Innovative Projects",
@@ -22,7 +23,8 @@
     "homeLink": "Go to the home page"
   },
   "HomePage": {
-    "title": "Spark Studio | Modern Solutions for Innovative Businesses",
+    "title": "Spark Studio",
+    "subtitle":"Modern Solutions for Innovative Businesses",
     "about": "Empowering businesses with cutting-edge technology and sleek design to transform ideas into reality.",
     "techSectionTitle": "Only the best technologies for your bussiness"
   },

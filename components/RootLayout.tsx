@@ -11,7 +11,7 @@ import {
 } from "react";
 
 import clsx from "clsx";
-import { motion, MotionConfig, useReducedMotion } from "framer-motion";
+import {  MotionConfig, useReducedMotion } from "framer-motion";
 
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
@@ -23,6 +23,7 @@ import { SocialMedia } from "@/components/SocialMedia";
 import { Link, usePathname } from "@/i18n/routing";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useTranslations } from "next-intl";
+import { AnimatedModalDemo } from "./shared/AnimatedModalHeader";
 
 
 
@@ -67,7 +68,7 @@ function Header({
   const t = useTranslations("Header");
 
   return (
-    <Container>
+    <Container className="">
       <div className="flex items-center justify-between">
         <Link
           href="/"
@@ -113,6 +114,7 @@ function Header({
               )}
             />
           </button>
+          <AnimatedModalDemo/>
         </div>
       </div>
     </Container>
@@ -212,16 +214,16 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           />
         </div>
 
-        <motion.div
-          layout
+        <div
+          
           id={panelId}
           style={{ height: expanded ? "auto" : "0.5rem" }}
-          className="relative z-50 overflow-hidden bg-primary-800 pt-2"
+          className="relative z-50 overflow-hidden bg-primary-800"
           aria-hidden={expanded ? undefined : "true"}
 
           //  inert={expanded ? undefined : ''}
         >
-          <motion.div layout className="bg-primary-600">
+          <div  className="bg-primary-600">
             <div ref={navRef} className="bg-primary-800 pb-16 pt-14">
               <Header
                 invert
@@ -261,17 +263,17 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
                 </div>
               </Container>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </header>
 
-      <motion.div
-        layout
+      <div
+        
         style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
         className="relative flex flex-auto overflow-hidden bg-white pt-14"
       >
-        <motion.div
-          layout
+        <div
+          
           className="relative isolate flex w-full flex-col pt-9"
         >
           <GridPattern
@@ -283,8 +285,8 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           <main className="w-full flex-auto">{children}</main>
 
           <Footer />
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </MotionConfig>
   );
 }

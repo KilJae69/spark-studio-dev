@@ -1,6 +1,6 @@
 {
   "Metadata": {
-    "titleHome": "Spark Studio | Preisgekrönte Webentwicklungsagentur",
+    "titleHome": "Spark Studio",
     "descriptionHome": "Willkommen bei Spark Studio, einer führenden Webentwicklungsagentur, die modernes Design und Technologie kombiniert, um maßgeschneiderte Lösungen zu liefern. Erfahren Sie, wie wir Ihre digitale Vision zum Leben erwecken können.",
 
     "titleOurWork": "Spark Studio | Unser Portfolio Innovativer Projekte",
@@ -16,7 +16,8 @@
     "descriptionBlog": "Bleiben Sie mit dem Blog von Spark Studio auf dem Laufenden. Lesen Sie Experteneinblicke, Tipps und Trends zu Webentwicklung, UI/UX-Design und den neuesten Technologien."
   },
   "HomePage": {
-    "title": "Spark Studio | Moderne Lösungen für innovative Unternehmen",
+    "title": "Spark Studio",
+    "subtitle":"Moderne Lösungen für innovative Unternehmen",
     "about": "Wir stärken Unternehmen mit modernster Technologie und elegantem Design, um Ideen in die Realität umzusetzen.",
     "techSectionTitle": "Nur die besten Technologien für Ihr Unternehmen"
   },
