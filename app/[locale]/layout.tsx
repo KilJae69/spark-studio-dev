@@ -71,7 +71,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
       <body className="flex min-h-full flex-col">
         <NextIntlClientProvider messages={messages}>
           <InnerLayout>{children}</InnerLayout>
-          <div id="modal-root"></div>
+          
         </NextIntlClientProvider>
       </body>
     </html>

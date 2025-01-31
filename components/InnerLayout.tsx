@@ -10,19 +10,21 @@ import { Logo, Logomark } from "./Logo";
 import { Button } from "./Button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
-import { AnimatedModalDemo } from "./shared/AnimatedModalHeader";
 
+
+import { AnimatedModalHeader } from "./shared/AnimatedModalHeader";
 
 type InnerLayoutProps = {
   children: ReactNode;
 };
 
 function Header() {
+ 
   const t = useTranslations("Header");
 
   return (
-    <Container className="fixed w-full mx-auto z-[1000]">
-      <div className="flex items-center justify-between">
+    <Container className="fixed w-full left-1/2 -translate-x-1/2  z-[1000]">
+      <div className="flex items-center justify-between p-3 ">
         <Link
           href="/"
           aria-label="Home"
@@ -45,11 +47,12 @@ function Header() {
             {t("contact-button")}
           </Button>
           <LanguageSwitcher />
+
           
-          <AnimatedModalDemo />
-         
+       <AnimatedModalHeader/>
         </div>
       </div>
+       {/* Render the CustomModal component */}
     </Container>
   );
 }
@@ -71,6 +74,7 @@ export default function InnerLayout({ children }: InnerLayoutProps) {
           <Footer />
         </div>
       </div>
+      <div id="modal-root"></div>
     </>
   );
 }
