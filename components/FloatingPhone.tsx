@@ -1,8 +1,9 @@
 "use client"
 import { m } from "framer-motion";
 import { FiBatteryCharging, FiWifi } from "react-icons/fi";
-import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+
 import { Link } from "@/i18n/routing";
+import Image from "next/image";
 
 const Phone3D = () => {
   return (
@@ -56,26 +57,15 @@ const HeaderBar = () => {
 };
 
 const Screen = () => {
-    const words = [
-        {
-          text: "Build",
-        },
-        {
-          text: "awesome",
-        },
-        {
-          text: "apps",
-        },
-       
-      ];
+   
   return (
     <div className="relative z-0 grid h-full w-full place-content-center overflow-hidden rounded-[20px] bg-white">
       {/* Example logo from logoispum */}
-      <TypewriterEffectSmooth className=" text-xs" words={words} />
+      <Image className="absolute top-5 left-1 right-0" src={"/mobile-view-spark.png"} alt="spark mobile view" width={200} height={200}/>
       
       
 
-      <Link href="/contact" className="absolute text-center bottom-4 left-4 right-4 z-10 rounded-lg border-[1px] bg-white py-2 text-sm font-medium text-primary-accent backdrop-blur hover:scale-110 transition">
+      <Link href="/contact" className="absolute text-center shadow-lg bottom-4 left-4 right-4 z-10 rounded-lg border-[1px] bg-white py-2 text-sm font-medium text-primary-accent backdrop-blur hover:scale-110 transition">
         Get Started
       </Link>
       
