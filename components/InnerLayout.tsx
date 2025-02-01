@@ -55,8 +55,8 @@ function Header() {
     >
       <Container className="fixed w-full left-1/2 -translate-x-1/2  z-[1000]">
         <div
-          className={`flex items-center justify-between p-3 transition-all duration-300 ${
-            headerState === "top" ? "py-6" : "py-3"
+          className={`flex relative items-center justify-between p-3 transition-all duration-300 ${
+            headerState === "top" ? "py-6 px-0 top-0 border-none rounded-none" : "py-3 top-2 border border-white border-opacity-40 bg-primary-800/90  shadow-lg backdrop-filter shadow-black/[0.3] backdrop-blur-xl rounded-full px-10"
           }`}
         >
           <Link href="/" aria-label="Home">

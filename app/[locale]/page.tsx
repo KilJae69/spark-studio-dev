@@ -8,9 +8,7 @@ import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import { List, ListItem } from "@/components/List";
 import { SectionIntro } from "@/components/SectionIntro";
 import { StylizedImage } from "@/components/StylizedImage";
-import { Testimonial } from "@/components/Testimonial";
 
-import logoPetVet from "@/images/clients/pet-vet/petvet-logo.png";
 import imageLaptop from "@/images/laptop.jpg";
 import nextLogo from "@/images/tech/next-logo.svg";
 import reactLogo from "@/images/tech/react-logo.svg";
@@ -27,6 +25,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { ColourfulText } from "@/components/ui/colourful-text";
 import { caseStudies, CaseStudyType } from "@/constants/data";
 import { Link } from "@/i18n/routing";
+// import MarqueeBanner from "@/components/shared/marquee-banner";
 
 // import MarqueeBanner from '@/components/shared/marquee-banner'
 
@@ -215,18 +214,15 @@ export default function Home() {
       </FadeIn>
       <Services />
 
-      <Testimonial
+      {/* <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: "Pet Vet", logo: logoPetVet }}
       >
         The team at Studio went above and beyond with our onboarding, even
         finding a way to access the user’s microphone without triggering one of
         those annoying permission dialogs.
-      </Testimonial>
-      {/* <MarqueeBanner text='The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.'/> */}
-
+      </Testimonial> */}
+      
       <CaseStudies caseStudies={caseStudies} />
       <ContactSection />
     </>
