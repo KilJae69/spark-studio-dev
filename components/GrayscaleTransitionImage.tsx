@@ -3,14 +3,14 @@
 import { useRef } from "react";
 import Image, { type ImageProps } from "next/image";
 import {
-  motion,
+  m,
   
   useMotionTemplate,
   useScroll,
   useTransform,
 } from "framer-motion";
 
-const MotionImage = motion.create(Image);
+const MotionImage = m.create(Image);
 
 export function GrayscaleTransitionImage(
   props: Pick<

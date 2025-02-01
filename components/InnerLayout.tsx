@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import { Footer } from "./Footer";
 import { GridPattern } from "./GridPattern";
 import { useTranslations } from "next-intl";
@@ -9,7 +9,7 @@ import { Link } from "@/i18n/routing";
 import { Logo, Logomark } from "./Logo";
 import { Button } from "./Button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-// import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+ import { m, useScroll, useMotionValueEvent } from "framer-motion";
 
 
 import { AnimatedModalHeader } from "./shared/AnimatedModalHeader";
@@ -19,7 +19,7 @@ type InnerLayoutProps = {
 };
 
 
-/*
+
 function Header() {
   const [isVisible, setIsVisible] = useState(true);
   const { scrollY } = useScroll();
@@ -35,7 +35,7 @@ function Header() {
   });
 
   return (
-    <motion.header
+    <m.header
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: isVisible ? 0 : -100, opacity: isVisible ? 1 : 0 }}
       transition={{ type: "spring", stiffness: 100, damping: 20 }}
@@ -73,11 +73,11 @@ function Header() {
       </div>
      
     </Container>
-    </motion.header>
+    </m.header>
   );
 }
-*/
 
+/*
 function Header() {
  
   const t = useTranslations("Header");
@@ -112,10 +112,11 @@ function Header() {
        <AnimatedModalHeader/>
         </div>
       </div>
-       {/* Render the CustomModal component */}
+
     </Container>
   );
 }
+*/
 export default function InnerLayout({ children }: InnerLayoutProps) {
   return (
     <>

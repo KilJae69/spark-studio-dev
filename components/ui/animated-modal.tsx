@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import React, {
   ReactNode,
   createContext,
@@ -128,7 +128,7 @@ export const ModalBody = ({
   return ReactDOM.createPortal(
     <AnimatePresence>
       {open && (
-        <motion.div
+        <m.div
           initial={{
             x: "100%",
           }}
@@ -143,7 +143,7 @@ export const ModalBody = ({
           
           className="fixed shadow-xl top-2 right-2 bottom-2 overflow-hidden [perspective:800px] [transform-style:preserve-3d] z-[2000] rounded-3xl  max-w-[500px] flex items-center justify-center"
         >
-          <motion.div
+          <m.div
             ref={modalRef}
             className={cn(
               " dark:bg-neutral-950 border border-transparent dark:border-neutral-800 relative z-50 flex flex-col flex-1 overflow-hidden",
@@ -166,8 +166,8 @@ export const ModalBody = ({
             
           >
             {children}
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       )}
     </AnimatePresence>,
     modalRoot
