@@ -46,6 +46,7 @@ export default {
         },
         "transparent-red-border": "rgba(250, 52, 52, 0.1)",
         "transparent-gray-border": "rgba(255, 255, 255, 0.1)",
+        "primary-accent":"#d4af37"
       },
       borderRadius: {
         "4xl": "2.5rem",

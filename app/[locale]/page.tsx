@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 // import Link from 'next/link'
-
+import Phone3D from "@/components/FloatingPhone"
 import Marquee from "react-fast-marquee";
 import { ContactSection } from "@/components/ContactSection";
 import { Container } from "@/components/Container";
@@ -27,6 +27,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { ColourfulText } from "@/components/ui/colourful-text";
 import { caseStudies, CaseStudyType } from "@/constants/data";
 import { Link } from "@/i18n/routing";
+
 // import MarqueeBanner from '@/components/shared/marquee-banner'
 
 // import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
@@ -189,11 +190,13 @@ function Services() {
 export default function Home() {
   //  let caseStudies = (await loadCaseStudies()).slice(0, 3)
   const t = useTranslations("HomePage");
+
+ 
   return (
     <>
       <BackgroundBeamsWithCollision>
-        <Container className="mt-24 pb-24 sm:py-32 lg:pb-56 ">
-          <FadeIn className="flex flex-col items-start justify-start max-w-7xl">
+        <Container className="mt-24 pb-24 sm:py-32 lg:pb-56 flex">
+          <FadeIn className="flex flex-col md:flex-row gap-6 items-center justify-start max-w-7xl">
             <div className="">
               <h1 className="font-display text-5xl font-bold tracking-tight text-gradient-accent [text-wrap:balance] sm:text-7xl">
                 <ColourfulText text={t("title")} /> <br />
@@ -201,12 +204,16 @@ export default function Home() {
               </h1>
               <TextGenerateEffect className="max-w-3xl" words={t("about")} />
             </div>
+          <Phone3D/>
+          
           </FadeIn>
+          
         </Container>
       </BackgroundBeamsWithCollision>
-
-      <Techs />
-        <Services />
+      <FadeIn>
+        <Techs />
+      </FadeIn>
+      <Services />
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
@@ -220,7 +227,7 @@ export default function Home() {
         finding a way to access the user’s microphone without triggering one of
         those annoying permission dialogs.'/> */}
 
-        <CaseStudies caseStudies={caseStudies} />
+      <CaseStudies caseStudies={caseStudies} />
       <ContactSection />
     </>
   );

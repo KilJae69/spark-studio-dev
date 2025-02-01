@@ -9,8 +9,7 @@ import { Link } from "@/i18n/routing";
 import { Logo, Logomark } from "./Logo";
 import { Button } from "./Button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
- import { m, useScroll, useMotionValueEvent } from "framer-motion";
-
+import { m, useScroll, useMotionValueEvent } from "framer-motion";
 
 import { AnimatedModalHeader } from "./shared/AnimatedModalHeader";
 
@@ -18,65 +17,64 @@ type InnerLayoutProps = {
   children: ReactNode;
 };
 
-
-
 function Header() {
-  const [isVisible, setIsVisible] = useState(true);
+  const [headerState, setHeaderState] = useState<"top" | "hidden" | "small">(
+    "top"
+  );
   const { scrollY } = useScroll();
   const t = useTranslations("Header");
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() || 0;
-    if (latest > previous && latest > 50) {
-      setIsVisible(false);
+
+    if (latest === 0) {
+      // At the top of the page
+      setHeaderState("top");
+    } else if (latest > previous && latest > 50) {
+      // Scrolling down and past 50px
+      setHeaderState("hidden");
     } else if (latest < previous) {
-      setIsVisible(true);
+      // Scrolling up
+      setHeaderState("small");
     }
   });
 
   return (
     <m.header
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: isVisible ? 0 : -100, opacity: isVisible ? 1 : 0 }}
+      initial={{ y: 0, opacity: 1 }}
+      animate={{
+        y: headerState === "hidden" ? -100 : 0,
+        opacity: headerState === "hidden" ? 0 : 1,
+      }}
       transition={{ type: "spring", stiffness: 100, damping: 20 }}
-      className="fixed top-0 left-0 w-full bg-white shadow-md z-[1000]"
+      className={`fixed top-0 left-0 w-full z-[1000] ${
+        headerState === "small"
+          ? "backdrop-blur-md bg-white/50 shadow-md"
+          : "bg-transparent"
+      }`}
     >
-
-    <Container className="fixed w-full left-1/2 -translate-x-1/2  z-[1000]">
-      <div className="flex items-center justify-between p-3 ">
-        <Link
-          href="/"
-          aria-label="Home"
-          // onMouseEnter={() => setLogoHovered(true)}
-          //  onMouseLeave={() => setLogoHovered(false)}
-          >
-          <Logomark
-            className="h-8 sm:hidden"
-            
-            //  filled={logoHovered}
-            />
-          <Logo
-            className="hidden h-8 sm:block"
-            
-            //   filled={logoHovered}
-          />
-        </Link>
-        <div className="flex items-center whitespace-nowrap gap-x-8">
-          <Button className="hidden sm:block" href="/contact">
-            {t("contact-button")}
-          </Button>
-          <LanguageSwitcher />
-
-          
-       <AnimatedModalHeader/>
+      <Container className="fixed w-full left-1/2 -translate-x-1/2  z-[1000]">
+        <div
+          className={`flex items-center justify-between p-3 transition-all duration-300 ${
+            headerState === "top" ? "py-6" : "py-3"
+          }`}
+        >
+          <Link href="/" aria-label="Home">
+            <Logomark className="h-8 sm:hidden" />
+            <Logo className="hidden h-8 sm:block" />
+          </Link>
+          <div className="flex items-center whitespace-nowrap gap-x-8">
+            <Button className="hidden sm:block" href="/contact">
+              {t("contact-button")}
+            </Button>
+            <LanguageSwitcher />
+            <AnimatedModalHeader />
+          </div>
         </div>
-      </div>
-     
-    </Container>
+      </Container>
     </m.header>
   );
 }
-
 
 export default function InnerLayout({ children }: InnerLayoutProps) {
   return (
