@@ -90,12 +90,7 @@ function Techs() {
   );
 }
 
-
-function CaseStudies({
-  caseStudies,
-}: {
-  caseStudies: CaseStudyType[]
-}) {
+function CaseStudies({ caseStudies }: { caseStudies: CaseStudyType[] }) {
   return (
     <>
       <SectionIntro
@@ -126,10 +121,10 @@ function CaseStudies({
                 </h3>
                 <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
                   <time
-                    dateTime={caseStudy.date.split('-')[0]}
+                    dateTime={caseStudy.date.split("-")[0]}
                     className="font-semibold"
                   >
-                    {caseStudy.date.split('-')[0]}
+                    {caseStudy.date.split("-")[0]}
                   </time>
                   <span className="text-neutral-300" aria-hidden="true">
                     /
@@ -148,7 +143,7 @@ function CaseStudies({
         </FadeInStagger>
       </Container>
     </>
-  )
+  );
 }
 
 function Services() {
@@ -201,20 +196,20 @@ export default function Home() {
           <FadeIn className="flex flex-col items-start justify-start max-w-7xl">
             <div className="">
               <h1 className="font-display text-5xl font-bold tracking-tight text-gradient-accent [text-wrap:balance] sm:text-7xl">
-               
                 <ColourfulText text={t("title")} /> <br />
                 <span className="">{t("subtitle")}</span>
               </h1>
               <TextGenerateEffect className="max-w-3xl" words={t("about")} />
-              
             </div>
           </FadeIn>
         </Container>
       </BackgroundBeamsWithCollision>
 
-      <Techs />
+      <FadeIn>
+        <Techs />
+      </FadeIn>
 
-       <CaseStudies caseStudies={caseStudies} />
+      <CaseStudies caseStudies={caseStudies} />
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"

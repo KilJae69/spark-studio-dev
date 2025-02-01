@@ -107,15 +107,15 @@ export const ModalBody = ({
   useEffect(() => {
     setIsClient(true); // Set isClient to true when the component mounts (client-side)
   }, []);
-
+  /*
   useEffect(() => {
     if (open) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowX = "hidden";
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflowX = "auto";
     }
   }, [open]);
-
+*/
   const modalRef = useRef<HTMLDivElement>(null as unknown as HTMLDivElement);
 
   useOutsideClick(modalRef, () => setOpen(false), triggerRef);
@@ -134,13 +134,12 @@ export const ModalBody = ({
           }}
           animate={{
             x: "0",
-      //  backdropFilter: "blur(10px)",
+            //  backdropFilter: "blur(10px)",
           }}
           exit={{
             x: "100%",
-      //  backdropFilter: "blur(0px)",
+            //  backdropFilter: "blur(0px)",
           }}
-          
           className="fixed shadow-xl top-2 right-2 bottom-2 overflow-hidden [perspective:800px] [transform-style:preserve-3d] z-[2000] rounded-3xl  max-w-[500px] flex items-center justify-center"
         >
           <m.div
@@ -150,20 +149,16 @@ export const ModalBody = ({
               className
             )}
             initial={{
-            
               x: "-100%", // Start from the top
             }}
             animate={{
-            
               x: 0, // Slide down to the center
-          // backdropFilter: "blur(10px)",
+              // backdropFilter: "blur(10px)",
             }}
             exit={{
-              
               x: "-100%", // Slide back up
-          // backdropFilter: "blur(0px)",
+              // backdropFilter: "blur(0px)",
             }}
-            
           >
             {children}
           </m.div>

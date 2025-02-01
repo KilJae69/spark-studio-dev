@@ -77,46 +77,7 @@ function Header() {
   );
 }
 
-/*
-function Header() {
- 
-  const t = useTranslations("Header");
 
-  return (
-    <Container className="fixed w-full left-1/2 -translate-x-1/2  z-[1000]">
-      <div className="flex items-center justify-between p-3 ">
-        <Link
-          href="/"
-          aria-label="Home"
-          // onMouseEnter={() => setLogoHovered(true)}
-          //  onMouseLeave={() => setLogoHovered(false)}
-        >
-          <Logomark
-            className="h-8 sm:hidden"
-
-            //  filled={logoHovered}
-          />
-          <Logo
-            className="hidden h-8 sm:block"
-
-            //   filled={logoHovered}
-          />
-        </Link>
-        <div className="flex items-center whitespace-nowrap gap-x-8">
-          <Button className="hidden sm:block" href="/contact">
-            {t("contact-button")}
-          </Button>
-          <LanguageSwitcher />
-
-          
-       <AnimatedModalHeader/>
-        </div>
-      </div>
-
-    </Container>
-  );
-}
-*/
 export default function InnerLayout({ children }: InnerLayoutProps) {
   return (
     <>

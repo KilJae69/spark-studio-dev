@@ -6,7 +6,7 @@
   @apply bg-gradient-to-tr from-primary-700 via-primary-500 to-primary-500 bg-clip-text text-transparent;
 }
 .bg-gradient-accent {
-  @apply bg-gradient-to-tr from-primary-400 via-primary-600 to-primary-400 hover:from-primary-600 hover:via-primary-400 hover:to-primary-600;
+  @apply bg-[#d4af37];
 }
 .bg-gradient-white {
   @apply bg-gradient-to-tr from-white via-gray-200 to-white hover:from-gray-200 hover:via-white hover:to-gray-200;
