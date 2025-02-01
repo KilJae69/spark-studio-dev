@@ -213,8 +213,7 @@ export default function Home() {
       </BackgroundBeamsWithCollision>
 
       <Techs />
-
-       <CaseStudies caseStudies={caseStudies} />
+        <Services />
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
@@ -227,8 +226,8 @@ export default function Home() {
       {/* <MarqueeBanner text='The team at Studio went above and beyond with our onboarding, even
         finding a way to access the user’s microphone without triggering one of
         those annoying permission dialogs.'/> */}
-      <Services />
 
+        <CaseStudies caseStudies={caseStudies} />
       <ContactSection />
     </>
   );
