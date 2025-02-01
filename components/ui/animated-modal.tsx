@@ -13,16 +13,18 @@ import ReactDOM from "react-dom";
 
 interface ModalContextType {
   open: boolean;
-  setOpen: (open: boolean) => void;
+  setOpen: (open: boolean | ((prev: boolean) => boolean)) => void;
+  triggerRef: React.RefObject<HTMLButtonElement | null>;
 }
 
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
 
 export const ModalProvider = ({ children }: { children: ReactNode }) => {
   const [open, setOpen] = useState(false);
-
+  const triggerRef = useRef<HTMLButtonElement | null>(null);
+  console.log(open);
   return (
-    <ModalContext.Provider value={{ open, setOpen }}>
+    <ModalContext.Provider value={{ open, setOpen, triggerRef }}>
       {children}
     </ModalContext.Provider>
   );
@@ -40,23 +42,54 @@ export function Modal({ children }: { children: ReactNode }) {
   return <ModalProvider>{children}</ModalProvider>;
 }
 
-export const ModalTrigger = ({
-  children,
-  className,
-}: {
-  children: ReactNode;
-  className?: string;
-}) => {
-  const { setOpen } = useModal();
+export const ModalTrigger = ({}) => {
+  const { open, setOpen, triggerRef } = useModal();
+
+  // Update the button's attributes based on its state
+  useEffect(() => {
+    const button = triggerRef.current;
+    if (button) {
+      button.setAttribute("data-state", open ? "opened" : "closed");
+      button.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+  }, [open, triggerRef]);
+
   return (
     <button
-      className={cn(
-        "px-4 py-2 rounded-md text-black dark:text-white text-center relative overflow-hidden",
-        className
-      )}
-      onClick={() => setOpen(true)}
+      onClick={() => setOpen((prev: boolean) => !prev)}
+      ref={triggerRef}
+      className="button-two"
+      aria-expanded="false"
     >
-      {children}
+      <svg
+        stroke="var(--button-color)"
+        className="hamburger"
+        viewBox="0 0 100 100"
+        width="30"
+      >
+        <line
+          className="line top"
+          x1="90"
+          x2="10"
+          y1="40"
+          y2="40"
+          strokeWidth="10"
+          strokeLinecap="round"
+          strokeDasharray="80"
+          strokeDashoffset="0"
+        ></line>
+        <line
+          className="line bottom"
+          x1="10"
+          x2="90"
+          y1="60"
+          y2="60"
+          strokeWidth="10"
+          strokeLinecap="round"
+          strokeDasharray="80"
+          strokeDashoffset="0"
+        ></line>
+      </svg>
     </button>
   );
 };
@@ -68,7 +101,7 @@ export const ModalBody = ({
   children: ReactNode;
   className?: string;
 }) => {
-  const { open } = useModal();
+  const { open, setOpen, triggerRef } = useModal();
   const [isClient, setIsClient] = useState(false); // Track if the code is running on the client
 
   useEffect(() => {
@@ -85,8 +118,7 @@ export const ModalBody = ({
 
   const modalRef = useRef<HTMLDivElement>(null as unknown as HTMLDivElement);
 
-  const { setOpen } = useModal();
-  useOutsideClick(modalRef, () => setOpen(false));
+  useOutsideClick(modalRef, () => setOpen(false), triggerRef);
 
   if (!isClient) return null; // Don't render anything on the server
 
@@ -98,48 +130,40 @@ export const ModalBody = ({
       {open && (
         <motion.div
           initial={{
-            opacity: 0,
+            x: "100%",
           }}
           animate={{
-            opacity: 1,
-            backdropFilter: "blur(10px)",
+            x: "0",
+      //  backdropFilter: "blur(10px)",
           }}
           exit={{
-            opacity: 0,
-            backdropFilter: "blur(0px)",
+            x: "100%",
+      //  backdropFilter: "blur(0px)",
           }}
-          className="fixed [perspective:800px] [transform-style:preserve-3d] z-[2000] inset-0 h-full w-full flex items-center justify-center"
+          
+          className="fixed shadow-xl top-2 right-2 bottom-2 overflow-hidden [perspective:800px] [transform-style:preserve-3d] z-[2000] rounded-3xl  max-w-[500px] flex items-center justify-center"
         >
-          <Overlay />
-
           <motion.div
             ref={modalRef}
             className={cn(
-              "bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 relative z-50 flex flex-col flex-1 overflow-hidden",
+              " dark:bg-neutral-950 border border-transparent dark:border-neutral-800 relative z-50 flex flex-col flex-1 overflow-hidden",
               className
             )}
             initial={{
-              opacity: 1,
-              y: "-100%", // Start from the top
+            
+              x: "-100%", // Start from the top
             }}
             animate={{
-              opacity: 1,
-              y: 0, // Slide down to the center
-              transition: {
-                type: "spring",
-                stiffness: 300, // Adjust stiffness for bounce
-                damping: 20, // Adjust damping for bounce
-              },
+            
+              x: 0, // Slide down to the center
+          // backdropFilter: "blur(10px)",
             }}
             exit={{
-              opacity: 1,
-              y: "-100%", // Slide back up
-              transition: {
-                type: "spring",
-                stiffness: 100,
-                damping: 20,
-              },
+              
+              x: "-100%", // Slide back up
+          // backdropFilter: "blur(0px)",
             }}
+            
           >
             {children}
           </motion.div>
@@ -158,9 +182,7 @@ export const ModalContent = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("flex flex-col flex-1", className)}>
-      {children}
-    </div>
+    <div className={cn("flex flex-col flex-1", className)}>{children}</div>
   );
 };
 
@@ -183,37 +205,45 @@ export const ModalFooter = ({
   );
 };
 
-const Overlay = ({ className }: { className?: string }) => {
-  return (
-    <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-        backdropFilter: "blur(10px)",
-      }}
-      exit={{
-        opacity: 0,
-        backdropFilter: "blur(0px)",
-      }}
-      className={`fixed inset-0 h-full w-full bg-primary-800  z-50 ${className}`}
-    ></motion.div>
-  );
-};
-
-
+// const Overlay = ({ className }: { className?: string }) => {
+//   return (
+//     <motion.div
+//       initial={{
+//         opacity: 0,
+//       }}
+//       animate={{
+//         opacity: 1,
+//         backdropFilter: "blur(10px)",
+//       }}
+//       exit={{
+//         opacity: 0,
+//         backdropFilter: "blur(0px)",
+//       }}
+//       className={`fixed inset-0 h-full w-full bg-white  z-50 ${className}`}
+//     ></motion.div>
+//   );
+// };
 
 // Hook to detect clicks outside of a component.
 export const useOutsideClick = (
   ref: React.RefObject<HTMLDivElement>,
-  callback: (event: MouseEvent | TouchEvent) => void
+  callback: (event: MouseEvent | TouchEvent) => void,
+  excludeRef?: React.RefObject<HTMLElement | null>
 ) => {
   useEffect(() => {
     const listener = (event: MouseEvent | TouchEvent) => {
-      if (!ref.current || ref.current.contains(event.target as Node)) {
+      if (
+        excludeRef?.current &&
+        excludeRef.current.contains(event.target as Node)
+      ) {
+        console.log("Clicked on excluded element (ModalTrigger)");
         return;
       }
+      if (!ref.current || ref.current.contains(event.target as Node)) {
+        console.log("Clicked inside modal or ref is null");
+        return;
+      }
+      console.log("Clicked outside modal");
       callback(event);
     };
 
@@ -224,5 +254,5 @@ export const useOutsideClick = (
       document.removeEventListener("mousedown", listener);
       document.removeEventListener("touchstart", listener);
     };
-  }, [ref, callback]);
+  }, [ref, callback, excludeRef]);
 };

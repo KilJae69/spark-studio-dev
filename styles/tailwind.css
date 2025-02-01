@@ -101,3 +101,76 @@
   scale: 1.3;
   transition: scale var(--animation-speed) linear;
 }
+
+/* button two */
+
+.button-two {
+  --button-color: #1E293B;
+  position: relative;
+}
+
+.button-two:before {
+  content: "";
+  inset: -5px;
+  position: absolute;
+  background-color: #E2E8F0;
+  z-index: -1;
+  border-radius: 100%;
+  padding: 2px;
+}
+
+.button-two[data-state="closed"] :is(.top, .bottom) {
+  animation: to-open-icon 1s forwards;
+}
+
+.button-two[data-state="opened"] :is(.top, .bottom) {
+  animation: to-close-icon 1s forwards;
+}
+.button-two .hamburger {
+  transition: rotate 800ms 100ms;
+}
+.button-two[data-state="opened"] .hamburger {
+  rotate: 1turn;
+}
+
+.button-two .line.top {
+  --rotation: -45deg;
+  transform-origin: 65px 45px;
+}
+.button-two .line.bottom {
+  --rotation: 45deg;
+  transform-origin: 60px 55px;
+}
+
+@keyframes to-close-icon {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 79.9;
+  }
+  60% {
+    stroke-dashoffset: 79.9;
+    rotate: calc(var(--rotation));
+  }
+  100% {
+    stroke-dashoffset: 0;
+    rotate: var(--rotation);
+  }
+}
+@keyframes to-open-icon {
+  0% {
+    stroke-dashoffset: 0;
+    rotate: var(--rotation);
+  }
+  40% {
+    stroke-dashoffset: 79.9;
+    rotate: var(--rotation);
+  }
+  60% {
+    stroke-dashoffset: 79.9;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

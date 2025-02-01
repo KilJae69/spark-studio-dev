@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import { Footer } from "./Footer";
 import { GridPattern } from "./GridPattern";
 import { useTranslations } from "next-intl";
@@ -9,7 +9,7 @@ import { Link } from "@/i18n/routing";
 import { Logo, Logomark } from "./Logo";
 import { Button } from "./Button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 
 import { AnimatedModalHeader } from "./shared/AnimatedModalHeader";
@@ -19,10 +19,27 @@ type InnerLayoutProps = {
 };
 
 function Header() {
- 
+  const [isVisible, setIsVisible] = useState(true);
+  const { scrollY } = useScroll();
   const t = useTranslations("Header");
 
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious() || 0;
+    if (latest > previous && latest > 50) {
+      setIsVisible(false);
+    } else if (latest < previous) {
+      setIsVisible(true);
+    }
+  });
+
   return (
+    <motion.header
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: isVisible ? 0 : -100, opacity: isVisible ? 1 : 0 }}
+      transition={{ type: "spring", stiffness: 100, damping: 20 }}
+      className="fixed top-0 left-0 w-full bg-white shadow-md z-[1000]"
+    >
+
     <Container className="fixed w-full left-1/2 -translate-x-1/2  z-[1000]">
       <div className="flex items-center justify-between p-3 ">
         <Link
@@ -30,15 +47,15 @@ function Header() {
           aria-label="Home"
           // onMouseEnter={() => setLogoHovered(true)}
           //  onMouseLeave={() => setLogoHovered(false)}
-        >
+          >
           <Logomark
             className="h-8 sm:hidden"
-
+            
             //  filled={logoHovered}
-          />
+            />
           <Logo
             className="hidden h-8 sm:block"
-
+            
             //   filled={logoHovered}
           />
         </Link>
@@ -54,6 +71,7 @@ function Header() {
       </div>
        {/* Render the CustomModal component */}
     </Container>
+    </motion.header>
   );
 }
 
