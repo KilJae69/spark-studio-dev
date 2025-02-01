@@ -44,7 +44,7 @@ function Header() {
       initial={{ y: 0, opacity: 1 }}
       animate={{
         y: headerState === "hidden" ? -100 : 0,
-        opacity: headerState === "hidden" ? 0 : 1,
+       // opacity: headerState === "hidden" ? 0 : 1,
       }}
       transition={{ type: "spring", stiffness: 100, damping: 20 }}
       className={`fixed top-0 left-0 w-full z-[1000] ${

@@ -17,18 +17,21 @@ export const TextGenerateEffect = ({
   const [scope, animate] = useAnimate();
   const wordsArray = words.split(" ");
   useEffect(() => {
-    animate(
-      "span",
-      {
-        opacity: 1,
-        filter: filter ? "blur(0px)" : "none",
-      },
-      {
-        duration: duration ? duration : 1,
-        delay: stagger(0.2),
-      }
-    );
-  }, [animate,duration,filter]);
+    const timer = setTimeout(() => {
+      animate(
+        "span",
+        {
+          opacity: 1,
+          filter: filter ? "blur(0px)" : "none",
+        },
+        {
+          duration: duration || 1,
+          delay: stagger(0.2),
+        }
+      );
+    }, 50); // small delay
+    return () => clearTimeout(timer);
+  }, [animate, duration, filter]);
 
   const renderWords = () => {
     return (

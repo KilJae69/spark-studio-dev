@@ -31,7 +31,7 @@ export const TypewriterEffect = ({
       animate(
         "span",
         {
-          display: "inline-block",
+         
           opacity: 1,
           width: "fit-content",
         },
@@ -55,7 +55,7 @@ export const TypewriterEffect = ({
                   initial={{}}
                   key={`char-${index}`}
                   className={cn(
-                    `dark:text-white text-primary-accent opacity-0 hidden`,
+                    `dark:text-white text-primary-accent opacity-0 `,
                     word.className
                   )}
                 >
