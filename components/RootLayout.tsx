@@ -11,11 +11,11 @@ import {
 } from "react";
 
 import clsx from "clsx";
-import {  MotionConfig, useReducedMotion } from "framer-motion";
+import { MotionConfig, useReducedMotion } from "framer-motion";
 
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/sections/Footer";
 import { GridPattern } from "@/components/GridPattern";
 import { Logo, Logomark } from "@/components/Logo";
 
@@ -23,9 +23,6 @@ import { SocialMedia } from "@/components/SocialMedia";
 import { Link, usePathname } from "@/i18n/routing";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useTranslations } from "next-intl";
-
-
-
 
 const RootLayoutContext = createContext<{
   logoHovered: boolean;
@@ -88,7 +85,6 @@ function Header({
           />
         </Link>
         <div className="flex items-center whitespace-nowrap gap-x-8">
-         
           <Button className="hidden sm:block" href="/contact" invert={invert}>
             {t("contact-button")}
           </Button>
@@ -114,7 +110,6 @@ function Header({
               )}
             />
           </button>
-       
         </div>
       </div>
     </Container>
@@ -145,7 +140,6 @@ function NavigationItem({
     >
       {children}
       <span className="absolute inset-y-0 -z-10 w-screen bg-primary-700 h-0 transition group-odd:right-0 group-even:left-0 group-hover:h-full" />
-      
     </Link>
   );
 }
@@ -215,7 +209,6 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
         </div>
 
         <div
-          
           id={panelId}
           style={{ height: expanded ? "auto" : "0.5rem" }}
           className="relative z-50 overflow-hidden bg-primary-800"
@@ -223,7 +216,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
 
           //  inert={expanded ? undefined : ''}
         >
-          <div  className="bg-primary-600">
+          <div className="bg-primary-600">
             <div ref={navRef} className="bg-primary-800 pb-16 pt-14">
               <Header
                 invert
@@ -268,14 +261,10 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
       </header>
 
       <div
-        
         style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
         className="relative flex flex-auto overflow-hidden bg-white pt-14"
       >
-        <div
-          
-          className="relative isolate flex w-full flex-col pt-9"
-        >
+        <div className="relative isolate flex w-full flex-col pt-9">
           <GridPattern
             className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-slate-50 stroke-slate-500/10 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
             yOffset={-96}

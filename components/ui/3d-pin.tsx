@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/routing";
 
 
-export const PinContainer = ({
+  const PinContainer = ({
   children,
   title,
   href,
@@ -165,3 +165,5 @@ export const PinPerspective = ({
     </m.div>
   );
 };
+
+export default PinContainer

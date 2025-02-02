@@ -25,10 +25,7 @@ export default {
     },
     extend: {
       boxShadow: {
-        glow: "0 0 10px #1e9bff, 0 0 20px #1e9bff, 0 0 30px #1e9bff, 0 0 50px #1e9bff, 0 0 100px #1e9bff",
-        bgGlow: "0 0 10px #1e9bff, 0 0 30px #1e9bff, 0 0 60px #1e9bff",
-        bgRoseGlow:
-          "0 0 5px #ff0461, 0 0 15px #ff0461, 0 0 30px #ff0461, 0 0 60px #ff0461",
+        
         cardShadow: "0 5px 20px rgba(0, 0, 0, 0.5)",
       },
       colors: {
@@ -44,8 +41,7 @@ export default {
           800: colors.slate[800], // Default primary shade
           900: colors.slate[900],
         },
-        "transparent-red-border": "rgba(250, 52, 52, 0.1)",
-        "transparent-gray-border": "rgba(255, 255, 255, 0.1)",
+       
         "primary-accent":"#d4af37"
       },
       borderRadius: {

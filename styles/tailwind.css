@@ -142,6 +142,8 @@
   transform-origin: 60px 55px;
 }
 
+
+
 @keyframes to-close-icon {
   0% {
     stroke-dashoffset: 0;

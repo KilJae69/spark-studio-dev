@@ -103,7 +103,7 @@ function ModalHeader() {
   );
 }
 
-export function AnimatedModalHeader() {
+export default function AnimatedModalHeader() {
  // const t = useTranslations("ContactSection");
   return (
     <div className="flex items-center justify-center">

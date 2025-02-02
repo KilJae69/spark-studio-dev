@@ -1,4 +1,4 @@
-import { ContactSection } from "@/components/ContactSection";
+import { ContactSection } from "@/components/sections/ContactSection";
 import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
 import { GrayscaleTransitionImage } from "@/components/GrayscaleTransitionImage";

@@ -3,7 +3,7 @@ import clsx from 'clsx'
 type ContainerProps<T extends React.ElementType> = {
   as?: T
   className?: string
-  children: React.ReactNode
+  children: React.ReactNode,
 }
 
 export function Container<T extends React.ElementType = 'div'>({

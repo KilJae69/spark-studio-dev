@@ -1,10 +1,10 @@
 import Image, { StaticImageData } from "next/image";
-// import Link from 'next/link'
-import Phone3D from "@/components/FloatingPhone";
+
+
 import Marquee from "react-fast-marquee";
-import { ContactSection } from "@/components/ContactSection";
+import { ContactSection } from "@/components/sections/ContactSection";
 import { Container } from "@/components/Container";
-import { FadeIn, FadeInStagger } from "@/components/FadeIn";
+import { FadeIn } from "@/components/FadeIn";
 import { List, ListItem } from "@/components/List";
 import { SectionIntro } from "@/components/SectionIntro";
 import { StylizedImage } from "@/components/StylizedImage";
@@ -20,13 +20,12 @@ import vercelLogo from "@/images/tech/vercel-logo.svg";
 import hetznerLogo from "@/images/tech/hetzner-logo.svg";
 
 import { useTranslations } from "next-intl";
-import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { ColourfulText } from "@/components/ui/colourful-text";
-import { caseStudies, CaseStudyType } from "@/constants/data";
 
-import { PinContainer } from "@/components/ui/3d-pin";
-import { GridPattern } from "@/components/GridPattern";
+import { caseStudies } from "@/constants/data";
+
+
+import HeroSection from "@/components/sections/HeroSection";
+import CaseStudiesSection from "@/components/sections/CaseStudiesSection";
 
 const techs: [string, StaticImageData][] = [
   ["NextJs", nextLogo],
@@ -42,7 +41,7 @@ const techs: [string, StaticImageData][] = [
 function Techs() {
   const t = useTranslations("HomePage");
   return (
-    <div className=" rounded-xl bg-primary-800 py-20">
+    <div className=" rounded-xl bg-primary-800 py-10 md:py-20">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
@@ -58,7 +57,7 @@ function Techs() {
         >
           {techs.map(([tech, logo]) => (
             <li key={tech}>
-              <div className="relative flex items-center justify-center h-[120px] w-[230px]">
+              <div className="relative flex items-center justify-center h-[70px] w-[120px] md:h-[120px] md:w-[230px]">
                 <Image
                   src={logo}
                   alt={tech}
@@ -75,59 +74,7 @@ function Techs() {
   );
 }
 
-function CaseStudies({ caseStudies }: { caseStudies: CaseStudyType[] }) {
-  return (
-    <div className="relative isolate bg-slate-50 py-16  md:pb-32">
-    <GridPattern
-        className="absolute inset-0 -z-10 h-full w-full fill-slate-100 stroke-slate-500/10 [mask-image:linear-gradient(to_bottom_left,white_50%,transparent_60%)]"
-        yOffset={-256}
-      />
-      <SectionIntro
-      eyebrow="Our Work"
-        title="Harnessing technology for a brighter future"
-        className="mt-24 sm:mt-32 lg:mt-40"
-      >
-        <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
-        </p>
-      </SectionIntro>
-      <Container className="mt-16">
-        <FadeInStagger className="grid grid-cols-1 gap-20 lg:grid-cols-3">
-          {caseStudies.map((caseStudy) => (
-            <FadeIn key={caseStudy.href} className="w-full ">
-              <PinContainer
-                className="w-full group"
-                href={caseStudy.href}
-                title={caseStudy.title}
-              >
-                <div className="flex basis-full flex-col p-1  sm:p-4 w-[16rem] sm:w-[27rem] tracking-tight text-primary-100/50 lg:w-[20rem] h-[20rem] ">
-                  <h3 className="max-w-xs min-h-16 !pb-2 !m-0 font-bold  text-base text-white group-hover:text-primary-accent transition">
-                    {caseStudy.title}
-                  </h3>
-                  <div className="text-base !m-0 !p-0 font-normal">
-                    <span className="text-slate-500 line-clamp-3">
-                      {caseStudy.description}
-                    </span>
-                  </div>
-                  <div className="mt-2 relative overflow-hidden w-full h-full rounded-xl">
-                    <Image
-                      className="grayscale group-hover:grayscale-0 transition-all object-cover"
-                      fill
-                      src={caseStudy.image.src}
-                      alt={caseStudy.title}
-                    />
-                  </div>
-                </div>
-              </PinContainer>
-            </FadeIn>
-          ))}
-        </FadeInStagger>
-      </Container>
-    </div>
-  );
-}
+
 
 function Services() {
   const t = useTranslations("ServicesSection");
@@ -171,24 +118,10 @@ function Services() {
 
 export default function Home() {
   //  let caseStudies = (await loadCaseStudies()).slice(0, 3)
-  const t = useTranslations("HomePage");
 
   return (
     <>
-      <BackgroundBeamsWithCollision>
-        <Container className="mt-24 pb-24 sm:py-32 lg:pb-56 flex">
-          <FadeIn className="flex flex-col md:flex-row gap-6 items-center justify-start max-w-7xl">
-            <div className="">
-              <h1 className="font-display text-5xl font-bold tracking-tight text-gradient-accent [text-wrap:balance] sm:text-7xl">
-                <ColourfulText text={t("title")} /> <br />
-                <span className="">{t("subtitle")}</span>
-              </h1>
-              <TextGenerateEffect className="max-w-3xl" words={t("about")} />
-            </div>
-            <Phone3D />
-          </FadeIn>
-        </Container>
-      </BackgroundBeamsWithCollision>
+      <HeroSection />
       <FadeIn>
         <Techs />
       </FadeIn>
@@ -203,8 +136,8 @@ export default function Home() {
         those annoying permission dialogs.
       </Testimonial> */}
       <div className="relative isolate  w-full  pt-9">
-        <CaseStudies caseStudies={caseStudies} />
-       
+        <CaseStudiesSection caseStudies={caseStudies} />
+
         <ContactSection />
       </div>
     </>

@@ -1,6 +1,6 @@
 import { type Metadata } from "next";
 
-import { ContactSection } from "@/components/ContactSection";
+import { ContactSection } from "@/components/sections/ContactSection";
 import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
 import { GridList, GridListItem } from "@/components/GridList";
@@ -17,7 +17,6 @@ import imageWhiteboard from "@/images/whiteboard.jpg";
 import { notFound } from "next/navigation";
 import { Locale, locales } from "@/lib/locales";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -207,9 +206,8 @@ export default async function Process({
   const t = await getTranslations({ locale, namespace: "ProcessPage" });
   return (
     <>
-      <PageIntro  eyebrow={t("pageIntro.eyebrow")} title={t("pageIntro.title")}>
-      
-          <p>{t("pageIntro.description")}</p>
+      <PageIntro eyebrow={t("pageIntro.eyebrow")} title={t("pageIntro.title")}>
+        <p>{t("pageIntro.description")}</p>
       </PageIntro>
 
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
