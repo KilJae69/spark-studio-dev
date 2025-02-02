@@ -6,11 +6,10 @@ import { FadeIn } from "../FadeIn";
 import { BackgroundBeamsWithCollision } from "../ui/background-beams-with-collision";
 import { ColourfulText } from "../ui/colourful-text";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
-import dynamic from "next/dynamic";
 
-const Dynamic3DPhone = dynamic(() => import("@/components/FloatingPhone"), {
-  ssr: false,
-});
+import Phone3D from "@/components/FloatingPhone";
+
+
 
 export default function HeroSection() {
   const t = useTranslations("HomePage");
@@ -26,7 +25,7 @@ export default function HeroSection() {
               </h1>
               <TextGenerateEffect className="max-w-3xl" words={t("about")} />
             </div>
-            <Dynamic3DPhone/>
+            <Phone3D/>
           </FadeIn>
         </Container>
       </BackgroundBeamsWithCollision>
