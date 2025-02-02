@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 // import Link from 'next/link'
-import Phone3D from "@/components/FloatingPhone"
+import Phone3D from "@/components/FloatingPhone";
 import Marquee from "react-fast-marquee";
 import { ContactSection } from "@/components/ContactSection";
 import { Container } from "@/components/Container";
@@ -24,24 +24,9 @@ import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-w
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { ColourfulText } from "@/components/ui/colourful-text";
 import { caseStudies, CaseStudyType } from "@/constants/data";
-import { Link } from "@/i18n/routing";
-// import MarqueeBanner from "@/components/shared/marquee-banner";
 
-// import MarqueeBanner from '@/components/shared/marquee-banner'
-
-// import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
-
-// const clients = [
-//   // ["Pet Vet", logoPetVet],
-//   ["Phobia", logoPhobiaLight],
-//   ["Family Fund", logoFamilyFund],
-//   ["Unseal", logoUnseal],
-//   ["Mail Smirk", logoMailSmirk],
-//   ["Home Work", logoHomeWork],
-//   ["Green Life", logoGreenLife],
-//   ["Bright Path", logoBrightPath],
-//   ["North Adventures", logoNorthAdventures],
-// ];
+import { PinContainer } from "@/components/ui/3d-pin";
+import { GridPattern } from "@/components/GridPattern";
 
 const techs: [string, StaticImageData][] = [
   ["NextJs", nextLogo],
@@ -92,8 +77,13 @@ function Techs() {
 
 function CaseStudies({ caseStudies }: { caseStudies: CaseStudyType[] }) {
   return (
-    <>
+    <div className="relative isolate bg-slate-50 py-16  md:pb-32">
+    <GridPattern
+        className="absolute inset-0 -z-10 h-full w-full fill-slate-100 stroke-slate-500/10 [mask-image:linear-gradient(to_bottom_left,white_50%,transparent_60%)]"
+        yOffset={-256}
+      />
       <SectionIntro
+      eyebrow="Our Work"
         title="Harnessing technology for a brighter future"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
@@ -104,45 +94,38 @@ function CaseStudies({ caseStudies }: { caseStudies: CaseStudyType[] }) {
         </p>
       </SectionIntro>
       <Container className="mt-16">
-        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <FadeInStagger className="grid grid-cols-1 gap-20 lg:grid-cols-3">
           {caseStudies.map((caseStudy) => (
-            <FadeIn key={caseStudy.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
-                <h3>
-                  <Link href={caseStudy.href}>
-                    <span className="absolute inset-0 rounded-3xl" />
+            <FadeIn key={caseStudy.href} className="w-full ">
+              <PinContainer
+                className="w-full group"
+                href={caseStudy.href}
+                title={caseStudy.title}
+              >
+                <div className="flex basis-full flex-col p-1  sm:p-4 w-[16rem] sm:w-[27rem] tracking-tight text-primary-100/50 lg:w-[20rem] h-[20rem] ">
+                  <h3 className="max-w-xs min-h-16 !pb-2 !m-0 font-bold  text-base text-white group-hover:text-primary-accent transition">
+                    {caseStudy.title}
+                  </h3>
+                  <div className="text-base !m-0 !p-0 font-normal">
+                    <span className="text-slate-500 line-clamp-3">
+                      {caseStudy.description}
+                    </span>
+                  </div>
+                  <div className="mt-2 relative overflow-hidden w-full h-full rounded-xl">
                     <Image
-                      src={caseStudy.logo}
-                      alt={caseStudy.client}
-                      className="h-16 w-16"
-                      unoptimized
+                      className="grayscale group-hover:grayscale-0 transition-all object-cover"
+                      fill
+                      src={caseStudy.image.src}
+                      alt={caseStudy.title}
                     />
-                  </Link>
-                </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
-                  <time
-                    dateTime={caseStudy.date.split("-")[0]}
-                    className="font-semibold"
-                  >
-                    {caseStudy.date.split("-")[0]}
-                  </time>
-                  <span className="text-neutral-300" aria-hidden="true">
-                    /
-                  </span>
-                  <span>Case study</span>
-                </p>
-                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
-                  {caseStudy.title}
-                </p>
-                <p className="mt-4 text-base text-neutral-600">
-                  {caseStudy.description}
-                </p>
-              </article>
+                  </div>
+                </div>
+              </PinContainer>
             </FadeIn>
           ))}
         </FadeInStagger>
       </Container>
-    </>
+    </div>
   );
 }
 
@@ -190,7 +173,6 @@ export default function Home() {
   //  let caseStudies = (await loadCaseStudies()).slice(0, 3)
   const t = useTranslations("HomePage");
 
- 
   return (
     <>
       <BackgroundBeamsWithCollision>
@@ -203,10 +185,8 @@ export default function Home() {
               </h1>
               <TextGenerateEffect className="max-w-3xl" words={t("about")} />
             </div>
-          <Phone3D/>
-          
+            <Phone3D />
           </FadeIn>
-          
         </Container>
       </BackgroundBeamsWithCollision>
       <FadeIn>
@@ -222,9 +202,11 @@ export default function Home() {
         finding a way to access the user’s microphone without triggering one of
         those annoying permission dialogs.
       </Testimonial> */}
-      
-      <CaseStudies caseStudies={caseStudies} />
-      <ContactSection />
+      <div className="relative isolate  w-full  pt-9">
+        <CaseStudies caseStudies={caseStudies} />
+       
+        <ContactSection />
+      </div>
     </>
   );
 }

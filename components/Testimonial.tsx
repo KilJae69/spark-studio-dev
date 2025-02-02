@@ -22,7 +22,7 @@ export function Testimonial({
       )}
     >
       <GridPattern
-        className="absolute inset-0 -z-10 h-full w-full fill-yellow-50 stroke-yellow-500/10 [mask-image:linear-gradient(to_bottom_left,white_50%,transparent_60%)]"
+        className="absolute inset-0 -z-10 h-full w-full fill-slate-50 stroke-slate-500/10 [mask-image:linear-gradient(to_bottom_left,white_50%,transparent_60%)]"
         yOffset={-256}
       />
       <Container>
