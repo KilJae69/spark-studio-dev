@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import React from "react";
 
 export const BackgroundLines = ({
@@ -91,7 +91,7 @@ const SVG = ({
     "#604483",
   ];
   return (
-    <motion.svg
+    <m.svg
       viewBox="0 0 1440 900"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ const SVG = ({
       className="absolute inset-0 w-full h-full"
     >
       {paths.map((path, idx) => (
-        <motion.path
+        <m.path
           d={path}
           stroke={colors[idx]}
           strokeWidth="2.3"
@@ -123,7 +123,7 @@ const SVG = ({
 
       {/* duplicate for more paths */}
       {paths.map((path, idx) => (
-        <motion.path
+        <m.path
           d={path}
           stroke={colors[idx]}
           strokeWidth="2.3"
@@ -142,6 +142,6 @@ const SVG = ({
           key={`path-second-${idx}`}
         />
       ))}
-    </motion.svg>
+    </m.svg>
   );
 };

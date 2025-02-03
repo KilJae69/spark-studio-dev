@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import React, { useRef, useState, useEffect } from "react";
 
 interface BeamOptions {
@@ -151,7 +151,7 @@ const CollisionMechanism: React.FC<{
 
   return (
     <>
-      <motion.div
+      <m.div
         key={beamKey}
         ref={beamRef}
         initial={{
@@ -202,7 +202,7 @@ const Explosion: React.FC<React.HTMLProps<HTMLDivElement>> = ({ ...props }) => {
 
   return (
     <div {...props} className="absolute z-50 h-2 w-2">
-      <motion.div
+      <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -210,7 +210,7 @@ const Explosion: React.FC<React.HTMLProps<HTMLDivElement>> = ({ ...props }) => {
         className="absolute -inset-x-10 top-0 m-auto h-2 w-10 rounded-full bg-gradient-to-r from-transparent via-yellow-500 to-transparent blur-sm"
       />
       {spans.map((span) => (
-        <motion.span
+        <m.span
           key={span.id}
           initial={{ opacity: 1 }}
           animate={{ x: span.directionX, y: span.directionY, opacity: 0 }}

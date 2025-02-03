@@ -14,6 +14,8 @@ import { m, useScroll, useMotionValueEvent } from "framer-motion";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
+
+
 const FallbackComponent = () => (
   <button className="button-two" aria-expanded="false">
     <svg
@@ -60,10 +62,11 @@ type InnerLayoutProps = {
   children: ReactNode;
 };
 
+// Define animation variants for the items
+
+
 function Header() {
-  const [headerState, setHeaderState] = useState<"top" | "hidden" | "small">(
-    "top"
-  );
+  const [headerState, setHeaderState] = useState<"top" | "hidden" | "small">("top");
   const { scrollY } = useScroll();
   const t = useTranslations("Header");
 
@@ -71,49 +74,84 @@ function Header() {
     const previous = scrollY.getPrevious() || 0;
 
     if (latest === 0) {
-      // At the top of the page
       setHeaderState("top");
     } else if (latest > previous && latest > 50) {
-      // Scrolling down and past 50px
       setHeaderState("hidden");
     } else if (latest < previous) {
-      // Scrolling up
       setHeaderState("small");
     }
   });
 
   return (
     <m.header
-      initial={{ y: 0, opacity: 1 }}
+      initial={{ y: -150,  }}
       animate={{
         y: headerState === "hidden" ? -150 : 0,
-        // opacity: headerState === "hidden" ? 0 : 1,
+        
       }}
-      transition={{ type: "spring", stiffness: 100, damping: 20 }}
-      className={`fixed top-0 left-0 w-full z-[1000] ${
-        headerState === "small"
-          ? "backdrop-blur-md bg-white/50 shadow-md"
-          : "bg-transparent"
-      }`}
+      transition={{ type: "spring", stiffness: 100, damping: 20, duration: 0.5 }}
+      className={`fixed top-0 left-0 w-full z-[1000] `}
     >
-      <Container className="fixed w-full left-1/2 -translate-x-1/2  z-[1000]">
+      <Container className="fixed w-full left-1/2 -translate-x-1/2 z-[1000]">
         <div
           className={`flex relative items-center justify-between p-3 transition-all duration-300 ${
             headerState === "top"
               ? "py-6 px-0 top-0 border-none rounded-none"
-              : "py-1 top-2 border border-white border-opacity-40 bg-primary-800/90  shadow-lg backdrop-filter shadow-black/[0.3] backdrop-blur-xl rounded-full px-10"
+              : "py-1 top-2 border border-white border-opacity-40 bg-primary-800/90 shadow-lg backdrop-filter shadow-black/[0.3] backdrop-blur-xl rounded-full px-10"
           }`}
         >
-          <Link href="/" aria-label="Home">
-            <Image src="/spark-logo.svg" alt="Spark Studio Logo" width={200} height={100}/>
-          </Link>
-          <div className="flex items-center whitespace-nowrap gap-x-8">
-            <Button className="hidden sm:block" href="/contact">
-              {t("contact-button")}
-            </Button>
-            <LanguageSwitcher />
-            <DynamicAnimatedSidebar />
-          </div>
+          {/* Logo Animation */}
+          <m.div
+            initial={{ width: 200, height: 100 }}
+            animate={{
+              width: headerState === "small" ? 120 : 200,
+              height: headerState === "small" ? 70 : 100,
+            }}
+            transition={{ type: "spring", stiffness: 100, damping: 20 }}
+            className="relative"
+          >
+            <Link href="/" aria-label="Home">
+              <Image src="/spark-logo.svg" alt="Spark Studio Logo" className="object-contain" fill />
+            </Link>
+          </m.div>
+
+          {/* Animated Items */}
+          <m.div
+            className="flex items-center whitespace-nowrap gap-x-8"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  
+                  staggerChildren: 0.1, // Staggered children entrance
+                  delayChildren: 0.4, // Delay after header animation
+                },
+              },
+              exit: {
+                
+                opacity: 0,
+                transition: {
+                  staggerChildren: 0.05,
+                  staggerDirection: -1,
+                },
+              },
+            }}
+            initial="hidden"
+            animate={headerState !== "hidden" ? "visible" : "exit"} // Items animate after header
+          >
+            <m.div variants={{ hidden: { opacity: 0, y: -20 }, visible: { opacity: 1, y: 0 } }}>
+              <Button className="hidden sm:block" href="/contact">
+                {t("contact-button")}
+              </Button>
+            </m.div>
+            <m.div variants={{ hidden: { opacity: 0, y: -20 }, visible: { opacity: 1, y: 0 } }}>
+              <LanguageSwitcher />
+            </m.div>
+            <m.div variants={{ hidden: { opacity: 0, y: -20 }, visible: { opacity: 1, y: 0 } }}>
+              <DynamicAnimatedSidebar />
+            </m.div>
+          </m.div>
         </div>
       </Container>
     </m.header>
@@ -123,7 +161,7 @@ function Header() {
 export default function InnerLayout({ children }: InnerLayoutProps) {
   return (
     <>
-      <Header />
+      <Header/>
       <div className="relative flex flex-auto overflow-hidden bg-white pt-14">
         <div className="relative isolate flex w-full flex-col pt-9">
           <GridPattern

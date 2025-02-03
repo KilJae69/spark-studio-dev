@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "motion/react";
+import { m } from "motion/react";
 
 export function ColourfulText({ text }: { text: string }) {
   const colors = [
@@ -21,7 +21,7 @@ export function ColourfulText({ text }: { text: string }) {
   }, []);
 
   return text.split("").map((char, index) => (
-    <motion.span
+    <m.span
       key={`${char}-${count}-${index}`}
       initial={{
         y: 0,
@@ -40,6 +40,6 @@ export function ColourfulText({ text }: { text: string }) {
       className="inline-block whitespace-pre font-sans tracking-tight"
     >
       {char}
-    </motion.span>
+    </m.span>
   ));
 }

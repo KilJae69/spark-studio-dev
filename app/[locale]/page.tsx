@@ -41,7 +41,7 @@ const techs: [string, StaticImageData][] = [
 function Techs() {
   const t = useTranslations("HomePage");
   return (
-    <div className=" rounded-xl bg-primary-800 py-10 md:py-20">
+    <div className=" rounded-sm bg-primary-800 py-10 md:py-20">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
@@ -53,7 +53,7 @@ function Techs() {
       <Marquee pauseOnClick className="overflow-y-hidden">
         <ul
           role="list"
-          className="mt-10 mx-10 flex gap-20 items-center justify-center "
+          className="mt-10 mx-10 flex gap-10 md:gap-20 items-center justify-center "
         >
           {techs.map(([tech, logo]) => (
             <li key={tech}>

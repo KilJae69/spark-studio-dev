@@ -22,7 +22,7 @@ const ModalContext = createContext<ModalContextType | undefined>(undefined);
 export const ModalProvider = ({ children }: { children: ReactNode }) => {
   const [open, setOpen] = useState(false);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
-  console.log(open);
+  
   return (
     <ModalContext.Provider value={{ open, setOpen, triggerRef }}>
       {children}
@@ -140,28 +140,18 @@ export const ModalBody = ({
             x: "100%",
             //  backdropFilter: "blur(0px)",
           }}
-          className="fixed shadow-xl top-2 right-2 bottom-2 overflow-hidden [perspective:800px] [transform-style:preserve-3d] z-[2000] rounded-3xl  max-w-[500px] flex items-center justify-center"
+          className="fixed shadow-2xl top-[100px] right-2  bottom-2 overflow-hidden [perspective:800px] [transform-style:preserve-3d] z-[2000] rounded-3xl  max-w-[70%] sm:max-w-[500px] flex items-center justify-center"
         >
-          <m.div
+          <div
             ref={modalRef}
             className={cn(
               " dark:bg-neutral-950 border border-transparent dark:border-neutral-800 relative z-50 flex flex-col flex-1 overflow-hidden",
               className
             )}
-            initial={{
-              x: "-100%", // Start from the top
-            }}
-            animate={{
-              x: 0, // Slide down to the center
-              // backdropFilter: "blur(10px)",
-            }}
-            exit={{
-              x: "-100%", // Slide back up
-              // backdropFilter: "blur(0px)",
-            }}
+          
           >
             {children}
-          </m.div>
+          </div>
         </m.div>
       )}
     </AnimatePresence>,
@@ -202,7 +192,7 @@ export const ModalFooter = ({
 
 // const Overlay = ({ className }: { className?: string }) => {
 //   return (
-//     <motion.div
+//     <m.div
 //       initial={{
 //         opacity: 0,
 //       }}
@@ -215,7 +205,7 @@ export const ModalFooter = ({
 //         backdropFilter: "blur(0px)",
 //       }}
 //       className={`fixed inset-0 h-full w-full bg-white  z-50 ${className}`}
-//     ></motion.div>
+//     ></m.div>
 //   );
 // };
 
@@ -231,14 +221,14 @@ export const useOutsideClick = (
         excludeRef?.current &&
         excludeRef.current.contains(event.target as Node)
       ) {
-        console.log("Clicked on excluded element (ModalTrigger)");
+      
         return;
       }
       if (!ref.current || ref.current.contains(event.target as Node)) {
-        console.log("Clicked inside modal or ref is null");
+        
         return;
       }
-      console.log("Clicked outside modal");
+      
       callback(event);
     };
 

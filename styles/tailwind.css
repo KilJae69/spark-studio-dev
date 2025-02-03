@@ -105,7 +105,7 @@
 /* button two */
 
 .button-two {
-  --button-color: #1E293B;
+  --button-color: #1e293b;
   position: relative;
 }
 
@@ -113,7 +113,7 @@
   content: "";
   inset: -5px;
   position: absolute;
-  background-color: #E2E8F0;
+  background-color: #e2e8f0;
   z-index: -1;
   border-radius: 100%;
   padding: 2px;
@@ -141,8 +141,6 @@
   --rotation: 45deg;
   transform-origin: 60px 55px;
 }
-
-
 
 @keyframes to-close-icon {
   0% {
@@ -176,3 +174,4 @@
     stroke-dashoffset: 0;
   }
 }
+

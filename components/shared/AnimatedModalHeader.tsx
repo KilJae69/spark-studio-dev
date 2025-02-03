@@ -12,9 +12,12 @@ import { Link } from "@/i18n/routing";
 // import { SocialMedia } from "../SocialMedia";
 // import { IoMenu } from "react-icons/io5";
 import { useModal } from "../ui/animated-modal"; // Import useModal
-import { IoClose } from "react-icons/io5";
+// import { IoClose } from "react-icons/io5";
 
-import { Logo, Logomark } from "../Logo";
+import { useTranslations } from "next-intl";
+import { SocialMedia } from "../SocialMedia";
+import Image from "next/image";
+import { Meteors } from "../ui/meteors";
 
 /* 
 function NavigationRow({ children }: { children: React.ReactNode }) {
@@ -27,124 +30,119 @@ function NavigationRow({ children }: { children: React.ReactNode }) {
   );
 }
 
+ */
 function NavigationItem({
   href,
   children,
+  onOpen,
 }: {
   href: string;
   children: React.ReactNode;
+  onOpen: () => void;
 }) {
-  const { setOpen } = useModal(); // Use the useModal hook to get setOpen
+  // Use the useModal hook to get setOpen
 
   return (
     <Link
       href={href}
-      className="group relative isolate -mx-6 bg-white px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l-[1px] sm:even:border-primary-600 sm:even:pl-16"
-      onClick={() => setOpen(false)} // Close the modal when the link is clicked
+      className=""
+      onClick={onOpen} // Close the modal when the link is clicked
     >
       {children}
-      <span className="absolute inset-y-0 -z-10 w-screen bg-primary-700 h-0 transition group-odd:right-0 group-even:left-0 group-hover:h-full" />
+      <span className="" />
     </Link>
   );
 }
 
- function Navigation() {
-   const t = useTranslations("Header");
-   return (
-     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
-       <NavigationRow>
-         <NavigationItem href="/work">{t("link-our-work")}</NavigationItem>
-         <NavigationItem href="/process">{t("link-process")}</NavigationItem>
-       </NavigationRow>
-       <NavigationRow>
-         <NavigationItem href="/contact">{t("link-contact-us")}</NavigationItem>
-         <NavigationItem href="/blog">{t("link-blog")}</NavigationItem>
-       </NavigationRow>
-     </nav>
-   );
- }
+function Navigation() {
+  const { setOpen } = useModal();
+  const t = useTranslations("Header");
+  return (
+    <nav className=" font-display text-3xl font-medium flex flex-col gap-4 tracking-tight text-primary-800">
+      <NavigationItem onOpen={() => setOpen(false)} href="/work">
+        {t("link-our-work")}
+      </NavigationItem>
+      <NavigationItem onOpen={() => setOpen(false)} href="/process">
+        {t("link-process")}
+      </NavigationItem>
 
- */
+      <NavigationItem onOpen={() => setOpen(false)} href="/contact">
+        {t("link-contact-us")}
+      </NavigationItem>
+      <NavigationItem onOpen={() => setOpen(false)} href="/blog">
+        {t("link-blog")}
+      </NavigationItem>
+    </nav>
+  );
+}
 
 function ModalHeader() {
-  const { setOpen } = useModal();
+  // const { setOpen } = useModal();
   return (
-   
-      <div className="flex items-center justify-between p-3 ">
-        <Link
+    <div className="flex relative items-center justify-center">
+      <Link href="/" aria-label="Home" className="relative w-[300px] h-[120px]">
+        <Image
+          src="/spark-logo.svg"
+          alt="Spark Studio Logo"
+          className="object-contain"
+          fill
+        />
+      </Link>
+      <span className="bg-primary-800 absolute inset-0 -z-10 scale-150 -rotate-12"/>
+      <Meteors number={20} />
+      {/* <div className="flex items-center whitespace-nowrap gap-x-8">
+        <button
           onClick={() => setOpen(false)}
-          href="/"
-          aria-label="Home"
-          // onMouseEnter={() => setLogoHovered(true)}
-          //  onMouseLeave={() => setLogoHovered(false)}
+          className="group text-primary-800 p-1 bg-primary-200 rounded-full flex justify-center group/modal-btn"
         >
-          <Logomark
-            className="h-8 sm:hidden"
-
-            //  filled={logoHovered}
-          />
-          <Logo
-            className="hidden h-8 sm:block"
-
-            //   filled={logoHovered}
-          />
-        </Link>
-        <div className="flex items-center whitespace-nowrap gap-x-8">
-          <button
-            onClick={() => setOpen(false)}
-            className="group text-primary-800 p-1 bg-primary-200 rounded-full flex justify-center group/modal-btn"
-          >
-            <IoClose className="size-10 group-hover:scale-110 transition" />
-          </button>
-        </div>
-      </div>
-
-   
+          <IoClose className="size-10 group-hover:scale-110 transition" />
+        </button>
+      </div> */}
+    </div>
   );
 }
 
 export default function AnimatedModalHeader() {
- // const t = useTranslations("ContactSection");
+  const t = useTranslations("ContactSection");
   return (
-    <div className="flex items-center justify-center">
+    
       <Modal>
         <ModalTrigger />
-          
-        
-        <ModalBody className="size-full bg-white">
-          <ModalContent>
-            <ModalHeader/>
-            {/* <ModalHeader />
-            <div className="mt-20">
-               <Navigation /> 
+
+        <ModalBody className="size-full bg-white ">
+          <ModalContent className="flex">
+            <ModalHeader />
+
+            <div className="mt-20  p-5">
+              {" "}
+              <Navigation />{" "}
             </div>
-            <div className="relative bg-white before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-primary-600">
-              <Container>
-                <div className="flex flex-col sm:flex-row gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
-                  <div className="flex-1">
-                    <h2 className="font-display text-base font-semibold text-white">
-                      {t("noOfficesTitle")}
-                    </h2>
-                    <p className="mt-2 text-sm text-white/75">
-                      {t("description")}
+            <div className="relative px-2 sm:px-5 py-10 mt-auto max-w-[300px]">
+              <div className="flex flex-col gap-y-10  ">
+                <div className="flex-1">
+                  <h2 className="font-display text-base font-semibold text-primary-700">
+                    {t("noOfficesTitle")}
+                  </h2>
+                  <p className="mt-2 text-sm text-primary-700/75">
+                    {t("description")}
+                  </p>
+                  <div className="mt-4">
+                    <p className="text-sm text-primary-700/75">
+                      🛜{t("wifiNote")}
                     </p>
-                    <div className="mt-4">
-                      <p className="text-sm text-white/75">🛜{t("wifiNote")}</p>
-                    </div>
-                  </div>
-                  <div className="sm:border-l sm:border-transparent sm:pl-16">
-                    <h2 className="font-display text-base font-semibold text-white">
-                      Follow us
-                    </h2>
-                    <SocialMedia className="mt-6" invert />
                   </div>
                 </div>
-              </Container>
-             
-            </div> */}
+                <div className="sm:border-l sm:border-transparent ">
+                  <h2 className="font-display text-base font-semibold text-primary-700">
+                    Follow us
+                  </h2>
+                  <SocialMedia className="mt-6" />
+                </div>
+              </div>
+            </div>
           </ModalContent>
         </ModalBody>
       </Modal>
-    </div>
+    
   );
 }
