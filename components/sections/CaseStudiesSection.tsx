@@ -38,10 +38,10 @@ export default function CaseStudiesSection({
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-20 lg:grid-cols-3">
           {caseStudies.map((caseStudy) => (
-            <FadeIn key={caseStudy.href} className="w-full ">
+            <FadeIn key={caseStudy.href} className=" ">
               {isInView && (
                 <DynamicPinContainer
-                  className="w-full group"
+                  className=" group"
                   href={caseStudy.href}
                   title={caseStudy.title}
                 >

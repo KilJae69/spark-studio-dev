@@ -1,4 +1,4 @@
-"use client";
+
 
 import { useTranslations } from "next-intl";
 import { Container } from "../Container";

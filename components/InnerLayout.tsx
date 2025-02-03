@@ -6,12 +6,13 @@ import { GridPattern } from "./GridPattern";
 import { useTranslations } from "next-intl";
 import { Container } from "./Container";
 import { Link } from "@/i18n/routing";
-import { Logo, Logomark } from "./Logo";
+
 import { Button } from "./Button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { m, useScroll, useMotionValueEvent } from "framer-motion";
 
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 const FallbackComponent = () => (
   <button className="button-two" aria-expanded="false">
@@ -85,7 +86,7 @@ function Header() {
     <m.header
       initial={{ y: 0, opacity: 1 }}
       animate={{
-        y: headerState === "hidden" ? -100 : 0,
+        y: headerState === "hidden" ? -150 : 0,
         // opacity: headerState === "hidden" ? 0 : 1,
       }}
       transition={{ type: "spring", stiffness: 100, damping: 20 }}
@@ -100,12 +101,11 @@ function Header() {
           className={`flex relative items-center justify-between p-3 transition-all duration-300 ${
             headerState === "top"
               ? "py-6 px-0 top-0 border-none rounded-none"
-              : "py-3 top-2 border border-white border-opacity-40 bg-primary-800/90  shadow-lg backdrop-filter shadow-black/[0.3] backdrop-blur-xl rounded-full px-10"
+              : "py-1 top-2 border border-white border-opacity-40 bg-primary-800/90  shadow-lg backdrop-filter shadow-black/[0.3] backdrop-blur-xl rounded-full px-10"
           }`}
         >
           <Link href="/" aria-label="Home">
-            <Logomark className="h-8 sm:hidden" />
-            <Logo className="hidden h-8 sm:block" />
+            <Image src="/spark-logo.svg" alt="Spark Studio Logo" width={200} height={100}/>
           </Link>
           <div className="flex items-center whitespace-nowrap gap-x-8">
             <Button className="hidden sm:block" href="/contact">
