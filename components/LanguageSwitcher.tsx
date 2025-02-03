@@ -7,20 +7,36 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { usePathname, useRouter } from "@/i18n/routing";
+import { Locale } from "@/lib/locales";
 import { capitalize } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React from "react";
+import { useParams } from "next/navigation";
+import React, { useTransition } from "react";
 
 export const LanguageSwitcher: React.FC = () => {
-  const pathname = usePathname(); // Get the full pathname
+  const router = useRouter();
+  const [isPending, startTransition] = useTransition();
+  const pathname = usePathname();
+  const params = useParams();
   const t = useTranslations("Header");
+
+  const handleLocaleChange = (nextLocale: Locale) => {
+    startTransition(() => {
+      router.replace(
+        // @ts-expect-error -- TypeScript will validate that only known `params`
+        // are used in combination with a given `pathname`. Since the two will
+        // always match for the current route, we can skip runtime checks.
+        { pathname, params },
+        { locale: nextLocale }
+      );
+    });
+  };
 
   type Option = {
     country: string;
-    code: string;
+    code: Locale;
   };
 
   const options: Option[] = [
@@ -30,12 +46,11 @@ export const LanguageSwitcher: React.FC = () => {
   ];
 
   // Extract the current language code from the pathname
-  const currentLanguageCode =
-    pathname.split("/")[1] || "en"; // Get the first segment or default to 'en'
+  const currentLanguageCode = (pathname.split("/")[1] as Locale) || "en"; // Get the first segment or default to 'en'
 
-  const currentLanguage =
-    options.find((option) => option.code === currentLanguageCode) ||
-    { country: t("language-option-en"), code: "en" };
+  const currentLanguage = options.find(
+    (option) => option.code === currentLanguageCode
+  ) || { country: t("language-option-en"), code: "en" };
 
   return (
     <DropdownMenu>
@@ -62,27 +77,27 @@ export const LanguageSwitcher: React.FC = () => {
       <DropdownMenuContent align="end" className="bg-white">
         {options.map((lang) => (
           <DropdownMenuItem
+            disabled={isPending}
             key={lang.code}
             className="hover:bg-rose-500 group cursor-pointer"
+            onClick={() => handleLocaleChange(lang.code)}
           >
-            <Link href={`/${lang.code}/${pathname.split("/").slice(2).join("/")}`}>
-              <button
-                lang={lang.code}
-                onMouseDown={(e) => e.preventDefault()}
-                className={`flex w-full items-center gap-2 px-4 py-2 text-left text-sm group-hover:text-white ${
-                  currentLanguageCode === lang.code ? "text-primary" : ""
-                }`}
-              >
-                <Image
-                  className="rounded-full"
-                  width={24}
-                  height={24}
-                  src={`/icons/${lang.code}.png`}
-                  alt={`${lang.country} flag icon`}
-                />
-                {capitalize(lang.country)}
-              </button>
-            </Link>
+            <button
+              lang={lang.code}
+              onMouseDown={(e) => e.preventDefault()}
+              className={`flex w-full items-center gap-2 px-4 py-2 text-left text-sm group-hover:text-white ${
+                currentLanguageCode === lang.code ? "text-primary" : ""
+              }`}
+            >
+              <Image
+                className="rounded-full"
+                width={24}
+                height={24}
+                src={`/icons/${lang.code}.png`}
+                alt={`${lang.country} flag icon`}
+              />
+              {capitalize(lang.country)}
+            </button>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

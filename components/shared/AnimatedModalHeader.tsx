@@ -18,6 +18,8 @@ import { useTranslations } from "next-intl";
 import { SocialMedia } from "../SocialMedia";
 import Image from "next/image";
 import { Meteors } from "../ui/meteors";
+import { FloatingDock } from "../ui/floating-dock";
+
 
 /* 
 function NavigationRow({ children }: { children: React.ReactNode }) {
@@ -35,21 +37,25 @@ function NavigationItem({
   href,
   children,
   onOpen,
+  iconSrc,
+  iconAlt,
 }: {
   href: string;
   children: React.ReactNode;
   onOpen: () => void;
+  iconSrc?: string;
+  iconAlt?: string;
 }) {
   // Use the useModal hook to get setOpen
 
   return (
     <Link
       href={href}
-      className=""
+      className="flex gap-4"
       onClick={onOpen} // Close the modal when the link is clicked
     >
+      <Image src={iconSrc || ""} alt={iconAlt || ""} width={40} height={20} />
       {children}
-      <span className="" />
     </Link>
   );
 }
@@ -58,18 +64,34 @@ function Navigation() {
   const { setOpen } = useModal();
   const t = useTranslations("Header");
   return (
-    <nav className=" font-display text-3xl font-medium flex flex-col gap-4 tracking-tight text-primary-800">
-      <NavigationItem onOpen={() => setOpen(false)} href="/work">
+    <nav className=" font-display sm:text-3xl font-medium flex flex-col gap-4 tracking-tight text-primary-800">
+      <NavigationItem
+        onOpen={() => setOpen(false)}
+        href="/work"
+        iconSrc="/animations/coding-icon.gif"
+      >
         {t("link-our-work")}
       </NavigationItem>
-      <NavigationItem onOpen={() => setOpen(false)} href="/process">
+      <NavigationItem
+        onOpen={() => setOpen(false)}
+        href="/process"
+        iconSrc="/animations/developer-icon.gif"
+      >
         {t("link-process")}
       </NavigationItem>
 
-      <NavigationItem onOpen={() => setOpen(false)} href="/contact">
+      <NavigationItem
+        onOpen={() => setOpen(false)}
+        href="/contact"
+        iconSrc="/animations/phone-icon.gif"
+      >
         {t("link-contact-us")}
       </NavigationItem>
-      <NavigationItem onOpen={() => setOpen(false)} href="/blog">
+      <NavigationItem
+        onOpen={() => setOpen(false)}
+        href="/blog"
+        iconSrc="/animations/blog-icon.gif"
+      >
         {t("link-blog")}
       </NavigationItem>
     </nav>
@@ -88,7 +110,7 @@ function ModalHeader() {
           fill
         />
       </Link>
-      <span className="bg-primary-800 absolute inset-0 -z-10 scale-150 -rotate-12"/>
+      <span className="bg-primary-800 absolute inset-0 -z-10 scale-150 -rotate-12" />
       <Meteors number={20} />
       {/* <div className="flex items-center whitespace-nowrap gap-x-8">
         <button
@@ -104,45 +126,51 @@ function ModalHeader() {
 
 export default function AnimatedModalHeader() {
   const t = useTranslations("ContactSection");
+
+  
   return (
-    
-      <Modal>
-        <ModalTrigger />
+    <Modal>
+      <ModalTrigger />
 
-        <ModalBody className="size-full bg-white ">
-          <ModalContent className="flex">
-            <ModalHeader />
+      <ModalBody className="size-full bg-white ">
+        <ModalContent className="flex">
+          <ModalHeader />
 
-            <div className="mt-20  p-5">
-              {" "}
-              <Navigation />{" "}
-            </div>
-            <div className="relative px-2 sm:px-5 py-10 mt-auto max-w-[300px]">
-              <div className="flex flex-col gap-y-10  ">
-                <div className="flex-1">
-                  <h2 className="font-display text-base font-semibold text-primary-700">
-                    {t("noOfficesTitle")}
-                  </h2>
-                  <p className="mt-2 text-sm text-primary-700/75">
-                    {t("description")}
+          <div className="mt-20  p-5">
+           
+            <Navigation />
+          </div>
+          <div className="flex items-center justify-center my-auto w-full">
+            <FloatingDock
+             // only for demo, remove for production
+              
+            />
+          </div>
+          <div className="relative px-2 sm:px-5 py-10 mt-auto mb-10 max-w-[300px]">
+            <div className="flex flex-col gap-y-10  ">
+              <div className="flex-1">
+                <h2 className="font-display text-base font-semibold text-primary-700">
+                  {t("noOfficesTitle")}
+                </h2>
+                <p className="mt-2 text-sm text-primary-700/75">
+                  {t("description")}
+                </p>
+                <div className="mt-4">
+                  <p className="text-sm text-primary-700/75">
+                    🛜{t("wifiNote")}
                   </p>
-                  <div className="mt-4">
-                    <p className="text-sm text-primary-700/75">
-                      🛜{t("wifiNote")}
-                    </p>
-                  </div>
-                </div>
-                <div className="sm:border-l sm:border-transparent ">
-                  <h2 className="font-display text-base font-semibold text-primary-700">
-                    Follow us
-                  </h2>
-                  <SocialMedia className="mt-6" />
                 </div>
               </div>
+              <div className="sm:border-l sm:border-transparent ">
+                <h2 className="font-display text-base font-semibold text-primary-700">
+                  Follow us
+                </h2>
+                <SocialMedia className="mt-6" />
+              </div>
             </div>
-          </ModalContent>
-        </ModalBody>
-      </Modal>
-    
+          </div>
+        </ModalContent>
+      </ModalBody>
+    </Modal>
   );
 }

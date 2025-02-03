@@ -145,7 +145,7 @@ export const ModalBody = ({
           <div
             ref={modalRef}
             className={cn(
-              " dark:bg-neutral-950 border border-transparent dark:border-neutral-800 relative z-50 flex flex-col flex-1 overflow-hidden",
+              "  border border-transparent  relative z-50 flex flex-col flex-1 overflow-hidden",
               className
             )}
           

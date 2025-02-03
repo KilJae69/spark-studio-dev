@@ -3,16 +3,17 @@
 import { ReactNode, useState } from "react";
 import { Footer } from "./sections/Footer";
 import { GridPattern } from "./GridPattern";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Container } from "./Container";
-import { Link } from "@/i18n/routing";
+import { Link, usePathname } from "@/i18n/routing";
 
 import { Button } from "./Button";
-import { LanguageSwitcher } from "./LanguageSwitcher";
+
 import { m, useScroll, useMotionValueEvent } from "framer-motion";
 
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import { FloatingDockMobile } from "./ui/floating-dock";
 
 
 
@@ -69,6 +70,14 @@ function Header() {
   const [headerState, setHeaderState] = useState<"top" | "hidden" | "small">("top");
   const { scrollY } = useScroll();
   const t = useTranslations("Header");
+  const locale = useLocale()
+  console.log(locale);
+  const pathname = usePathname()
+  const languages = [
+    { code: "en", country: t("language-option-en"), flag: "/icons/en.png" },
+    { code: "bs", country: t("language-option-bs"), flag: "/icons/bs.png" },
+    { code: "de", country: t("language-option-de"), flag: "/icons/de.png" },
+  ];
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() || 0;
@@ -111,13 +120,13 @@ function Header() {
             className="relative"
           >
             <Link href="/" aria-label="Home">
-              <Image src="/spark-logo.svg" alt="Spark Studio Logo" className="object-contain" fill />
+              <Image src="/spark-logo.svg" priority alt="Spark Studio Logo" className="object-contain" fill />
             </Link>
           </m.div>
 
           {/* Animated Items */}
           <m.div
-            className="flex items-center whitespace-nowrap gap-x-8"
+            className="flex items-center justify-center whitespace-nowrap gap-x-8"
             variants={{
               hidden: { opacity: 0 },
               visible: {
@@ -146,7 +155,8 @@ function Header() {
               </Button>
             </m.div>
             <m.div variants={{ hidden: { opacity: 0, y: -20 }, visible: { opacity: 1, y: 0 } }}>
-              <LanguageSwitcher />
+          
+              <FloatingDockMobile items={languages} path={pathname}  />
             </m.div>
             <m.div variants={{ hidden: { opacity: 0, y: -20 }, visible: { opacity: 1, y: 0 } }}>
               <DynamicAnimatedSidebar />
