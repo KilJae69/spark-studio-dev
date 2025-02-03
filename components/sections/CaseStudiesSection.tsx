@@ -9,6 +9,7 @@ import { FadeIn, FadeInStagger } from "../FadeIn";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import useLazyLoad from "@/hooks/useLazyLoad";
+import { PinContainer } from "../ui/3d-pin-new";
 
 const DynamicPinContainer = dynamic(() => import("@/components/ui/3d-pin"));
 
@@ -64,6 +65,40 @@ export default function CaseStudiesSection({
                     </div>
                   </div>
                 </DynamicPinContainer>
+              )}
+            </FadeIn>
+          ))}
+        </FadeInStagger>
+      </Container>
+      <Container className="mt-16">
+        <FadeInStagger className="grid grid-cols-1 gap-20 lg:grid-cols-3">
+          {caseStudies.map((caseStudy) => (
+            <FadeIn key={caseStudy.href} className=" ">
+              {isInView && (
+                <PinContainer
+                  className=" group"
+                  href={caseStudy.href}
+                  title={caseStudy.title}
+                >
+                  <div className="flex basis-full flex-col p-1  sm:p-4 w-[16rem] sm:w-[27rem] tracking-tight text-primary-100/50 lg:w-[20rem] h-[20rem] ">
+                    <h3 className="max-w-xs min-h-16 !pb-2 !m-0 font-bold  text-base text-white group-hover:text-primary-accent transition">
+                      {caseStudy.title}
+                    </h3>
+                    <div className="text-base !m-0 !p-0 font-normal">
+                      <span className="text-slate-500 line-clamp-3">
+                        {caseStudy.description}
+                      </span>
+                    </div>
+                    <div className="mt-2 relative overflow-hidden w-full h-full rounded-xl">
+                      <Image
+                        className="grayscale group-hover:grayscale-0 transition-all object-cover"
+                        fill
+                        src={caseStudy.image.src}
+                        alt={caseStudy.title}
+                      />
+                    </div>
+                  </div>
+                </PinContainer>
               )}
             </FadeIn>
           ))}
