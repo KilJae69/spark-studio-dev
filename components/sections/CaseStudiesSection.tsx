@@ -7,11 +7,11 @@ import { Container } from "../Container";
 import { FadeIn, FadeInStagger } from "../FadeIn";
 
 import Image from "next/image";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import useLazyLoad from "@/hooks/useLazyLoad";
 import { PinContainer } from "../ui/3d-pin-new";
 
-const DynamicPinContainer = dynamic(() => import("@/components/ui/3d-pin"));
+// const DynamicPinContainer = dynamic(() => import("@/components/ui/3d-pin"));
 
 export default function CaseStudiesSection({
   caseStudies,
@@ -36,7 +36,7 @@ export default function CaseStudiesSection({
           catch 22 situation.
         </p>
       </SectionIntro>
-      <Container className="mt-16">
+      {/* <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-20 lg:grid-cols-3">
           {caseStudies.map((caseStudy) => (
             <FadeIn key={caseStudy.href} className=" ">
@@ -69,7 +69,7 @@ export default function CaseStudiesSection({
             </FadeIn>
           ))}
         </FadeInStagger>
-      </Container>
+      </Container> */}
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-5 lg:grid-cols-3">
           {caseStudies.map((caseStudy) => (
@@ -81,18 +81,25 @@ export default function CaseStudiesSection({
                 <PinContainer
                   className=" group"
                   href={caseStudy.href}
-                  title={caseStudy.title}
+                  title={"Read more"}
                 >
-                  <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-                    <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-                      Aceternity UI
+                  <div className="flex basis-full flex-col p-4 tracking-tight text-primary-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+                    <h3 className="max-w-xs !pb-2 !m-0 font-bold line-clamp-1 group-hover:text-primary-accent transition text-base text-primary-100">
+                    {caseStudy.title}
                     </h3>
                     <div className="text-base !m-0 !p-0 font-normal">
-                      <span className="text-slate-500 ">
-                        Customizable Tailwind CSS and Framer Motion Components.
+                      <span className="text-primary-300 line-clamp-2">
+                      {caseStudy.description}
                       </span>
                     </div>
-                    <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+                    <div className="mt-4 relative overflow-hidden w-full h-full rounded-xl">
+                      <Image
+                        className="grayscale group-hover:grayscale-0 transition-all object-cover"
+                        fill
+                        src={caseStudy.image.src}
+                        alt={caseStudy.title}
+                      />
+                    </div>
                   </div>
                 </PinContainer>
               )}
