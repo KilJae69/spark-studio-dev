@@ -12,9 +12,8 @@ import { Link } from "@/i18n/routing";
 // import { Container } from "../Container";
 // import { SocialMedia } from "../SocialMedia";
 // import { IoMenu } from "react-icons/io5";
-
 // import { IoClose } from "react-icons/io5";
-import { SocialMedia } from "../SocialMedia";
+// import { SocialMedia } from "../SocialMedia";
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -79,7 +78,7 @@ function NavigationLinks() {
         <CustomLink
           heading={t("link-contact-us")}
           href="/contact"
-          iconSrc="/animations/phone-icon.gif"
+          iconSrc="/animations/mail-flying-icon.gif"
         />
       </m.div>
       <m.div variants={itemVariants}>
@@ -115,7 +114,7 @@ function ModalHeader() {
     </div>
   );
 }
-
+/*
 function ModalFooter() {
   const t = useTranslations("ContactSection");
 
@@ -150,7 +149,7 @@ function ModalFooter() {
     </div>
   );
 }
-
+*/
 export default function AnimatedModalSidebar() {
   const t = useTranslations("Header");
   return (
@@ -174,7 +173,7 @@ export default function AnimatedModalSidebar() {
             </p>
             <FloatingDock />
           </m.div>
-          <ModalFooter />
+          {/* <ModalFooter /> */}
         </ModalContent>
       </ModalBody>
     </Modal>
