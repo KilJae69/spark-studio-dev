@@ -140,12 +140,13 @@ export const ModalBody = ({
             x: "100%",
             //  backdropFilter: "blur(0px)",
           }}
-          className="fixed shadow-2xl top-[100px] right-2  bottom-2 overflow-hidden [perspective:800px] [transform-style:preserve-3d] z-[2000] rounded-3xl  max-w-[70%] sm:max-w-[500px] flex items-center justify-center"
+          className="fixed shadow-2xl top-2 right-2  bottom-2 overflow-hidden [perspective:800px] [transform-style:preserve-3d] z-[2000] rounded-3xl border  max-w-[70%] sm:max-w-[500px] flex items-center justify-center"
+          
         >
           <div
             ref={modalRef}
             className={cn(
-              "  border border-transparent  relative z-50 flex flex-col flex-1 overflow-hidden",
+              "  relative z-50 flex flex-col flex-1 overflow-y-auto",
               className
             )}
           

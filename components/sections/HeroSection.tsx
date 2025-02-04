@@ -23,7 +23,7 @@ export default function HeroSection() {
                 <ColourfulText text={t("title")} /> <br />
                 <span className="">{t("subtitle")}</span>
               </h1>
-              <TextGenerateEffect className="max-w-3xl" words={t("about")} />
+              <TextGenerateEffect className="hidden sm:block max-w-3xl" words={t("about")} />
             </div>
             <Phone3D/>
           </FadeIn>

@@ -42,11 +42,11 @@
     "customContentManagement": "Effortlessly manage your content with solutions tailored to your workflow. We specialize in building intuitive and scalable content management systems."
   },
   "Header": {
-    "link-our-work": "Our Work",
-    "link-process": "Our Process",
+    "link-our-work": "Work",
+    "link-process": "Process",
     "link-blog": "Blog",
-    "link-contact-us": "Contact us",
-    "contact-button": "Contact us",
+    "link-contact-us": "Contact",
+    "contact-button": "Contact Us",
     "language-button": "Language",
     "language-option-bs": "Bosnian",
     "language-option-en": "English",

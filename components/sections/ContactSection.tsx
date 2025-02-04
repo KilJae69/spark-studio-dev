@@ -4,8 +4,8 @@ import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { useState, useEffect } from "react";
-
 
 export function ContactSection() {
   const t = useTranslations("ContactSection");
@@ -37,10 +37,7 @@ export function ContactSection() {
               {t("title")}
             </h2>
             <div className="mt-6 flex">
-              <Button href="/contact" >
-                {t("buttonText")}
-              </Button>
-              
+              <Button href="/contact">{t("buttonText")}</Button>
             </div>
             <div className="mt-10 border-t border-white/10 pt-10 flex justify-between">
               <div className="flex-1">
@@ -49,7 +46,16 @@ export function ContactSection() {
                 </h3>
                 <p className="mt-2 text-sm text-white/75">{t("description")}</p>
                 <div className="mt-4">
-                  <p className="text-sm text-white/75">🛜{t("wifiNote")}</p>
+                  <p className="text-sm flex items-center gap-3 text-white/75">
+                    {" "}
+                    <Image
+                      src="/animations/wifi-icon.gif"
+                      alt="wifi icon"
+                      width={30}
+                      height={30}
+                    />
+                    {t("wifiNote")}
+                  </p>
                 </div>
               </div>
             </div>

@@ -3,7 +3,7 @@
 import { ReactNode, useState } from "react";
 import { Footer } from "./sections/Footer";
 import { GridPattern } from "./GridPattern";
-import { useLocale, useTranslations } from "next-intl";
+import {  useTranslations } from "next-intl";
 import { Container } from "./Container";
 import { Link, usePathname } from "@/i18n/routing";
 
@@ -70,8 +70,8 @@ function Header() {
   const [headerState, setHeaderState] = useState<"top" | "hidden" | "small">("top");
   const { scrollY } = useScroll();
   const t = useTranslations("Header");
-  const locale = useLocale()
-  console.log(locale);
+ 
+
   const pathname = usePathname()
   const languages = [
     { code: "en", country: t("language-option-en"), flag: "/icons/en.png" },

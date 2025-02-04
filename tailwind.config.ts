@@ -25,7 +25,7 @@ export default {
     },
     extend: {
       boxShadow: {
-        
+        glow: "0 0 10px #d4af37, 0 0 20px #d4af37, 0 0 30px #d4af37, 0 0 50px #d4af37, 0 0 80px #d4af37",
         cardShadow: "0 5px 20px rgba(0, 0, 0, 0.5)",
       },
       colors: {

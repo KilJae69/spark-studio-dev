@@ -200,7 +200,7 @@ export const FloatingDockMobile = ({ items, className, path }: { items: Language
         onClick={onClick}
         className={cn(
           "aspect-square rounded-full bg-primary-200 flex items-center justify-center relative cursor-pointer",
-          isCurrent && "border-2 border-primary-800 bg-primary-800" // Highlight the current locale
+          isCurrent && "border-2 border-primary-accent bg-primary-accent" // Highlight the current locale
         )}
       >
         

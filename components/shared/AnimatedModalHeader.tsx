@@ -5,104 +5,104 @@ import {
   ModalBody,
   ModalContent,
   ModalTrigger,
+  useModal,
 } from "../ui/animated-modal";
 import { Link } from "@/i18n/routing";
-// import { useTranslations } from "next-intl";
+
 // import { Container } from "../Container";
 // import { SocialMedia } from "../SocialMedia";
 // import { IoMenu } from "react-icons/io5";
-import { useModal } from "../ui/animated-modal"; // Import useModal
+
 // import { IoClose } from "react-icons/io5";
+import { SocialMedia } from "../SocialMedia";
 
 import { useTranslations } from "next-intl";
-import { SocialMedia } from "../SocialMedia";
 import Image from "next/image";
 import { Meteors } from "../ui/meteors";
 import { FloatingDock } from "../ui/floating-dock";
 
+import CustomLink from "./CustomAnimatedLink";
+import { Variants, m } from "framer-motion";
 
-/* 
-function NavigationRow({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="even:mt-px sm:bg-primary-800 ">
-      <Container>
-        <div className="grid grid-cols-1 sm:grid-cols-2">{children}</div>
-      </Container>
-    </div>
-  );
-}
+const containerVariants: Variants = {
+  hidden: { x: "100%" },
+  visible: {
+    x: "0",
+    transition: {
+      staggerChildren: 0.1, // Adjust the stagger delay as needed
+      type: "spring",
+      damping: "16",
+      stiffness: "130",
+    },
+  },
+};
 
- */
-function NavigationItem({
-  href,
-  children,
-  onOpen,
-  iconSrc,
-  iconAlt,
-}: {
-  href: string;
-  children: React.ReactNode;
-  onOpen: () => void;
-  iconSrc?: string;
-  iconAlt?: string;
-}) {
-  // Use the useModal hook to get setOpen
+const itemVariants: Variants = {
+  hidden: { x: "100%" },
+  visible: {
+    x: "0",
+    transition: {
+      duration: 0.3,
+      type: "spring",
+      damping: "16",
+      stiffness: "130",
+    },
+  },
+};
 
-  return (
-    <Link
-      href={href}
-      className="flex gap-4"
-      onClick={onOpen} // Close the modal when the link is clicked
-    >
-      <Image src={iconSrc || ""} alt={iconAlt || ""} width={40} height={20} />
-      {children}
-    </Link>
-  );
-}
-
-function Navigation() {
-  const { setOpen } = useModal();
+function NavigationLinks() {
   const t = useTranslations("Header");
-  return (
-    <nav className=" font-display sm:text-3xl font-medium flex flex-col gap-4 tracking-tight text-primary-800">
-      <NavigationItem
-        onOpen={() => setOpen(false)}
-        href="/work"
-        iconSrc="/animations/coding-icon.gif"
-      >
-        {t("link-our-work")}
-      </NavigationItem>
-      <NavigationItem
-        onOpen={() => setOpen(false)}
-        href="/process"
-        iconSrc="/animations/developer-icon.gif"
-      >
-        {t("link-process")}
-      </NavigationItem>
 
-      <NavigationItem
-        onOpen={() => setOpen(false)}
-        href="/contact"
-        iconSrc="/animations/phone-icon.gif"
-      >
-        {t("link-contact-us")}
-      </NavigationItem>
-      <NavigationItem
-        onOpen={() => setOpen(false)}
-        href="/blog"
-        iconSrc="/animations/blog-icon.gif"
-      >
-        {t("link-blog")}
-      </NavigationItem>
-    </nav>
+  return (
+    <m.nav
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="mt-20 p-5"
+    >
+      <m.div variants={itemVariants}>
+        <CustomLink
+          heading={t("link-our-work")}
+          href="/work"
+          iconSrc="/animations/coding-icon.gif"
+        />
+      </m.div>
+      <m.div variants={itemVariants}>
+        <CustomLink
+          heading={t("link-process")}
+          href="/process"
+          iconSrc="/animations/developer-icon.gif"
+        />
+      </m.div>
+      <m.div variants={itemVariants}>
+        <CustomLink
+          heading={t("link-contact-us")}
+          href="/contact"
+          iconSrc="/animations/phone-icon.gif"
+        />
+      </m.div>
+      <m.div variants={itemVariants}>
+        <CustomLink
+          heading={t("link-blog")}
+          href="/blog"
+          iconSrc="/animations/blog-icon.gif"
+        />
+      </m.div>
+    </m.nav>
   );
 }
 
 function ModalHeader() {
-  // const { setOpen } = useModal();
+  const { setOpen } = useModal();
   return (
     <div className="flex relative items-center justify-center">
-      <Link href="/" aria-label="Home" className="relative w-[300px] h-[120px]">
+      <Link
+        href="/"
+        onClick={() => setOpen(false)}
+        aria-label="Home"
+        className="relative w-[300px] h-[120px]"
+      >
         <Image
           src="/spark-logo.svg"
           alt="Spark Studio Logo"
@@ -112,22 +112,12 @@ function ModalHeader() {
       </Link>
       <span className="bg-primary-800 absolute inset-0 -z-10 scale-150 -rotate-12" />
       <Meteors number={20} />
-      {/* <div className="flex items-center whitespace-nowrap gap-x-8">
-        <button
-          onClick={() => setOpen(false)}
-          className="group text-primary-800 p-1 bg-primary-200 rounded-full flex justify-center group/modal-btn"
-        >
-          <IoClose className="size-10 group-hover:scale-110 transition" />
-        </button>
-      </div> */}
     </div>
   );
 }
 
 export default function AnimatedModalHeader() {
   const t = useTranslations("ContactSection");
-
-  
   return (
     <Modal>
       <ModalTrigger />
@@ -136,16 +126,19 @@ export default function AnimatedModalHeader() {
         <ModalContent className="flex">
           <ModalHeader />
 
-          <div className="mt-20  p-5">
-           
-            <Navigation />
-          </div>
-          <div className="flex items-center justify-center my-auto w-full">
-            <FloatingDock
-             // only for demo, remove for production
-              
-            />
-          </div>
+          <NavigationLinks />
+          <m.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="flex flex-col items-center justify-center py-10 w-full"
+          >
+            <p className="text-2xl font-semibold tracking-widest mb-10 text-primary-800">
+              Izaberite jezik
+            </p>
+            <FloatingDock />
+          </m.div>
           <div className="relative px-2 sm:px-5 py-10 mt-auto mb-10 max-w-[300px]">
             <div className="flex flex-col gap-y-10  ">
               <div className="flex-1">
@@ -156,8 +149,14 @@ export default function AnimatedModalHeader() {
                   {t("description")}
                 </p>
                 <div className="mt-4">
-                  <p className="text-sm text-primary-700/75">
-                    🛜{t("wifiNote")}
+                  <p className="text-sm flex flex-col sm:flex-row items-center justify-start gap-3 italic font-semibold text-primary-700/75">
+                    <Image
+                      src="/animations/wifi-icon.gif"
+                      alt="wifi icon"
+                      width={30}
+                      height={30}
+                    />
+                    {t("wifiNote")}
                   </p>
                 </div>
               </div>
