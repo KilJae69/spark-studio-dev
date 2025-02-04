@@ -16,15 +16,15 @@ export function FadeIn(
   return (
     <m.div
       variants={{
-        hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 24 },
+        hidden: { opacity: shouldReduceMotion ? 1 : 0, y: shouldReduceMotion ? 0 : 24 },
         visible: { opacity: 1, y: 0 },
       }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: shouldReduceMotion ? 0 : 0.5 }}
       {...(isInStaggerGroup
         ? {}
         : {
             initial: 'hidden',
-            whileInView: 'visible',
+            whileInView: shouldReduceMotion ? 'visible' : 'visible',
             viewport,
           })}
       {...props}
@@ -36,13 +36,15 @@ export function FadeInStagger({
   faster = false,
   ...props
 }: React.ComponentPropsWithoutRef<typeof m.div> & { faster?: boolean }) {
+  const shouldReduceMotion = useReducedMotion()
+
   return (
     <FadeInStaggerContext.Provider value={true}>
       <m.div
         initial="hidden"
-        whileInView="visible"
+        whileInView={shouldReduceMotion ? 'visible' : 'visible'}
         viewport={viewport}
-        transition={{ staggerChildren: faster ? 0.12 : 0.2 }}
+        transition={{ staggerChildren: shouldReduceMotion ? 0 : (faster ? 0.12 : 0.2) }}
         {...props}
       />
     </FadeInStaggerContext.Provider>

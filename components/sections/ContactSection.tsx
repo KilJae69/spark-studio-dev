@@ -62,7 +62,7 @@ export function ContactSection() {
           </div>
         </div>
         <div className=" absolute bottom-0 translate-y-[50%] lg:translate-x-1/2 lg:right-20 lg:bottom-20 right-0 left-0">
-          {LottieComponent && <LottieComponent />}
+          {LottieComponent && <LottieComponent path="/animations/globe.json"/>}
         </div>
       </FadeIn>
     </Container>

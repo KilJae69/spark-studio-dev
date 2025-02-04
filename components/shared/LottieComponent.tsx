@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { LottiePlayer } from "lottie-web";
 
-const LottieComponent = () => {
+const LottieComponent = ({path}:{path:string}) => {
   const ref = useRef<HTMLDivElement>(null);
   const [lottie, setLottie] = useState<LottiePlayer | null>(null);
 
@@ -17,12 +17,12 @@ const LottieComponent = () => {
         loop: true,
         autoplay: true,
         // path to your animation file, place it inside public folder
-        path: "/animations/globe.json",
+        path: path,
       });
 
       return () => animation.destroy();
     }
-  }, [lottie]);
+  }, [lottie,path]);
 
   return <div className="size-full" ref={ref} />;
 };

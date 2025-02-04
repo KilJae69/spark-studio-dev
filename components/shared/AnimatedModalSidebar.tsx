@@ -59,7 +59,7 @@ function NavigationLinks() {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="mt-20 p-5"
+      className="mt-14 p-5"
     >
       <m.div variants={itemVariants}>
         <CustomLink
@@ -116,8 +116,43 @@ function ModalHeader() {
   );
 }
 
-export default function AnimatedModalHeader() {
+function ModalFooter() {
   const t = useTranslations("ContactSection");
+
+  return (
+    <div className="relative px-2 sm:px-5 max-w-[300px] pb-10">
+      <div className="flex flex-col gap-y-10  ">
+        <div className="flex-1">
+          <h2 className="font-display text-base font-semibold text-primary-700">
+            {t("noOfficesTitle")}
+          </h2>
+          <p className="mt-2 text-sm text-primary-700/75">{t("description")}</p>
+          <div className="rotate-90"></div>
+          <div className="mt-4">
+            <p className="text-sm flex flex-col sm:flex-row items-center justify-start gap-3 italic font-semibold text-primary-700/75">
+              <Image
+                src="/animations/wifi-icon.gif"
+                alt="wifi icon"
+                width={30}
+                height={30}
+              />
+              {t("wifiNote")}
+            </p>
+          </div>
+        </div>
+        <div className="sm:border-l sm:border-transparent ">
+          <h2 className="font-display text-base font-semibold text-primary-700">
+            Follow us
+          </h2>
+          <SocialMedia className="mt-6" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function AnimatedModalSidebar() {
+  const t = useTranslations("Header");
   return (
     <Modal>
       <ModalTrigger />
@@ -134,40 +169,12 @@ export default function AnimatedModalHeader() {
             exit="exit"
             className="flex flex-col items-center justify-center py-10 w-full"
           >
-            <p className="text-2xl font-semibold tracking-widest mb-10 text-primary-800">
-              Izaberite jezik
+            <p className="text-md sm:text-xl font-semibold tracking-widest mb-10 text-primary-800">
+              {t("language-label")}
             </p>
             <FloatingDock />
           </m.div>
-          <div className="relative px-2 sm:px-5 py-10 mt-auto mb-10 max-w-[300px]">
-            <div className="flex flex-col gap-y-10  ">
-              <div className="flex-1">
-                <h2 className="font-display text-base font-semibold text-primary-700">
-                  {t("noOfficesTitle")}
-                </h2>
-                <p className="mt-2 text-sm text-primary-700/75">
-                  {t("description")}
-                </p>
-                <div className="mt-4">
-                  <p className="text-sm flex flex-col sm:flex-row items-center justify-start gap-3 italic font-semibold text-primary-700/75">
-                    <Image
-                      src="/animations/wifi-icon.gif"
-                      alt="wifi icon"
-                      width={30}
-                      height={30}
-                    />
-                    {t("wifiNote")}
-                  </p>
-                </div>
-              </div>
-              <div className="sm:border-l sm:border-transparent ">
-                <h2 className="font-display text-base font-semibold text-primary-700">
-                  Follow us
-                </h2>
-                <SocialMedia className="mt-6" />
-              </div>
-            </div>
-          </div>
+          <ModalFooter />
         </ModalContent>
       </ModalBody>
     </Modal>

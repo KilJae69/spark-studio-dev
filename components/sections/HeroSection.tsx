@@ -17,7 +17,7 @@ export default function HeroSection() {
     <>
       <BackgroundBeamsWithCollision>
         <Container className="mt-24 pb-24 sm:py-32 lg:pb-56 flex">
-          <FadeIn className="flex flex-col md:flex-row gap-6 items-center justify-start max-w-7xl">
+          <FadeIn  className="flex flex-col md:flex-row gap-6 items-center justify-start max-w-7xl">
             <div className="">
               <h1 className="font-display hidden md:block text-5xl font-bold tracking-tight text-gradient-accent [text-wrap:balance] sm:text-7xl">
                 <ColourfulText text={t("title")} /> <br />

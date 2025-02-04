@@ -52,7 +52,7 @@ const FallbackComponent = () => (
 );
 
 const DynamicAnimatedSidebar = dynamic(
-  () => import("@/components/shared/AnimatedModalHeader"),
+  () => import("@/components/shared/AnimatedModalSidebar"),
   {
     ssr: false,
     loading: () => <FallbackComponent />,
