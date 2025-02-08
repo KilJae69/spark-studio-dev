@@ -28,8 +28,8 @@ export default async function Blog() {
         </p>
       </PageIntro>
 
-      <Container className="mt-24 sm:mt-32 lg:mt-40">
-        <div className="space-y-24 lg:space-y-32">
+      <Container className="mt-24 ">
+        <div className="space-y-24 ">
           <FadeIn>
             <article>
               <Border className="pt-16">

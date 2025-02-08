@@ -15,6 +15,7 @@ import { routing } from "@/i18n/routing";
 import InnerLayout from "@/components/InnerLayout";
 import { LazyMotion, domAnimation } from "framer-motion";
 
+
 const poppins = Poppins({
   subsets: ["latin"], // Choose language subsets as needed
   weight: ["200", "300", "400", "500", "700"], // Include only the weights you use
@@ -72,7 +73,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
       <body className="flex min-h-full flex-col">
         <NextIntlClientProvider messages={messages}>
           <LazyMotion features={domAnimation}>
-            <InnerLayout>{children}</InnerLayout>
+            <InnerLayout>{children}
+         
+            </InnerLayout>
           </LazyMotion>
         </NextIntlClientProvider>
       </body>

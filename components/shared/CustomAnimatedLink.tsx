@@ -58,7 +58,7 @@ export default function CustomLink({
             whileHover: { width: "100%" },
           }}
         //  transition={{ type: "spring" }}
-          className="rounded-[10px] absolute inset-x-0  shadow-glow bg-primary-accent w-0 group-hover:w-full transition-all duration-500 -bottom-[2px] h-[3px]"
+          className="rounded-[10px] absolute inset-x-0  bg-primary-accent w-0 group-hover:w-full transition-all duration-500 -bottom-[2px] h-[3px]"
         />
         <div>
           <m.span
@@ -88,6 +88,7 @@ export default function CustomLink({
                 width={40}
                 height={20}
                 className="mr-2"
+                unoptimized
               />
             </m.span>
             {heading.split("").map((l, i) => (

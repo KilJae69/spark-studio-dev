@@ -53,7 +53,7 @@ function Section({
 }) {
   return (
     <Container className="group/section [counter-increment:section]">
-      <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
+      <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-16">
         <div className="flex justify-center">
           <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
             <StylizedImage
@@ -153,7 +153,7 @@ function Deliver({ t }: { t: (key: string) => string }) {
 
 function Values({ t }: { t: (key: string) => string }) {
   return (
-    <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-40">
+    <div className="relative mt-24 pt-24 ">
       <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-gradient-to-b from-neutral-50">
         <GridPattern
           className="absolute inset-0 h-full w-full fill-neutral-100 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
@@ -210,7 +210,7 @@ export default async function Process({
         <p>{t("pageIntro.description")}</p>
       </PageIntro>
 
-      <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
+      <div className="mt-24 space-y-24 [counter-reset:section] ">
         <Discover t={t} />
         <Build t={t} />
         <Deliver t={t} />

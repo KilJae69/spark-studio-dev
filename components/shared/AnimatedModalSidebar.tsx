@@ -166,7 +166,7 @@ export default function AnimatedModalSidebar() {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="flex flex-col items-center justify-center py-10 w-full"
+            className="flex flex-col items-center justify-center py-10 mt-auto w-full"
           >
             <p className="text-md sm:text-xl font-semibold tracking-widest mb-10 text-primary-800">
               {t("language-label")}
@@ -174,6 +174,7 @@ export default function AnimatedModalSidebar() {
             <FloatingDock />
           </m.div>
           {/* <ModalFooter /> */}
+          
         </ModalContent>
       </ModalBody>
     </Modal>

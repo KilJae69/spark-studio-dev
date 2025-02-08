@@ -28,7 +28,7 @@ export default function CaseStudiesSection({
       <SectionIntro
         eyebrow="Our Work"
         title="Harnessing technology for a brighter future"
-        className="mt-24 sm:mt-32 lg:mt-40"
+        className=""
       >
         <p>
           We believe technology is the answer to the world’s greatest

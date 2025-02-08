@@ -12,13 +12,13 @@ import { ContactSection } from "@/components/sections/ContactSection";
 
 function CaseStudies({ caseStudies }: { caseStudies: CaseStudyType[] }) {
   return (
-    <Container className="mt-40">
+    <Container className="mt-24">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
           Case studies
         </h2>
       </FadeIn>
-      <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
+      <div className="mt-10 space-y-20 sm:space-y-24 ">
         {caseStudies.map((caseStudy) => (
           <FadeIn key={caseStudy.client}>
             <article>
