@@ -205,5 +205,44 @@
         "title": "Follow us"
       }
     }
+  },
+  "ContactForm": {
+    "workInquiriesTitle": "Work inquiries",
+      "fields": {
+        "name": {
+          "label": "Name *",
+          "placeholder": "Your full name"
+        },
+        "email": {
+          "label": "Email *",
+          "placeholder": "Your email address"
+        },
+        "company": {
+          "label": "Company",
+          "placeholder": "Your company name"
+        },
+        "phone": {
+          "label": "Phone *",
+          "placeholder": "Your phone number"
+        },
+        "message": {
+          "label": "Message *",
+          "placeholder": "Your message"
+        }
+      },
+      "submitButton": "Let’s work together",
+      "validation": {
+        "required": "This field is required.",
+        "nameMax": "Name must be less than 100 characters.",
+        "nameLetters": "Your name must only contain letters.",
+        "emailInvalid": "Invalid email address.",
+        "emailMax": "Email must be less than 100 characters.",
+        "phoneInvalid": "Invalid phone number format.",
+        "phoneMax": "Phone number must be less than 20 characters.",
+        "subjectMax": "Subject must be less than 100 characters.",
+        "messageMax": "Message must be less than 1000 characters."
+      },
+      "successMessage": "Your message has been sent successfully!",
+      "errorMessage": "Something went wrong. Please try again later."
   }
 }

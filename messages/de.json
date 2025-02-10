@@ -203,5 +203,44 @@
         "title": "Folgen Sie uns"
       }
     }
+  },
+  "ContactForm": {
+    "workInquiriesTitle": "Arbeitsanfragen",
+      "fields": {
+        "name": {
+          "label": "Name *",
+          "placeholder": "Ihr vollständiger Name"
+        },
+        "email": {
+          "label": "E-Mail *",
+          "placeholder": "Ihre E-Mail-Adresse"
+        },
+        "company": {
+          "label": "Firma *",
+          "placeholder": "Name Ihrer Firma"
+        },
+        "phone": {
+          "label": "Telefon *",
+          "placeholder": "Ihre Telefonnummer"
+        },
+        "message": {
+          "label": "Nachricht *",
+          "placeholder": "Ihre Nachricht"
+        }
+      },
+      "submitButton": "Lassen Sie uns zusammenarbeiten",
+      "validation": {
+      "required": "Dieses Feld ist erforderlich.",
+      "nameMax": "Der Vorname darf nicht länger als 100 Zeichen sein.",
+      "nameLetters": "Ihr Name darf nur Buchstaben enthalten.",
+      "emailInvalid": "Ungültige E-Mail-Adresse.",
+      "emailMax": "Die E-Mail darf nicht länger als 100 Zeichen sein.",
+      "phoneInvalid": "Ungültiges Telefonnummernformat.",
+      "phoneMax": "Die Telefonnummer darf nicht länger als 20 Zeichen sein.",
+      "subjectMax": "Der Betreff darf nicht länger als 100 Zeichen sein.",
+      "messageMax": "Die Nachricht darf nicht länger als 1000 Zeichen sein."
+    },
+    "successMessage": "Ihre Nachricht wurde erfolgreich gesendet!",
+    "errorMessage": "Etwas ist schief gelaufen. Bitte versuchen Sie es später erneut."
   }
 }

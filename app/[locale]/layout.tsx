@@ -14,7 +14,7 @@ import { routing } from "@/i18n/routing";
 
 import InnerLayout from "@/components/InnerLayout";
 import { LazyMotion, domAnimation } from "framer-motion";
-
+import {Toaster} from "react-hot-toast"
 
 const poppins = Poppins({
   subsets: ["latin"], // Choose language subsets as needed
@@ -74,7 +74,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
         <NextIntlClientProvider messages={messages}>
           <LazyMotion features={domAnimation}>
             <InnerLayout>{children}
-         
+            <Toaster/>
             </InnerLayout>
           </LazyMotion>
         </NextIntlClientProvider>

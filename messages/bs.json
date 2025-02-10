@@ -203,5 +203,44 @@
         "title": "Pratite nas"
       }
     }
+  },
+  "ContactForm":{
+    "workInquiriesTitle": "Upiti za posao",
+      "fields": {
+        "name": {
+          "label": "Ime *",
+          "placeholder": "Vaše puno ime"
+        },
+        "email": {
+          "label": "Email *",
+          "placeholder": "Vaša email adresa"
+        },
+        "company": {
+          "label": "Kompanija *",
+          "placeholder": "Naziv vaše kompanije"
+        },
+        "phone": {
+          "label": "Telefon *",
+          "placeholder": "Vaš broj telefona"
+        },
+        "message": {
+          "label": "Poruka *",
+          "placeholder": "Vaša poruka"
+        }
+      },
+      "submitButton": "Radimo zajedno",
+      "validation": {
+    "required": "Ovo polje je obavezno.",
+    "nameMax": "Ime mora imati manje od 100 znakova.",
+    "nameLetters": "Vaše ime smije sadržavati samo slova.",
+    "emailInvalid": "Nevažeća e-mail adresa.",
+    "emailMax": "E-mail mora imati manje od 100 znakova.",
+    "phoneInvalid": "Nevažeći format telefonskog broja.",
+    "phoneMax": "Telefonski broj mora imati manje od 20 znakova.",
+    "subjectMax": "Naslov mora imati manje od 100 znakova.",
+    "messageMax": "Poruka mora imati manje od 1000 znakova."
+  },
+  "successMessage": "Vaša poruka je uspješno poslana!",
+  "errorMessage": "Nešto je pošlo po zlu. Molimo pokušajte ponovo kasnije."
   }
 }
