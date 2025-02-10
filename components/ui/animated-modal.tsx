@@ -90,6 +90,7 @@ export const ModalTrigger = ({}) => {
           strokeDashoffset="0"
         ></line>
       </svg>
+      <span className="sr-only">Open menu</span>
     </button>
   );
 };
