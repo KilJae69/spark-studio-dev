@@ -137,7 +137,7 @@ export const ModalBody = ({
             //  backdropFilter: "blur(10px)",
           }}
           exit={{
-            x: "100%",
+            x: "110%",
             //  backdropFilter: "blur(0px)",
           }}
           className="fixed shadow-2xl top-2 right-2  bottom-2 overflow-hidden [perspective:800px] [transform-style:preserve-3d] z-[2000] rounded-3xl border  max-w-[70%] sm:max-w-[500px] flex items-center justify-center"

@@ -58,7 +58,7 @@ function NavigationLinks() {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="mt-14 p-5"
+      className="mt-14 p-5 space-y-4"
     >
       <m.div variants={itemVariants}>
         <CustomLink

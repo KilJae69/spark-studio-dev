@@ -3,7 +3,7 @@ import { Link } from "@/i18n/routing";
 import { useMotionValue, m } from "framer-motion";
 import Image from "next/image";
 import React, { useRef } from "react";
-import { FiArrowRight } from "react-icons/fi";
+//  import { FiArrowRight } from "react-icons/fi";
 import { useModal } from "../ui/animated-modal";
 
 type LinkProps = {
@@ -50,7 +50,7 @@ export default function CustomLink({
         onMouseMove={handleMouseMove}
         initial="initial"
         whileHover="whileHover"
-        className="group relative flex items-center justify-between border-b-2 border-primary-700 transition-colors duration-500 "
+        className="group relative flex items-center pb-2 justify-between border-b-2 border-primary-700 transition-colors duration-500 "
       >
         <m.span
           variants={{
@@ -107,7 +107,7 @@ export default function CustomLink({
           </m.span>
         </div>
 
-        <m.div
+        {/* <m.div
           variants={{
             initial: {
               x: "25%",
@@ -122,7 +122,7 @@ export default function CustomLink({
           className="relative z-10 p-4"
         >
           <FiArrowRight className="text-5xl text-primary-accent" />
-        </m.div>
+        </m.div> */}
       </m.span>
     </Link>
   );
