@@ -8,7 +8,7 @@ import { SocialMedia } from '@/components/SocialMedia'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { Locale, locales } from '@/lib/locales'
 import { notFound } from 'next/navigation'
-import { Link } from '@/i18n/routing'
+
 import ContactForm from '@/components/ContactForm'
 
 
@@ -64,12 +64,12 @@ function ContactDetails({ t }: { t: (key: string) => string }) {
             <div key={email}>
               <dt className="font-semibold text-neutral-950">{label}</dt>
               <dd>
-                <Link
+                <a
                   href={`mailto:${email}`}
                   className="text-neutral-600 hover:text-neutral-950"
                 >
                   {email}
-                </Link>
+                </a>
               </dd>
             </div>
           ))}
