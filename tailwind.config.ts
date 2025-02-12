@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 import animate from "tailwindcss-animate";
 import colors from "tailwindcss/colors";
+import typography from "@tailwindcss/typography"
 
 export default {
   content: [
@@ -117,5 +118,5 @@ export default {
       },
     },
   },
-  plugins: [animate],
+  plugins: [animate,typography],
 } satisfies Config;

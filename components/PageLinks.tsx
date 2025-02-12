@@ -6,7 +6,7 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { GridPattern } from '@/components/GridPattern'
 import { SectionIntro } from '@/components/SectionIntro'
-import { formatDate } from '@/lib/utils'
+// import { formatDate } from '@/lib/utils'
 
 
 function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -42,7 +42,7 @@ function PageLink({ page }: { page: Page }) {
           dateTime={page.date}
           className="order-first text-sm text-neutral-600"
         >
-          {formatDate(page.date)}
+          {/* {formatDate(page.date)} */}
         </time>
         <p className="mt-2.5 text-base text-neutral-600">{page.description}</p>
         <Link

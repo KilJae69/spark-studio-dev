@@ -26,16 +26,16 @@ export function capitalize(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
-export function formatDate(dateString: string) {
-  const parts = dateString.split('-')
-  const hasDay = parts.length > 2
+export function formatDate(dateString: string, locale: string) {
+  const parts = dateString.split("-");
+  const hasDay = parts.length > 2;
 
-  return new Date(`${dateString}Z`).toLocaleDateString('en-US', {
-    day: hasDay ? 'numeric' : undefined,
-    month: 'long',
-    year: 'numeric',
-    timeZone: 'UTC',
-  })
+  return new Date(`${dateString}Z`).toLocaleDateString(locale, {
+    day: hasDay ? "numeric" : undefined,
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
 }
 
 export const validateString = (value: unknown,maxLength:number) => {

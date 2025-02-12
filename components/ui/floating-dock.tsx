@@ -13,6 +13,8 @@ type LanguageItem = {
     flag:string;
 }
 
+
+
 export const FloatingDock = ({ className }: { className?: string }) => {
   const pathname = usePathname();
   const t = useTranslations("Header");
@@ -31,6 +33,8 @@ export const FloatingDock = ({ className }: { className?: string }) => {
   );
 };
 
+
+
 export const FloatingDockMobile = ({ items, className, path }: { items: LanguageItem[]; className?: string; path: string }) => {
     const [open, setOpen] = useState(false);
     const router = useRouter();
@@ -46,17 +50,21 @@ export const FloatingDockMobile = ({ items, className, path }: { items: Language
     // Filter out the current locale from the dropdown options
     const filteredItems = items.filter((item) => item.code !== currentLocale);
   
-    const handleLocaleChange = (nextLocale: string) => {
+    const handleLocaleChange = (targetLocale: string) => {
       startTransition(() => {
-        router.replace(
-          // @ts-expect-error -- TypeScript will validate that only known `params`
+        // If we're on a blog detail page, redirect to the blog listing.
+        if (path.includes("/blog/")) {
+           // @ts-expect-error -- TypeScript will validate that only known `params`
           // are used in combination with a given `pathname`. Since the two will
           // always match for the current route, we can skip runtime checks.
-          { pathname: path, params: {} },
-          { locale: nextLocale }
-        );
+          router.replace({ pathname: "/blog", params: {} }, { locale: targetLocale });
+        } else {
+          // Otherwise, change locale while retaining the current pathname.
+          //@ts-expect-error -- Fuck tihs
+          router.replace({ pathname: path, params: {} }, { locale: targetLocale });
+        }
       });
-      setOpen(false); // Close the dropdown after selecting a language
+      setOpen(false);
     };
   
     return (
@@ -119,17 +127,24 @@ export const FloatingDockMobile = ({ items, className, path }: { items: Language
     const router = useRouter();
     const [isPending, startTransition] = useTransition();
     const currentLocale = useLocale(); // Use useLocale to get the current locale
+    const pathname = usePathname()
   
     const handleLocaleChange = (nextLocale: string) => {
+      console.log(nextLocale);
       startTransition(() => {
-        router.replace(
+        // If we're on a blog detail page, redirect to the blog listing.
+        if (path.includes("/blog/")) {
           // @ts-expect-error -- TypeScript will validate that only known `params`
           // are used in combination with a given `pathname`. Since the two will
           // always match for the current route, we can skip runtime checks.
-          { pathname: path, params: {} },
-          { locale: nextLocale }
-        );
+          router.replace({ pathname: "/blog", params: {} }, { locale: nextLocale });
+        } else {
+          // Otherwise, change locale while retaining the current pathname.
+          //@ts-expect-error -- Fuck tihs
+          router.replace({ pathname: path, params: {} }, { locale: nextLocale });
+        }
       });
+      console.log(pathname);
     };
   
     return (

@@ -35,3 +35,16 @@ export const contactFormSchema = (t: (key: string) => string) =>
 
 export type TContactFormSchema = z.infer<ReturnType<typeof contactFormSchema>>;
 
+export type BlogPost = {
+  id: number;
+  title: string;
+  slug: string;
+  short_description: string | null;
+  body: string;
+  thumbnail: string;
+  published: boolean;
+  published_at: string; // ISO date format
+  created_at: string; // ISO date format
+  updated_at: string; // ISO date format
+  user_id: number;
+};

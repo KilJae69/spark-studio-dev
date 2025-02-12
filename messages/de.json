@@ -242,5 +242,10 @@
     },
     "successMessage": "Ihre Nachricht wurde erfolgreich gesendet!",
     "errorMessage": "Etwas ist schief gelaufen. Bitte versuchen Sie es später erneut."
-  }
+  },
+  "BlogPage": {
+  "heading": "Die neuesten Artikel und Nachrichten",
+  "subheading": "Einblicke, Trends und Innovationen im Webentwicklung – bleiben Sie mit unseren Expertenartikeln auf dem neuesten Stand.",
+  "ButtonLinkLabel":"Mehr erfahren"
+}
 }

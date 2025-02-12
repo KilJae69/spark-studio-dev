@@ -5,83 +5,123 @@ import { Border } from "@/components/Border";
 import { Button } from "@/components/Button";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Container } from "@/components/Container";
-import { FadeIn } from "@/components/FadeIn";
+import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import { PageIntro } from "@/components/PageIntro";
 import { Link } from "@/i18n/routing";
 import { formatDate } from "@/lib/utils";
+import { getLocalizedPosts } from "@/lib/getBlogPosts";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { BlogPost } from "@/lib/types";
+import { Locale, locales } from "@/lib/locales";
+import { notFound } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Blog",
-  description:
-    "Stay up-to-date with the latest industry news as our marketing teams finds new ways to re-purpose old CSS tricks articles.",
-};
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
-export default async function Blog() {
-  // let articles = await loadArticles()
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
 
+  if (!locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  return {
+    title: t("titleBlog"),
+    description: t("descriptionBlog"),
+  };
+}
+
+export default async function Blog({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  
+  const { locale } = await params;
+
+  if (!locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
+  const data = await getLocalizedPosts(locale);
+  const blogs = data.data
+  console.log(blogs);
+  const t = await getTranslations({ locale, namespace: "BlogPage" });
+console.log(data);
   return (
     <>
-      <PageIntro eyebrow="Blog" title="The latest articles and news">
-        <p>
-          Stay up-to-date with the latest industry news as our marketing teams
-          finds new ways to re-purpose old CSS tricks articles.
-        </p>
+      <PageIntro eyebrow="Blog" title={t("heading")}>
+        <p>{t("subheading")}</p>
       </PageIntro>
 
       <Container className="mt-24 ">
-        <div className="space-y-24 ">
-          <FadeIn>
+        <FadeInStagger className="space-y-24 ">
+          {blogs && blogs.length > 0 ? blogs.map((blog:BlogPost) => (
+            <FadeIn key={blog.slug}>
             <article>
               <Border className="pt-16">
                 <div className="relative lg:-mx-4 lg:flex lg:justify-end">
                   <div className="pt-10 lg:w-2/3 lg:flex-none lg:px-4 lg:pt-0">
                     <h2 className="font-display text-2xl font-semibold text-neutral-950">
-                      <Link href={"/"}>
-                        The Future of Web Development: Our Predictions for 2023
+                      <Link href={{ pathname: "/blog/[slug]", params: { slug: blog.slug } }}>
+                        {blog.title}
                       </Link>
                     </h2>
                     <dl className="lg:absolute lg:left-0 lg:top-0 lg:w-1/3 lg:px-4">
                       <dt className="sr-only">Published</dt>
                       <dd className="absolute left-0 top-0 text-sm text-neutral-950 lg:static">
-                        <time dateTime={"article.date"}>
-                          {formatDate("article.date")}
+                        <time dateTime={blog.published_at}>
+                          {formatDate(blog.published_at,locale)}
                         </time>
                       </dd>
                       <dt className="sr-only">Author</dt>
-                      <dd className="mt-6 flex gap-x-4">
+                      <dd className="mt-6 flex items-center gap-x-4">
                         <div className="flex-none overflow-hidden rounded-xl bg-neutral-100">
                           <Image
                             width={50}
                             height={50}
-                            alt=""
-                            src={"/angela-fisher.jpg"}
-                            className="h-12 w-12 object-cover grayscale "
+                            alt="avatar icon"
+                            src={"/icons/developer-icon.webp"}
+                            className="h-12 w-12 object-cover"
                           />
                         </div>
                         <div className="text-sm text-neutral-950">
-                          <div className="font-semibold">Adi Toromanovic</div>
-                          <div>Frontend Developer</div>
+                          <div className="font-semibold">
+                            <span className="text-primary-accent">Spark</span>{" "}
+                            Studio
+                          </div>
                         </div>
                       </dd>
                     </dl>
                     <p className="mt-6 max-w-2xl text-base text-neutral-600">
-                      Let’s explore the latest trends in web development, and
-                      regurgitate some predictions we read on X for how they
-                      will shape the industry in the coming year.
+                      {blog.short_description}
                     </p>
                     <Button
-                      href={"/"}
-                      aria-label={`Read more: ${"The Future of Web Development: Our Predictions for 2023"}`}
+                      href={{ pathname: "/blog/[slug]", params: { slug: blog.slug } }}
+                      aria-label={`${t("ButtonLinkLabel")}: ${blog.title}`}
                       className="mt-8"
                     >
-                      Read more
+                     {t("ButtonLinkLabel")}
                     </Button>
                   </div>
                 </div>
               </Border>
+              <div dangerouslySetInnerHTML={{ __html: blog.body }}></div>
             </article>
           </FadeIn>
-        </div>
+          )):""}
+          
+        </FadeInStagger>
       </Container>
 
       <ContactSection />

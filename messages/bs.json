@@ -242,5 +242,10 @@
   },
   "successMessage": "Vaša poruka je uspješno poslana!",
   "errorMessage": "Nešto je pošlo po zlu. Molimo pokušajte ponovo kasnije."
-  }
+  },
+  "BlogPage": {
+  "heading": "Najnoviji članci i vijesti",
+  "subheading": "Uvidi, trendovi i inovacije u web razvoju—budite ispred s našim stručnim člancima.",
+  "ButtonLinkLabel":"Pročitaj više"
+}
 }

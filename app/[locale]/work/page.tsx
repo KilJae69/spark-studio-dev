@@ -5,7 +5,7 @@ import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
 import { PageIntro } from "@/components/PageIntro";
 import { Link } from "@/i18n/routing";
-import { formatDate } from "@/lib/utils";
+//  import { formatDate } from "@/lib/utils";
 import Image from "next/image";
 import { caseStudies, CaseStudyType } from "@/constants/data";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -41,7 +41,7 @@ function CaseStudies({ caseStudies }: { caseStudies: CaseStudyType[] }) {
                     </p>
                     <p className="text-sm text-neutral-950 lg:mt-2">
                       <time dateTime={caseStudy.date}>
-                        {formatDate(caseStudy.date)}
+                        {/* {formatDate(caseStudy.date)} */}
                       </time>
                     </p>
                   </div>

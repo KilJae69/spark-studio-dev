@@ -244,5 +244,10 @@
       },
       "successMessage": "Your message has been sent successfully!",
       "errorMessage": "Something went wrong. Please try again later."
+  },
+  "BlogPage": {
+    "heading":"The latest articles and news",
+    "subheading":"Insights, trends, and innovations in web development—stay ahead with expert articles from our team.",
+    "ButtonLinkLabel":"Read more"
   }
 }
