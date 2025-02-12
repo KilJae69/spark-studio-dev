@@ -2,7 +2,6 @@
 @import "./components.css";
 @import "./utilities.css";
 
-
 .text-gradient-accent {
   @apply bg-gradient-to-tr from-primary-700 via-primary-500 to-primary-500 bg-clip-text text-transparent;
 }
@@ -108,7 +107,7 @@
 .button-two {
   --button-color: #1e293b;
   position: relative;
-  margin-top:8px;
+  margin-top: 8px;
 }
 
 .button-two:before {
@@ -177,3 +176,11 @@
   }
 }
 
+.prose {
+  text-align: justify;
+  img {
+    border-radius: 20px;
+    max-height: 500px;
+    
+  }
+}

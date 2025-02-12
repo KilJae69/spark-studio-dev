@@ -55,9 +55,9 @@ export default async function Blog({
 
   const data = await getLocalizedPosts(locale);
   const blogs = data.data
-  console.log(blogs);
+  
   const t = await getTranslations({ locale, namespace: "BlogPage" });
-console.log(data);
+
   return (
     <>
       <PageIntro eyebrow="Blog" title={t("heading")}>
@@ -116,7 +116,7 @@ console.log(data);
                   </div>
                 </div>
               </Border>
-              <div dangerouslySetInnerHTML={{ __html: blog.body }}></div>
+            
             </article>
           </FadeIn>
           )):""}

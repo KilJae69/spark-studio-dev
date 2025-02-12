@@ -1,4 +1,4 @@
-import Link from 'next/link'
+
 import clsx from 'clsx'
 
 import { Border } from '@/components/Border'
@@ -6,7 +6,10 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { GridPattern } from '@/components/GridPattern'
 import { SectionIntro } from '@/components/SectionIntro'
-// import { formatDate } from '@/lib/utils'
+import { Link } from '@/i18n/routing'
+import { BlogPost } from '@/lib/types'
+ import { formatDate } from '@/lib/utils'
+import { Locale } from '@/lib/locales'
 
 
 function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -21,16 +24,11 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-interface Page {
-  href: string
-  date: string
-  title: string
-  description: string
-}
 
-function PageLink({ page }: { page: Page }) {
+
+function PageLink({ page, locale }: { page: BlogPost; locale:Locale }) {
   return (
-    <article key={page.href}>
+    <article key={page.id}>
       <Border
         position="left"
         className="relative flex flex-col items-start pl-8"
@@ -39,14 +37,14 @@ function PageLink({ page }: { page: Page }) {
           {page.title}
         </h3>
         <time
-          dateTime={page.date}
+          dateTime={page.published_at}
           className="order-first text-sm text-neutral-600"
         >
-          {/* {formatDate(page.date)} */}
+           {formatDate(page.published_at,locale)}
         </time>
-        <p className="mt-2.5 text-base text-neutral-600">{page.description}</p>
+        <p className="mt-2.5 text-base text-neutral-600">{page.short_description}</p>
         <Link
-          href={page.href}
+         href={{ pathname: "/blog/[slug]", params: { slug: page.slug } }}
           className="mt-6 flex gap-x-3 text-base font-semibold text-neutral-950 transition hover:text-neutral-700"
           aria-label={`Read more: ${page.title}`}
         >
@@ -64,12 +62,16 @@ export function PageLinks({
   pages,
   intro,
   className,
+  locale
 }: {
   title: string
-  pages: Array<Page>
+  pages: Array<BlogPost>
   intro?: string
   className?: string
+  locale: Locale
 }) {
+
+  console.log(pages);
   return (
     <div className={clsx('relative pt-24 sm:pt-32 lg:pt-40', className)}>
       <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-gradient-to-b from-neutral-50">
@@ -86,8 +88,8 @@ export function PageLinks({
       <Container className={intro ? 'mt-24' : 'mt-16'}>
         <FadeInStagger className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
           {pages.map((page) => (
-            <FadeIn key={page.href}>
-              <PageLink page={page} />
+            <FadeIn key={page.id}>
+              <PageLink locale = {locale} page={page} />
             </FadeIn>
           ))}
         </FadeInStagger>
