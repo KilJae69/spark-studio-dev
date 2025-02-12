@@ -11,6 +11,7 @@ import { caseStudies, CaseStudyType } from "@/constants/data";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 function CaseStudies({ caseStudies }: { caseStudies: CaseStudyType[] }) {
+  console.log(caseStudies);
   return (
     <Container className="mt-24">
       <FadeIn>
@@ -48,7 +49,7 @@ function CaseStudies({ caseStudies }: { caseStudies: CaseStudyType[] }) {
                 </div>
                 <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
                   <p className="font-display text-4xl font-medium text-neutral-950">
-                    <Link href={caseStudy.href}>{caseStudy.title}</Link>
+                    <Link href={{ pathname: "/work/[slug]", params: { slug: caseStudy.slug } }}>{caseStudy.title}</Link>
                   </p>
                   <div className="mt-6 space-y-6 text-base text-neutral-600">
                     {caseStudy.summary.map((paragraph) => (
@@ -57,7 +58,7 @@ function CaseStudies({ caseStudies }: { caseStudies: CaseStudyType[] }) {
                   </div>
                   <div className="mt-8 flex">
                     <Button
-                      href={caseStudy.href}
+                      href={{ pathname: "/work/[slug]", params: { slug: caseStudy.slug } }}
                       aria-label={`Read case study: ${caseStudy.client}`}
                     >
                       Read case study

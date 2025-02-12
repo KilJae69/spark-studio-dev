@@ -26,6 +26,11 @@ export const routing = defineRouting({
       bs: "/blog/[slug]",
       de: "/blog/[slug]",
     },
+    "/work/[slug]": {
+      en: "/work/[slug]",
+      bs: "/work/[slug]",
+      de: "/work/[slug]",
+    },
   },
   
 });
