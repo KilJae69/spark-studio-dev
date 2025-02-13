@@ -13,7 +13,9 @@
     "descriptionContact": "Kontaktirajte Spark Studio kako biste razgovarali o vašim projektima. Bilo da planirate web stranicu, aplikaciju ili strategiju brendiranja, naš tim je spreman da radi s vama.",
 
     "titleBlog": "Spark Studio | Uvidi i Trendovi Web Razvoja",
-    "descriptionBlog": "Budite u toku sa Spark Studio blogom. Pročitajte stručne uvide, savjete i trendove iz oblasti web razvoja, UI/UX dizajna i najnovijih tehnologija."
+    "descriptionBlog": "Budite u toku sa Spark Studio blogom. Pročitajte stručne uvide, savjete i trendove iz oblasti web razvoja, UI/UX dizajna i najnovijih tehnologija.",
+    "titleWork": "Spark Studio | Uvidi i Trendovi Web Razvoja",
+    "descriptionWork": "Budite u toku sa Spark Studio blogom. Pročitajte stručne uvide, savjete i trendove iz oblasti web razvoja, UI/UX dizajna i najnovijih tehnologija."
   },
   "NotFound": {
     "title": "404",
@@ -59,6 +61,12 @@
     "description": "Spark Studio je globalni tim dostupan gdje god se nalazili. Bilo da je to uz kafu u vašem omiljenom kafiću ili brzi video poziv s drugog kraja svijeta, spremni smo na saradnju.",
     "wifiNote": "Imate Wi-Fi? Mi smo tu."
   },
+  "CaseStudiesSection": {
+  "eyebrow": "Naš rad",
+  "title": "Iskorištavanje tehnologije za svjetliju budućnost",
+  "paragraph": "Vjerujemo da je tehnologija odgovor na najveće svjetske izazove. Također je i njihov uzrok, pa se nalazimo u pomalo paradoksalnoj situaciji.",
+   "ButtonLinkLabel":"Pročitaj više"
+},
   "ProcessPage": {
     "pageIntro": {
       "eyebrow": "Naš proces",
@@ -247,5 +255,33 @@
   "heading": "Najnoviji članci i vijesti",
   "subheading": "Uvidi, trendovi i inovacije u web razvoju—budite ispred s našim stručnim člancima.",
   "ButtonLinkLabel":"Pročitaj više"
+},
+"WorkPage": {
+  "eyebrow": "Naš rad",
+  "title": "Dokazana rješenja za stvarne probleme.",
+  "paragraph": "Vjerujemo u efikasnost i maksimalno iskorištavanje resursa kako bismo našim klijentima pružili najbolju vrijednost. Glavni način na koji to postižemo je ponovna upotreba istih pet projekata koje razvijamo već deset godina.",
+  "ListSection": {
+  "title": "Studije slučaja",
+  "CTAButton": "Pročitaj studiju slučaja"
+}
+},
+"Footer":{
+  "NewsletterForm": {
+    "title":"Prijavite se na naš newsletter",
+    "paragraph":"Pretplatite se i primajte najnovije vijesti, članke, resurse i inspiraciju o dizajnu.",
+    "placeholder":"Email adresa"
+  },
+  "Sections": {
+      "work": "Radovi",
+      "Company": "Kompanija",
+      "Connect": "Poveži se",
+      "see-more": "Vidi više"
+    },
+    "CompanyLinks": {
+  "process-text": "Proces",
+  "blog-text": "Blog",
+  "contact-text": "Kontakt",
+  "privacy-text": "Pravila privatnosti"
+}
 }
 }

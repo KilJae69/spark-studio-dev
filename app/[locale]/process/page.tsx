@@ -18,6 +18,7 @@ import { notFound } from "next/navigation";
 import { Locale, locales } from "@/lib/locales";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
@@ -219,6 +220,7 @@ export default async function Process({
       <Values t={t} />
 
       <ContactSection />
+    
     </>
   );
 }

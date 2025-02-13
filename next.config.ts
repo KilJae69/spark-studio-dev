@@ -11,7 +11,15 @@ const bundleAnalyzer = withBundleAnalyzer({
 });
 
 const nextConfig: NextConfig = {
-  // your next config options here
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "admin.spark-dev-studio.com", 
+        pathname: "/storage/**",
+      },
+    ],
+  },
   reactStrictMode: true,
   // ...other options
 };

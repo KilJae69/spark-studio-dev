@@ -28,8 +28,8 @@ export const routing = defineRouting({
     },
     "/work/[slug]": {
       en: "/work/[slug]",
-      bs: "/work/[slug]",
-      de: "/work/[slug]",
+      bs: "/rad/[slug]",
+      de: "/arbeit/[slug]",
     },
   },
   

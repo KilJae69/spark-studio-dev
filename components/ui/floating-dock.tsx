@@ -58,6 +58,11 @@ export const FloatingDockMobile = ({ items, className, path }: { items: Language
           // are used in combination with a given `pathname`. Since the two will
           // always match for the current route, we can skip runtime checks.
           router.replace({ pathname: "/blog", params: {} }, { locale: targetLocale });
+        }else if (path.includes("/work/")) {
+          // @ts-expect-error -- TypeScript will validate that only known `params`
+          // are used in combination with a given `pathname`. Since the two will
+          // always match for the current route, we can skip runtime checks.
+          router.replace({ pathname: "/work", params: {} }, { locale: targetLocale });
         } else {
           // Otherwise, change locale while retaining the current pathname.
           //@ts-expect-error -- Fuck tihs
@@ -127,10 +132,10 @@ export const FloatingDockMobile = ({ items, className, path }: { items: Language
     const router = useRouter();
     const [isPending, startTransition] = useTransition();
     const currentLocale = useLocale(); // Use useLocale to get the current locale
-    const pathname = usePathname()
+   // const pathname = usePathname()
   
     const handleLocaleChange = (nextLocale: string) => {
-      console.log(nextLocale);
+      
       startTransition(() => {
         // If we're on a blog detail page, redirect to the blog listing.
         if (path.includes("/blog/")) {
@@ -138,13 +143,18 @@ export const FloatingDockMobile = ({ items, className, path }: { items: Language
           // are used in combination with a given `pathname`. Since the two will
           // always match for the current route, we can skip runtime checks.
           router.replace({ pathname: "/blog", params: {} }, { locale: nextLocale });
+        }else if (path.includes("/work/")) {
+          // @ts-expect-error -- TypeScript will validate that only known `params`
+          // are used in combination with a given `pathname`. Since the two will
+          // always match for the current route, we can skip runtime checks.
+          router.replace({ pathname: "/work", params: {} }, { locale: nextLocale });
         } else {
           // Otherwise, change locale while retaining the current pathname.
           //@ts-expect-error -- Fuck tihs
           router.replace({ pathname: path, params: {} }, { locale: nextLocale });
         }
       });
-      console.log(pathname);
+      
     };
   
     return (

@@ -5,57 +5,100 @@ import { GrayscaleTransitionImage } from "@/components/GrayscaleTransitionImage"
 // import { MDXComponents } from "@/components/MDXComponents";
 import { PageIntro } from "@/components/PageIntro";
 //  import { PageLinks } from "@/components/PageLinks";
-import { caseStudies } from "@/constants/data";
+
 import { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { Locale, locales } from "@/lib/locales";
+import { getLocalizedCaseStudies, getLocalizedCaseStudy } from "@/lib/getBlogPosts";
 
-type CaseStudyProps = {
-  params: Promise<{ locale: string; slug: string }>;
-};
+import { CaseStudy } from "@/lib/types";
+import { PageLinks } from "@/components/PageLinks";
+
+
+
 
 export async function generateMetadata({
   params,
-}: CaseStudyProps): Promise<Metadata> {
-  const { slug } = await params;
-  const singleService = caseStudies.find((service) => service.slug === slug);
-  if (!singleService) return notFound();
+}: {
+  params: Promise<{ locale: Locale; slug: string }>;
+}): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const data = await getLocalizedCaseStudy(locale, slug);
 
-  // const t = await getTranslations({ locale, namespace: "ServicesList" });
+  if (!data || !data.data) {
+    return {
+      title: "Case Study Not Found",
+      description: "The case study you are looking for does not exist.",
+    };
+  }
+
+  const caseStudy = data.data;
 
   return {
-    title: "Case Study",
-    description: "Description",
+    title: `${caseStudy.title} | Spark Studio`,
+    description: caseStudy.short_description || caseStudy.excerpt || "Read the latest insights on Spark Studio.",
+    openGraph: {
+      title: caseStudy.title,
+      description: caseStudy.short_description || caseStudy.excerpt,
+      type: "article",
+      url: `https://yourwebsite.com/${locale}/blog/${slug}`,
+      images: [
+        {
+          url: caseStudy.featured_image || "/default-blog-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: caseStudy.title,
+        },
+      ],
+    },
   };
 }
 
-export function generateStaticParams() {
-  const paths = caseStudies.map((service) => ({
-    slug: service.slug,
-  }));
+export async function generateStaticParams() {
+  const params = [];
 
-  return paths;
+  for (const locale of locales) {
+    const posts = await getLocalizedCaseStudies(locale);
+
+    for (const post of posts.data) {
+      params.push({
+        locale,
+        slug: post.slug,
+      });
+    }
+  }
+
+  return params;
 }
 
-export default async function CaseStudyPage({ params }: CaseStudyProps) {
+export default async function CaseStudyPage({
+  params,
+}: {
+  params: Promise<{ locale: Locale; slug: string }>;
+}) {
   const { slug, locale } = await params;
   setRequestLocale(locale);
   // const t = await getTranslations("ServicesList");
-  const singleCaseStudyData = caseStudies.find(
-    (service) => service.slug === slug
-  );
+  const data = await getLocalizedCaseStudy(locale, slug);
+  const singleCaseStudy:CaseStudy = data.data;
 
-  if (!singleCaseStudyData) return notFound();
+  const allCaseStudiesData = await getLocalizedCaseStudies(locale);
+    const allCaseStudies: CaseStudy[] = allCaseStudiesData.data;
 
-  const { title, description, client, date, service, image, content } =
-    singleCaseStudyData;
+  const restOfCaseStudies = allCaseStudies.filter(({ id }) => id !== singleCaseStudy.id).slice(0, 2);
+
+  if (!singleCaseStudy) return notFound();
+
+  const { title, short_description, client, created_at, service, featured_image, body } =
+    singleCaseStudy;
 
   return (
     <>
       <article className="mt-24 sm:mt-32 lg:mt-40">
         <header>
           <PageIntro eyebrow="Case Study" title={title} centered>
-            <p>{description}</p>
+            <p>{short_description}</p>
           </PageIntro>
 
           <FadeIn>
@@ -70,8 +113,8 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
                     <div className="border-t border-neutral-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0">
                       <dt className="font-semibold">Year</dt>
                       <dd>
-                        <time dateTime={date.split("-")[0]}>
-                          {date.split("-")[0]}
+                        <time dateTime={created_at.split("-")[0]}>
+                          {created_at.split("-")[0]}
                         </time>
                       </dd>
                     </div>
@@ -86,35 +129,37 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
 
             <div className="border-y border-neutral-200 bg-neutral-100">
               <div className="-my-px mx-auto max-w-[76rem] bg-neutral-200">
-                <GrayscaleTransitionImage
-                  {...image}
+              <GrayscaleTransitionImage
+                  src={`https://admin.spark-dev-studio.com/storage/${featured_image}`}
                   quality={90}
                   className="w-full"
                   sizes="(min-width: 1216px) 76rem, 100vw"
                   priority
-                />
+                /> 
+              {/* <Image src={`https://admin.spark-dev-studio.com/storage/${featured_image}`} width={400} height={400} alt=""/>   */}
               </div>
             </div>
           </FadeIn>
         </header>
 
-        <Container className="mt-24 sm:mt-32 lg:mt-40">
-          <FadeIn>
-            <h2>Overview</h2>
-            {content.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+        <Container className="">
+        <FadeIn className="flex justify-center">
+            <section
+              className="mt-24 prose"
+              dangerouslySetInnerHTML={{ __html: body }}
+            />
           </FadeIn>
         </Container>
       </article>
 
-      {/* {moreCaseStudies.length > 0 && (
+     {restOfCaseStudies.length > 0 && (
         <PageLinks
-          className="mt-24 sm:mt-32 lg:mt-40"
+        locale={locale}
+          className="mt-24 "
           title="More case studies"
-          pages={moreCaseStudies}
+          pages={restOfCaseStudies}
         />
-      )} */}
+      )} 
 
       <ContactSection />
     </>

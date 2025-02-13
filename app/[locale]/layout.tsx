@@ -15,6 +15,7 @@ import { routing } from "@/i18n/routing";
 import InnerLayout from "@/components/InnerLayout";
 import { LazyMotion, domAnimation } from "framer-motion";
 import {Toaster} from "react-hot-toast"
+import { Footer } from "@/components/sections/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"], // Choose language subsets as needed
@@ -25,13 +26,13 @@ const poppins = Poppins({
 
 type LayoutProps = {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>; // params is now a Promise
+  params: Promise<{ locale: Locale }>; // params is now a Promise
 };
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
 
@@ -68,7 +69,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
   return (
     <html
       lang={locale}
-      className={`${poppins.variable} h-full bg-primary-800 text-base antialiased`}
+      className={`${poppins.variable} h-full bg-white text-base antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <NextIntlClientProvider messages={messages}>
@@ -76,6 +77,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
             <InnerLayout>{children}
             <Toaster/>
             </InnerLayout>
+            <Footer locale = {locale}/>
           </LazyMotion>
         </NextIntlClientProvider>
       </body>

@@ -48,3 +48,19 @@ export type BlogPost = {
   updated_at: string; // ISO date format
   user_id: number;
 };
+
+export type CaseStudy = {
+  id: number;
+  title: string;
+  slug: string;
+  body: string;
+  client: string;
+  service: string;
+  short_description: string;
+  featured_image: string;
+  published: boolean | 1 | 0;
+  year: string;
+  user_id: number;
+  created_at: string; // ISO date format
+  updated_at: string; // ISO date format
+};

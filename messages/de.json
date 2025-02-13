@@ -13,11 +13,13 @@
     "descriptionContact": "Kontaktieren Sie Spark Studio, um über Ihre Projektanforderungen zu sprechen. Egal, ob Sie eine Website, eine App oder eine Branding-Strategie planen – unser Team ist bereit, mit Ihnen zusammenzuarbeiten.",
 
     "titleBlog": "Spark Studio | Einblicke und Trends der Webentwicklung",
-    "descriptionBlog": "Bleiben Sie mit dem Blog von Spark Studio auf dem Laufenden. Lesen Sie Experteneinblicke, Tipps und Trends zu Webentwicklung, UI/UX-Design und den neuesten Technologien."
+    "descriptionBlog": "Bleiben Sie mit dem Blog von Spark Studio auf dem Laufenden. Lesen Sie Experteneinblicke, Tipps und Trends zu Webentwicklung, UI/UX-Design und den neuesten Technologien.",
+    "titleWork": "Spark Studio | Einblicke und Trends der Webentwicklung",
+    "descriptionWork": "Bleiben Sie mit dem Blog von Spark Studio auf dem Laufenden. Lesen Sie Experteneinblicke, Tipps und Trends zu Webentwicklung, UI/UX-Design und den neuesten Technologien."
   },
   "HomePage": {
     "title": "Spark Studio",
-    "subtitle":"Moderne Lösungen für innovative Unternehmen",
+    "subtitle": "Moderne Lösungen für innovative Unternehmen",
     "about": "Wir stärken Unternehmen mit modernster Technologie und elegantem Design, um Ideen in die Realität umzusetzen.",
     "techSectionTitle": "Nur die besten Technologien für Ihr Unternehmen"
   },
@@ -46,7 +48,7 @@
     "link-blog": "Blog",
     "link-contact-us": "Kontaktieren ",
     "contact-button": "Kontaktieren ",
-    "language-label":"Sprache auswählen",
+    "language-label": "Sprache auswählen",
     "language-button": "Sprache",
     "language-option-bs": "Bosnisch",
     "language-option-en": "Englisch",
@@ -58,6 +60,12 @@
     "noOfficesTitle": "Wir arbeiten nicht in Büros",
     "description": "Spark Studio ist ein globales Team, das überall verfügbar ist. Ob bei einem Kaffee an Ihrem Lieblingsort oder einem schnellen Videoanruf vom anderen Ende der Welt – wir sind bereit, zusammenzuarbeiten.",
     "wifiNote": "Haben Sie WLAN? Wir sind da."
+  },
+  "CaseStudiesSection": {
+    "eyebrow": "Unsere Arbeit",
+    "title": "Technologie nutzen für eine bessere Zukunft",
+    "paragraph": "Wir glauben, dass Technologie die Antwort auf die größten Herausforderungen der Welt ist. Sie ist aber auch die Ursache, sodass wir uns in einer Art Zwickmühle befinden.",
+    "ButtonLinkLabel": "Mehr erfahren"
   },
   "ProcessPage": {
     "pageIntro": {
@@ -206,30 +214,30 @@
   },
   "ContactForm": {
     "workInquiriesTitle": "Arbeitsanfragen",
-      "fields": {
-        "name": {
-          "label": "Name *",
-          "placeholder": "Ihr vollständiger Name"
-        },
-        "email": {
-          "label": "E-Mail *",
-          "placeholder": "Ihre E-Mail-Adresse"
-        },
-        "company": {
-          "label": "Firma *",
-          "placeholder": "Name Ihrer Firma"
-        },
-        "phone": {
-          "label": "Telefon *",
-          "placeholder": "Ihre Telefonnummer"
-        },
-        "message": {
-          "label": "Nachricht *",
-          "placeholder": "Ihre Nachricht"
-        }
+    "fields": {
+      "name": {
+        "label": "Name *",
+        "placeholder": "Ihr vollständiger Name"
       },
-      "submitButton": "Lassen Sie uns zusammenarbeiten",
-      "validation": {
+      "email": {
+        "label": "E-Mail *",
+        "placeholder": "Ihre E-Mail-Adresse"
+      },
+      "company": {
+        "label": "Firma *",
+        "placeholder": "Name Ihrer Firma"
+      },
+      "phone": {
+        "label": "Telefon *",
+        "placeholder": "Ihre Telefonnummer"
+      },
+      "message": {
+        "label": "Nachricht *",
+        "placeholder": "Ihre Nachricht"
+      }
+    },
+    "submitButton": "Lassen Sie uns zusammenarbeiten",
+    "validation": {
       "required": "Dieses Feld ist erforderlich.",
       "nameMax": "Der Vorname darf nicht länger als 100 Zeichen sein.",
       "nameLetters": "Ihr Name darf nur Buchstaben enthalten.",
@@ -244,8 +252,36 @@
     "errorMessage": "Etwas ist schief gelaufen. Bitte versuchen Sie es später erneut."
   },
   "BlogPage": {
-  "heading": "Die neuesten Artikel und Nachrichten",
-  "subheading": "Einblicke, Trends und Innovationen im Webentwicklung – bleiben Sie mit unseren Expertenartikeln auf dem neuesten Stand.",
-  "ButtonLinkLabel":"Mehr erfahren"
-}
+    "heading": "Die neuesten Artikel und Nachrichten",
+    "subheading": "Einblicke, Trends und Innovationen im Webentwicklung – bleiben Sie mit unseren Expertenartikeln auf dem neuesten Stand.",
+    "ButtonLinkLabel": "Mehr erfahren"
+  },
+  "WorkPage": {
+    "eyebrow": "Unsere Arbeit",
+    "title": "Bewährte Lösungen für reale Probleme.",
+    "paragraph": "Wir glauben an Effizienz und eine optimale Nutzung unserer Ressourcen, um unseren Kunden den besten Mehrwert zu bieten. Der Hauptweg, wie wir das erreichen, besteht darin, dieselben fünf Projekte wiederzuverwenden, die wir seit einem Jahrzehnt entwickeln.",
+    "ListSection": {
+      "title": "Fallstudien",
+      "CTAButton": "Fallstudie lesen"
+    }
+  },
+  "Footer": {
+    "NewsletterForm": {
+      "title": "Melden Sie sich für unseren Newsletter an",
+      "paragraph": "Abonnieren Sie unseren Newsletter, um die neuesten Design-News, Artikel, Ressourcen und Inspiration zu erhalten.",
+      "placeholder": "E-Mail Adresse"
+    },
+    "Sections": {
+      "work": "Arbeit",
+      "Company": "Unternehmen",
+      "Connect": "Verbinden",
+      "see-more": "Mehr sehen"
+    },
+    "CompanyLinks": {
+      "process-text": "Prozess",
+      "blog-text": "Blog",
+      "contact-text": "Kontakt",
+      "privacy-text": "Datenschutzerklärung"
+    }
+  }
 }

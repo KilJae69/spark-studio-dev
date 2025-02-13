@@ -27,9 +27,10 @@ export function GrayscaleTransitionImage(
   const filter = useMotionTemplate`grayscale(${grayscale})`;
 
   return (
-    <div ref={ref} className="group relative">
+    <div ref={ref} className="group relative object-cover aspect-[1216/1083]">
       <MotionImage
         alt=""
+        fill
         style={{ filter } }
         {...props}
       />
@@ -37,7 +38,7 @@ export function GrayscaleTransitionImage(
         className="pointer-events-none absolute left-0 top-0 w-full opacity-0 transition duration-300 group-hover:opacity-100"
         aria-hidden="true"
       >
-        <Image alt="" {...props} />
+        <Image alt="" fill {...props} />
       </div>
     </div>
   );

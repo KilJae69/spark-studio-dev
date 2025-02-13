@@ -113,7 +113,7 @@ export default function ContactForm() {
       toast.error(`Unexpected error: ${error} `);
     }
   };
-  console.log(errors);
+  
   return (
     <FadeIn className="lg:order-last">
       <form onSubmit={handleSubmit(onSubmit)}>

@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode, useState } from "react";
-import { Footer } from "./sections/Footer";
+
 import { GridPattern } from "./GridPattern";
 import {  useTranslations } from "next-intl";
 import { Container } from "./Container";
@@ -182,7 +182,6 @@ export default function InnerLayout({ children }: InnerLayoutProps) {
 
           <main className="w-full flex-auto">{children}</main>
 
-          <Footer />
         </div>
       </div>
       <div id="modal-root"></div>
