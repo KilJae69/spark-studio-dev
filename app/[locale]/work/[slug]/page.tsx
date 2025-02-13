@@ -42,7 +42,7 @@ export async function generateMetadata({
       title: caseStudy.title,
       description: caseStudy.short_description || caseStudy.excerpt,
       type: "article",
-      url: `https://yourwebsite.com/${locale}/blog/${slug}`,
+      url: `https://spark-dev-studio.com/${locale}/blog/${slug}`,
       images: [
         {
           url: caseStudy.featured_image || "/default-blog-image.jpg",

@@ -125,7 +125,7 @@ export async function Footer({ locale }: { locale: Locale }) {
                   </li>
                   <li className="mt-4">
                     <Link
-                      href="/contact"
+                      href="/privacy"
                       className="transition hover:text-neutral-950"
                     >
                        {t("CompanyLinks.privacy-text")}

@@ -265,6 +265,59 @@
       "CTAButton": "Fallstudie lesen"
     }
   },
+  "PrivacyPage": {
+    "title": "Datenschutzrichtlinie & Nutzungsbedingungen",
+    "eyebrow": "Datenschutz - {year}",
+    "intro": "Willkommen bei Spark Studio. Ihre Privatsphäre ist uns wichtig. Diese Datenschutzrichtlinie erklärt, wie wir Ihre Informationen sammeln, verwenden und schützen, wenn Sie mit unserer Website interagieren. Durch die Nutzung unserer Website stimmen Sie den in dieser Richtlinie beschriebenen Praktiken zu.",
+
+    "sections": {
+      "information_we_collect": {
+        "title": "1. Welche Informationen wir sammeln",
+        "description": "Wir speichern keine Benutzerdaten. Allerdings sammeln und verarbeiten wir bestimmte Informationen über Drittanbieterdienste:",
+        "points": [
+          "<strong>Kontaktformular:</strong> Wenn Sie eine Nachricht über unser Kontaktformular senden, wird Ihre Nachricht per E-Mail über <strong>Resend</strong> an uns weitergeleitet.",
+          "<strong>Newsletter-Abonnement:</strong> Wenn Sie sich für unseren Newsletter anmelden, wird Ihre E-Mail-Adresse über <strong>Resend</strong> verarbeitet, um unsere Updates zuzustellen.",
+          "<strong>Cookies:</strong> Unsere Website speichert nur ein <strong>funktionales Locale-Cookie</strong>, um Ihre bevorzugte Spracheinstellung zu speichern. Wir verwenden keine Tracking-Cookies oder Analysen."
+        ]
+      },
+      "how_we_use": {
+        "title": "2. Wie wir Ihre Informationen verwenden",
+        "points": [
+          "Beantwortung von Anfragen, die über das Kontaktformular gesendet wurden.",
+          "Versand von Newslettern an Benutzer, die sich angemeldet haben (Benutzer können sich jederzeit abmelden).",
+          "Bereitstellung einer lokalisierten Benutzererfahrung durch ein Spracheinstellungen-Cookie."
+        ]
+      },
+      "data_sharing": {
+        "title": "3. Weitergabe von Daten & Drittanbieterdienste",
+        "description": "Wir verkaufen oder teilen Ihre Daten nicht mit Dritten. Allerdings verwenden wir <strong>Resend</strong> für die E-Mail-Verarbeitung. E-Mails, die über unsere Formulare gesendet werden, werden sicher über Resend übermittelt."
+      },
+      "data_security": {
+        "title": "4. Datensicherheit",
+        "points": [
+          "Unsere Website wurde mit <strong>Filament CMS</strong> (gehostet auf <strong>Hetzner</strong>) und <strong>Next.js</strong> (gehostet auf <strong>Vercel</strong>) entwickelt, die moderne Sicherheitsstandards einhalten.",
+          "Wir verwenden <strong>HTTPS</strong>, um die Datenübertragung zu verschlüsseln.",
+          "Da wir keine Benutzerdaten speichern, minimieren wir Sicherheitsrisiken im Zusammenhang mit der Datenspeicherung."
+        ]
+      },
+      "user_rights": {
+        "title": "5. Benutzerrechte & Abmeldung",
+        "points": [
+          "<strong>Abmeldung vom Newsletter:</strong> Wenn Sie sich für unseren Newsletter angemeldet haben, können Sie sich jederzeit abmelden, indem Sie auf den &quot;Abmelden&quot;-Link in der E-Mail klicken.",
+          "<strong>Cookies:</strong> Wir speichern nur ein Spracheinstellungen-Cookie, das kein Tracking beinhaltet. Es sind keine zusätzlichen Cookie-Einstellungen erforderlich."
+        ]
+      },
+      "changes": {
+        "title": "6. Änderungen dieser Datenschutzrichtlinie",
+        "description": "Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Alle Änderungen werden auf dieser Seite mit einem aktualisierten Datum veröffentlicht."
+      },
+      "contact": {
+        "title": "7. Kontaktinformationen",
+        "description": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, können Sie uns kontaktieren unter: <a>info@spark-dev-studio.com</a> oder direkt über unser <Link>Kontaktformular</Link>."
+      },
+      "thank_you": "Danke, dass Sie <strong><span>Spark</span> Studio!</strong> vertrauen."
+    }
+  },
   "Footer": {
     "NewsletterForm": {
       "title": "Melden Sie sich für unseren Newsletter an",

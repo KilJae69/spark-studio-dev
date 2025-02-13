@@ -267,6 +267,60 @@
       "CTAButton": "Read case study"
     }
   },
+  "PrivacyPage": {
+    "title": "Privacy Policy & Terms of Agreement",
+    "eyebrow": "Privacy - {year}",
+    "intro": "Welcome to Spark Studio. Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you interact with our website. By using our website, you agree to the practices described in this policy.",
+
+    "sections": {
+      "information_we_collect": {
+        "title": "1. Information We Collect",
+        "description": "We do not store user data. However, we collect and process certain information via third-party services:",
+        "points": [
+          "<strong>Contact Form:</strong> When you submit a message via our contact form, your message is sent to us via email through <strong>Resend</strong>.",
+          "<strong>Newsletter Subscription:</strong> When you subscribe to our newsletter, your email is processed by <strong>Resend</strong> to deliver our updates.",
+          "<strong>Cookies:</strong> Our website only stores a <strong>functional locale cookie</strong> to remember your language preference. We do not use tracking cookies or analytics."
+        ]
+      },
+      "how_we_use": {
+        "title": "2. How We Use Your Information",
+        "points": [
+          "Responding to inquiries sent via the contact form.",
+          "Sending newsletters to users who opt-in (users can unsubscribe at any time).",
+          "Providing a localized experience through a language selection cookie."
+        ]
+      },
+      "data_sharing": {
+        "title": "3. Data Sharing & Third-Party Services",
+        "description": "We do not sell or share your data with third parties. However, we rely on <strong>Resend</strong> for email processing. Emails submitted through our forms are transmitted securely via Resend."
+      },
+      "data_security": {
+        "title": "4. Data Security",
+        "points": [
+          "Our website is built with <strong>Filament CMS</strong> (hosted on <strong>Hetzner</strong>) and <strong>Next.js</strong> (hosted on <strong>Vercel</strong>), both of which follow modern security standards.",
+          "We use <strong>HTTPS</strong> to encrypt data transmissions.",
+          "Since we do not store user data, we minimize security risks associated with personal data storage."
+        ]
+      },
+      "user_rights": {
+        "title": "5. User Rights & Opt-Out",
+        "points": [
+          "<strong>Newsletter Unsubscription:</strong> If you have subscribed to our newsletter, you can unsubscribe at any time by clicking the &quot;unsubscribe&quot; link in the email.",
+          "<strong>Cookies:</strong> We only store a locale cookie for language selection, which does not involve tracking. No additional cookie settings are required."
+        ]
+      },
+      "changes": {
+        "title": "6. Changes to This Privacy Policy",
+        "description": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated Effective Date."
+      },
+      "contact": {
+        "title": "7. Contact Information",
+        "description": "If you have any questions about this Privacy Policy, you can contact us at: <a>info@spark-dev-studio.com</a> or directly through our <Link>Contact Form</Link>."
+        
+      },
+      "thank_you": "Thank you for trusting <strong><span>Spark</span> Studio!</strong>"
+    }
+  },
   "Footer": {
     "NewsletterForm": {
       "title": "Sign up for our newsletter",
@@ -274,16 +328,16 @@
       "placeholder": "Email address"
     },
     "Sections": {
-      "work": "work",
+      "work": "Work",
       "Company": "Company",
       "Connect": "Connect",
       "see-more": "See more"
     },
     "CompanyLinks": {
-      "process-text":"Process",
-      "blog-text":"Blog",
-      "contact-text":"Contact",
-      "privacy-text":"Privacy Policy"
+      "process-text": "Process",
+      "blog-text": "Blog",
+      "contact-text": "Contact",
+      "privacy-text": "Privacy Policy"
     }
   }
 }

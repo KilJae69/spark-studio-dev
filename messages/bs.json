@@ -265,6 +265,59 @@
   "CTAButton": "Pročitaj studiju slučaja"
 }
 },
+"PrivacyPage": {
+    "title": "Politika privatnosti i uslovi korištenja",
+    "eyebrow": "Privatnost - {year}",
+    "intro": "Dobrodošli u Spark Studio. Vaša privatnost nam je važna. Ova politika privatnosti objašnjava kako prikupljamo, koristimo i štitimo vaše informacije kada komunicirate s našom web stranicom. Korištenjem naše web stranice, pristajete na prakse opisane u ovoj politici.",
+
+    "sections": {
+      "information_we_collect": {
+        "title": "1. Informacije koje prikupljamo",
+        "description": "Ne pohranjujemo korisničke podatke. Međutim, određene informacije prikupljamo i obrađujemo putem usluga trećih strana:",
+        "points": [
+          "<strong>Kontakt forma:</strong> Kada pošaljete poruku putem naše kontakt forme, vaša poruka se šalje putem e-pošte putem <strong>Resend</strong>.",
+          "<strong>Pretplata na newsletter:</strong> Kada se prijavite na naš newsletter, vaša e-pošta se obrađuje putem <strong>Resend</strong> kako bi vam dostavljali naše novosti.",
+          "<strong>Kolačići:</strong> Naša web stranica pohranjuje samo <strong>funkcionalni kolačić za jezik</strong> kako bi zapamtila vaš odabir jezika. Ne koristimo kolačiće za praćenje niti analitiku."
+        ]
+      },
+      "how_we_use": {
+        "title": "2. Kako koristimo vaše informacije",
+        "points": [
+          "Odgovaranje na upite poslane putem kontakt forme.",
+          "Slanje newslettera korisnicima koji su se prijavili (korisnici se mogu odjaviti u bilo kojem trenutku).",
+          "Omogućavanje lokalizovanog iskustva putem kolačića za odabir jezika."
+        ]
+      },
+      "data_sharing": {
+        "title": "3. Dijeljenje podataka i usluge trećih strana",
+        "description": "Ne prodajemo niti dijelimo vaše podatke s trećim stranama. Međutim, koristimo <strong>Resend</strong> za obradu e-pošte. E-poruke poslane putem naših formi se sigurno prenose putem Resend-a."
+      },
+      "data_security": {
+        "title": "4. Sigurnost podataka",
+        "points": [
+          "Naša web stranica je izgrađena pomoću <strong>Filament CMS</strong> (hostovan na <strong>Hetzner</strong>) i <strong>Next.js</strong> (hostovan na <strong>Vercel</strong>), koji prate moderne sigurnosne standarde.",
+          "Koristimo <strong>HTTPS</strong> za enkripciju prenosa podataka.",
+          "Budući da ne pohranjujemo korisničke podatke, minimiziramo sigurnosne rizike povezane s pohranom podataka."
+        ]
+      },
+      "user_rights": {
+        "title": "5. Korisnička prava i odjava",
+        "points": [
+          "<strong>Odjava s newslettera:</strong> Ako ste se pretplatili na naš newsletter, možete se odjaviti u bilo kojem trenutku klikom na &quot;odjava&quot; link u e-pošti.",
+          "<strong>Kolačići:</strong> Pohranjujemo samo kolačić za odabir jezika, koji ne uključuje praćenje. Nisu potrebne dodatne postavke za kolačiće."
+        ]
+      },
+      "changes": {
+        "title": "6. Promjene u ovoj politici privatnosti",
+        "description": "S vremena na vrijeme možemo ažurirati ovu politiku privatnosti. Sve promjene će biti objavljene na ovoj stranici s ažuriranim datumom stupanja na snagu."
+      },
+      "contact": {
+        "title": "7. Kontakt informacije",
+        "description": "Ako imate bilo kakvih pitanja o ovoj politici privatnosti, možete nas kontaktirati na: <a>info@spark-dev-studio.com</a> ili direktno putem naše <Link>Kontakt forme</Link>."
+      },
+      "thank_you": "Hvala vam što vjerujete <strong><span>Spark</span> Studio!</strong>"
+    }
+  },
 "Footer":{
   "NewsletterForm": {
     "title":"Prijavite se na naš newsletter",

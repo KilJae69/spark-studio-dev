@@ -19,6 +19,7 @@ export const routing = defineRouting({
     "/process": {en:"/process",bs:"/proces", de:"/prozess"},
     "/work": {en:"/work",bs:"/rad", de:"/arbeit"},
     "/contact": {en:"/contact",bs:"/kontakt", de:"/kontaktieren"},
+    "/privacy": {en:"/privacy-policy",bs:"/politika-privatnosti", de:"/datenschutzerklärung"},
 
     // Dynamic blog pages (uses CMS)
     "/blog/[slug]": {

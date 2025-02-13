@@ -38,7 +38,7 @@ export async function generateMetadata({
       title: post.title,
       description: post.short_description || post.excerpt,
       type: "article",
-      url: `https://yourwebsite.com/${locale}/blog/${slug}`,
+      url: `https://spark-dev-studio.com/${locale}/blog/${slug}`,
       images: [
         {
           url: post.featuredImage || "/default-blog-image.jpg",
