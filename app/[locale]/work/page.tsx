@@ -14,11 +14,14 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getLocalizedCaseStudies } from "@/lib/getBlogPosts";
 import { CaseStudy } from "@/lib/types";
+import { REVALIDATE_TIME } from "@/lib/revalidateTime";
 
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
+
+export const revalidate = REVALIDATE_TIME;
 
 export async function generateMetadata({
   params,

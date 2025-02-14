@@ -14,6 +14,7 @@ import { getLocalizedCaseStudies, getLocalizedCaseStudy } from "@/lib/getBlogPos
 
 import { CaseStudy } from "@/lib/types";
 import { PageLinks } from "@/components/PageLinks";
+import { REVALIDATE_TIME } from "@/lib/revalidateTime";
 
 
 
@@ -72,6 +73,8 @@ export async function generateStaticParams() {
   return params;
 }
 
+export const revalidate = REVALIDATE_TIME;
+
 export default async function CaseStudyPage({
   params,
 }: {
@@ -127,7 +130,7 @@ export default async function CaseStudyPage({
               </Container>
             </div>
 
-            <div className="border-y border-neutral-200 bg-neutral-100">
+            <div className="border-y p-2 border-neutral-200 bg-neutral-100">
               <div className="-my-px mx-auto max-w-[76rem] bg-neutral-200">
               <GrayscaleTransitionImage
                   src={`https://admin.spark-dev-studio.com/storage/${featured_image}`}
