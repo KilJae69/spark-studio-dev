@@ -11,6 +11,7 @@ export async function getLocalizedPosts(locale: string) {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${API_KEY}`, 
         },
+        next: { revalidate: 60 },
       });
   
       if (!res.ok) {
@@ -33,6 +34,7 @@ export async function getLocalizedCaseStudies(locale: string) {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${API_KEY}`, 
         },
+        next: { revalidate: 60 },
       });
   
       if (!res.ok) {
@@ -57,6 +59,7 @@ export async function getLocalizedCaseStudies(locale: string) {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${API_KEY}`, 
         },
+        next: { revalidate: 60 },
       });
   
       if (!res.ok) {
@@ -79,6 +82,7 @@ export async function getLocalizedCaseStudies(locale: string) {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${API_KEY}`, 
         },
+        next: { revalidate: 60 },
       });
   
       if (!res.ok) {
