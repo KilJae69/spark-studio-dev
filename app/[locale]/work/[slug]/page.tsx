@@ -14,7 +14,7 @@ import { getLocalizedCaseStudies, getLocalizedCaseStudy } from "@/lib/getBlogPos
 
 import { CaseStudy } from "@/lib/types";
 import { PageLinks } from "@/components/PageLinks";
-import { REVALIDATE_TIME } from "@/lib/revalidateTime";
+
 
 
 
@@ -73,7 +73,7 @@ export async function generateStaticParams() {
   return params;
 }
 
-export const revalidate = REVALIDATE_TIME;
+export const revalidate = 60
 
 export default async function CaseStudyPage({
   params,
