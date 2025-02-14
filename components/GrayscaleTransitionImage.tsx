@@ -21,13 +21,13 @@ export function GrayscaleTransitionImage(
   const ref = useRef<React.ElementRef<"div">>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 65%", "end 35%"],
+    offset: ["start 85%", "end 15%"],
   });
   const grayscale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0, 1]);
   const filter = useMotionTemplate`grayscale(${grayscale})`;
 
   return (
-    <div ref={ref} className="group relative object-cover aspect-[1216/1083]">
+    <div ref={ref} className="group relative object-cover overflow-hidden aspect-[1216/1083] ">
       <MotionImage
         alt=""
         fill

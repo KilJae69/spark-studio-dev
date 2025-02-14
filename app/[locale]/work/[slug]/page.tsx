@@ -130,8 +130,8 @@ export default async function CaseStudyPage({
               </Container>
             </div>
 
-            <div className="border-y p-2 border-neutral-200 bg-neutral-100">
-              <div className="-my-px mx-auto max-w-[76rem] bg-neutral-200">
+            <div className="border-y  border-neutral-200 bg-neutral-100">
+              <div className="-my-px mx-auto max-w-[76rem]  rounded-xl">
               <GrayscaleTransitionImage
                   src={`https://admin.spark-dev-studio.com/storage/${featured_image}`}
                   quality={90}
