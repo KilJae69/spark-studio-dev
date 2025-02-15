@@ -11,7 +11,7 @@ export async function getLocalizedPosts(locale: string) {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${API_KEY}`, 
         },
-        next: { revalidate: 60 },
+        next: { tags: ['posts'] },
       });
   
       if (!res.ok) {
@@ -34,7 +34,7 @@ export async function getLocalizedCaseStudies(locale: string) {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${API_KEY}`, 
         },
-        next: { revalidate: 60 },
+        next: { tags: ['case-studies'] },
       });
   
       if (!res.ok) {
@@ -59,7 +59,7 @@ export async function getLocalizedCaseStudies(locale: string) {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${API_KEY}`, 
         },
-        next: { revalidate: 60 },
+        next: { tags: ['posts'] },
       });
   
       if (!res.ok) {
@@ -82,7 +82,7 @@ export async function getLocalizedCaseStudies(locale: string) {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${API_KEY}`, 
         },
-        next: { revalidate: 60 },
+        next: { tags: ['case-studies'] },
       });
   
       if (!res.ok) {
