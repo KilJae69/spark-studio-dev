@@ -1,19 +1,25 @@
 import createMiddleware from 'next-intl/middleware';
-import {routing} from './i18n/routing';
- 
-export default createMiddleware(routing);
- 
+import { routing } from './i18n/routing';
+import { NextRequest, NextResponse } from 'next/server';
+
+export function middleware(req: NextRequest) { // ✅ Use NextRequest instead of Request
+  const url = new URL(req.url);
+
+  // 🚀 Exclude API routes from next-intl middleware
+  if (url.pathname.startsWith('/api')) {
+    return NextResponse.next(); // ✅ Allow API requests to pass through without locale handling
+  }
+
+  return createMiddleware(routing)(req); // ✅ Correct type now
+}
+
 export const config = {
   matcher: [
-    // Enable a redirect to a matching locale at the root
+    // ✅ Exclude API routes from next-intl
+    '/((?!api|_next|_vercel|.*\\..*).*)',
+
+    // Keep the original locale-based matching
     '/',
-
-    // Set a cookie to remember the previous locale for
-    // all requests that have a locale prefix
-    '/(de|en|bs)/:path*',
-
-    // Enable redirects that add missing locales
-    // (e.g. `/pathnames` -> `/en/pathnames`)
-    '/((?!_next|_vercel|.*\\..*).*)'
+    '/(de|en|bs)/:path*'
   ]
 };
