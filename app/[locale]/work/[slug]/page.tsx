@@ -35,7 +35,7 @@ export async function generateMetadata({
   }
 
   const caseStudy = data.data;
-console.log();
+
   return {
     title: `${caseStudy.title} | Spark Studio`,
     description: caseStudy.short_description || caseStudy.excerpt || "Read the latest insights on Spark Studio.",
