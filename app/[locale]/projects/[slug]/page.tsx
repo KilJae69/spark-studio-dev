@@ -7,7 +7,7 @@ import { PageIntro } from "@/components/PageIntro";
 //  import { PageLinks } from "@/components/PageLinks";
 
 import { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Locale, locales } from "@/lib/locales";
 import { getLocalizedCaseStudies, getLocalizedCaseStudy } from "@/lib/getBlogPosts";
@@ -80,7 +80,7 @@ export default async function CaseStudyPage({
 }) {
   const { slug, locale } = await params;
   setRequestLocale(locale);
-  // const t = await getTranslations("ServicesList");
+   const t = await getTranslations("SingleCaseStudyPage");
   const data = await getLocalizedCaseStudy(locale, slug);
   const singleCaseStudy:CaseStudy = data.data;
 
@@ -98,7 +98,7 @@ export default async function CaseStudyPage({
     <>
       <article className="mt-24 sm:mt-32 lg:mt-40">
         <header>
-          <PageIntro eyebrow="Case Study" title={title} centered>
+          <PageIntro eyebrow={t("eyebrow")} title={title} centered>
             <p>{short_description}</p>
           </PageIntro>
 
@@ -108,11 +108,11 @@ export default async function CaseStudyPage({
                 <div className="mx-auto max-w-5xl">
                   <dl className="-mx-6 grid grid-cols-1 text-sm text-neutral-950 sm:mx-0 sm:grid-cols-3">
                     <div className="border-t border-neutral-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0">
-                      <dt className="font-semibold">Client</dt>
+                      <dt className="font-semibold">{t("client")}</dt>
                       <dd>{client}</dd>
                     </div>
                     <div className="border-t border-neutral-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0">
-                      <dt className="font-semibold">Year</dt>
+                      <dt className="font-semibold">{t("year")}</dt>
                       <dd>
                         <time dateTime={created_at.split("-")[0]}>
                           {created_at.split("-")[0]}
@@ -120,7 +120,7 @@ export default async function CaseStudyPage({
                       </dd>
                     </div>
                     <div className="border-t border-neutral-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0">
-                      <dt className="font-semibold">Service</dt>
+                      <dt className="font-semibold">{t("service")}</dt>
                       <dd>{service}</dd>
                     </div>
                   </dl>
@@ -157,7 +157,8 @@ export default async function CaseStudyPage({
         <PageLinks
         locale={locale}
           className="mt-24 "
-          title="More case studies"
+          title={t("pageLinksTitle")}
+          linkLabel={t("pageLinksLink")}
           pages={restOfCaseStudies}
         />
       )} 

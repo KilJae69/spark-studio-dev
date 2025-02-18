@@ -10,7 +10,7 @@ type LinkProps = {
   heading: string;
   iconSrc?: string;
   iconAlt?: string;
-  href: "/" | "/about" | "/blog" | "/process" | "/work" | "/contact";
+  href: "/" | "/about" | "/blog" | "/process" | "/projects" | "/contact";
 };
 
 export default function CustomLink({

@@ -75,7 +75,7 @@ export async function Footer({ locale }: { locale: Locale }) {
                     <li className="mt-4" key={caseStudy.id}>
                       <Link
                         href={{
-                          pathname: "/work/[slug]",
+                          pathname: "/projects/[slug]",
                           params: { slug: caseStudy.slug },
                         }}
                         className="transition hover:text-neutral-950"
@@ -86,7 +86,7 @@ export async function Footer({ locale }: { locale: Locale }) {
                   ))}
                   <li className="mt-4">
                     <Link
-                      href="/work"
+                      href="/projects"
                       className="transition flex  hover:text-neutral-950"
                     >
                       {t("Sections.see-more")} <span aria-hidden="true">&rarr;</span>

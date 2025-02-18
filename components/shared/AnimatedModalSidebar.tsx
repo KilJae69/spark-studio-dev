@@ -63,7 +63,7 @@ function NavigationLinks() {
       <m.div variants={itemVariants}>
         <CustomLink
           heading={t("link-our-work")}
-          href="/work"
+          href="/projects"
           iconSrc="/animations/coding-icon.gif"
         />
       </m.div>

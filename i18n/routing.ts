@@ -3,7 +3,7 @@ import {createNavigation} from 'next-intl/navigation';
  
 export const routing = defineRouting({
   // A list of all locales that are supported
-  locales: ['en', 'de',"bs"],
+  locales: ['bs', 'en',"de"],
  
   // Used when no locale matches
   defaultLocale: 'bs',
@@ -17,7 +17,7 @@ export const routing = defineRouting({
     "/blog":"/blog",
     // Blog listing page
     "/process": {en:"/process",bs:"/proces", de:"/prozess"},
-    "/work": {en:"/work",bs:"/rad", de:"/arbeit"},
+    "/projects": {en:"/projects",bs:"/projekti", de:"/projekte"},
     "/contact": {en:"/contact",bs:"/kontakt", de:"/kontaktieren"},
     "/privacy": {en:"/privacy-policy",bs:"/politika-privatnosti", de:"/datenschutzerklärung"},
 
@@ -27,10 +27,10 @@ export const routing = defineRouting({
       bs: "/blog/[slug]",
       de: "/blog/[slug]",
     },
-    "/work/[slug]": {
-      en: "/work/[slug]",
-      bs: "/rad/[slug]",
-      de: "/arbeit/[slug]",
+    "/projects/[slug]": {
+      en: "/projects/[slug]",
+      bs: "/projekti/[slug]",
+      de: "/projekte/[slug]",
     },
   },
   

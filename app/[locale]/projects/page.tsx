@@ -14,6 +14,7 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getLocalizedCaseStudies } from "@/lib/getBlogPosts";
 import { CaseStudy } from "@/lib/types";
+// import Image from "next/image";
 
 
 
@@ -44,7 +45,7 @@ export async function generateMetadata({
 }
 
 function CaseStudies({ caseStudies,t }: { caseStudies: CaseStudy[]; t:(t:string)=>string; }) {
-
+console.log(caseStudies);
   return (
     <Container className="mt-24">
       <FadeIn>
@@ -61,12 +62,12 @@ function CaseStudies({ caseStudies,t }: { caseStudies: CaseStudy[]; t:(t:string)
               <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
                 <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
                   <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
-                    {/* <Image
-                      src={caseStudy.logo}
+                     {/* <Image
+                      src={caseStudy.}
                       alt=""
                       className="h-16 w-16 flex-none"
                       unoptimized
-                    /> */}
+                    />  */}
                     <h3 className="mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
                       {caseStudy.client}
                     </h3>
@@ -84,7 +85,7 @@ function CaseStudies({ caseStudies,t }: { caseStudies: CaseStudy[]; t:(t:string)
                 </div>
                 <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
                   <p className="font-display text-4xl font-medium text-neutral-950">
-                    <Link href={{ pathname: "/work/[slug]", params: { slug: caseStudy.slug } }}>{caseStudy.title}</Link>
+                    <Link href={{ pathname: "/projects/[slug]", params: { slug: caseStudy.slug } }}>{caseStudy.title}</Link>
                   </p>
                   <div className="mt-6 space-y-6 text-base text-neutral-600">
                   
@@ -93,7 +94,7 @@ function CaseStudies({ caseStudies,t }: { caseStudies: CaseStudy[]; t:(t:string)
                   </div>
                   <div className="mt-8 flex">
                     <Button
-                      href={{ pathname: "/work/[slug]", params: { slug: caseStudy.slug } }}
+                      href={{ pathname: "/projects/[slug]", params: { slug: caseStudy.slug } }}
                       aria-label={`Read case study: ${caseStudy.client}`}
                     >
                       {t("ListSection.CTAButton")}

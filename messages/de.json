@@ -43,7 +43,7 @@
     "customContentManagement": "Verwalten Sie Ihre Inhalte mühelos mit Lösungen, die auf Ihre Arbeitsabläufe zugeschnitten sind. Wir sind auf den Aufbau intuitiver und skalierbarer Content-Management-Systeme spezialisiert."
   },
   "Header": {
-    "link-our-work": "Arbeit",
+    "link-our-work": "Projekte",
     "link-process": "Prozess",
     "link-blog": "Blog",
     "link-contact-us": "Kontaktieren ",
@@ -62,7 +62,7 @@
     "wifiNote": "Haben Sie WLAN? Wir sind da."
   },
   "CaseStudiesSection": {
-    "eyebrow": "Unsere Arbeit",
+    "eyebrow": "Unsere Projekte",
     "title": "Technologie nutzen für eine bessere Zukunft",
     "paragraph": "Wir glauben, dass Technologie die Antwort auf die größten Herausforderungen der Welt ist. Sie ist aber auch die Ursache, sodass wir uns in einer Art Zwickmühle befinden.",
     "ButtonLinkLabel": "Mehr erfahren"
@@ -228,7 +228,7 @@
         "placeholder": "Name Ihrer Firma"
       },
       "phone": {
-        "label": "Telefon *",
+        "label": "Telefon",
         "placeholder": "Ihre Telefonnummer"
       },
       "message": {
@@ -257,7 +257,7 @@
     "ButtonLinkLabel": "Mehr erfahren"
   },
   "WorkPage": {
-    "eyebrow": "Unsere Arbeit",
+    "eyebrow": "Unsere Projekte",
     "title": "Bewährte Lösungen für reale Probleme.",
     "paragraph": "Wir glauben an Effizienz und eine optimale Nutzung unserer Ressourcen, um unseren Kunden den besten Mehrwert zu bieten. Der Hauptweg, wie wir das erreichen, besteht darin, dieselben fünf Projekte wiederzuverwenden, die wir seit einem Jahrzehnt entwickeln.",
     "ListSection": {
@@ -318,6 +318,15 @@
       "thank_you": "Danke, dass Sie <strong><span>Spark</span> Studio!</strong> vertrauen."
     }
   },
+  "SingleCaseStudyPage": {
+    "eyebrow": "Fallstudie",
+    "client": "Kunde",
+    "year": "Jahr",
+    "service": "Dienstleistung",
+    "pageLinksTitle": "Weitere Fallstudien",
+    "pageLinksLink": "Mehr erfahren"
+  },
+
   "Footer": {
     "NewsletterForm": {
       "title": "Melden Sie sich für unseren Newsletter an",
@@ -325,7 +334,7 @@
       "placeholder": "E-Mail Adresse"
     },
     "Sections": {
-      "work": "Arbeit",
+      "work": "Projekte",
       "Company": "Unternehmen",
       "Connect": "Verbinden",
       "see-more": "Mehr sehen"

@@ -93,7 +93,7 @@ export default async function BlogPage({
 
   return (
     <>
-      <Container as="article" className="mt-24 sm:mt-32 lg:mt-40">
+      <Container as="article" className="mt-24 sm:mt-32 lg:mt-40 ">
         <TracingBeam className="pl-2 sm:pl-4">
           <FadeIn>
             <header className="mx-auto flex max-w-5xl flex-col text-center">
@@ -127,7 +127,7 @@ export default async function BlogPage({
 
           <FadeIn className="flex justify-center">
             <section
-              className="mt-24 prose"
+              className="mt-24 prose pb-10"
               dangerouslySetInnerHTML={{ __html: post.body }}
             />
           </FadeIn>

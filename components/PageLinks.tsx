@@ -25,9 +25,11 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 function PageLink({
   page,
   locale,
+  linkLabel
 }: {
   page: BlogPost | CaseStudy;
   locale: Locale;
+  linkLabel:string
 }) {
   // Type guard to check if it's a BlogPost
   const isBlogPost = (page: BlogPost | CaseStudy): page is BlogPost =>
@@ -61,19 +63,19 @@ function PageLink({
           <Link
             href={{ pathname: "/blog/[slug]", params: { slug: page.slug } }}
             className="mt-6 flex gap-x-3 text-base font-semibold text-neutral-950 transition hover:text-neutral-700"
-            aria-label={`Read more: ${page.title}`}
+            aria-label={`${linkLabel}: ${page.title}`}
           >
-            Read more
+            {linkLabel}
             <ArrowIcon className="w-6 flex-none fill-current" />
             <span className="absolute inset-0" />
           </Link>
         ) : (
           <Link
-            href={{ pathname: "/work/[slug]", params: { slug: page.slug } }}
+            href={{ pathname: "/projects/[slug]", params: { slug: page.slug } }}
             className="mt-6 flex gap-x-3 text-base font-semibold text-neutral-950 transition hover:text-neutral-700"
-            aria-label={`Read more: ${page.title}`}
+            aria-label={`${linkLabel}: ${page.title}`}
           >
-            Read more
+            {linkLabel}
             <ArrowIcon className="w-6 flex-none fill-current" />
             <span className="absolute inset-0" />
           </Link>
@@ -89,8 +91,10 @@ export function PageLinks({
   intro,
   className,
   locale,
+  linkLabel,
 }: {
   title: string;
+  linkLabel: string;
   pages: Array<BlogPost> | Array<CaseStudy>;
   intro?: string;
   className?: string;
@@ -113,7 +117,7 @@ export function PageLinks({
         <FadeInStagger className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
           {pages.map((page) => (
             <FadeIn key={page.id}>
-              <PageLink locale={locale} page={page} />
+              <PageLink linkLabel = {linkLabel} locale={locale} page={page} />
             </FadeIn>
           ))}
         </FadeInStagger>

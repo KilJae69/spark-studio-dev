@@ -15,7 +15,7 @@ export default function PrivacyPage() {
       >
         <p>{t("intro")}</p>
       </PageIntro>
-      <FadeIn className="prose mx-auto my-12">
+      <FadeIn className="prose mx-auto px-4 my-12">
         <h2>{t("sections.information_we_collect.title")}</h2>
         <p>{t("sections.information_we_collect.description")}</p>
         <ul>

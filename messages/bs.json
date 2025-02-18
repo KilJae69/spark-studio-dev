@@ -25,7 +25,7 @@
   },
   "HomePage": {
     "title": "Spark Studio",
-    "subtitle":"Moderna Rješenja za Inovativne Biznise",
+    "subtitle": "Moderna Rješenja za Inovativne Biznise",
     "about": "Osnažujemo biznise savremenim tehnologijama i elegantnim dizajnom kako bismo vaše ideje pretvorili u stvarnost.",
     "techSectionTitle": "Samo najbolje tehnologije za Vaš biznis"
   },
@@ -43,12 +43,12 @@
     "customContentManagement": "Jednostavno upravljajte svojim sadržajem uz rješenja prilagođena vašem poslovanju. Specijalizirani smo za izradu intuitivnih i skalabilnih sustava za upravljanje sadržajem."
   },
   "Header": {
-    "link-our-work": "Rad",
+    "link-our-work": "Projekti",
     "link-process": "Proces",
     "link-blog": "Blog",
     "link-contact-us": "Kontakt",
     "contact-button": "Kontakt",
-    "language-label":"Izaberite jezik",
+    "language-label": "Izaberite jezik",
     "language-button": "Jezik",
     "language-option-bs": "Bosanski",
     "language-option-en": "Engleski",
@@ -62,11 +62,11 @@
     "wifiNote": "Imate Wi-Fi? Mi smo tu."
   },
   "CaseStudiesSection": {
-  "eyebrow": "Naš rad",
-  "title": "Iskorištavanje tehnologije za svjetliju budućnost",
-  "paragraph": "Vjerujemo da je tehnologija odgovor na najveće svjetske izazove. Također je i njihov uzrok, pa se nalazimo u pomalo paradoksalnoj situaciji.",
-   "ButtonLinkLabel":"Pročitaj više"
-},
+    "eyebrow": "Naši projekti",
+    "title": "Iskorištavanje tehnologije za svjetliju budućnost",
+    "paragraph": "Vjerujemo da je tehnologija odgovor na najveće svjetske izazove. Također je i njihov uzrok, pa se nalazimo u pomalo paradoksalnoj situaciji.",
+    "ButtonLinkLabel": "Pročitaj više"
+  },
   "ProcessPage": {
     "pageIntro": {
       "eyebrow": "Naš proces",
@@ -165,7 +165,7 @@
       "description": "Radujemo se vašem javljanju."
     },
     "form": {
-      "workInquiriesTitle": "Upiti za posao",
+      "workInquiriesTitle": "Upiti za saradnju",
       "fields": {
         "name": {
           "label": "Ime",
@@ -212,60 +212,60 @@
       }
     }
   },
-  "ContactForm":{
-    "workInquiriesTitle": "Upiti za posao",
-      "fields": {
-        "name": {
-          "label": "Ime *",
-          "placeholder": "Vaše puno ime"
-        },
-        "email": {
-          "label": "Email *",
-          "placeholder": "Vaša email adresa"
-        },
-        "company": {
-          "label": "Kompanija *",
-          "placeholder": "Naziv vaše kompanije"
-        },
-        "phone": {
-          "label": "Telefon *",
-          "placeholder": "Vaš broj telefona"
-        },
-        "message": {
-          "label": "Poruka *",
-          "placeholder": "Vaša poruka"
-        }
+  "ContactForm": {
+    "workInquiriesTitle": "Upiti za saradnju",
+    "fields": {
+      "name": {
+        "label": "Ime *",
+        "placeholder": "Vaše puno ime"
       },
-      "submitButton": "Radimo zajedno",
-      "validation": {
-    "required": "Ovo polje je obavezno.",
-    "nameMax": "Ime mora imati manje od 100 znakova.",
-    "nameLetters": "Vaše ime smije sadržavati samo slova.",
-    "emailInvalid": "Nevažeća e-mail adresa.",
-    "emailMax": "E-mail mora imati manje od 100 znakova.",
-    "phoneInvalid": "Nevažeći format telefonskog broja.",
-    "phoneMax": "Telefonski broj mora imati manje od 20 znakova.",
-    "subjectMax": "Naslov mora imati manje od 100 znakova.",
-    "messageMax": "Poruka mora imati manje od 1000 znakova."
-  },
-  "successMessage": "Vaša poruka je uspješno poslana!",
-  "errorMessage": "Nešto je pošlo po zlu. Molimo pokušajte ponovo kasnije."
+      "email": {
+        "label": "Email *",
+        "placeholder": "Vaša email adresa"
+      },
+      "company": {
+        "label": "Kompanija *",
+        "placeholder": "Naziv vaše kompanije"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "Vaš broj telefona"
+      },
+      "message": {
+        "label": "Poruka *",
+        "placeholder": "Vaša poruka"
+      }
+    },
+    "submitButton": "Radimo zajedno",
+    "validation": {
+      "required": "Ovo polje je obavezno.",
+      "nameMax": "Ime mora imati manje od 100 znakova.",
+      "nameLetters": "Vaše ime smije sadržavati samo slova.",
+      "emailInvalid": "Nevažeća e-mail adresa.",
+      "emailMax": "E-mail mora imati manje od 100 znakova.",
+      "phoneInvalid": "Nevažeći format telefonskog broja.",
+      "phoneMax": "Telefonski broj mora imati manje od 20 znakova.",
+      "subjectMax": "Naslov mora imati manje od 100 znakova.",
+      "messageMax": "Poruka mora imati manje od 1000 znakova."
+    },
+    "successMessage": "Vaša poruka je uspješno poslana!",
+    "errorMessage": "Nešto je pošlo po zlu. Molimo pokušajte ponovo kasnije."
   },
   "BlogPage": {
-  "heading": "Najnoviji članci i vijesti",
-  "subheading": "Uvidi, trendovi i inovacije u web razvoju—budite ispred s našim stručnim člancima.",
-  "ButtonLinkLabel":"Pročitaj više"
-},
-"WorkPage": {
-  "eyebrow": "Naš rad",
-  "title": "Dokazana rješenja za stvarne probleme.",
-  "paragraph": "Vjerujemo u efikasnost i maksimalno iskorištavanje resursa kako bismo našim klijentima pružili najbolju vrijednost. Glavni način na koji to postižemo je ponovna upotreba istih pet projekata koje razvijamo već deset godina.",
-  "ListSection": {
-  "title": "Studije slučaja",
-  "CTAButton": "Pročitaj studiju slučaja"
-}
-},
-"PrivacyPage": {
+    "heading": "Najnoviji članci i vijesti",
+    "subheading": "Uvidi, trendovi i inovacije u web razvoju—budite ispred s našim stručnim člancima.",
+    "ButtonLinkLabel": "Pročitaj više"
+  },
+  "WorkPage": {
+    "eyebrow": "Naši projekti",
+    "title": "Dokazana rješenja za stvarne probleme.",
+    "paragraph": "Vjerujemo u efikasnost i maksimalno iskorištavanje resursa kako bismo našim klijentima pružili najbolju vrijednost. Glavni način na koji to postižemo je ponovna upotreba istih pet projekata koje razvijamo već deset godina.",
+    "ListSection": {
+      "title": "Studije slučaja",
+      "CTAButton": "Pročitaj studiju slučaja"
+    }
+  },
+  "PrivacyPage": {
     "title": "Politika privatnosti i uslovi korištenja",
     "eyebrow": "Privatnost - {year}",
     "intro": "Dobrodošli u Spark Studio. Vaša privatnost nam je važna. Ova politika privatnosti objašnjava kako prikupljamo, koristimo i štitimo vaše informacije kada komunicirate s našom web stranicom. Korištenjem naše web stranice, pristajete na prakse opisane u ovoj politici.",
@@ -318,23 +318,32 @@
       "thank_you": "Hvala vam što vjerujete <strong><span>Spark</span> Studio!</strong>"
     }
   },
-"Footer":{
-  "NewsletterForm": {
-    "title":"Prijavite se na naš newsletter",
-    "paragraph":"Pretplatite se i primajte najnovije vijesti, članke, resurse i inspiraciju o dizajnu.",
-    "placeholder":"Email adresa"
-  },
-  "Sections": {
-      "work": "Radovi",
+  "SingleCaseStudyPage": {
+    "eyebrow": "Studija slučaja",
+    "client": "Klijent",
+    "year": "Godina",
+    "service": "Usluga",
+    "pageLinksTitle": "Više studija slučaja",
+    "pageLinksLink": "Pročitaj više"
+},
+
+  "Footer": {
+    "NewsletterForm": {
+      "title": "Prijavite se na naš newsletter",
+      "paragraph": "Pretplatite se i primajte najnovije vijesti, članke, resurse i inspiraciju o dizajnu.",
+      "placeholder": "Email adresa"
+    },
+    "Sections": {
+      "work": "Projekti",
       "Company": "Kompanija",
       "Connect": "Poveži se",
       "see-more": "Vidi više"
     },
     "CompanyLinks": {
-  "process-text": "Proces",
-  "blog-text": "Blog",
-  "contact-text": "Kontakt",
-  "privacy-text": "Pravila privatnosti"
-}
-}
+      "process-text": "Proces",
+      "blog-text": "Blog",
+      "contact-text": "Kontakt",
+      "privacy-text": "Pravila privatnosti"
+    }
+  }
 }

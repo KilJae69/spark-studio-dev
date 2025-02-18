@@ -49,7 +49,7 @@ export default function CaseStudiesSection({
                 <DynamicPinContainer
                 key={caseStudy.slug}
                   className=" group"
-                  href={{ pathname: "/work/[slug]", params: { slug: caseStudy.slug } }}
+                  href={{ pathname: "/projects/[slug]", params: { slug: caseStudy.slug } }}
                   title={t("ButtonLinkLabel")}
                 >
                   <div className="flex basis-full flex-col p-4 tracking-tight text-primary-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">

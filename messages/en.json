@@ -44,7 +44,7 @@
     "customContentManagement": "Effortlessly manage your content with solutions tailored to your workflow. We specialize in building intuitive and scalable content management systems."
   },
   "Header": {
-    "link-our-work": "Work",
+    "link-our-work": "Projects",
     "link-process": "Process",
     "link-blog": "Blog",
     "link-contact-us": "Contact",
@@ -63,7 +63,7 @@
     "wifiNote": "Got Wi-Fi? We’re there."
   },
   "CaseStudiesSection": {
-    "eyebrow": "Our Work",
+    "eyebrow": "Our Projects",
     "title": "Harnessing technology for a brighter future",
     "paragraph": "We believe technology is the answer to the world’s greatest challenges. It’s also the cause, so we find ourselves in bit of a catch 22 situation.",
     "ButtonLinkLabel": "Read more"
@@ -167,7 +167,7 @@
       "description": "We can’t wait to hear from you."
     },
     "form": {
-      "workInquiriesTitle": "Work inquiries",
+      "workInquiriesTitle": "Project inquiries",
       "fields": {
         "name": {
           "label": "Name",
@@ -215,7 +215,7 @@
     }
   },
   "ContactForm": {
-    "workInquiriesTitle": "Work inquiries",
+    "workInquiriesTitle": "Project inquiries",
     "fields": {
       "name": {
         "label": "Name *",
@@ -230,7 +230,7 @@
         "placeholder": "Your company name"
       },
       "phone": {
-        "label": "Phone *",
+        "label": "Phone",
         "placeholder": "Your phone number"
       },
       "message": {
@@ -259,7 +259,7 @@
     "ButtonLinkLabel": "Read more"
   },
   "WorkPage": {
-    "eyebrow": "Our Work",
+    "eyebrow": "Our Projects",
     "title": "Proven solutions for real-world problems.",
     "paragraph": "We believe in efficiency and maximizing our resources to provide the best value to our clients. The primary way we do that is by re-using the same five projects we’ve been developing for the past decade.",
     "ListSection": {
@@ -321,6 +321,14 @@
       "thank_you": "Thank you for trusting <strong><span>Spark</span> Studio!</strong>"
     }
   },
+  "SingleCaseStudyPage": {
+    "eyebrow":"Case Study",
+    "client":"Client",
+    "year":"Year",
+    "service": "Service",
+    "pageLinksTitle":"More case studies",
+    "pageLinksLink":"Read More"
+  },
   "Footer": {
     "NewsletterForm": {
       "title": "Sign up for our newsletter",
@@ -328,7 +336,7 @@
       "placeholder": "Email address"
     },
     "Sections": {
-      "work": "Work",
+      "work": "Projects",
       "Company": "Company",
       "Connect": "Connect",
       "see-more": "See more"

@@ -58,11 +58,11 @@ export const FloatingDockMobile = ({ items, className, path }: { items: Language
           // are used in combination with a given `pathname`. Since the two will
           // always match for the current route, we can skip runtime checks.
           router.replace({ pathname: "/blog", params: {} }, { locale: targetLocale });
-        }else if (path.includes("/work/")) {
+        }else if (path.includes("/projects/")) {
           // @ts-expect-error -- TypeScript will validate that only known `params`
           // are used in combination with a given `pathname`. Since the two will
           // always match for the current route, we can skip runtime checks.
-          router.replace({ pathname: "/work", params: {} }, { locale: targetLocale });
+          router.replace({ pathname: "/projects", params: {} }, { locale: targetLocale });
         } else {
           // Otherwise, change locale while retaining the current pathname.
           //@ts-expect-error -- Fuck tihs
@@ -143,11 +143,11 @@ export const FloatingDockMobile = ({ items, className, path }: { items: Language
           // are used in combination with a given `pathname`. Since the two will
           // always match for the current route, we can skip runtime checks.
           router.replace({ pathname: "/blog", params: {} }, { locale: nextLocale });
-        }else if (path.includes("/work/")) {
+        }else if (path.includes("/projects/")) {
           // @ts-expect-error -- TypeScript will validate that only known `params`
           // are used in combination with a given `pathname`. Since the two will
           // always match for the current route, we can skip runtime checks.
-          router.replace({ pathname: "/work", params: {} }, { locale: nextLocale });
+          router.replace({ pathname: "/projects", params: {} }, { locale: nextLocale });
         } else {
           // Otherwise, change locale while retaining the current pathname.
           //@ts-expect-error -- Fuck tihs
