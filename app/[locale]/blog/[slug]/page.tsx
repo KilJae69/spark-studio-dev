@@ -10,7 +10,7 @@ import { Metadata } from "next";
 // import { BlogPost } from "@/lib/types";
 // import { formatDate } from "@/lib/utils";
 // import { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -80,7 +80,7 @@ export default async function BlogPage({
   }
 
   setRequestLocale(locale);
-
+  const t = await getTranslations("SingleBlogPage");
   const data = await getLocalizedPost(locale, slug);
   const post = data.data;
 
@@ -138,7 +138,8 @@ export default async function BlogPage({
           pages={restOfBlogs}
           locale={locale}
           className="mt-6  "
-          title="More articles"
+          title={t("pageLinksTitle")}
+          linkLabel={t("pageLinksLink")}
         />
       )}
       <ContactSection />

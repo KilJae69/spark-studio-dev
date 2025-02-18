@@ -329,6 +329,11 @@
     "pageLinksTitle":"More case studies",
     "pageLinksLink":"Read More"
   },
+  "SingleBlogPage": {
+    
+    "pageLinksTitle":"More articles",
+    "pageLinksLink":"Read More"
+  },
   "Footer": {
     "NewsletterForm": {
       "title": "Sign up for our newsletter",

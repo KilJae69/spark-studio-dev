@@ -326,6 +326,10 @@
     "pageLinksTitle": "Weitere Fallstudien",
     "pageLinksLink": "Mehr erfahren"
   },
+  "SingleBlogPage": {
+    "pageLinksTitle": "Weitere Artikel",
+    "pageLinksLink": "Mehr lesen"
+  },
 
   "Footer": {
     "NewsletterForm": {

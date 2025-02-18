@@ -326,6 +326,10 @@
     "pageLinksTitle": "Više studija slučaja",
     "pageLinksLink": "Pročitaj više"
 },
+"SingleBlogPage": {
+    "pageLinksTitle": "Više članaka",
+    "pageLinksLink": "Pročitaj više"
+},
 
   "Footer": {
     "NewsletterForm": {
