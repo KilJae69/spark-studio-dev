@@ -32,7 +32,7 @@
     "title": "Spark Studio",
     "subtitle": "Moderna Rješenja za Inovativne Biznise",
     "about": "Osnažujemo biznise savremenim tehnologijama i elegantnim dizajnom kako bismo vaše ideje pretvorili u stvarnost.",
-    "techSectionTitle": "Samo najbolje tehnologije za Vaš biznis"
+    "techSectionTitle": "Samo najbolje tehnologije"
   },
   "ServicesSection": {
     "eyebrow": "Usluge",
@@ -41,7 +41,7 @@
     "webDevelopmentTitle": "Web Razvoj",
     "webDevelopment": "Vaš biznis zaslužuje web stranicu koja se ističe. Dizajniramo vizualno privlačne i funkcionalne stranice prilagođene vašim ciljevima i publici.",
     "applicationDevelopmentTitle": "Razvoj Aplikacija",
-    "applicationDevelopment": "Pretvorite svoje ideje u utjecajne aplikacije. Naš tim koristi moderne okvire za izgradnju korisnički prilagođenih i skalabilnih rješenja za vaše poslovne potrebe.",
+    "applicationDevelopment": "Pretvorite svoje ideje u utjecajne web ili mobilne aplikacije. Naš tim koristi moderne tehnologije za izgradnju korisnički prilagođenih i skalabilnih rješenja za vaše poslovne potrebe.",
     "eCommerceTitle": "E-Trgovina",
     "eCommerce": "Podignite svoju online trgovinu na viši nivo. Od prilagođenih dizajna do besprijekornih integracija, stvaramo iskustva e-trgovine koja povećavaju prodaju i zadovoljstvo kupaca.",
     "customContentManagementTitle": "Prilagođeno Upravljanje Sadržajem",
@@ -61,7 +61,7 @@
   },
   "ContactSection": {
     "title": "Recite nam o svom projektu",
-    "buttonText": "Pozdravite",
+    "buttonText": "Kontaktirajte nas",
     "noOfficesTitle": "Mi ne radimo u kancelarijama",
     "description": "Spark Studio je globalni tim dostupan gdje god se nalazili. Bilo da je to uz kafu u vašem omiljenom kafiću ili brzi video poziv s drugog kraja svijeta, spremni smo na saradnju.",
     "wifiNote": "Imate Wi-Fi? Mi smo tu."

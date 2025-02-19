@@ -33,7 +33,7 @@
     "title": "Spark Studio",
     "subtitle": "Modern Solutions for Innovative Businesses",
     "about": "Empowering businesses with cutting-edge technology and sleek design to transform ideas into reality.",
-    "techSectionTitle": "Only the best technologies for your bussiness"
+    "techSectionTitle": "Only the best technologies"
   },
   "ServicesSection": {
     "eyebrow": "Services",
@@ -42,7 +42,7 @@
     "webDevelopmentTitle": "Web Development",
     "webDevelopment": "Your business deserves a website that stands out. We design visually stunning and highly functional websites tailored to your unique goals and audience.",
     "applicationDevelopmentTitle": "Application Development",
-    "applicationDevelopment": "Transform your ideas into impactful applications. Our team leverages modern frameworks to build user-friendly, scalable solutions for your business needs.",
+    "applicationDevelopment": "Transform your ideas into impactful web or mobile applications. Our team leverages modern frameworks to build user-friendly, scalable solutions for your business needs.",
     "eCommerceTitle": "E-Commerce",
     "eCommerce": "Take your online store to the next level. From custom designs to seamless integrations, we create e-commerce experiences that drive sales and customer satisfaction.",
     "customContentManagementTitle": "Custom Content Management",

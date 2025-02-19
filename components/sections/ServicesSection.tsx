@@ -4,7 +4,7 @@ import { Container } from "../Container";
 import { FadeIn } from "../FadeIn";
 import { StylizedImage } from "../StylizedImage";
 import { List, ListItem } from "../List";
-import imageLaptop from "@/images/laptop.jpg";
+import imageLaptop from "@/images/desktop.jpg";
 
 export default function ServicesSection() {
     const t = useTranslations("ServicesSection");
