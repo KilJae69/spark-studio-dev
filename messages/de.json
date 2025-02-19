@@ -1,21 +1,26 @@
 {
   "Metadata": {
+    "ogCTA1":"Loslegen",
+    "ogCTA2":"Mehr erfahren",
     "titleHome": "Spark Studio",
     "descriptionHome": "Willkommen bei Spark Studio, einer führenden Webentwicklungsagentur, die modernes Design und Technologie kombiniert, um maßgeschneiderte Lösungen zu liefern. Erfahren Sie, wie wir Ihre digitale Vision zum Leben erwecken können.",
-
-    "titleOurWork": "Spark Studio | Unser Portfolio Innovativer Projekte",
-    "descriptionOurWork": "Entdecken Sie das Portfolio von Spark Studio voller innovativer und wirkungsvoller Projekte. Erfahren Sie, wie wir Unternehmen mit maßgeschneiderten Web-, Design- und E-Commerce-Lösungen unterstützen.",
+    "ogDescriptionHome": "Erfahren Sie, wie wir Ihre digitale Vision zum Leben erwecken können.",
 
     "titleProcess": "Spark Studio | Unser Kreativer Entwicklungsprozess",
     "descriptionProcess": "Erfahren Sie mehr über den einzigartigen Prozess von Spark Studio, der den Erfolg jedes Projekts garantiert. Von der Ideenfindung bis zur Lieferung schaffen wir Lösungen mit Präzision und Kreativität.",
+    "ogDescriptionProcess": "Erfahren Sie mehr über den einzigartigen Prozess von Spark Studio, der den Erfolg jedes Projekts garantiert.",
 
     "titleContact": "Spark Studio | Kontaktieren Sie Uns für Ihr Nächstes Großes Projekt",
     "descriptionContact": "Kontaktieren Sie Spark Studio, um über Ihre Projektanforderungen zu sprechen. Egal, ob Sie eine Website, eine App oder eine Branding-Strategie planen – unser Team ist bereit, mit Ihnen zusammenzuarbeiten.",
+    "ogDescriptionContact": "Kontaktieren Sie Spark Studio, um über Ihre Projektanforderungen zu sprechen.",
 
     "titleBlog": "Spark Studio | Einblicke und Trends der Webentwicklung",
     "descriptionBlog": "Bleiben Sie mit dem Blog von Spark Studio auf dem Laufenden. Lesen Sie Experteneinblicke, Tipps und Trends zu Webentwicklung, UI/UX-Design und den neuesten Technologien.",
-    "titleWork": "Spark Studio | Einblicke und Trends der Webentwicklung",
-    "descriptionWork": "Bleiben Sie mit dem Blog von Spark Studio auf dem Laufenden. Lesen Sie Experteneinblicke, Tipps und Trends zu Webentwicklung, UI/UX-Design und den neuesten Technologien."
+    "ogDescriptionBlog": "Bleiben Sie mit dem Blog von Spark Studio auf dem Laufenden.",
+
+    "titleWork": "Spark Studio | Unser Portfolio Innovativer Projekte",
+    "descriptionWork": "Entdecken Sie das Portfolio von Spark Studio voller innovativer und wirkungsvoller Projekte. Erfahren Sie, wie wir Unternehmen mit maßgeschneiderten Web-, Design- und E-Commerce-Lösungen unterstützen.",
+     "ogDescriptionWork": "Entdecken Sie das Portfolio von Spark Studio voller innovativer und wirkungsvoller Projekte."
   },
   "HomePage": {
     "title": "Spark Studio",

@@ -1,21 +1,26 @@
 {
   "Metadata": {
+    "ogCTA1":"Započni",
+    "ogCTA2":"Saznaj više",
     "titleHome": "Spark Studio |  Agencija za Web Razvoj",
     "descriptionHome": "Dobrodošli u Spark Studio, vodeću agenciju za web razvoj koja spaja savremeni dizajn i tehnologiju za izradu prilagođenih rješenja. Otkrijte kako možemo oživjeti vašu digitalnu viziju.",
-
-    "titleOurWork": "Spark Studio | Naši Inovativni Projekti",
-    "descriptionOurWork": "Istražite portfolio Spark Studija, pun inovativnih i značajnih projekata. Pogledajte kako smo pomogli biznisima da uspiju kroz prilagođena web rješenja, dizajn i e-trgovinu.",
+    "ogDescriptionHome": "Otkrijte kako možemo oživjeti vašu digitalnu viziju.",
 
     "titleProcess": "Spark Studio | Naš Kreativni Proces",
     "descriptionProcess": "Saznajte više o jedinstvenom procesu Spark Studija koji garantuje uspjeh svakog projekta. Od ideje do isporuke, izrađujemo rješenja s preciznošću i kreativnošću.",
+    "ogDescriptionProcess": "Saznajte više o jedinstvenom procesu Spark Studija koji garantuje uspjeh svakog projekta.",
 
     "titleContact": "Spark Studio | Kontaktirajte Nas za Vaše Sljedeće Ideje",
     "descriptionContact": "Kontaktirajte Spark Studio kako biste razgovarali o vašim projektima. Bilo da planirate web stranicu, aplikaciju ili strategiju brendiranja, naš tim je spreman da radi s vama.",
+    "ogDescriptionContact": "Kontaktirajte Spark Studio kako biste razgovarali o vašim projektima.",
 
     "titleBlog": "Spark Studio | Uvidi i Trendovi Web Razvoja",
     "descriptionBlog": "Budite u toku sa Spark Studio blogom. Pročitajte stručne uvide, savjete i trendove iz oblasti web razvoja, UI/UX dizajna i najnovijih tehnologija.",
-    "titleWork": "Spark Studio | Uvidi i Trendovi Web Razvoja",
-    "descriptionWork": "Budite u toku sa Spark Studio blogom. Pročitajte stručne uvide, savjete i trendove iz oblasti web razvoja, UI/UX dizajna i najnovijih tehnologija."
+    "ogDescriptionBlog": "Budite u toku sa Spark Studio blogom.",
+
+    "titleWork": "Spark Studio | Naši Inovativni Projekti",
+    "descriptionWork": "Istražite portfolio Spark Studija, pun inovativnih i značajnih projekata. Pogledajte kako smo pomogli biznisima da uspiju kroz prilagođena web rješenja, dizajn i e-trgovinu.",
+     "ogDescriptionWork": "Istražite portfolio Spark Studija, pun inovativnih i značajnih projekata."
   },
   "NotFound": {
     "title": "404",

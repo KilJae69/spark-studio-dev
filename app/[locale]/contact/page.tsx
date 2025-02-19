@@ -29,10 +29,31 @@ export async function generateMetadata({
 
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Metadata" });
+  const ogImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?title=${encodeURIComponent(
+    t("titleContact")
+  )}&description=${encodeURIComponent(t("ogDescriptionContact"))}&locale=${locale}&ogCTA1=${encodeURIComponent(t("ogCTA1"))}&ogCTA2=${encodeURIComponent(t("ogCTA2"))}`;
 
   return {
     title: t("titleContact"),
     description: t("descriptionContact"),
+    openGraph: {
+      title: t("titleContact"),
+      description: t("ogDescriptionContact"),
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: t("titleContact"),
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("titleContact"),
+      description: t("ogDescriptionContact"),
+      images: [ogImageUrl],
+    },
   };
 }
 

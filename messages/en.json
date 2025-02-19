@@ -1,22 +1,27 @@
 {
   "Metadata": {
+    "ogCTA1":"Get started",
+    "ogCTA2":"Learn more",
     "titleHome": "Spark Studio | Web Development Agency",
 
     "descriptionHome": "Welcome to Spark Studio, a leading web development agency combining cutting-edge design and technology to deliver bespoke solutions. Discover how we can bring your digital vision to life.",
-
-    "titleOurWork": "Spark Studio | Portfolio of Innovative Projects",
-    "descriptionOurWork": "Explore Spark Studio's portfolio of innovative and impactful projects. See how we've helped businesses thrive with tailored web development, design, and e-commerce solutions.",
+    "ogDescriptionHome": "Discover how we can bring your digital vision to life.",
 
     "titleProcess": "Spark Studio | Our Creative Development Process",
     "descriptionProcess": "Learn about Spark Studio's unique process that ensures success in every project. From ideation to delivery, we craft solutions with precision and creativity.",
+    "ogDescriptionProcess": "Learn about Spark Studio's unique process that ensures success in every project.",
 
     "titleContact": "Spark Studio | Contact Us for Your Next Big Idea",
     "descriptionContact": "Contact Spark Studio to discuss your project needs. Whether you’re planning a website, app, or branding strategy, our team is ready to collaborate with you to make it a success.",
+    "ogDescriptionContact": "Contact Spark Studio to discuss your project needs.",
 
     "titleBlog": "Spark Studio | Insights and Web Development Trends",
     "descriptionBlog": "Stay informed with the Spark Studio blog. Read expert insights, tips, and trends in web development, UI/UX design, and the latest technologies shaping the digital world.",
-    "titleWork": "Spark Studio | Insights and Web Development Trends",
-    "descriptionWork": "Stay informed with the Spark Studio blog. Read expert insights, tips, and trends in web development, UI/UX design, and the latest technologies shaping the digital world."
+    "ogDescriptionBlog": "Stay informed with the Spark Studio blog.",
+
+    "titleWork": "Spark Studio | Portfolio of Innovative Projects",
+    "descriptionWork": "Explore Spark Studio's portfolio of innovative and impactful projects. See how we've helped businesses thrive with tailored web development, design, and e-commerce solutions.",
+    "ogDescriptionWork": "Explore Spark Studio's portfolio of innovative and impactful projects."
   },
   "NotFound": {
     "title": "404",
@@ -316,23 +321,21 @@
       "contact": {
         "title": "7. Contact Information",
         "description": "If you have any questions about this Privacy Policy, you can contact us at: <a>info@spark-dev-studio.com</a> or directly through our <Link>Contact Form</Link>."
-        
       },
       "thank_you": "Thank you for trusting <strong><span>Spark</span> Studio!</strong>"
     }
   },
   "SingleCaseStudyPage": {
-    "eyebrow":"Case Study",
-    "client":"Client",
-    "year":"Year",
+    "eyebrow": "Case Study",
+    "client": "Client",
+    "year": "Year",
     "service": "Service",
-    "pageLinksTitle":"More case studies",
-    "pageLinksLink":"Read More"
+    "pageLinksTitle": "More case studies",
+    "pageLinksLink": "Read More"
   },
   "SingleBlogPage": {
-    
-    "pageLinksTitle":"More articles",
-    "pageLinksLink":"Read More"
+    "pageLinksTitle": "More articles",
+    "pageLinksLink": "Read More"
   },
   "Footer": {
     "NewsletterForm": {
