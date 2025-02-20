@@ -56,7 +56,7 @@ export async function GET(request: Request) {
 
             {/* <img src={logoUrl} alt="spark logo" width={300} height={120} /> */}
             {pill && (
-              <div tw="bg-slate-800 text-[#d4af37] rounded-2xl py-3 px-6">
+              <div tw="bg-slate-800 text-[#d4af37] text-xl rounded-2xl py-3 px-6">
                 {pill}
               </div>
             )}
