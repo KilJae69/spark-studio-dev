@@ -10,14 +10,14 @@ import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Locale, locales } from "@/lib/locales";
-import { getLocalizedCaseStudies, getLocalizedCaseStudy } from "@/lib/getBlogPosts";
+import {
+  getLocalizedCaseStudies,
+  getLocalizedCaseStudy,
+} from "@/lib/getBlogPosts";
 
 import { CaseStudy } from "@/lib/types";
 import { PageLinks } from "@/components/PageLinks";
-
-
-
-
+import OutsideLink from "@/components/shared/OutsideLink";
 
 export async function generateMetadata({
   params,
@@ -33,26 +33,36 @@ export async function generateMetadata({
       description: "The case study you are looking for does not exist.",
     };
   }
-
+  const t = await getTranslations({ locale, namespace: "Metadata" });
   const caseStudy = data.data;
+  const ogImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?title=${encodeURIComponent(
+    caseStudy.title
+  )}&description=${encodeURIComponent(caseStudy.og_desc)}&locale=${locale}&ogCTA1=${encodeURIComponent(t("ogCTA1"))}&ogCTA2=${encodeURIComponent(t("ogCTA2"))}&pill=${encodeURIComponent(t("ogPillProject"))}`;
 
   return {
     title: `${caseStudy.title} | Spark Studio`,
-    description: caseStudy.short_description || caseStudy.excerpt || "Read the latest insights on Spark Studio.",
-    openGraph: {
-      title: caseStudy.title,
-      description: caseStudy.short_description || caseStudy.excerpt,
-      type: "article",
-      url: `https://spark-dev-studio.com/${locale}/blog/${slug}`,
-      images: [
-        {
-          url: caseStudy.featured_image || "/default-blog-image.jpg",
-          width: 1200,
-          height: 630,
-          alt: caseStudy.title,
-        },
-      ],
-    },
+    description:
+      caseStudy.short_description ||
+      caseStudy.excerpt ||
+      "Read the latest insights on Spark Studio.",
+      openGraph: {
+        title: caseStudy.title,
+        description: caseStudy.short_description,
+        images: [
+          {
+            url: ogImageUrl,
+            width: 1200,
+            height: 630,
+            alt: caseStudy.title,
+          },
+        ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: caseStudy.title,
+        description: caseStudy.short_description,
+        images: [ogImageUrl],
+      },
   };
 }
 
@@ -80,20 +90,30 @@ export default async function CaseStudyPage({
 }) {
   const { slug, locale } = await params;
   setRequestLocale(locale);
-   const t = await getTranslations("SingleCaseStudyPage");
+  const t = await getTranslations("SingleCaseStudyPage");
   const data = await getLocalizedCaseStudy(locale, slug);
-  const singleCaseStudy:CaseStudy = data.data;
+  const singleCaseStudy: CaseStudy = data.data;
 
   const allCaseStudiesData = await getLocalizedCaseStudies(locale);
-    const allCaseStudies: CaseStudy[] = allCaseStudiesData.data;
+  const allCaseStudies: CaseStudy[] = allCaseStudiesData.data;
 
-  const restOfCaseStudies = allCaseStudies.filter(({ id }) => id !== singleCaseStudy.id).slice(0, 2);
+  const restOfCaseStudies = allCaseStudies
+    .filter(({ id }) => id !== singleCaseStudy.id)
+    .slice(0, 2);
 
   if (!singleCaseStudy) return notFound();
 
-  const { title, short_description, client, created_at, service, featured_image, body } =
-    singleCaseStudy;
-
+  const {
+    title,
+    short_description,
+    client,
+    created_at,
+    service,
+    featured_image,
+    body,
+    url,
+  } = singleCaseStudy;
+  console.log(url);
   return (
     <>
       <article className="mt-24 sm:mt-32 lg:mt-40">
@@ -130,38 +150,41 @@ export default async function CaseStudyPage({
 
             <div className="border-y  border-neutral-200 bg-neutral-100">
               <div className="-my-px mx-auto max-w-[76rem]  rounded-xl">
-              <GrayscaleTransitionImage
+                <GrayscaleTransitionImage
                   src={`https://admin.spark-dev-studio.com/storage/${featured_image}`}
                   quality={90}
                   className="w-full"
                   sizes="(min-width: 1216px) 76rem, 100vw"
                   priority
-                /> 
-              {/* <Image src={`https://admin.spark-dev-studio.com/storage/${featured_image}`} width={400} height={400} alt=""/>   */}
+                />
+                {/* <Image src={`https://admin.spark-dev-studio.com/storage/${featured_image}`} width={400} height={400} alt=""/>   */}
               </div>
             </div>
           </FadeIn>
         </header>
 
         <Container className="">
-        <FadeIn className="flex justify-center">
+          <FadeIn className="flex justify-center">
             <section
               className="mt-24 prose"
               dangerouslySetInnerHTML={{ __html: body }}
             />
           </FadeIn>
+          <div className="w-full mt-8 flex items-center">
+            <OutsideLink href={url}>{t("CTALink")}</OutsideLink>
+          </div>
         </Container>
       </article>
 
-     {restOfCaseStudies.length > 0 && (
+      {restOfCaseStudies.length > 0 && (
         <PageLinks
-        locale={locale}
+          locale={locale}
           className="mt-24 "
           title={t("pageLinksTitle")}
           linkLabel={t("pageLinksLink")}
           pages={restOfCaseStudies}
         />
-      )} 
+      )}
 
       <ContactSection />
     </>

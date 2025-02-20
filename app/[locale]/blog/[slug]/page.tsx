@@ -28,25 +28,32 @@ export async function generateMetadata({
       description: "The blog post you are looking for does not exist.",
     };
   }
-
+  const t = await getTranslations({ locale, namespace: "Metadata" });
   const post = data.data;
+  const ogImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?title=${encodeURIComponent(
+    post.title
+  )}&description=${encodeURIComponent(post.og_desc)}&locale=${locale}&ogCTA1=${encodeURIComponent(t("ogCTA1"))}&ogCTA2=${encodeURIComponent(t("ogCTA2"))}&pill=${encodeURIComponent(t("ogPillBlog"))}`;
 
   return {
     title: `${post.title} | Spark Studio`,
     description: post.short_description || post.excerpt || "Read the latest insights on Spark Studio.",
     openGraph: {
       title: post.title,
-      description: post.short_description || post.excerpt,
-      type: "article",
-      url: `https://spark-dev-studio.com/${locale}/blog/${slug}`,
+      description: post.short_description,
       images: [
         {
-          url: post.featuredImage || "/default-blog-image.jpg",
+          url: ogImageUrl,
           width: 1200,
           height: 630,
           alt: post.title,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.short_description,
+      images: [ogImageUrl],
     },
   };
 }

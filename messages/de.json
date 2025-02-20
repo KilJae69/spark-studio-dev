@@ -2,6 +2,8 @@
   "Metadata": {
     "ogCTA1":"Loslegen",
     "ogCTA2":"Mehr erfahren",
+    "ogPillBlog":"Blog",
+    "ogPillProject": "Projekte",
     "titleHome": "Spark Studio",
     "descriptionHome": "Willkommen bei Spark Studio, einer führenden Webentwicklungsagentur, die modernes Design und Technologie kombiniert, um maßgeschneiderte Lösungen zu liefern. Erfahren Sie, wie wir Ihre digitale Vision zum Leben erwecken können.",
     "ogDescriptionHome": "Erfahren Sie, wie wir Ihre digitale Vision zum Leben erwecken können.",
@@ -329,7 +331,8 @@
     "year": "Jahr",
     "service": "Dienstleistung",
     "pageLinksTitle": "Weitere Fallstudien",
-    "pageLinksLink": "Mehr erfahren"
+    "pageLinksLink": "Mehr erfahren",
+    "CTALink":"Jetzt live ansehen"
   },
   "SingleBlogPage": {
     "pageLinksTitle": "Weitere Artikel",

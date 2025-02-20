@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useEffect } from 'react'
 
 type ButtonProps = {
+
   invert?: boolean
   disabled?:boolean
 } & (
@@ -14,6 +15,7 @@ type ButtonProps = {
 
 export function Button({
   invert = false,
+ 
   className,
   children,
   disabled,
@@ -64,6 +66,8 @@ export function Button({
       </button>
     )
   }
+
+  
 
   return (
     <Link className={`${className}`} {...props}>

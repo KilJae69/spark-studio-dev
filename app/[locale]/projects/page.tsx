@@ -14,7 +14,7 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getLocalizedCaseStudies } from "@/lib/getBlogPosts";
 import { CaseStudy } from "@/lib/types";
-// import Image from "next/image";
+ import Image from "next/image";
 
 
 
@@ -83,12 +83,14 @@ console.log(caseStudies);
               <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
                 <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
                   <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
-                     {/* <Image
-                      src={caseStudy.}
+                      <Image
+                      src={`https://admin.spark-dev-studio.com/storage/${caseStudy.logo}`}
                       alt=""
+                      height={64}
+                      width={64}
                       className="h-16 w-16 flex-none"
                       unoptimized
-                    />  */}
+                    />  
                     <h3 className="mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
                       {caseStudy.client}
                     </h3>

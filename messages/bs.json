@@ -2,6 +2,8 @@
   "Metadata": {
     "ogCTA1":"Započni",
     "ogCTA2":"Saznaj više",
+    "ogPillBlog":"Blog",
+    "ogPillProject": "Projekt",
     "titleHome": "Spark Studio |  Agencija za Web Razvoj",
     "descriptionHome": "Dobrodošli u Spark Studio, vodeću agenciju za web razvoj koja spaja savremeni dizajn i tehnologiju za izradu prilagođenih rješenja. Otkrijte kako možemo oživjeti vašu digitalnu viziju.",
     "ogDescriptionHome": "Otkrijte kako možemo oživjeti vašu digitalnu viziju.",
@@ -329,7 +331,8 @@
     "year": "Godina",
     "service": "Usluga",
     "pageLinksTitle": "Više studija slučaja",
-    "pageLinksLink": "Pročitaj više"
+    "pageLinksLink": "Pročitaj više",
+    "CTALink":"Vidi uživo"
 },
 "SingleBlogPage": {
     "pageLinksTitle": "Više članaka",

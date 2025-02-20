@@ -2,6 +2,8 @@
   "Metadata": {
     "ogCTA1":"Get started",
     "ogCTA2":"Learn more",
+    "ogPillBlog":"Blog",
+    "ogPillProject": "Project",
     "titleHome": "Spark Studio | Web Development Agency",
 
     "descriptionHome": "Welcome to Spark Studio, a leading web development agency combining cutting-edge design and technology to deliver bespoke solutions. Discover how we can bring your digital vision to life.",
@@ -331,7 +333,8 @@
     "year": "Year",
     "service": "Service",
     "pageLinksTitle": "More case studies",
-    "pageLinksLink": "Read More"
+    "pageLinksLink": "Read More",
+    "CTALink":"See live"
   },
   "SingleBlogPage": {
     "pageLinksTitle": "More articles",

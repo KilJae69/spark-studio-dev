@@ -52,6 +52,8 @@ export type BlogPost = {
 
 export type CaseStudy = {
   id: number;
+  logo:string;
+  url:string;
   title: string;
   slug: string;
   body: string;

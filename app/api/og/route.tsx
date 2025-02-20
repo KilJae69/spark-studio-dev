@@ -27,6 +27,9 @@ export async function GET(request: Request) {
       ? searchParams.get("ogCTA2")?.slice(0, 100)
       : "Saznaj više";
 
+    const hasPill = searchParams.has("pill");
+    const pill = hasPill ? searchParams.get("pill") : "N/A";
+
     const fontData = await fetch(
       new URL("../../../fonts/Poppins-SemiBold.ttf", import.meta.url)
     ).then((res) => res.arrayBuffer());
@@ -52,12 +55,17 @@ export async function GET(request: Request) {
             {/* Image with responsive styling */}
 
             {/* <img src={logoUrl} alt="spark logo" width={300} height={120} /> */}
+            {pill && (
+              <div tw="bg-slate-800 text-[#d4af37] rounded-2xl py-3 px-6">
+                {pill}
+              </div>
+            )}
             <h2
               style={{ fontFamily: "Poppins" }}
               tw="flex flex-col text-3xl sm:text-4xl font-bold py-8 tracking-wide text-center text-[#d4af37] justify-center items-center"
             >
               <span tw="mb-6">{title}</span>
-              <span tw="text-slate-800">{description}</span>
+              <span tw="text-slate-800 line-clamp-3">{description}</span>
             </h2>
             <div tw="mt-8 flex md:mt-0">
               <div tw="flex rounded-md shadow">
@@ -73,7 +81,13 @@ export async function GET(request: Request) {
             </div>
           </div>
           <div tw="w-[30%] flex flex-col pt-8 items-center justify-between h-full bg-slate-800">
-          <img src={logoUrl} alt="spark logo" tw="ml-8" width={300} height={120} />
+            <img
+              src={logoUrl}
+              alt="spark logo"
+              tw="ml-8"
+              width={300}
+              height={120}
+            />
             <img src={avatarUrl} alt="avatar" width={300} height={400} />
           </div>
         </div>
