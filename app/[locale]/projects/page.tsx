@@ -39,7 +39,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "Metadata" });
   const ogImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?title=${encodeURIComponent(
     t("titleWork")
-  )}&description=${encodeURIComponent(t("ogDescriptionWork"))}&locale=${locale}&ogCTA1=${encodeURIComponent(t("ogCTA1"))}&ogCTA2=${encodeURIComponent(t("ogCTA2"))}`;
+  )}&description=${encodeURIComponent(t("ogDescriptionWork"))}&locale=${locale}`;
 
   return {
     title: t("titleWork"),

@@ -17,18 +17,11 @@ export async function GET(request: Request) {
       ? searchParams.get("description")?.slice(0, 140)
       : "Your go-to platform for creativity and innovation.";
 
-    const hasOGCTA1 = searchParams.has("ogCTA1");
-    const hasOGCTA2 = searchParams.has("ogCTA2");
-
-    const ogCTA1 = hasOGCTA1
-      ? searchParams.get("ogCTA1")?.slice(0, 100)
-      : "Započni";
-    const ogCTA2 = hasOGCTA2
-      ? searchParams.get("ogCTA2")?.slice(0, 100)
-      : "Saznaj više";
+  
+    
 
     const hasPill = searchParams.has("pill");
-    const pill = hasPill ? searchParams.get("pill") : "N/A";
+    const pill = hasPill && searchParams.get("pill");
 
     const fontData = await fetch(
       new URL("../../../fonts/Poppins-SemiBold.ttf", import.meta.url)
@@ -67,18 +60,7 @@ export async function GET(request: Request) {
               <span tw="mb-6">{title}</span>
               <span tw="text-slate-800 line-clamp-3">{description}</span>
             </h2>
-            <div tw="mt-8 flex md:mt-0">
-              <div tw="flex rounded-md shadow">
-                <a tw="flex items-center justify-center rounded-md border border-transparent bg-[#d4af37] px-5 py-3 text-base font-medium text-white">
-                  {ogCTA1}
-                </a>
-              </div>
-              <div tw="ml-3 flex rounded-md shadow">
-                <a tw="flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-[#d4af37]">
-                  {ogCTA2}
-                </a>
-              </div>
-            </div>
+           
           </div>
           <div tw="w-[30%] flex flex-col pt-8 items-center justify-between h-full bg-slate-800">
             <img

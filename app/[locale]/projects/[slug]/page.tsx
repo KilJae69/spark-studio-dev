@@ -37,7 +37,7 @@ export async function generateMetadata({
   const caseStudy = data.data;
   const ogImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?title=${encodeURIComponent(
     caseStudy.title
-  )}&description=${encodeURIComponent(caseStudy.og_desc)}&locale=${locale}&ogCTA1=${encodeURIComponent(t("ogCTA1"))}&ogCTA2=${encodeURIComponent(t("ogCTA2"))}&pill=${encodeURIComponent(t("ogPillProject"))}`;
+  )}&description=${encodeURIComponent(caseStudy.og_desc)}&locale=${locale}&pill=${encodeURIComponent(t("ogPillProject"))}`;
 
   return {
     title: `${caseStudy.title} | Spark Studio`,
