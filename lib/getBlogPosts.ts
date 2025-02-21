@@ -61,6 +61,11 @@ export async function getLocalizedCaseStudies(locale: string) {
         },
         next: { tags: ['posts'] },
       });
+
+      if (res.status === 404) {
+        console.warn(`Post with slug "${slug}" not found.`);
+        return null;
+      }
   
       if (!res.ok) {
         throw new Error(`Failed to fetch post: ${res.statusText}`);
@@ -84,6 +89,11 @@ export async function getLocalizedCaseStudies(locale: string) {
         },
         next: { tags: ['case-studies'] },
       });
+
+      if (res.status === 404) {
+        console.warn(`Post with slug "${slug}" not found.`);
+        return null;
+      }
   
       if (!res.ok) {
         throw new Error(`Failed to fetch post: ${res.statusText}`);

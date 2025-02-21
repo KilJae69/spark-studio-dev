@@ -30,13 +30,17 @@ export async function generateMetadata({
   }
   const t = await getTranslations({ locale, namespace: "Metadata" });
   const post = data.data;
+
   const ogImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?title=${encodeURIComponent(
     post.title
   )}&description=${encodeURIComponent(post.og_desc)}&locale=${locale}&pill=${encodeURIComponent(t("ogPillBlog"))}`;
 
   return {
     title: `${post.title} | Spark Studio`,
-    description: post.short_description || post.excerpt || "Read the latest insights on Spark Studio.",
+    description:
+      post.short_description ||
+      post.excerpt ||
+      "Read the latest insights on Spark Studio.",
     openGraph: {
       title: post.title,
       description: post.short_description,
@@ -89,14 +93,13 @@ export default async function BlogPage({
   setRequestLocale(locale);
   const t = await getTranslations("SingleBlogPage");
   const data = await getLocalizedPost(locale, slug);
+  if (!data) return notFound();
   const post = data.data;
 
   const allBlogsData = await getLocalizedPosts(locale);
   const allBlogs: BlogPost[] = allBlogsData.data;
- 
+
   const restOfBlogs = allBlogs.filter(({ id }) => id !== post.id).slice(0, 2);
-  
-  if (!post) return notFound();
 
   return (
     <>

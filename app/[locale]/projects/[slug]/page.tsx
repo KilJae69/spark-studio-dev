@@ -45,24 +45,24 @@ export async function generateMetadata({
       caseStudy.short_description ||
       caseStudy.excerpt ||
       "Read the latest insights on Spark Studio.",
-      openGraph: {
-        title: caseStudy.title,
-        description: caseStudy.short_description,
-        images: [
-          {
-            url: ogImageUrl,
-            width: 1200,
-            height: 630,
-            alt: caseStudy.title,
-          },
-        ],
-      },
-      twitter: {
-        card: "summary_large_image",
-        title: caseStudy.title,
-        description: caseStudy.short_description,
-        images: [ogImageUrl],
-      },
+    openGraph: {
+      title: caseStudy.title,
+      description: caseStudy.short_description,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: caseStudy.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: caseStudy.title,
+      description: caseStudy.short_description,
+      images: [ogImageUrl],
+    },
   };
 }
 
@@ -92,6 +92,7 @@ export default async function CaseStudyPage({
   setRequestLocale(locale);
   const t = await getTranslations("SingleCaseStudyPage");
   const data = await getLocalizedCaseStudy(locale, slug);
+  if (!data) return notFound();
   const singleCaseStudy: CaseStudy = data.data;
 
   const allCaseStudiesData = await getLocalizedCaseStudies(locale);
@@ -100,8 +101,6 @@ export default async function CaseStudyPage({
   const restOfCaseStudies = allCaseStudies
     .filter(({ id }) => id !== singleCaseStudy.id)
     .slice(0, 2);
-
-  if (!singleCaseStudy) return notFound();
 
   const {
     title,
