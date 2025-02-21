@@ -27,13 +27,13 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const data = await getLocalizedCaseStudy(locale, slug);
 
+  const t = await getTranslations({ locale, namespace: "Metadata" });
   if (!data || !data.data) {
     return {
-      title: "Case Study Not Found",
-      description: "The case study you are looking for does not exist.",
+      title: t("ProjectNotFoundTitle"),
+      description: t("ProjectNotFoundDescription"),
     };
   }
-  const t = await getTranslations({ locale, namespace: "Metadata" });
   const caseStudy = data.data;
   const ogImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?title=${encodeURIComponent(
     caseStudy.title

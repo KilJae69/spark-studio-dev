@@ -1,5 +1,9 @@
 {
   "Metadata": {
+    "BlogNotFoundTitle": "Objava na blogu nije pronađena",
+  "BlogNotFoundDescription": "Blog post koji tražite ne postoji.",
+  "ProjectNotFoundTitle": "Studija slučaja nije pronađena",
+  "ProjectNotFoundDescription": "Studija slučaja koju tražite ne postoji.",
     "ogCTA1":"Započni",
     "ogCTA2":"Saznaj više",
     "ogPillBlog":"Blog",

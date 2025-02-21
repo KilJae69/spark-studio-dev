@@ -1,5 +1,9 @@
 {
   "Metadata": {
+    "BlogNotFoundTitle":"Blog Post Not Found",
+    "BlogNotFoundDescription":"The blog post you are looking for does not exist.",
+    "ProjectNotFoundTitle":"Case Study Not Found",
+    "ProjectNotFoundDescription":"The case study you are looking for does not exist.",
     "ogCTA1":"Get started",
     "ogCTA2":"Learn more",
     "ogPillBlog":"Blog",

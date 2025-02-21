@@ -1,8 +1,12 @@
 {
   "Metadata": {
-    "ogCTA1":"Loslegen",
-    "ogCTA2":"Mehr erfahren",
-    "ogPillBlog":"Blog",
+    "BlogNotFoundTitle": "Blog-Beitrag nicht gefunden",
+    "BlogNotFoundDescription": "Der gesuchte Blog-Beitrag existiert nicht.",
+    "ProjectNotFoundTitle": "Fallstudie nicht gefunden",
+    "ProjectNotFoundDescription": "Die gesuchte Fallstudie existiert nicht.",
+    "ogCTA1": "Loslegen",
+    "ogCTA2": "Mehr erfahren",
+    "ogPillBlog": "Blog",
     "ogPillProject": "Projekte",
     "titleHome": "Spark Studio",
     "descriptionHome": "Willkommen bei Spark Studio, einer führenden Webentwicklungsagentur, die modernes Design und Technologie kombiniert, um maßgeschneiderte Lösungen zu liefern. Erfahren Sie, wie wir Ihre digitale Vision zum Leben erwecken können.",
@@ -22,7 +26,7 @@
 
     "titleWork": "Spark Studio | Unser Portfolio Innovativer Projekte",
     "descriptionWork": "Entdecken Sie das Portfolio von Spark Studio voller innovativer und wirkungsvoller Projekte. Erfahren Sie, wie wir Unternehmen mit maßgeschneiderten Web-, Design- und E-Commerce-Lösungen unterstützen.",
-     "ogDescriptionWork": "Entdecken Sie das Portfolio von Spark Studio voller innovativer und wirkungsvoller Projekte."
+    "ogDescriptionWork": "Entdecken Sie das Portfolio von Spark Studio voller innovativer und wirkungsvoller Projekte."
   },
   "HomePage": {
     "title": "Spark Studio",
@@ -332,7 +336,7 @@
     "service": "Dienstleistung",
     "pageLinksTitle": "Weitere Fallstudien",
     "pageLinksLink": "Mehr erfahren",
-    "CTALink":"Jetzt live ansehen"
+    "CTALink": "Jetzt live ansehen"
   },
   "SingleBlogPage": {
     "pageLinksTitle": "Weitere Artikel",

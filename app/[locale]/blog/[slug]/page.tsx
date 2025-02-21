@@ -21,14 +21,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, slug } = await params;
   const data = await getLocalizedPost(locale, slug);
+  const t = await getTranslations({ locale, namespace: "Metadata" });
 
   if (!data || !data.data) {
     return {
-      title: "Blog Post Not Found",
-      description: "The blog post you are looking for does not exist.",
+      title: t("BlogNotFoundTitle"),
+      description: t("BlogNotFoundDescription"),
     };
   }
-  const t = await getTranslations({ locale, namespace: "Metadata" });
   const post = data.data;
 
   const ogImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?title=${encodeURIComponent(
