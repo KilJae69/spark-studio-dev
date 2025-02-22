@@ -58,7 +58,7 @@ export async function GET(request: Request) {
               tw="flex flex-col text-3xl sm:text-4xl font-bold py-8 tracking-wide text-center text-[#d4af37] justify-center items-center"
             >
               <span tw="mb-6">{title}</span>
-              <span tw="text-slate-800 line-clamp-3">{description}</span>
+              <span tw="text-slate-800">{description}</span>
             </h2>
            
           </div>
