@@ -347,7 +347,14 @@
     "NewsletterForm": {
       "title": "Prijavite se na naš newsletter",
       "paragraph": "Pretplatite se i primajte najnovije vijesti, članke, resurse i inspiraciju o dizajnu.",
-      "placeholder": "Email adresa"
+      "placeholder": "Email adresa",
+      "validation": {
+      "required": "Ovo polje je obavezno.",
+      "emailInvalid": "Neispravna email adresa.",
+      "emailMax": "Email mora biti kraći od 100 znakova."
+    },
+    "successMessage": "Uspješno ste se pretplatili na naš newsletter!",
+    "errorMessage": "Došlo je do greške. Molimo pokušajte ponovo kasnije."
     },
     "Sections": {
       "work": "Projekti",

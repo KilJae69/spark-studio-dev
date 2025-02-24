@@ -99,7 +99,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
           <LazyMotion features={domAnimation}>
             <InnerLayout>
               {children}
-              <Toaster />
+              <Toaster position="top-right"/>
             </InnerLayout>
             <Footer locale={locale} />
           </LazyMotion>

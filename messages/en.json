@@ -348,7 +348,16 @@
     "NewsletterForm": {
       "title": "Sign up for our newsletter",
       "paragraph": "Subscribe to get the latest design news, articles, resources and inspiration.",
-      "placeholder": "Email address"
+      "placeholder": "Email address",
+      "validation": {
+      "required": "This field is required.",
+      
+      "emailInvalid": "Invalid email address.",
+      "emailMax": "Email must be less than 100 characters."
+      
+    },
+    "successMessage": "Your have succesfully subscribed to our newsletter!",
+    "errorMessage": "Something went wrong. Please try again later."
     },
     "Sections": {
       "work": "Projects",

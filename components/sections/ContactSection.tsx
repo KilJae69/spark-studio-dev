@@ -41,6 +41,7 @@ export function ContactSection() {
                     <Image
                       src="/animations/wifi-icon.gif"
                       alt="wifi icon"
+                      unoptimized
                       width={30}
                       height={30}
                     />

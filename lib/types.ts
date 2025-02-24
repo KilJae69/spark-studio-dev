@@ -36,6 +36,20 @@ export const contactFormSchema = (t: (key: string) => string) =>
 
 export type TContactFormSchema = z.infer<ReturnType<typeof contactFormSchema>>;
 
+export const newsletterSchema = (t: (key: string) => string) =>
+  z.object({
+    email: z
+      .string()
+      .trim()
+      .email({ message: t("NewsletterForm.validation.emailInvalid") })
+      .min(1, { message: t("NewsletterForm.validation.required") })
+      .max(100, { message: t("NewsletterForm.validation.emailMax") }),
+
+      
+  });
+
+export type TNewsletterFormSchema = z.infer<ReturnType<typeof newsletterSchema>>;
+
 export type BlogPost = {
   id: number;
   title: string;

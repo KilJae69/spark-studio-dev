@@ -72,7 +72,7 @@ function TextareaInput({
         htmlFor={name}
         className={clsx(
           "pointer-events-none absolute top-14 left-6 tracking-widest -mt-3 origin-left text-base/6 text-primary-500 transition-all duration-200 peer-focus:-translate-y-9 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-primary-800 peer-[:not(:placeholder-shown)]:-translate-y-9 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-primary-800",
-          errorMessage && "text-rose-500"
+          errorMessage && "!text-rose-500"
         )}
       >
         {label}

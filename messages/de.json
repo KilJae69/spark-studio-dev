@@ -347,7 +347,14 @@
     "NewsletterForm": {
       "title": "Melden Sie sich für unseren Newsletter an",
       "paragraph": "Abonnieren Sie unseren Newsletter, um die neuesten Design-News, Artikel, Ressourcen und Inspiration zu erhalten.",
-      "placeholder": "E-Mail Adresse"
+      "placeholder": "E-Mail Adresse",
+      "validation": {
+      "required": "Dieses Feld ist erforderlich.",
+      "emailInvalid": "Ungültige E-Mail-Adresse.",
+      "emailMax": "Die E-Mail-Adresse muss weniger als 100 Zeichen lang sein."
+    },
+    "successMessage": "Sie haben sich erfolgreich für unseren Newsletter angemeldet!",
+    "errorMessage": "Etwas ist schief gelaufen. Bitte versuchen Sie es später noch einmal."
     },
     "Sections": {
       "work": "Projekte",
