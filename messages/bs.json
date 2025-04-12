@@ -70,7 +70,10 @@
     "buttonText": "Kontaktirajte nas",
     "noOfficesTitle": "Mi ne radimo u kancelarijama",
     "description": "Spark Studio je globalni tim dostupan gdje god se nalazili. Bilo da je to uz kafu u vašem omiljenom kafiću ili brzi video poziv s drugog kraja svijeta, spremni smo na saradnju.",
-    "wifiNote": "Imate Wi-Fi? Mi smo tu."
+    "wifiNote": "Imate Wi-Fi? Mi smo tu.",
+    "phoneTitle":"Više volite telefon?",
+    "phoneDescription":"Volite pozive? Dostupni smo direktno ili putem Vibera i WhatsAppa.",
+    "phoneNote":"Nazovite nas na" 
   },
   "CaseStudiesSection": {
     "eyebrow": "Naši projekti",
@@ -220,6 +223,9 @@
       },
       "socialMediaSection": {
         "title": "Pratite nas"
+      },
+      "callUsSection": {
+        "title": "Nazovite nas"
       }
     }
   },

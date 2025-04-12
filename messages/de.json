@@ -70,7 +70,10 @@
     "buttonText": "Sagen Sie Hallo",
     "noOfficesTitle": "Wir arbeiten nicht in Büros",
     "description": "Spark Studio ist ein globales Team, das überall verfügbar ist. Ob bei einem Kaffee an Ihrem Lieblingsort oder einem schnellen Videoanruf vom anderen Ende der Welt – wir sind bereit, zusammenzuarbeiten.",
-    "wifiNote": "Haben Sie WLAN? Wir sind da."
+    "wifiNote": "Haben Sie WLAN? Wir sind da.",
+    "phoneTitle":"Telefon bevorzugt?",
+    "phoneDescription":"Sie bevorzugen Anrufe? Erreichen Sie uns direkt oder über Viber und WhatsApp.",
+    "phoneNote":"Rufen Sie uns an unter" 
   },
   "CaseStudiesSection": {
     "eyebrow": "Unsere Projekte",
@@ -220,6 +223,9 @@
       },
       "socialMediaSection": {
         "title": "Folgen Sie uns"
+      },
+      "callUsSection": {
+        "title": "Rufen Sie uns"
       }
     }
   },
