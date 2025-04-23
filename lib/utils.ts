@@ -60,3 +60,13 @@ export const getErrorMessage = (error: unknown): string => {
 
   return message;
 };
+
+export function truncateWithEllipsis(
+  str: string | null | undefined,
+  maxLen: number
+): string {
+  if (!str) return ""
+  if (str.length < maxLen) return str;
+  // reserve 3 chars for "..."
+  return str.slice(0, maxLen - 3).trimEnd() + "..."
+}

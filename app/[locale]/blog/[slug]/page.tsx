@@ -6,6 +6,7 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 import { getLocalizedPost, getLocalizedPosts } from "@/lib/getBlogPosts";
 import { Locale, locales } from "@/lib/locales";
 import { BlogPost } from "@/lib/types";
+
 import { Metadata } from "next";
 // import { BlogPost } from "@/lib/types";
 // import { formatDate } from "@/lib/utils";
@@ -35,11 +36,7 @@ export async function generateMetadata({
     post.title
   )}&description=${encodeURIComponent(post.og_desc)}&locale=${locale}&pill=${encodeURIComponent(t("ogPillBlog"))}`;
 
-  console.log({ 
-    route: `/[${locale}]/blog/${slug}`, 
-    postTitle: post?.title, 
-    ogImageUrl 
-  });
+
   
   return {
     title: `${post.title} | Spark Studio`,
@@ -106,6 +103,9 @@ export default async function BlogPage({
   const allBlogs: BlogPost[] = allBlogsData.data;
 
   const restOfBlogs = allBlogs.filter(({ id }) => id !== post.id).slice(0, 2);
+
+
+ 
 
   return (
     <>

@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
+import { truncateWithEllipsis } from "@/lib/utils";
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
@@ -11,13 +12,13 @@ export async function GET(request: Request) {
     const hasTitle = searchParams.has("title");
     const hasDescription = searchParams.has("description");
     const title = hasTitle
-      ? searchParams.get("title")?.slice(0, 100)
-      : "Spark Studio Website";
-    const description = hasDescription
-      ? searchParams.get("description")?.slice(0, 140)
-      : "Your go-to platform for creativity and innovation.";
+  ? truncateWithEllipsis(searchParams.get("title"), 100)
+  : "Spark Studio Website"
 
-  
+const description = hasDescription
+  ? truncateWithEllipsis(searchParams.get("description"), 140)
+  : "Your go-to platform for creativity and innovation."
+
     
 
     const hasPill = searchParams.has("pill");
