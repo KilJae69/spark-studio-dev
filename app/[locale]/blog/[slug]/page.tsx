@@ -31,10 +31,16 @@ export async function generateMetadata({
   }
   const post = data.data;
 
-  const ogImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?title=${encodeURIComponent(
+  const ogImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}api/og?title=${encodeURIComponent(
     post.title
   )}&description=${encodeURIComponent(post.og_desc)}&locale=${locale}&pill=${encodeURIComponent(t("ogPillBlog"))}`;
 
+  console.log({ 
+    route: `/[${locale}]/blog/${slug}`, 
+    postTitle: post?.title, 
+    ogImageUrl 
+  });
+  
   return {
     title: `${post.title} | Spark Studio`,
     description:
@@ -95,7 +101,7 @@ export default async function BlogPage({
   const data = await getLocalizedPost(locale, slug);
   if (!data) return notFound();
   const post = data.data;
-
+  
   const allBlogsData = await getLocalizedPosts(locale);
   const allBlogs: BlogPost[] = allBlogsData.data;
 

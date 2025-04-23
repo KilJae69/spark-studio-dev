@@ -41,6 +41,8 @@ export async function GET(request: Request) {
     const avatarBase64 = Buffer.from(avatarData).toString("base64");
     const avatarUrl = `data:image/png;base64,${avatarBase64}`;
 
+    console.log(title,description);
+
     return new ImageResponse(
       (
         <div tw="flex flex relative w-full h-full items-center justify-center bg-white ">
