@@ -7,7 +7,7 @@ export const routing = defineRouting({
  
   // Used when no locale matches
   defaultLocale: 'bs',
-  localePrefix: 'as-needed',
+  localePrefix: 'always',
 
   pathnames: {
     // Static pages
