@@ -21,6 +21,7 @@ const nextConfig: NextConfig = {
     ],
   },
   reactStrictMode: true,
+  trailingSlash: true,
   // ...other options
 };
 
