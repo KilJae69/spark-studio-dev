@@ -31,13 +31,17 @@ export async function generateMetadata({
     };
   }
   const post = data.data;
+  const hasThumb = Boolean(post.thumbnail);
+  const thumbnailUrl = hasThumb
+    ? `${process.env.FILAMENT_API_URL}/storage/${post.thumbnail}`
+    : `${process.env.NEXT_PUBLIC_SITE_URL}api/og?title=${encodeURIComponent(
+        post.title
+      )}&description=${encodeURIComponent(post.og_desc)}&locale=${locale}&pill=${encodeURIComponent(t("ogPillBlog"))}`;
 
-  const ogImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}api/og?title=${encodeURIComponent(
-    post.title
-  )}&description=${encodeURIComponent(post.og_desc)}&locale=${locale}&pill=${encodeURIComponent(t("ogPillBlog"))}`;
+  // const ogImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}api/og?title=${encodeURIComponent(
+  //   post.title
+  // )}&description=${encodeURIComponent(post.og_desc)}&locale=${locale}&pill=${encodeURIComponent(t("ogPillBlog"))}`;
 
-
-  
   return {
     title: `${post.title} | Spark Studio`,
     description:
@@ -49,7 +53,7 @@ export async function generateMetadata({
       description: post.short_description,
       images: [
         {
-          url: ogImageUrl,
+          url: thumbnailUrl,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -60,7 +64,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: post.title,
       description: post.short_description,
-      images: [ogImageUrl],
+      images: [thumbnailUrl],
     },
   };
 }
@@ -98,14 +102,13 @@ export default async function BlogPage({
   const data = await getLocalizedPost(locale, slug);
   if (!data) return notFound();
   const post = data.data;
-  
+
+  console.log(post);
+
   const allBlogsData = await getLocalizedPosts(locale);
   const allBlogs: BlogPost[] = allBlogsData.data;
 
   const restOfBlogs = allBlogs.filter(({ id }) => id !== post.id).slice(0, 2);
-
-
- 
 
   return (
     <>
