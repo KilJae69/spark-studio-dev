@@ -27,9 +27,7 @@ export async function generateMetadata({
 
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Metadata" });
-  const ogImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?title=${encodeURIComponent(
-    t("titleContact")
-  )}&description=${encodeURIComponent(t("ogDescriptionContact"))}&locale=${locale}`;
+
 
   return {
     title: t("titleContact"),
@@ -39,7 +37,7 @@ export async function generateMetadata({
       description: t("ogDescriptionContact"),
       images: [
         {
-          url: ogImageUrl,
+          url: "/spark-og.png",
           width: 1200,
           height: 630,
           alt: t("titleContact"),
@@ -50,7 +48,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: t("titleContact"),
       description: t("ogDescriptionContact"),
-      images: [ogImageUrl],
+      images: ["/spark-og.png"],
     },
   };
 }

@@ -35,9 +35,7 @@ export async function generateMetadata({
     };
   }
   const caseStudy = data.data;
-  const ogImageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?title=${encodeURIComponent(
-    caseStudy.title
-  )}&description=${encodeURIComponent(caseStudy.og_desc)}&locale=${locale}&pill=${encodeURIComponent(t("ogPillProject"))}`;
+  
 
   return {
     title: `${caseStudy.title} | Spark Studio`,
@@ -50,7 +48,7 @@ export async function generateMetadata({
       description: caseStudy.short_description,
       images: [
         {
-          url: ogImageUrl,
+          url: "/spark-og.png",
           width: 1200,
           height: 630,
           alt: caseStudy.title,
@@ -61,7 +59,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: caseStudy.title,
       description: caseStudy.short_description,
-      images: [ogImageUrl],
+      images: ["/spark-og.png"],
     },
   };
 }
