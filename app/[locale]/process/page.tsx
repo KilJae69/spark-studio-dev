@@ -46,7 +46,7 @@ export async function generateMetadata({
       description: t("ogDescriptionProcess"),
       images: [
         {
-          url: "/spark-og.png",
+          url: `${process.env.NEXT_PUBLIC_SITE_URL}spark-og.png`,
           width: 1200,
           height: 630,
           alt: t("titleProcess"),
@@ -57,7 +57,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: t("titleProcess"),
       description: t("ogDescriptionProcess"),
-      images: ["/spark-og.png"],
+      images: [`${process.env.NEXT_PUBLIC_SITE_URL}spark-og.png`],
     },
   };
 }

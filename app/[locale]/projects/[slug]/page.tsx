@@ -48,7 +48,7 @@ export async function generateMetadata({
       description: caseStudy.short_description,
       images: [
         {
-          url: "/spark-og.png",
+          url: `${process.env.NEXT_PUBLIC_SITE_URL}spark-og.png`,
           width: 1200,
           height: 630,
           alt: caseStudy.title,
@@ -59,7 +59,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: caseStudy.title,
       description: caseStudy.short_description,
-      images: ["/spark-og.png"],
+      images: [`${process.env.NEXT_PUBLIC_SITE_URL}spark-og.png`],
     },
   };
 }
