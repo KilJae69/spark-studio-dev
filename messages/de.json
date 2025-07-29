@@ -71,9 +71,9 @@
     "noOfficesTitle": "Wir arbeiten nicht in Büros",
     "description": "Spark Studio ist ein globales Team, das überall verfügbar ist. Ob bei einem Kaffee an Ihrem Lieblingsort oder einem schnellen Videoanruf vom anderen Ende der Welt – wir sind bereit, zusammenzuarbeiten.",
     "wifiNote": "Haben Sie WLAN? Wir sind da.",
-    "phoneTitle":"Telefon bevorzugt?",
-    "phoneDescription":"Sie bevorzugen Anrufe? Erreichen Sie uns direkt oder über Viber und WhatsApp.",
-    "phoneNote":"Rufen Sie uns an unter" 
+    "phoneTitle": "Telefon bevorzugt?",
+    "phoneDescription": "Sie bevorzugen Anrufe? Erreichen Sie uns direkt oder über Viber und WhatsApp.",
+    "phoneNote": "Rufen Sie uns an unter"
   },
   "CaseStudiesSection": {
     "eyebrow": "Unsere Projekte",
@@ -83,94 +83,94 @@
   },
   "ProcessPage": {
     "pageIntro": {
-      "eyebrow": "Unser Prozess",
-      "title": "Wie wir Ihre Ideen zum Leben erwecken",
-      "subtitle": "Klare Prozesse. Echte Ergebnisse.",
-      "description": "Bei Spark Studio sind wir überzeugt, dass großartige Ergebnisse aus einem klar definierten und transparenten Prozess entstehen. Durch die Kombination von Zusammenarbeit, Fachwissen und Innovation verwandeln wir Ihre Vision in die Realität. Unser Ansatz stellt sicher, dass jeder Schritt auf die Bedürfnisse Ihres Unternehmens abgestimmt ist, um Lösungen mit echtem Mehrwert zu schaffen."
+      "eyebrow": "Über Spark Studio",
+      "title": "Wer wir sind – und warum wir diesen Studio gegründet haben",
+      "subtitle": "Klare Prozesse. Messbare Ergebnisse.",
+      "description": "Wir sind ein Team erfahrener Softwareentwickler aus Bosnien und Herzegowina. Nach Jahren in der Produktentwicklung haben wir eine Lücke erkannt: Die Technologie entwickelt sich rasant, aber viele Unternehmen – besonders in unserer Region – arbeiten noch immer mit veralteten Tools wie WordPress, Wix oder alten Systemen. Spark Studio wurde gegründet, um das zu ändern. Wir helfen Unternehmen, von langsamen und aufgeblähten Webseiten zu modernen Lösungen mit Performance, Skalierbarkeit und voller Kontrolle zu wechseln."
     },
     "discover": {
-      "title": "Entdecken",
+      "title": "Was wir tun",
       "description": [
-        "Das Verständnis Ihres Unternehmens steht im Mittelpunkt unseres Handelns. In dieser Phase konzentrieren wir uns darauf, Ihre Ziele, Herausforderungen und Zielgruppe wirklich zu verstehen. Durch offene Zusammenarbeit und detaillierte Gespräche stellen wir sicher, dass jede Entscheidung auf Ihre individuellen Bedürfnisse abgestimmt ist.",
-        "Ob es darum geht, Ihre Marktposition zu analysieren, Wettbewerber zu bewerten oder Chancen für Innovationen zu identifizieren – diese Phase legt den Grundstein für Lösungen, die einen Unterschied machen. Gemeinsam mit Ihnen definieren wir Prioritäten und einen klaren Fahrplan, der eine Ausrichtung in jeder Phase gewährleistet.",
-        "Das Ergebnis? Ein klares Verständnis davon, wo Ihr Unternehmen heute steht, und ein fokussierter Plan, um es dahin zu bringen, wo es sein muss."
+        "Wir entwerfen und entwickeln maßgeschneiderte digitale Produkte – von Websites und internen Tools bis hin zu komplexen Web- und Mobile-Apps. Alles wird individuell auf deine Geschäftsziele zugeschnitten, nichts stammt aus einem Baukasten.",
+        "Außerdem erstellen wir Headless-CMS-Lösungen und individuelle Admin-Dashboards, damit du die volle Kontrolle über deine Inhalte hast – ohne die Einschränkungen klassischer Plattformen wie WordPress.",
+        "Wo es Sinn macht, integrieren wir KI und Automatisierung, um wiederkehrende Aufgaben zu eliminieren, Prozesse zu beschleunigen oder intelligente Funktionen bereitzustellen. Das Ergebnis: schnelle, zuverlässige und skalierbare Lösungen."
       ],
       "included": {
-        "title": "In dieser Phase enthalten",
+        "title": "Technologien und Leistungen",
         "items": [
-          "Kundeninterviews",
-          "Wettbewerbsanalyse",
-          "Zielgruppenforschung",
-          "Inhalts- und Designprüfungen",
-          "Zielpriorisierung",
-          "Hochrangige Projektplanung"
+          "Individuelle Websites",
+          "Web- & Mobile-Apps",
+          "Headless CMS",
+          "Admin-Dashboards",
+          "KI & Automatisierung",
+          "Performance-Optimierung"
         ]
       }
     },
     "build": {
-      "title": "Bauen",
+      "title": "Wie wir arbeiten",
       "description": [
-        "Mit einem klaren Plan ist die Build-Phase der Moment, in dem Ideen Wirklichkeit werden. Wir nutzen die Erkenntnisse und Strategien aus der Entdeckungsphase, um Lösungen zu schaffen, die nicht nur funktional, sondern auch auf Ihre Geschäftsziele abgestimmt sind. Ob es sich um eine Website, eine Anwendung oder ein benutzerdefiniertes Tool handelt – hier treffen Innovation und Umsetzung aufeinander.",
-        "Kommunikation ist in dieser Phase entscheidend. Wir halten Sie mit regelmäßigen Updates und Meilensteinen auf dem Laufenden, sorgen für Transparenz und fördern die Zusammenarbeit. Wir begrüßen Feedback und optimieren kontinuierlich, um sicherzustellen, dass wir stets das bestmögliche Ergebnis erzielen.",
-        "Durch die Kombination moderner Technologien, effizienter Workflows und unserem Engagement für Qualität stellen wir sicher, dass die von uns gelieferten Lösungen langlebig und anpassungsfähig an Ihre zukünftigen Bedürfnisse sind."
+        "Jedes Projekt ist bei uns individuell – vom Designsystem bis zum Code. Wir verwenden keine Vorlagen, Page-Builder oder Plattformen, die dein Wachstum einschränken. Du erhältst sauberen, skalierbaren Code, der dir gehört.",
+        "Wir legen Wert auf Leistung und nachhaltige Wartbarkeit. Das heißt: schnelle Ladezeiten, hohe Lighthouse-Scores und keine versteckten technischen Schulden. Ob Website, App oder Dashboard – wir bauen langlebige Lösungen.",
+        "Du bist jederzeit im Bilde. Wir arbeiten offen und transparent: Wireframes, Code-Reviews, Fortschrittsberichte und Übergabedokumente gehören zum Standard. Keine leeren Versprechen – wir zeigen dir, was wir tun und warum."
       ]
     },
     "deliver": {
-      "title": "Liefern",
+      "title": "Was wir nicht tun – und warum",
       "description": [
-        "Die Lieferphase ist der Moment, in dem alles zusammenkommt. Nach Monaten der Zusammenarbeit und Entwicklung konzentrieren wir uns darauf, sicherzustellen, dass Ihre Lösung bereit für den Launch ist. Dazu gehören gründliche Tests, letzte Anpassungen und die Vorbereitung für eine nahtlose Übergabe.",
-        "Wir wissen, wie wichtig Zuverlässigkeit beim Launch ist. Deshalb führen wir umfangreiche Tests durch, um sicherzustellen, dass Ihr Produkt unter realen Bedingungen wie erwartet funktioniert. Von schnellen Ladezeiten bis zur Funktionalität jeder Taste und Funktion wird nichts dem Zufall überlassen.",
-        "Sobald alles bereit ist, stellen wir Ihnen die Werkzeuge, Schulungen und Dokumentationen zur Verfügung, die Sie benötigen, um Ihre neue Lösung sicher zu verwalten. Und auch nach der Lieferung stehen wir Ihnen für Support, Updates oder zukünftige Verbesserungen zur Verfügung."
+        "Wir arbeiten nicht mit WordPress, Wix oder anderen Page-Buildern. Sie sind langsam, überladen und voller Plugins, die du nicht brauchst. Sie behindern die Performance und schränken deine Möglichkeiten ein.",
+        "Wir verwenden keine KI, um komplette Webseiten oder Apps zu generieren. Diese Tools liefern oft oberflächliche Ergebnisse, die schwer zu pflegen sind und keinen echten Mehrwert bieten.",
+        "Und wir binden dich nie an uns. Du besitzt deinen Code, deine Inhalte und deine Infrastruktur – vom ersten Tag an."
       ],
       "included": {
-        "title": "In dieser Phase enthalten",
+        "title": "Was wir vermeiden",
         "items": [
           {
-            "title": "Umfassende Tests",
-            "description": "Jede Funktion wird gründlich getestet, um einen reibungslosen Launch zu gewährleisten – von Leistung und Benutzerfreundlichkeit bis hin zu Sicherheit und Kompatibilität."
-          },
+        "title": "Keine Page-Builder",
+        "description": "Langsam, überladen und kaum skalierbar."
+      },
+      {
+        "title": "Keine generischen KI-Lösungen",
+        "description": "KI kann unterstützen – aber nicht ersetzen, was gutes Handwerk ausmacht."
+      },
           {
-            "title": "Launch-Support",
-            "description": "Wir begleiten Sie bei jedem Schritt und bieten Unterstützung, damit Ihr Launch reibungslos verläuft und einen großartigen ersten Eindruck hinterlässt."
-          },
-          {
-            "title": "Laufender Support",
-            "description": "Wir verschwinden nicht nach dem Launch. Egal ob Updates, Wartung oder neue Funktionen – wir sind hier, um Ihr Unternehmen beim Wachsen zu unterstützen."
+            "title": "Keine Abhängigkeit",
+            "description": "Der Code gehört dir. Wenn wir externe Dienste integrieren (z. B. KI-APIs), hast du volle Kontrolle und zahlst direkt an den Anbieter."
           }
         ]
       }
     },
     "values": {
-      "eyebrow": "Unsere Werte",
-      "title": "Unsere Werte leiten uns, innovative, zuverlässige und kundenorientierte Lösungen zu liefern.",
-      "description": "Bei Spark Studio wird unsere Arbeit von den Kernwerten geleitet, die jedes Projekt prägen, das wir übernehmen. Diese Prinzipien stellen sicher, dass wir Lösungen liefern, die nicht nur effektiv sind, sondern auch mit Ihren Zielen und Ihrer Vision übereinstimmen. Wir glauben an den Aufbau von Vertrauen durch Transparenz, die Anpassung an Herausforderungen und die ständige Weiterentwicklung in einer sich schnell verändernden Branche.",
-      "items": [
-        {
-          "title": "Sorgfältig",
-          "description": "Aufmerksamkeit für Details steht im Mittelpunkt dessen, was wir tun. Jedes Design, jede Codezeile und jede Interaktion wird mit Präzision erstellt, um ein nahtloses Benutzererlebnis zu gewährleisten."
-        },
-        {
-          "title": "Effizient",
-          "description": "Wir respektieren Ihre Zeit und Ressourcen und sind bestrebt, qualitativ hochwertige Ergebnisse pünktlich zu liefern."
-        },
-        {
-          "title": "Anpassungsfähig",
-          "description": "Jedes Unternehmen hat einzigartige Bedürfnisse, und wir sind stolz darauf, Lösungen anzubieten, die sich an Ihre Anforderungen anpassen und mit Ihren Zielen wachsen."
-        },
-        {
-          "title": "Transparent",
-          "description": "Kommunikation und Vertrauen stehen im Mittelpunkt unserer Partnerschaften. Wir halten Sie bei jedem Schritt informiert und eingebunden."
-        },
-        {
-          "title": "Loyal",
-          "description": "Wir liefern nicht nur Projekte, sondern bauen Beziehungen auf. Unser Engagement endet nicht mit der Lieferung."
-        },
-        {
-          "title": "Innovativ",
-          "description": "Wir bleiben immer einen Schritt voraus und nutzen die neuesten Tools und Technologien, um kreative und zukunftssichere Lösungen zu liefern."
-        }
-      ]
+  "eyebrow": "Unsere Werte",
+  "title": "Die Prinzipien, nach denen wir arbeiten – klar, einfach und in jedem Projekt spürbar.",
+  "description": "Unsere Werte sind kein Marketing-Gerede. Sie bestimmen, wie wir arbeiten, kommunizieren und Probleme lösen. Sie helfen uns, echte Ergebnisse zu liefern und Vertrauen mit unseren Kunden aufzubauen.",
+  "items": [
+    {
+      "title": "Präzision",
+      "description": "Wir achten auf jedes Detail – denn schlechter Code oder unüberlegtes Design kosten später mehr. Unsere Lösungen sind langlebig und stabil."
+    },
+    {
+      "title": "Effizienz",
+      "description": "Keine unnötigen Meetings, keine vagen Zeitpläne. Wir planen klar, arbeiten fokussiert und liefern schnell."
+    },
+    {
+      "title": "Flexibilität",
+      "description": "Dein Unternehmen ist kein Standardfall – und so behandeln wir es auch nicht. Unser Prozess passt sich deinen Zielen an, nicht umgekehrt."
+    },
+    {
+      "title": "Transparenz",
+      "description": "Keine Blackbox. Du weißt, was wir tun, warum wir es tun und was es kostet – von Anfang bis Ende."
+    },
+    {
+      "title": "Langfristiges Denken",
+      "description": "Wir liefern nicht einfach nur ab. Wir begleiten dich auch danach – wenn dein Produkt wächst oder sich weiterentwickelt."
+    },
+    {
+      "title": "Neugier",
+      "description": "Wir lernen ständig weiter. So bleiben deine Projekte aktuell, modern und effizient umgesetzt."
     }
+  ]
+}
   },
   "ContactPage": {
     "pageIntro": {
@@ -275,8 +275,8 @@
   },
   "WorkPage": {
     "eyebrow": "Unsere Projekte",
-    "title": "Bewährte Lösungen für reale Probleme.",
-    "paragraph": "Wir glauben an Effizienz und eine optimale Nutzung unserer Ressourcen, um unseren Kunden den besten Mehrwert zu bieten. Der Hauptweg, wie wir das erreichen, besteht darin, dieselben fünf Projekte wiederzuverwenden, die wir seit einem Jahrzehnt entwickeln.",
+    "title": "Was wir gebaut haben. Was wir gelöst haben.",
+    "paragraph": "Von schnellen Shops über Gesundheitsplattformen bis hin zu KI-Integrationen – diese Beispiele zeigen, wie wir echte Anforderungen mit maßgeschneiderten Lösungen umsetzen. Alles entwickelt von Grund auf, ohne Templates oder Kompromisse.",
     "ListSection": {
       "title": "Fallstudien",
       "CTAButton": "Fallstudie lesen"
@@ -355,12 +355,12 @@
       "paragraph": "Abonnieren Sie unseren Newsletter, um die neuesten Design-News, Artikel, Ressourcen und Inspiration zu erhalten.",
       "placeholder": "E-Mail Adresse",
       "validation": {
-      "required": "Dieses Feld ist erforderlich.",
-      "emailInvalid": "Ungültige E-Mail-Adresse.",
-      "emailMax": "Die E-Mail-Adresse muss weniger als 100 Zeichen lang sein."
-    },
-    "successMessage": "Sie haben sich erfolgreich für unseren Newsletter angemeldet!",
-    "errorMessage": "Etwas ist schief gelaufen. Bitte versuchen Sie es später noch einmal."
+        "required": "Dieses Feld ist erforderlich.",
+        "emailInvalid": "Ungültige E-Mail-Adresse.",
+        "emailMax": "Die E-Mail-Adresse muss weniger als 100 Zeichen lang sein."
+      },
+      "successMessage": "Sie haben sich erfolgreich für unseren Newsletter angemeldet!",
+      "errorMessage": "Etwas ist schief gelaufen. Bitte versuchen Sie es später noch einmal."
     },
     "Sections": {
       "work": "Projekte",

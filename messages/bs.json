@@ -1,12 +1,12 @@
 {
   "Metadata": {
     "BlogNotFoundTitle": "Objava na blogu nije pronađena",
-  "BlogNotFoundDescription": "Blog post koji tražite ne postoji.",
-  "ProjectNotFoundTitle": "Studija slučaja nije pronađena",
-  "ProjectNotFoundDescription": "Studija slučaja koju tražite ne postoji.",
-    "ogCTA1":"Započni",
-    "ogCTA2":"Saznaj više",
-    "ogPillBlog":"Blog",
+    "BlogNotFoundDescription": "Blog post koji tražite ne postoji.",
+    "ProjectNotFoundTitle": "Studija slučaja nije pronađena",
+    "ProjectNotFoundDescription": "Studija slučaja koju tražite ne postoji.",
+    "ogCTA1": "Započni",
+    "ogCTA2": "Saznaj više",
+    "ogPillBlog": "Blog",
     "ogPillProject": "Projekt",
     "titleHome": "Spark Studio |  Agencija za Web Razvoj",
     "descriptionHome": "Dobrodošli u Spark Studio, vodeću agenciju za web razvoj koja spaja savremeni dizajn i tehnologiju za izradu prilagođenih rješenja. Otkrijte kako možemo oživjeti vašu digitalnu viziju.",
@@ -26,7 +26,7 @@
 
     "titleWork": "Spark Studio | Naši Inovativni Projekti",
     "descriptionWork": "Istražite portfolio Spark Studija, pun inovativnih i značajnih projekata. Pogledajte kako smo pomogli biznisima da uspiju kroz prilagođena web rješenja, dizajn i e-trgovinu.",
-     "ogDescriptionWork": "Istražite portfolio Spark Studija, pun inovativnih i značajnih projekata."
+    "ogDescriptionWork": "Istražite portfolio Spark Studija, pun inovativnih i značajnih projekata."
   },
   "NotFound": {
     "title": "404",
@@ -71,106 +71,106 @@
     "noOfficesTitle": "Mi ne radimo u kancelarijama",
     "description": "Spark Studio je globalni tim dostupan gdje god se nalazili. Bilo da je to uz kafu u vašem omiljenom kafiću ili brzi video poziv s drugog kraja svijeta, spremni smo na saradnju.",
     "wifiNote": "Imate Wi-Fi? Mi smo tu.",
-    "phoneTitle":"Više volite telefon?",
-    "phoneDescription":"Volite pozive? Dostupni smo direktno ili putem Vibera i WhatsAppa.",
-    "phoneNote":"Nazovite nas na" 
+    "phoneTitle": "Više volite telefon?",
+    "phoneDescription": "Volite pozive? Dostupni smo direktno ili putem Vibera i WhatsAppa.",
+    "phoneNote": "Nazovite nas na"
   },
   "CaseStudiesSection": {
     "eyebrow": "Naši projekti",
-    "title": "Iskorištavanje tehnologije za svjetliju budućnost",
-    "paragraph": "Vjerujemo da je tehnologija odgovor na najveće svjetske izazove. Također je i njihov uzrok, pa se nalazimo u pomalo paradoksalnoj situaciji.",
+    "title": "Projekti koje smo radili. Problemi koje smo rješavali.",
+    "paragraph": "Od brzih webshopova do medicinskih platformi i AI rješenja — ovo su stvarni primjeri našeg rada. Svaki projekat je rađen od nule, sa fokusom na performanse, jasnoću i dugoročnu održivost.",
     "ButtonLinkLabel": "Pročitaj više"
   },
   "ProcessPage": {
     "pageIntro": {
-      "eyebrow": "Naš proces",
-      "title": "Kako vaše ideje pretvaramo u stvarnost",
-      "subtitle": "Jasni procesi. Stvarni rezultati.",
-      "description": "U Spark Studiu vjerujemo da veliki rezultati dolaze iz jasno definisanog i transparentnog procesa. Kombinovanjem saradnje, stručnosti i inovacija, vašu viziju pretvaramo u stvarnost. Naš pristup osigurava da svaki korak prilagodimo vašim poslovnim potrebama, stvarajući rješenja koja donose stvarni uticaj."
+      "eyebrow": "O Spark Studiju",
+      "title": "Ko smo mi — i zašto smo pokrenuli ovaj studio",
+      "subtitle": "Jasan proces. Stvarni rezultati.",
+      "description": "Mi smo tim iskusnih softverskih developera iz Bosne i Hercegovine. Nakon godina rada na digitalnim proizvodima, primijetili smo sve veći jaz: tehnologija brzo napreduje, a mnogi biznisi — posebno kod nas — i dalje koriste zastarjele alate poput WordPressa, Wixa ili starih sistema. Spark Studio je nastao da to promijeni. Pomažemo firmama da pređu sa sporih i napuhanih rješenja na moderne platforme koje nude brzinu, skalabilnost i punu kontrolu."
     },
     "discover": {
-      "title": "Otkrivanje",
+      "title": "Šta radimo",
       "description": [
-        "Razumijevanje vašeg poslovanja je srž svega što radimo. U ovoj fazi fokusiramo se na potpuno razumijevanje vaših ciljeva, izazova i ciljne publike. Kroz otvorenu saradnju i detaljne razgovore osiguravamo da svaka odluka bude utemeljena na vašim jedinstvenim potrebama.",
-        "Bilo da istražujemo vašu tržišnu poziciju, analiziramo konkurenciju ili identifikujemo prilike za inovacije, ova faza postavlja temelje za stvaranje rješenja koja prave razliku. S vama radimo na definisanju prioriteta i jasnom planu za budućnost, osiguravajući usklađenost na svakom koraku.",
-        "Rezultat? Jasno razumijevanje gdje vaše poslovanje stoji danas i fokusiran plan kako ga unaprijediti."
+        "Dizajniramo i razvijamo potpuno prilagođene digitalne proizvode — od web stranica i internih alata do složenih web i mobilnih aplikacija. Sve što pravimo je prilagođeno tvojim poslovnim ciljevima, a ne kopirano iz šablona.",
+        "Razvijamo i headless CMS rješenja i prilagođene admin panel-e, tako da imaš potpunu kontrolu nad sadržajem, bez ograničenja i nereda kao kod WordPressa.",
+        "Kada ima smisla, uvodimo AI i automatizaciju kako bismo uklonili ponavljajuće zadatke, ubrzali procese ili omogućili pametne funkcionalnosti. Dobijaš rješenja koja su brza, pouzdana i spremna za rast."
       ],
       "included": {
-        "title": "Šta je uključeno u ovu fazu",
+        "title": "Tehnologije i usluge koje nudimo",
         "items": [
-          "Intervjui s klijentima",
-          "Analiza konkurencije",
-          "Istraživanje publike",
-          "Revizije sadržaja i dizajna",
-          "Prioriteti ciljeva",
-          "Visok nivo planiranja projekata"
+          "Prilagođene web stranice",
+          "Web i mobilne aplikacije",
+          "Headless CMS",
+          "Admin paneli",
+          "AI i automatizacija",
+          "Optimizacija performansi"
         ]
       }
     },
     "build": {
-      "title": "Izgradnja",
+      "title": "Kako radimo",
       "description": [
-        "S jasnim planom, faza izgradnje je mjesto gdje ideje postaju stvarnost. Uzimamo uvide i strategije iz faze otkrivanja i počinjemo kreirati rješenja koja su ne samo funkcionalna već i usklađena s vašim poslovnim ciljevima. Bilo da je riječ o web stranici, aplikaciji ili prilagođenom alatu, ovdje inovacije susreću realizaciju.",
-        "Komunikacija je ključna u ovoj fazi. Posvećeni smo tome da vas redovno informišemo o napretku i prekretnicama, osiguravajući transparentnost i održavanje saradnje. Otvoreni smo za povratne informacije i kontinuirano unapređujemo, osiguravajući najbolje moguće rezultate.",
-        "Kombinovanjem modernih tehnologija, efikasnih radnih tokova i predanosti kvalitetu, osiguravamo da isporučena rješenja budu dugotrajna i prilagodljiva vašim budućim potrebama."
+        "Svaki naš projekat je potpuno custom — od dizajna do koda. Ne koristimo šablone, page builder-e ni platforme koje ograničavaju tvoj rast. Dobijaš čist i skalabilan kod koji ti pripada.",
+        "Fokusiramo se na performanse i dugoročnu održivost. To znači brzo učitavanje, visoke Lighthouse ocjene i bez skrivenog tehničkog duga koji pravi probleme kasnije. Bilo da se radi o web stranici, aplikaciji ili dashboardu — gradimo stvari koje traju.",
+        "Uvijek znaš gdje smo i šta radimo. Radimo transparentno — wireframe-ovi, pregled koda, update-ovi i dokumentacija su sastavni dio procesa. Ne krijemo se iza praznih riječi — pokažemo ti šta se radi i zašto."
       ]
     },
     "deliver": {
-      "title": "Isporuka",
+      "title": "Šta ne radimo — i zašto",
       "description": [
-        "Faza isporuke je trenutak kada se sve spaja. Nakon mjeseci saradnje i razvoja, fokusiramo se na osiguravanje da je vaše rješenje spremno za lansiranje. To uključuje temeljno testiranje, završne prilagodbe i pripremu za besprijekoran prijenos.",
-        "Razumijemo koliko je pouzdanost važna pri lansiranju. Zato provodimo rigorozna testiranja kako bismo osigurali da vaš proizvod funkcionira kako treba u stvarnim uslovima. Od brzine učitavanja do funkcionalnosti svake funkcije, ništa ne prepuštamo slučaju.",
-        "Nakon što je sve spremno, pružamo vam alate, obuku i dokumentaciju potrebnu za samopouzdano upravljanje vašim novim rješenjem. Čak i nakon isporuke, ostajemo dostupni za podršku, ažuriranja ili buduća poboljšanja."
+        "Ne radimo sa WordPressom, Wixom ili drugim page builderima. Spori su, puni nepotrebnih dodataka i usporavaju sajt. Loše utiču na performanse, sigurnost i budući razvoj.",
+        "Ne koristimo AI da generišemo cijele sajtove ili aplikacije. Možda djeluje brzo, ali rezultat je površan, neodrživ i bez pravog konteksta.",
+        "I nikad ne zaključavamo klijente u naš sistem. Kod, sadržaj i rješenje je tvoje od prvog dana. Bez skrivenih veza i uslova."
       ],
       "included": {
-        "title": "Šta je uključeno u ovu fazu",
+        "title": "Šta izbjegavamo",
         "items": [
           {
-            "title": "Detaljno testiranje",
-            "description": "Svaka funkcija je temeljno testirana kako bi se osigurala besprijekorna isporuka, od performansi i upotrebljivosti do sigurnosti i kompatibilnosti."
+            "title": "Bez page buildera",
+            "description": "Spori, puni bloat-a i teško skalabilni na duže staze."
           },
           {
-            "title": "Podrška pri lansiranju",
-            "description": "Uz vas smo na svakom koraku, pružajući pomoć kako bi vaše lansiranje prošlo bez problema i ostavilo sjajan prvi dojam."
+            "title": "Bez generičnih AI rješenja",
+            "description": "AI može pomoći — ali ne može sam napraviti kvalitetno rješenje."
           },
           {
-            "title": "Kontinuirana podrška",
-            "description": "Ne nestajemo nakon lansiranja. Bez obzira da li su u pitanju ažuriranja, održavanje ili nove funkcije, tu smo da pomognemo vašem poslovanju da raste."
+            "title": "Bez zatvorenih sistema",
+            "description": "Kod i rješenje koje pravimo su u tvojoj vlasnosti. Ako koristimo treće servise (poput AI API-ja), ti imaš kontrolu i direktno plaćaš provajderu."
           }
         ]
       }
     },
     "values": {
-      "eyebrow": "Naše vrijednosti",
-      "title": "Naše vrijednosti nas vode u isporuci inovativnih, pouzdanih i klijentima usmjerenih rješenja.",
-      "description": "U Spark Studiu, naš rad je vođen ključnim vrijednostima koje oblikuju svaki projekt koji preuzmemo. Ovi principi osiguravaju da isporučujemo rješenja koja su ne samo učinkovita već i usklađena s vašim ciljevima i vizijom. Vjerujemo u izgradnju povjerenja kroz transparentnost, prilagodljivost izazovima i ostanak na čelu u brzo mijenjajućoj industriji.",
-      "items": [
-        {
-          "title": "Preciznost",
-          "description": "Pažnja prema detaljima je srž onoga što radimo. Svaki dizajn, linija koda i interakcija su izrađeni s preciznošću kako bi se pružilo besprijekorno korisničko iskustvo."
-        },
-        {
-          "title": "Efikasnost",
-          "description": "Poštujemo vaše vrijeme i resurse, trudeći se da pružimo kvalitetne rezultate na vrijeme."
-        },
-        {
-          "title": "Prilagodljivost",
-          "description": "Svako poslovanje ima jedinstvene potrebe, a mi se ponosimo prilagođavanjem rješenja koja rastu s vašim ciljevima."
-        },
-        {
-          "title": "Transparentnost",
-          "description": "Komunikacija i povjerenje su centralni za naše partnerstvo. Održavamo vas informisanim i uključenim u svaki korak."
-        },
-        {
-          "title": "Odanost",
-          "description": "Ne isporučujemo samo projekte; gradimo odnose. Naša posvećenost ne prestaje nakon isporuke."
-        },
-        {
-          "title": "Inovativnost",
-          "description": "Stalno smo ispred, koristeći najnovije alate i tehnologije za isporuku kreativnih i dugotrajnih rješenja."
-        }
-      ]
+  "eyebrow": "Naše vrijednosti",
+  "title": "Principi po kojima radimo — jednostavno, jasno i dosljedno u svakom projektu.",
+  "description": "Naše vrijednosti nisu fraze za marketing. One oblikuju način na koji gradimo, komuniciramo i rješavamo probleme. Zahvaljujući njima isporučujemo konkretne rezultate i gradimo dugoročnu saradnju s klijentima.",
+  "items": [
+    {
+      "title": "Preciznost",
+      "description": "Obraćamo pažnju na detalje — jer loš kod ili brzoplet dizajn kasnije skupo koštaju. Sve što gradimo pravimo da traje."
+    },
+    {
+      "title": "Efikasnost",
+      "description": "Bez nepotrebnih sastanaka i nejasnih rokova. Jasno planiramo, radimo brzo i isporučujemo bez gubljenja vremena."
+    },
+    {
+      "title": "Fleksibilnost",
+      "description": "Tvoj biznis nije šablon — i ne tretiramo ga tako. Naš pristup se prilagođava tvojim ciljevima, a ne obrnuto."
+    },
+    {
+      "title": "Transparentnost",
+      "description": "Nema skrivenih dijelova. Znaš šta se radi, koliko košta i zašto — od početka do kraja."
+    },
+    {
+      "title": "Dugoročno razmišljanje",
+      "description": "Ne nestajemo nakon isporuke. Tu smo da podržimo tvoj proizvod i tim kako rastete."
+    },
+    {
+      "title": "Znanje i radoznalost",
+      "description": "Učimo i pratimo šta je novo da bi tvoj projekat ostao konkurentan. Bolji alati, pametniji pristupi — to nam je cilj."
     }
+  ]
+}
   },
   "ContactPage": {
     "pageIntro": {
@@ -275,8 +275,8 @@
   },
   "WorkPage": {
     "eyebrow": "Naši projekti",
-    "title": "Dokazana rješenja za stvarne probleme.",
-    "paragraph": "Vjerujemo u efikasnost i maksimalno iskorištavanje resursa kako bismo našim klijentima pružili najbolju vrijednost. Glavni način na koji to postižemo je ponovna upotreba istih pet projekata koje razvijamo već deset godina.",
+    "title": "Stvarni rezultati. Rađeno od nule.",
+    "paragraph": "Pravimo digitalna rješenja koja rješavaju konkretne probleme — brze web stranice, stabilne platforme i alati koji stvarno pomažu timu. Svaki projekat radimo od nule, bez šablona i prečica. Ovdje možeš vidjeti primjere koji najbolje pokazuju našu filozofiju: brzina, jasnoća i potpuna kontrola.",
     "ListSection": {
       "title": "Studije slučaja",
       "CTAButton": "Pročitaj studiju slučaja"
@@ -342,12 +342,12 @@
     "service": "Usluga",
     "pageLinksTitle": "Više studija slučaja",
     "pageLinksLink": "Pročitaj više",
-    "CTALink":"Vidi uživo"
-},
-"SingleBlogPage": {
+    "CTALink": "Vidi uživo"
+  },
+  "SingleBlogPage": {
     "pageLinksTitle": "Više članaka",
     "pageLinksLink": "Pročitaj više"
-},
+  },
 
   "Footer": {
     "NewsletterForm": {
@@ -355,12 +355,12 @@
       "paragraph": "Pretplatite se i primajte najnovije vijesti, članke, resurse i inspiraciju o dizajnu.",
       "placeholder": "Email adresa",
       "validation": {
-      "required": "Ovo polje je obavezno.",
-      "emailInvalid": "Neispravna email adresa.",
-      "emailMax": "Email mora biti kraći od 100 znakova."
-    },
-    "successMessage": "Uspješno ste se pretplatili na naš newsletter!",
-    "errorMessage": "Došlo je do greške. Molimo pokušajte ponovo kasnije."
+        "required": "Ovo polje je obavezno.",
+        "emailInvalid": "Neispravna email adresa.",
+        "emailMax": "Email mora biti kraći od 100 znakova."
+      },
+      "successMessage": "Uspješno ste se pretplatili na naš newsletter!",
+      "errorMessage": "Došlo je do greške. Molimo pokušajte ponovo kasnije."
     },
     "Sections": {
       "work": "Projekti",

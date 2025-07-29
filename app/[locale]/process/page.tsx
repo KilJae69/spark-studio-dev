@@ -17,7 +17,9 @@ import imageWhiteboard from "@/images/whiteboard.jpg";
 import { notFound } from "next/navigation";
 import { Locale, locales } from "@/lib/locales";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-
+import { IconType } from "react-icons/lib";
+import { Ban, CheckCheck, Code } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -63,13 +65,17 @@ export async function generateMetadata({
 }
 
 function Section({
+  Icon,
   title,
   image,
   children,
+  iconStyles
 }: {
   title: string;
   image: React.ComponentPropsWithoutRef<typeof StylizedImage>;
   children: React.ReactNode;
+  Icon?:IconType;
+  iconStyles?:string
 }) {
   return (
     <Container className="group/section [counter-increment:section]">
@@ -89,7 +95,10 @@ function Section({
               className="font-display text-base font-semibold before:text-neutral-300 before:content-['/_'] after:text-neutral-950 after:content-[counter(section,decimal-leading-zero)]"
               aria-hidden="true"
             />
-            <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
+             <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl flex items-center gap-x-3">
+              {Icon && (
+                <Icon className={cn(" size-8 flex-shrink-0",iconStyles)} aria-hidden="true" />
+              )}
               {title}
             </h2>
             <div className="mt-6">{children}</div>
@@ -102,7 +111,7 @@ function Section({
 
 function Discover({ t }: { t: (key: string) => string }) {
   return (
-    <Section title={t("discover.title")} image={{ src: imageWhiteboard }}>
+    <Section title={t("discover.title")} Icon={CheckCheck} iconStyles="text-green-500" image={{ src: imageWhiteboard }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>{t("discover.description.0")}</p>
         <p>{t("discover.description.1")}</p>
@@ -126,7 +135,7 @@ function Discover({ t }: { t: (key: string) => string }) {
 
 function Build({ t }: { t: (key: string) => string }) {
   return (
-    <Section title={t("build.title")} image={{ src: imageLaptop, shape: 1 }}>
+    <Section title={t("build.title")} Icon={Code} iconStyles="text-primary-accent" image={{ src: imageLaptop, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>{t("build.description.0")}</p>
         <p>{t("build.description.1")}</p>
@@ -146,16 +155,16 @@ function Build({ t }: { t: (key: string) => string }) {
 
 function Deliver({ t }: { t: (key: string) => string }) {
   return (
-    <Section title={t("deliver.title")} image={{ src: imageMeeting, shape: 2 }}>
+    <Section title={t("deliver.title")} iconStyles="text-red-500" Icon={Ban} image={{ src: imageMeeting, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>{t("deliver.description.0")}</p>
         <p>{t("deliver.description.1")}</p>
         <p>{t("deliver.description.2")}</p>
       </div>
 
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+      {/* <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
         {t("deliver.included.title")}
-      </h3>
+      </h3> */}
       <List className="mt-8">
         <ListItem title={t("deliver.included.items.0.title")}>
           {t("deliver.included.items.0.description")}
@@ -233,7 +242,7 @@ export default async function Process({
       <div className="mt-24 space-y-24 [counter-reset:section] ">
         <Discover t={t} />
         <Build t={t} />
-        <Deliver t={t} />
+        <Deliver  t={t} />
       </div>
 
       <Values t={t} />

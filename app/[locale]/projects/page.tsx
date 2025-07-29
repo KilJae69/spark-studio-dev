@@ -64,7 +64,7 @@ export async function generateMetadata({
 }
 
 function CaseStudies({ caseStudies,t }: { caseStudies: CaseStudy[]; t:(t:string)=>string; }) {
-console.log(caseStudies);
+
   return (
     <Container className="mt-24">
       <FadeIn>
@@ -76,7 +76,7 @@ console.log(caseStudies);
       <div className="mt-10 space-y-20 sm:space-y-24 ">
    
         {caseStudies.map((caseStudy) => (
-          <FadeIn key={caseStudy.client}>
+          <FadeIn key={caseStudy.slug}>
             <article>
               <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
                 <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
@@ -86,7 +86,7 @@ console.log(caseStudies);
                       alt=""
                       height={64}
                       width={64}
-                      className="h-16 w-16 flex-none"
+                      className="h-16 w-fit flex-none"
                       unoptimized
                     />  
                     <h3 className="mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
