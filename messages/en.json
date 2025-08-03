@@ -36,23 +36,26 @@
     "homeLink": "Go to the home page"
   },
   "HomePage": {
-    "title": "Spark Studio",
-    "subtitle": "Innovative Solutions for Modern Businesses",
-    "about": "Empowering businesses with cutting-edge technology and sleek design to transform ideas into reality.",
-    "techSectionTitle": "Only the best technologies"
+    "title": "No drag & drop builders. No bloat.",
+    "subtitle": "Custom websites and apps. Built with real code, not shortcuts.",
+    "about": "We don’t touch WordPress, Wix, or builder plugins. Every project is hand-coded using modern frameworks, to help your business scale with speed and confidence.",
+    "projectsCta": "Our Projects",
+    "processCta": "How We Work",
+    "techSectionTitle": "Only the best technologies",
+    "techSectionSubtitle": "We hand-pick every tool to push your business forward. Because exceptional clients deserve exceptional solutions."
   },
   "ServicesSection": {
     "eyebrow": "Services",
     "heading": "We Build Solutions That Power Your Business Forward",
-    "subheading": "Our services are designed to help you unlock opportunities, drive innovation, and achieve sustainable growth.",
+    "subheading": "Our services help you win trust, save time and grow without the headaches of generic tools.",
     "webDevelopmentTitle": "Web Development",
-    "webDevelopment": "Your business deserves a website that stands out. We design visually stunning and highly functional websites tailored to your unique goals and audience.",
+    "webDevelopment": "Your website is your front door. If it is slow, hard to use or looks dated, visitors will click away and assume your product or service is the same. We craft responsive, on-brand sites that load fast, work on every device and turn visitors into customers.",
     "applicationDevelopmentTitle": "Application Development",
-    "applicationDevelopment": "Transform your ideas into impactful web or mobile applications. Our team leverages modern frameworks to build user-friendly, scalable solutions for your business needs.",
-    "eCommerceTitle": "E-Commerce",
-    "eCommerce": "Take your online store to the next level. From custom designs to seamless integrations, we create e-commerce experiences that drive sales and customer satisfaction.",
+    "applicationDevelopment": "Need a customer portal, booking system or mobile app? Poorly built software frustrates users with confusing flows and slow features. We design intuitive applications that fit your exact needs, keep data secure and make every interaction a pleasure.",
+    "aiTitle": "AI Integrations",
+    "aiIntegration": "AI can automate tasks, surface insights and delight your users when done right. Out-of-the-box tools often miss context and create more work. We integrate and train AI such as ChatGPT or custom models into your workflows so you save hours every week.",
     "customContentManagementTitle": "Custom Content Management",
-    "customContentManagement": "Effortlessly manage your content with solutions tailored to your workflow. We specialize in building intuitive and scalable content management systems."
+    "customContentManagement": "Generic CMS platforms force you into templates and plugins that do not fit. Updating your own site becomes a chore. We build simple, tailored admin panels so you can add pages, images or products in seconds without extra training."
   },
   "Header": {
     "link-our-work": "Projects",
@@ -88,7 +91,7 @@
       "eyebrow": "About Spark Studio",
       "title": "Who we are — and why we started this studio",
       "subtitle": "Clear processes. Real results.",
-      "description": " We’re a team of experienced software developers from Bosnia and Herzegovina. After years of building digital products, we saw a growing gap: technology is moving fast, but many businesses—especially locally—are stuck using outdated tools like WordPress, Wix, or legacy systems. Spark Studio was born to fix that. We help businesses move away from slow, bloated websites and bring them into a world of performance, scalability, and full control."
+      "description": " We’re a team of experienced software developers from Bosnia and Herzegovina. After years of building digital products, we saw a growing gap: technology is moving fast, but many businesses, especially locally, are stuck using outdated tools like WordPress, Wix, or legacy systems. Spark Studio was born to fix that. We help businesses move away from slow, bloated websites and bring them into a world of performance, scalability, and full control."
     },
     "discover": {
       "title": "What we do",
@@ -143,36 +146,36 @@
       }
     },
     "values": {
-  "eyebrow": "Our values",
-  "title": "The principles we work by — simple, clear, and built into everything we deliver.",
-  "description": "Our values aren't slogans. They shape how we build, communicate, and solve problems. These principles help us stay sharp, deliver real results, and build long-term trust with every client.",
-  "items": [
-    {
-      "title": "Precision",
-      "description": "We sweat the details — because sloppy code or rushed design costs more later. Everything we build is made to hold up long-term."
-    },
-    {
-      "title": "Efficiency",
-      "description": "No bloated meetings or vague timelines. We plan clearly, work fast, and ship without wasting your time."
-    },
-    {
-      "title": "Flexibility",
-      "description": "Your business isn’t a template — so we don’t treat it like one. We adapt our process to fit your goals, not the other way around."
-    },
-    {
-      "title": "Transparency",
-      "description": "No black boxes. You see how things are built, what they cost, and why decisions are made—start to finish."
-    },
-    {
-      "title": "Long-Term Thinking",
-      "description": "We don't just deliver and disappear. We’re here to support your product and team as things evolve."
-    },
-    {
-      "title": "Curiosity",
-      "description": "We keep learning so your project stays current. New tools, smarter workflows, better results — that’s the goal."
+      "eyebrow": "Our values",
+      "title": "The principles we work by — simple, clear, and built into everything we deliver.",
+      "description": "Our values aren't slogans. They shape how we build, communicate, and solve problems. These principles help us stay sharp, deliver real results, and build long-term trust with every client.",
+      "items": [
+        {
+          "title": "Precision",
+          "description": "We sweat the details — because sloppy code or rushed design costs more later. Everything we build is made to hold up long-term."
+        },
+        {
+          "title": "Efficiency",
+          "description": "No bloated meetings or vague timelines. We plan clearly, work fast, and ship without wasting your time."
+        },
+        {
+          "title": "Flexibility",
+          "description": "Your business isn’t a template — so we don’t treat it like one. We adapt our process to fit your goals, not the other way around."
+        },
+        {
+          "title": "Transparency",
+          "description": "No black boxes. You see how things are built, what they cost, and why decisions are made—start to finish."
+        },
+        {
+          "title": "Long-Term Thinking",
+          "description": "We don't just deliver and disappear. We’re here to support your product and team as things evolve."
+        },
+        {
+          "title": "Curiosity",
+          "description": "We keep learning so your project stays current. New tools, smarter workflows, better results — that’s the goal."
+        }
+      ]
     }
-  ]
-}
   },
   "ContactPage": {
     "pageIntro": {

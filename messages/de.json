@@ -29,11 +29,14 @@
     "ogDescriptionWork": "Entdecken Sie das Portfolio von Spark Studio voller innovativer und wirkungsvoller Projekte."
   },
   "HomePage": {
-    "title": "Spark Studio",
-    "subtitle": "Innovative Lösungen für moderne Unternehmen",
-    "about": "Wir stärken Unternehmen mit modernster Technologie und elegantem Design, um Ideen in die Realität umzusetzen.",
-    "techSectionTitle": "Nur die besten Technologien"
-  },
+  "title": "Keine Baukastensysteme. Kein unnötiger Ballast.",
+  "subtitle": "Individuelle Webseiten und Apps. Entwickelt mit echtem Code, nicht mit Abkürzungen.",
+  "about": "Wir arbeiten nicht mit WordPress, Wix oder Page-Buildern. Jedes Projekt wird von Grund auf mit modernen Frameworks umgesetzt – damit dein Unternehmen schnell, sicher und flexibel wachsen kann.",
+  "projectsCta": "Unsere Projekte",
+  "processCta": "Wie wir arbeiten",
+  "techSectionTitle": "Nur die besten Technologien",
+  "techSectionSubtitle": "Wir wählen jedes Tool bewusst aus – denn herausragende Unternehmen verdienen herausragende Lösungen."
+},
   "NotFound": {
     "title": "404",
     "header": "Seite nicht gefunden",
@@ -41,18 +44,18 @@
     "homeLink": "Zur Startseite"
   },
   "ServicesSection": {
-    "eyebrow": "Dienstleistungen",
-    "heading": "Wir entwickeln Lösungen, die Ihr Unternehmen voranbringen",
-    "subheading": "Unsere Dienstleistungen helfen Ihnen, Chancen zu nutzen, Innovationen voranzutreiben und nachhaltiges Wachstum zu erzielen.",
-    "webDevelopmentTitle": "Webentwicklung",
-    "webDevelopment": "Ihr Unternehmen verdient eine Website, die auffällt. Wir entwerfen visuell ansprechende und hochfunktionale Websites, die auf Ihre Ziele und Zielgruppe zugeschnitten sind.",
-    "applicationDevelopmentTitle": "Anwendungsentwicklung",
-    "applicationDevelopment": "Verwandeln Sie Ihre Ideen in wirkungsvolle Anwendungen. Unser Team nutzt moderne Frameworks, um benutzerfreundliche und skalierbare Lösungen für Ihre Geschäftsanforderungen zu entwickeln.",
-    "eCommerceTitle": "E-Commerce",
-    "eCommerce": "Bringen Sie Ihren Online-Shop auf das nächste Level. Von individuellen Designs bis hin zu nahtlosen Integrationen schaffen wir E-Commerce-Erlebnisse, die Verkäufe steigern und Kunden begeistern.",
-    "customContentManagementTitle": "Individuelles Content-Management",
-    "customContentManagement": "Verwalten Sie Ihre Inhalte mühelos mit Lösungen, die auf Ihre Arbeitsabläufe zugeschnitten sind. Wir sind auf den Aufbau intuitiver und skalierbarer Content-Management-Systeme spezialisiert."
-  },
+  "eyebrow": "Leistungen",
+  "heading": "Wir entwickeln Lösungen, die Ihr Unternehmen voranbringen",
+  "subheading": "Unsere Leistungen helfen Ihnen, Vertrauen aufzubauen, Zeit zu sparen und zu wachsen ohne den Aufwand generischer Tools.",
+  "webDevelopmentTitle": "Webentwicklung",
+  "webDevelopment": "Ihre Website ist Ihre Visitenkarte. Ist sie langsam, schwer zu bedienen oder veraltet, klicken Besucher weg und schließen auf Ihr Angebot. Wir erstellen responsive Websites, die schnell laden, auf jedem Gerät funktionieren und Besucher zu Kunden machen.",
+  "applicationDevelopmentTitle": "Anwendungsentwicklung",
+  "applicationDevelopment": "Benötigen Sie ein Kundenportal, ein Buchungssystem oder eine Mobile App? Schlecht entwickelte Anwendungen verwirren Nutzer mit unübersichtlichen Abläufen und langen Ladezeiten. Wir gestalten intuitive Anwendungen, die genau Ihren Anforderungen entsprechen, Daten sicher verwahren und jede Interaktion zum Vergnügen machen.",
+  "customContentManagementTitle": "Individuelle Inhaltsverwaltung",
+  "customContentManagement": "Standard CMS Systeme zwingen Sie in Vorlagen und Plugins, die nicht passen. Die Pflege Ihrer Website wird zur lästigen Aufgabe. Wir entwickeln einfache und maßgeschneiderte Administrationsoberflächen, mit denen Sie Seiten, Bilder oder Produkte mit wenigen Klicks hinzufügen können ohne Schulung.",
+  "aiTitle": "KI Integrationen",
+  "aiIntegration": "Künstliche Intelligenz kann Aufgaben automatisieren, Erkenntnisse liefern und Ihre Nutzer begeistern, wenn sie richtig eingesetzt wird. Fertige Tools verkennen oft den Kontext und verursachen Mehraufwand. Wir integrieren und trainieren KI Technologien wie ChatGPT oder eigene Modelle in Ihre Abläufe damit Sie jede Woche wertvolle Zeit sparen."
+},
   "Header": {
     "link-our-work": "Projekte",
     "link-process": "Prozess",

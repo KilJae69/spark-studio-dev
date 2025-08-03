@@ -21,6 +21,7 @@ export default function CaseStudiesSection({
   caseStudies: CaseStudy[];
 }) {
   const { isInView, ref } = useLazyLoad();
+  console.log(caseStudies);
   const t = useTranslations("CaseStudiesSection")
   return (
     <div ref={ref} className="relative isolate bg-slate-50 py-16  md:pb-32">

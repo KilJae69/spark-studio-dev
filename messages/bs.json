@@ -35,23 +35,26 @@
     "homeLink": "Povratak na početnu stranicu"
   },
   "HomePage": {
-    "title": "Spark Studio",
-    "subtitle": "Inovativna Rješenja za Moderne Biznise",
-    "about": "Osnažujemo biznise savremenim tehnologijama i elegantnim dizajnom kako bismo vaše ideje pretvorili u stvarnost.",
-    "techSectionTitle": "Samo najbolje tehnologije"
+    "title": "Bez buildera. Bez nepotrebnih komplikacija.",
+    "subtitle": "Custom web stranice i aplikacije. Rađene pravim kodom, bez prečica.",
+    "about": "Ne radimo s WordPressom, Wixom ni sličnim alatima. Svaki projekat kodiramo od nule koristeći moderne tehnologije, kako bi tvoj biznis mogao rasti brzo i bez ograničenja.",
+    "projectsCta": "Naši projekti",
+    "processCta": "Kako radimo",
+    "techSectionTitle": "Samo najbolje tehnologije",
+    "techSectionSubtitle": "Biramo svaki alat s razlogom, jer najbolji klijenti zaslužuju i najbolja rješenja."
   },
   "ServicesSection": {
     "eyebrow": "Usluge",
     "heading": "Gradimo rješenja koja pokreću vaš biznis naprijed",
-    "subheading": "Naše usluge su osmišljene kako bi vam pomogle da otključate prilike, potaknete inovacije i postignete održiv rast.",
-    "webDevelopmentTitle": "Web Razvoj",
-    "webDevelopment": "Vaš biznis zaslužuje web stranicu koja se ističe. Dizajniramo vizualno privlačne i funkcionalne stranice prilagođene vašim ciljevima i publici.",
-    "applicationDevelopmentTitle": "Razvoj Aplikacija",
-    "applicationDevelopment": "Pretvorite svoje ideje u utjecajne web ili mobilne aplikacije. Naš tim koristi moderne tehnologije za izgradnju korisnički prilagođenih i skalabilnih rješenja za vaše poslovne potrebe.",
-    "eCommerceTitle": "E-Trgovina",
-    "eCommerce": "Podignite svoju online trgovinu na viši nivo. Od prilagođenih dizajna do besprijekornih integracija, stvaramo iskustva e-trgovine koja povećavaju prodaju i zadovoljstvo kupaca.",
-    "customContentManagementTitle": "Prilagođeno Upravljanje Sadržajem",
-    "customContentManagement": "Jednostavno upravljajte svojim sadržajem uz rješenja prilagođena vašem poslovanju. Specijalizirani smo za izradu intuitivnih i skalabilnih sustava za upravljanje sadržajem."
+    "subheading": "Naše usluge pomažu vam da steknete povjerenje, uštedite vrijeme i rastete bez muka koje donose generički alati.",
+    "webDevelopmentTitle": "Izrada web stranica",
+    "webDevelopment": "Vaša web stranica je vaša ulazna vrata. Ako je spora, teško se koristi ili izgleda zastarjelo, posjetitelji će otići i pomisliti da je i vaš proizvod ili usluga takva. Mi izrađujemo responzivne stranice koje odražavaju vaš brend, brzo se učitavaju na svakom uređaju i pretvaraju posjetitelje u kupce.",
+    "applicationDevelopmentTitle": "Razvoj aplikacija",
+    "applicationDevelopment": "Trebate portal za korisnike, sustav za rezervacije ili mobilnu aplikaciju? Loše izrađene aplikacije zbunjuju korisnike složenim koracima i sporim funkcijama. Mi dizajniramo jednostavne aplikacije koje točno odgovaraju vašim potrebama, čuvaju vaše podatke i čine svaku interakciju ugodnom.",
+    "customContentManagementTitle": "Prilagođeno upravljanje sadržajem",
+    "customContentManagement": "Standardni CMS sustavi nameću vam šablone i dodatke koji ne odgovaraju vašim potrebama. Ažuriranje stranice postaje zamoran posao. Mi gradimo jednostavna i prilagođena administratorska sučelja pa možete dodavati stranice, slike ili proizvode za nekoliko sekundi bez dodatnog usavršavanja.",
+    "aiTitle": "AI integracije",
+    "aiIntegration": "AI može automatizirati zadatke, otkriti važne informacije i oduševiti vaše korisnike kada se pravilno primijeni. Gotova rješenja često ne razumiju vaš kontekst i stvaraju dodatni posao. Mi integriramo i treniramo AI alate poput ChatGPT-a ili vlastitih modela u vaše procese kako biste svake sedmice uštedjeli sate."
   },
   "Header": {
     "link-our-work": "Projekti",
@@ -86,7 +89,7 @@
       "eyebrow": "O Spark Studiju",
       "title": "Ko smo mi — i zašto smo pokrenuli ovaj studio",
       "subtitle": "Jasan proces. Stvarni rezultati.",
-      "description": "Mi smo tim iskusnih softverskih developera iz Bosne i Hercegovine. Nakon godina rada na digitalnim proizvodima, primijetili smo sve veći jaz: tehnologija brzo napreduje, a mnogi biznisi — posebno kod nas — i dalje koriste zastarjele alate poput WordPressa, Wixa ili starih sistema. Spark Studio je nastao da to promijeni. Pomažemo firmama da pređu sa sporih i napuhanih rješenja na moderne platforme koje nude brzinu, skalabilnost i punu kontrolu."
+      "description": "Mi smo tim iskusnih softverskih developera iz Bosne i Hercegovine. Nakon godina rada na digitalnim proizvodima, primijetili smo sve veći jaz: tehnologija brzo napreduje, a mnogi biznisi, posebno kod nas, i dalje koriste zastarjele alate poput WordPressa, Wixa ili starih sistema. Spark Studio je nastao da to promijeni. Pomažemo firmama da pređu sa sporih i napuhanih rješenja na moderne platforme koje nude brzinu, skalabilnost i punu kontrolu."
     },
     "discover": {
       "title": "Šta radimo",
@@ -110,9 +113,9 @@
     "build": {
       "title": "Kako radimo",
       "description": [
-        "Svaki naš projekat je potpuno custom — od dizajna do koda. Ne koristimo šablone, page builder-e ni platforme koje ograničavaju tvoj rast. Dobijaš čist i skalabilan kod koji ti pripada.",
-        "Fokusiramo se na performanse i dugoročnu održivost. To znači brzo učitavanje, visoke Lighthouse ocjene i bez skrivenog tehničkog duga koji pravi probleme kasnije. Bilo da se radi o web stranici, aplikaciji ili dashboardu — gradimo stvari koje traju.",
-        "Uvijek znaš gdje smo i šta radimo. Radimo transparentno — wireframe-ovi, pregled koda, update-ovi i dokumentacija su sastavni dio procesa. Ne krijemo se iza praznih riječi — pokažemo ti šta se radi i zašto."
+        "Svaki naš projekat je potpuno prilagođen tvom biznisu, od dizajna do koda. Ne koristimo šablone, page builder-e ni platforme koje ograničavaju tvoj rast. Dobit ćeš čist i skalabilan kod koji ti pripada.",
+        "Fokusiramo se na performanse i dugoročnu održivost. To znači brzo učitavanje, visoke Lighthouse ocjene i bez skrivenog tehničkog duga koji pravi probleme kasnije. Bilo da se radi o web stranici, aplikaciji ili dashboardu, gradimo stvari koje traju.",
+        "Uvijek znaš gdje smo i šta radimo. Radimo transparentno — wireframe-ovi, pregled koda, update-ovi i dokumentacija su sastavni dio procesa. Ne krijemo se iza praznih riječi, pokažemo ti šta se radi i zašto."
       ]
     },
     "deliver": {
@@ -141,36 +144,36 @@
       }
     },
     "values": {
-  "eyebrow": "Naše vrijednosti",
-  "title": "Principi po kojima radimo — jednostavno, jasno i dosljedno u svakom projektu.",
-  "description": "Naše vrijednosti nisu fraze za marketing. One oblikuju način na koji gradimo, komuniciramo i rješavamo probleme. Zahvaljujući njima isporučujemo konkretne rezultate i gradimo dugoročnu saradnju s klijentima.",
-  "items": [
-    {
-      "title": "Preciznost",
-      "description": "Obraćamo pažnju na detalje — jer loš kod ili brzoplet dizajn kasnije skupo koštaju. Sve što gradimo pravimo da traje."
-    },
-    {
-      "title": "Efikasnost",
-      "description": "Bez nepotrebnih sastanaka i nejasnih rokova. Jasno planiramo, radimo brzo i isporučujemo bez gubljenja vremena."
-    },
-    {
-      "title": "Fleksibilnost",
-      "description": "Tvoj biznis nije šablon — i ne tretiramo ga tako. Naš pristup se prilagođava tvojim ciljevima, a ne obrnuto."
-    },
-    {
-      "title": "Transparentnost",
-      "description": "Nema skrivenih dijelova. Znaš šta se radi, koliko košta i zašto — od početka do kraja."
-    },
-    {
-      "title": "Dugoročno razmišljanje",
-      "description": "Ne nestajemo nakon isporuke. Tu smo da podržimo tvoj proizvod i tim kako rastete."
-    },
-    {
-      "title": "Znanje i radoznalost",
-      "description": "Učimo i pratimo šta je novo da bi tvoj projekat ostao konkurentan. Bolji alati, pametniji pristupi — to nam je cilj."
+      "eyebrow": "Naše vrijednosti",
+      "title": "Principi po kojima radimo — jednostavno, jasno i dosljedno u svakom projektu.",
+      "description": "Naše vrijednosti nisu fraze za marketing. One oblikuju način na koji gradimo, komuniciramo i rješavamo probleme. Zahvaljujući njima isporučujemo konkretne rezultate i gradimo dugoročnu saradnju s klijentima.",
+      "items": [
+        {
+          "title": "Preciznost",
+          "description": "Obraćamo pažnju na detalje — jer loš kod ili brzoplet dizajn kasnije skupo koštaju. Sve što gradimo pravimo da traje."
+        },
+        {
+          "title": "Efikasnost",
+          "description": "Bez nepotrebnih sastanaka i nejasnih rokova. Jasno planiramo, radimo brzo i isporučujemo bez gubljenja vremena."
+        },
+        {
+          "title": "Fleksibilnost",
+          "description": "Tvoj biznis nije šablon — i ne tretiramo ga tako. Naš pristup se prilagođava tvojim ciljevima, a ne obrnuto."
+        },
+        {
+          "title": "Transparentnost",
+          "description": "Nema skrivenih dijelova. Znaš šta se radi, koliko košta i zašto — od početka do kraja."
+        },
+        {
+          "title": "Dugoročno razmišljanje",
+          "description": "Ne nestajemo nakon isporuke. Tu smo da podržimo tvoj proizvod i tim kako rastete."
+        },
+        {
+          "title": "Znanje i radoznalost",
+          "description": "Učimo i pratimo šta je novo da bi tvoj projekat ostao konkurentan. Bolji alati, pametniji pristupi — to nam je cilj."
+        }
+      ]
     }
-  ]
-}
   },
   "ContactPage": {
     "pageIntro": {

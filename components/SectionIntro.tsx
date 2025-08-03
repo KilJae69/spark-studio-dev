@@ -2,6 +2,7 @@ import clsx from "clsx";
 
 import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
+import { SparklesText } from "./ui/sparkes-text";
 
 export function SectionIntro({
   title,
@@ -26,15 +27,17 @@ export function SectionIntro({
         <h2>
           {eyebrow && (
             <>
-              <span
-                className={clsx(
-                  "mb-6 block font-display text-base font-semibold",
-                  invert ? "text-white" : "text-gradient-accent"
-                )}
-              >
-                {eyebrow}
-              </span>
-              <span className="sr-only"> - </span>
+              <SparklesText>
+                <span
+                  className={clsx(
+                    " block font-display text-base font-semibold",
+                    invert ? "text-white" : "text-gradient-accent"
+                  )}
+                >
+                  {eyebrow}
+                </span>
+                <span className="sr-only"> - </span>
+              </SparklesText>
             </>
           )}
           <span
@@ -46,9 +49,7 @@ export function SectionIntro({
               invert ? "text-white" : "text-neutral-950"
             )}
           >
-           
-              {title}
-           
+            {title}
           </span>
         </h2>
         {children && (
