@@ -13,7 +13,7 @@ import vercelLogo from "@/images/tech/vercel-logo.svg";
 import hetznerLogo from "@/images/tech/hetzner-logo.svg";
 import filamentLogo from "@/images/tech/filament-logo.svg";
 import openaiLogo from "@/images/tech/openai-logo-2.svg";
-import { SparklesText } from "../ui/sparkes-text";
+
 
 const techs: [string, StaticImageData, number][] = [
   ["NextJs", nextLogo, 1],
@@ -43,8 +43,8 @@ export default function TechsSection() {
       <Container>
         {/* Title + Divider */}
         <FadeIn className="flex items-center gap-x-8">
-          <h2 className="font-display text-sm font-semibold uppercase tracking-wider text-white">
-            <SparklesText textColor="text-white" className="text-md lg:text-xl">{t("techSectionTitle")}</SparklesText>
+          <h2 className="font-display text-sm lg:text-lg font-semibold uppercase tracking-wider text-white">
+          {t("techSectionTitle")}
           </h2>
           <div className="h-px flex-auto bg-primary-600" />
         </FadeIn>

@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
-import { SparklesText } from "./ui/sparkes-text";
+
 
 export function PageIntro({
   eyebrow,
@@ -24,11 +24,11 @@ export function PageIntro({
     >
       <FadeIn className="relative">
         <h1>
-          <SparklesText>
+          
             <span className="block font-display text-base font-semibold text-gradient-accent">
               {eyebrow}
             </span>
-          </SparklesText>
+        
           <span className="sr-only"> - </span>
           <span
             className={clsx(

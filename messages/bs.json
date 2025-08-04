@@ -87,14 +87,14 @@
   "ProcessPage": {
     "pageIntro": {
       "eyebrow": "O Spark Studiju",
-      "title": "Ko smo mi — i zašto smo pokrenuli ovaj studio",
+      "title": "Ko smo mi i zašto smo pokrenuli ovaj studio",
       "subtitle": "Jasan proces. Stvarni rezultati.",
       "description": "Mi smo tim iskusnih softverskih developera iz Bosne i Hercegovine. Nakon godina rada na digitalnim proizvodima, primijetili smo sve veći jaz: tehnologija brzo napreduje, a mnogi biznisi, posebno kod nas, i dalje koriste zastarjele alate poput WordPressa, Wixa ili starih sistema. Spark Studio je nastao da to promijeni. Pomažemo firmama da pređu sa sporih i napuhanih rješenja na moderne platforme koje nude brzinu, skalabilnost i punu kontrolu."
     },
     "discover": {
       "title": "Šta radimo",
       "description": [
-        "Dizajniramo i razvijamo potpuno prilagođene digitalne proizvode — od web stranica i internih alata do složenih web i mobilnih aplikacija. Sve što pravimo je prilagođeno tvojim poslovnim ciljevima, a ne kopirano iz šablona.",
+        "Dizajniramo i razvijamo potpuno prilagođene digitalne proizvode, od web stranica i internih alata do složenih web i mobilnih aplikacija. Sve što pravimo je prilagođeno tvojim poslovnim ciljevima, a ne kopirano iz šablona.",
         "Razvijamo i headless CMS rješenja i prilagođene admin panel-e, tako da imaš potpunu kontrolu nad sadržajem, bez ograničenja i nereda kao kod WordPressa.",
         "Kada ima smisla, uvodimo AI i automatizaciju kako bismo uklonili ponavljajuće zadatke, ubrzali procese ili omogućili pametne funkcionalnosti. Dobijaš rješenja koja su brza, pouzdana i spremna za rast."
       ],
@@ -115,7 +115,7 @@
       "description": [
         "Svaki naš projekat je potpuno prilagođen tvom biznisu, od dizajna do koda. Ne koristimo šablone, page builder-e ni platforme koje ograničavaju tvoj rast. Dobit ćeš čist i skalabilan kod koji ti pripada.",
         "Fokusiramo se na performanse i dugoročnu održivost. To znači brzo učitavanje, visoke Lighthouse ocjene i bez skrivenog tehničkog duga koji pravi probleme kasnije. Bilo da se radi o web stranici, aplikaciji ili dashboardu, gradimo stvari koje traju.",
-        "Uvijek znaš gdje smo i šta radimo. Radimo transparentno — wireframe-ovi, pregled koda, update-ovi i dokumentacija su sastavni dio procesa. Ne krijemo se iza praznih riječi, pokažemo ti šta se radi i zašto."
+        "Uvijek znaš gdje smo i šta radimo. Radimo transparentno, wireframe-ovi, pregled koda, update-ovi i dokumentacija su sastavni dio procesa. Ne krijemo se iza praznih riječi, pokažemo ti šta se radi i zašto."
       ]
     },
     "deliver": {
@@ -150,7 +150,7 @@
       "items": [
         {
           "title": "Preciznost",
-          "description": "Obraćamo pažnju na detalje — jer loš kod ili brzoplet dizajn kasnije skupo koštaju. Sve što gradimo pravimo da traje."
+          "description": "Obraćamo pažnju na detalje, jer loš kod ili brzoplet dizajn kasnije skupo koštaju. Sve što gradimo pravimo da traje."
         },
         {
           "title": "Efikasnost",
@@ -158,11 +158,11 @@
         },
         {
           "title": "Fleksibilnost",
-          "description": "Tvoj biznis nije šablon — i ne tretiramo ga tako. Naš pristup se prilagođava tvojim ciljevima, a ne obrnuto."
+          "description": "Tvoj biznis nije šablon i ne tretiramo ga tako. Naš pristup se prilagođava tvojim ciljevima, a ne obrnuto."
         },
         {
           "title": "Transparentnost",
-          "description": "Nema skrivenih dijelova. Znaš šta se radi, koliko košta i zašto — od početka do kraja."
+          "description": "Nema skrivenih dijelova. Znaš šta se radi, koliko košta i zašto, od početka do kraja."
         },
         {
           "title": "Dugoročno razmišljanje",
@@ -170,7 +170,7 @@
         },
         {
           "title": "Znanje i radoznalost",
-          "description": "Učimo i pratimo šta je novo da bi tvoj projekat ostao konkurentan. Bolji alati, pametniji pristupi — to nam je cilj."
+          "description": "Učimo i pratimo šta je novo da bi tvoj projekat ostao konkurentan. Bolji alati, pametniji pristupi. To nam je cilj."
         }
       ]
     }

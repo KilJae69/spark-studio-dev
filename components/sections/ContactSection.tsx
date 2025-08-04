@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { SocialMedia } from "../SocialMedia";
+import { SparklesText } from "../ui/sparkes-text";
 
 const DynamicLottieComponent = dynamic(
   () => import("@/components/shared/LottieComponent"),
@@ -20,16 +21,18 @@ export function ContactSection() {
   const { ref, isLoaded } = useLazyLoad();
 
   return (
-    <Container className="mt-20">
+    <Container className="sm:mt-20">
       <FadeIn className="relative rounded-md  overflow-hidden -mx-6 sm:rounded-4xl bg-gradient-to-tr bg-primary-800 px-6 py-20 sm:mx-0  md:px-12">
         <div
           ref={ref}
           className="mx-auto max-w-4xl flex flex-col sm:flex-row justify-between "
         >
           <div className="max-w-xl flex-1">
-            <h2 className="font-display text-3xl font-medium text-white [text-wrap:balance] sm:text-4xl">
-              {t("title")}
-            </h2>
+            <SparklesText>
+              <h2 className="font-display text-3xl font-medium text-white [text-wrap:balance] sm:text-4xl">
+                {t("title")}
+              </h2>
+            </SparklesText>
             <div className="mt-6 flex">
               <Button href="/contact">{t("buttonText")}</Button>
             </div>

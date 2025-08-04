@@ -163,7 +163,7 @@ export default async function CaseStudyPage({
         <Container className="">
           <FadeIn className="flex justify-center">
             <section
-              className="mt-24 prose"
+              className="mt-12 md:mt-24 prose"
               dangerouslySetInnerHTML={{ __html: body }}
             />
           </FadeIn>
@@ -176,7 +176,7 @@ export default async function CaseStudyPage({
       {restOfCaseStudies.length > 0 && (
         <PageLinks
           locale={locale}
-          className="mt-24 "
+          className="mt-12 pb-12 lg:mt-24 lg:pb-24"
           title={t("pageLinksTitle")}
           linkLabel={t("pageLinksLink")}
           pages={restOfCaseStudies}

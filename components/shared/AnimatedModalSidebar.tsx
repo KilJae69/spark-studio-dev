@@ -65,6 +65,7 @@ function NavigationLinks() {
           heading={t("link-our-work")}
           href="/projects"
           iconSrc="/animations/coding-icon.gif"
+          iconSrcSmall="/icons/coding-icon.png"
         />
       </m.div>
       <m.div variants={itemVariants}>
@@ -72,6 +73,7 @@ function NavigationLinks() {
           heading={t("link-process")}
           href="/process"
           iconSrc="/animations/developer-icon.gif"
+          iconSrcSmall="/icons/developer-icon.png"
         />
       </m.div>
       <m.div variants={itemVariants}>
@@ -79,6 +81,7 @@ function NavigationLinks() {
           heading={t("link-contact-us")}
           href="/contact"
           iconSrc="/animations/mail-flying-icon.gif"
+          iconSrcSmall="/icons/mail-flying-icon.png"
         />
       </m.div>
       <m.div variants={itemVariants}>
@@ -86,6 +89,7 @@ function NavigationLinks() {
           heading={t("link-blog")}
           href="/blog"
           iconSrc="/animations/blog-icon.gif"
+          iconSrcSmall="/icons/blog-icon.png"
         />
       </m.div>
     </m.nav>

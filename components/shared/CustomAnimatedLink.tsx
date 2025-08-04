@@ -9,6 +9,7 @@ import { useModal } from "../ui/animated-modal";
 type LinkProps = {
   heading: string;
   iconSrc?: string;
+  iconSrcSmall?:string;
   iconAlt?: string;
   href: "/" | "/about" | "/blog" | "/process" | "/projects" | "/contact";
 };
@@ -17,6 +18,7 @@ export default function CustomLink({
   heading,
   href,
   iconSrc,
+  iconSrcSmall,
   iconAlt,
 }: LinkProps) {
   const { setOpen } = useModal();
@@ -79,7 +81,7 @@ export default function CustomLink({
                 whileHover: { x: 16 },
               }}
               transition={{ type: "spring" }}
-              className="inline-block"
+              className=" inline-block"
               key={iconSrc}
             >
               <Image
@@ -87,7 +89,15 @@ export default function CustomLink({
                 alt={iconAlt || ""}
                 width={40}
                 height={20}
-                className="mr-2"
+                className="mr-2 hidden md:block"
+                unoptimized
+              />
+              <Image
+                src={iconSrcSmall || ""}
+                alt={iconAlt || ""}
+                width={25}
+                height={20}
+                className="mr-2  md:hidden"
                 unoptimized
               />
             </m.span>

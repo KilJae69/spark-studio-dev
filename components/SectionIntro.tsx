@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
-import { SparklesText } from "./ui/sparkes-text";
+
 
 export function SectionIntro({
   title,
@@ -27,7 +27,7 @@ export function SectionIntro({
         <h2>
           {eyebrow && (
             <>
-              <SparklesText>
+              
                 <span
                   className={clsx(
                     " block font-display text-base font-semibold",
@@ -37,7 +37,7 @@ export function SectionIntro({
                   {eyebrow}
                 </span>
                 <span className="sr-only"> - </span>
-              </SparklesText>
+            
             </>
           )}
           <span
